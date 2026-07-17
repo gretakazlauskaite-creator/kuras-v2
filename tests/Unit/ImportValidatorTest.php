@@ -27,7 +27,7 @@ final class ImportValidatorTest extends TestCase
     public function testItRejectsAStaleSourceUnlessBackfillIsExplicit(): void
     {
         $result = $this->validator()->validate(
-            parsed: $this->validImport(),
+            parsed: $this->validImport('2026-07-01'),
             sourceDate: '2026-07-01',
             latestPublishedDate: '2026-07-16',
             now: new \DateTimeImmutable('2026-07-17', new \DateTimeZone('Europe/Vilnius')),
@@ -69,12 +69,24 @@ final class ImportValidatorTest extends TestCase
         self::assertStringContainsString('įtartinai pasikeitė', implode(' ', $result->errors));
     }
 
+    public function testItRejectsAWorkbookDateThatDisagreesWithTheLeaPage(): void
+    {
+        $result = $this->validator()->validate(
+            parsed: $this->validImport('2026-07-16'),
+            sourceDate: '2026-07-17',
+            now: new \DateTimeImmutable('2026-07-17', new \DateTimeZone('Europe/Vilnius')),
+        );
+
+        self::assertFalse($result->isValid());
+        self::assertStringContainsString('nesutampa', implode(' ', $result->errors));
+    }
+
     private function validator(): ImportValidator
     {
         return new ImportValidator(minimumStations: 1, minimumPrices: 1);
     }
 
-    private function validImport(): ParsedImport
+    private function validImport(string $sourceDate = '2026-07-17'): ParsedImport
     {
         return new ParsedImport([
             [
@@ -84,6 +96,6 @@ final class ImportValidatorTest extends TestCase
                 'municipality' => 'Vilniaus m. sav.',
                 'prices' => ['pb95' => 1.499, 'pb98' => 1.599, 'diesel' => 1.399, 'lpg' => 0.699],
             ],
-        ], ['pb95', 'pb98', 'diesel', 'lpg'], 1);
+        ], ['pb95', 'pb98', 'diesel', 'lpg'], 1, [], [$sourceDate]);
     }
 }
