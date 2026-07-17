@@ -78,6 +78,7 @@ final class ImportService
                         'stations' => 0,
                         'prices' => 0,
                         'fuel_columns' => '',
+                        'workbook_dates' => '',
                     ]),
                     runId: $runId,
                 );
@@ -163,7 +164,7 @@ final class ImportService
     private function publish(array $stations, string $sourceDate, int $runId): void
     {
         $fuelTypes = [];
-        foreach ($this->priceRepository->getFuelTypes() as $fuelType) {
+        foreach ($this->priceRepository->getAllFuelTypes() as $fuelType) {
             $fuelTypes[(string) $fuelType['slug']] = (int) $fuelType['id'];
         }
 
