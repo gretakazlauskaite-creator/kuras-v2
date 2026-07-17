@@ -17,6 +17,7 @@
 *.xlsx
 *.xls
 *.csv
+!/tests/Fixtures/*.xlsx
 
 # ── User uploads ──────────────────────────────────────────────
 /public/uploads/*
