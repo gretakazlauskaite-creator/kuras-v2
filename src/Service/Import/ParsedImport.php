@@ -10,12 +10,14 @@ final readonly class ParsedImport
      * @param list<array{brand:string,address:string,city:string,municipality:?string,prices:array<string,float>}> $stations
      * @param list<string> $detectedFuelSlugs
      * @param list<string> $issues
+     * @param list<string> $sourceDates
      */
     public function __construct(
         public array $stations,
         public array $detectedFuelSlugs,
         public int $rawRowCount,
         public array $issues = [],
+        public array $sourceDates = [],
     ) {
     }
 
