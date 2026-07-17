@@ -2,6 +2,7 @@
     "name": "kuras/pricer",
     "description": "Fuel price comparison platform for Lithuania",
     "type": "project",
+    "license": "proprietary",
     "require": {
         "php": "^8.2",
         "phpoffice/phpspreadsheet": "^2.1",
@@ -13,9 +14,16 @@
         }
     },
     "scripts": {
-        "import": "php bin/import.php"
+        "import": "php bin/import.php",
+        "test": "phpunit",
+        "check": [
+            "@php -r '$files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(\"src\")); foreach ($files as $file) { if ($file->getExtension() === \"php\") { passthru(\"php -l \" . escapeshellarg($file->getPathname()), $code); if ($code !== 0) exit($code); }}'",
+            "@php -l bin/import.php",
+            "@test"
+        ]
     },
     "require-dev": {
-        "deployer/deployer": "^7.5"
+        "deployer/deployer": "^7.5",
+        "phpunit/phpunit": "^11.5"
     }
 }
