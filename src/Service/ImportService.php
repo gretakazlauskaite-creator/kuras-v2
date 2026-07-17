@@ -23,6 +23,7 @@ final class ImportService
     private LeaWorkbookParser $parser;
     private ImportValidator $validator;
     private GeocodingService $geocoder;
+    private StationIdentity $stationIdentity;
 
     public int $importedPrices = 0;
     public int $newStations = 0;
@@ -43,6 +44,7 @@ final class ImportService
             maximumSourceAgeDays: $this->envInt('IMPORT_MAX_SOURCE_AGE_DAYS', 7),
         );
         $this->geocoder = new GeocodingService();
+        $this->stationIdentity = new StationIdentity();
     }
 
     public function importFromFile(
@@ -171,14 +173,26 @@ final class ImportService
         $this->priceRepository->deleteByDate($sourceDate);
         foreach ($stations as $station) {
             $brandId = $this->upsertBrand($station['brand']);
+            $identity = $this->stationIdentity->fromSource($station['brand'], $station['address']);
             $isNew = false;
             $stationId = $this->stationRepository->upsertReturnNew([
                 ':brand_id' => $brandId,
+                ':public_id' => $identity['public_id'],
+                ':source_key' => $identity['source_key'],
                 ':name' => $station['brand'] . ' — ' . $station['address'],
                 ':address' => $station['address'],
+                ':normalized_address' => $identity['normalized_address'],
                 ':city' => $station['city'],
                 ':municipality' => $station['municipality'],
             ], $isNew);
+
+            $this->stationRepository->recordAlias(
+                stationId: $stationId,
+                sourceName: 'lea',
+                aliasKey: $identity['source_key'],
+                sourceBrand: $station['brand'],
+                sourceAddress: $station['address'],
+            );
 
             if ($isNew) {
                 ++$this->newStations;
@@ -223,6 +237,8 @@ final class ImportService
                     (int) $station['id'],
                     $coordinates['lat'],
                     $coordinates['lng'],
+                    $coordinates['provider'],
+                    $coordinates['confidence'],
                 );
                 ++$count;
             }

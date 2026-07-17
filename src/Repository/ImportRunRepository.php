@@ -124,4 +124,26 @@ final class ImportRunRepository
             'price_count' => $row !== false ? (int) $row['price_count'] : null,
         ];
     }
+
+    /** @return array<string,mixed>|null */
+    public function latestPublished(): ?array
+    {
+        $row = $this->db->query(
+            "SELECT id, source_page_url, source_url, source_date, checksum_sha256,
+                    raw_row_count, station_count, price_count, published_at
+             FROM import_runs
+             WHERE status = 'published'
+             ORDER BY source_date DESC, id DESC
+             LIMIT 1",
+        )->fetch();
+
+        if ($row === false) {
+            return null;
+        }
+
+        foreach (['id', 'raw_row_count', 'station_count', 'price_count'] as $key) {
+            $row[$key] = $row[$key] !== null ? (int) $row[$key] : null;
+        }
+        return $row;
+    }
 }

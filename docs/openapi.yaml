@@ -1,0 +1,252 @@
+openapi: 3.1.0
+info:
+  title: Kuras Pricer public API
+  version: 1.0.0
+  description: >-
+    Versioned read-only API for official daily LEA fuel prices. LEA-derived
+    prices are published on working days and must not be described as real-time.
+servers:
+  - url: https://kuras.pricer.lt/api/v1
+paths:
+  /meta:
+    get:
+      summary: Source date, import freshness and available fuel types
+      operationId: getMeta
+      responses:
+        '200':
+          description: API and source metadata
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/MetaResponse' }
+  /filters:
+    get:
+      summary: Available fuel, municipality, city and network filters
+      operationId: getFilters
+      responses:
+        '200': { $ref: '#/components/responses/CollectionResponse' }
+  /stations:
+    get:
+      summary: Search and sort stations by current price
+      operationId: getStations
+      parameters:
+        - { $ref: '#/components/parameters/Fuel' }
+        - { $ref: '#/components/parameters/Date' }
+        - { name: municipality, in: query, schema: { type: string, maxLength: 120 } }
+        - { name: city, in: query, schema: { type: string, maxLength: 120 } }
+        - { name: brand, in: query, schema: { type: string, maxLength: 120 } }
+        - { name: q, in: query, schema: { type: string, maxLength: 120 } }
+        - { name: min_price, in: query, schema: { type: number, minimum: 0.1, maximum: 10 } }
+        - { name: max_price, in: query, schema: { type: number, minimum: 0.1, maximum: 10 } }
+        - { name: lat, in: query, schema: { type: number, minimum: -90, maximum: 90 } }
+        - { name: lng, in: query, schema: { type: number, minimum: -180, maximum: 180 } }
+        - name: sort
+          in: query
+          schema: { type: string, enum: [price_asc, price_desc, name_asc, distance_asc], default: price_asc }
+        - { $ref: '#/components/parameters/Page' }
+        - { $ref: '#/components/parameters/PerPage' }
+      responses:
+        '200':
+          description: Paginated station prices
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [data, meta]
+                properties:
+                  data: { type: array, items: { $ref: '#/components/schemas/StationPrice' } }
+                  meta: { $ref: '#/components/schemas/PaginatedMeta' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+        '429': { $ref: '#/components/responses/RateLimitError' }
+  /stations/{id}:
+    get:
+      summary: Station profile and current prices
+      operationId: getStation
+      parameters:
+        - { $ref: '#/components/parameters/StationId' }
+      responses:
+        '200': { $ref: '#/components/responses/SingleResponse' }
+        '404': { $ref: '#/components/responses/NotFoundError' }
+  /stations/{id}/history:
+    get:
+      summary: Bounded station price history
+      operationId: getStationHistory
+      parameters:
+        - { $ref: '#/components/parameters/StationId' }
+        - { $ref: '#/components/parameters/Fuel' }
+        - { name: days, in: query, schema: { type: integer, minimum: 2, maximum: 366, default: 30 } }
+        - { name: to, in: query, schema: { type: string, format: date } }
+      responses:
+        '200': { $ref: '#/components/responses/CollectionResponse' }
+        '404': { $ref: '#/components/responses/NotFoundError' }
+  /map/stations:
+    get:
+      summary: Viewport-bounded station GeoJSON
+      operationId: getMapStations
+      parameters:
+        - { $ref: '#/components/parameters/Fuel' }
+        - { $ref: '#/components/parameters/Date' }
+        - name: bounds
+          in: query
+          required: true
+          description: minLng,minLat,maxLng,maxLat
+          schema: { type: string, example: '20.6,53.8,26.9,56.5' }
+        - { name: municipality, in: query, schema: { type: string } }
+        - { name: city, in: query, schema: { type: string } }
+        - { name: brand, in: query, schema: { type: string } }
+        - { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 1000, default: 500 } }
+      responses:
+        '200':
+          description: GeoJSON FeatureCollection wrapped in data
+          content:
+            application/json:
+              schema: { type: object }
+        '422': { $ref: '#/components/responses/ValidationError' }
+  /nearby:
+    get:
+      summary: Stations nearest to browser-supplied coordinates
+      operationId: getNearbyStations
+      parameters:
+        - { name: lat, in: query, required: true, schema: { type: number, minimum: -90, maximum: 90 } }
+        - { name: lng, in: query, required: true, schema: { type: number, minimum: -180, maximum: 180 } }
+        - { $ref: '#/components/parameters/Fuel' }
+        - { $ref: '#/components/parameters/Date' }
+        - { name: radius_km, in: query, schema: { type: number, minimum: 0.5, maximum: 100, default: 10 } }
+        - { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 50, default: 10 } }
+      responses:
+        '200': { $ref: '#/components/responses/CollectionResponse' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+  /rankings:
+    get:
+      summary: Cheapest stations by scope and fuel
+      operationId: getRankings
+      parameters:
+        - { $ref: '#/components/parameters/Fuel' }
+        - { $ref: '#/components/parameters/Date' }
+        - { name: municipality, in: query, schema: { type: string } }
+        - { name: city, in: query, schema: { type: string } }
+        - { name: brand, in: query, schema: { type: string } }
+        - { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 100, default: 10 } }
+      responses:
+        '200': { $ref: '#/components/responses/CollectionResponse' }
+  /statistics:
+    get:
+      summary: National and municipality price aggregates
+      operationId: getStatistics
+      parameters:
+        - { $ref: '#/components/parameters/Fuel' }
+        - { $ref: '#/components/parameters/Date' }
+      responses:
+        '200': { $ref: '#/components/responses/SingleResponse' }
+components:
+  parameters:
+    Fuel:
+      name: fuel
+      in: query
+      schema: { type: string, enum: [pb95, pb98, diesel, lpg], default: pb95 }
+    Date:
+      name: date
+      in: query
+      description: Defaults to the last successfully published source date.
+      schema: { type: string, format: date }
+    Page:
+      name: page
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 10000, default: 1 }
+    PerPage:
+      name: per_page
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 100, default: 20 }
+    StationId:
+      name: id
+      in: path
+      required: true
+      schema: { type: string, pattern: '^st_[a-f0-9]{20}$' }
+  schemas:
+    StationPrice:
+      type: object
+      required: [id, brand, name, address, fuel, price, source_date]
+      properties:
+        id: { type: string, example: st_0cc175b9c0f1b6a831c3 }
+        brand: { type: string }
+        name: { type: string }
+        address: { type: string }
+        city: { type: [string, 'null'] }
+        municipality: { type: [string, 'null'] }
+        fuel: { type: string }
+        price: { type: number, format: float }
+        source_date: { type: string, format: date }
+        lat: { type: [number, 'null'] }
+        lng: { type: [number, 'null'] }
+        distance_km: { type: [number, 'null'] }
+    SourceMeta:
+      type: object
+      required: [api_version, source_date, source, freshness]
+      properties:
+        api_version: { type: string, const: v1 }
+        source_date: { type: string, format: date }
+        last_successful_import_at: { type: [string, 'null'] }
+        source: { type: object }
+        freshness: { type: object }
+    PaginatedMeta:
+      allOf:
+        - { $ref: '#/components/schemas/SourceMeta' }
+        - type: object
+          required: [pagination]
+          properties:
+            pagination:
+              type: object
+              required: [page, per_page, total, total_pages]
+              properties:
+                page: { type: integer }
+                per_page: { type: integer }
+                total: { type: integer }
+                total_pages: { type: integer }
+    MetaResponse:
+      type: object
+      required: [data, meta]
+      properties:
+        data: { type: object }
+        meta: { type: object }
+    ApiError:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [code, message]
+          properties:
+            code: { type: string }
+            message: { type: string }
+            details: { type: object }
+  responses:
+    CollectionResponse:
+      description: Collection and source metadata
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [data, meta]
+            properties:
+              data: { type: array, items: {} }
+              meta: { $ref: '#/components/schemas/SourceMeta' }
+    SingleResponse:
+      description: Resource and source metadata
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [data, meta]
+            properties:
+              data: { type: object }
+              meta: { $ref: '#/components/schemas/SourceMeta' }
+    ValidationError:
+      description: Invalid or out-of-range query parameter
+      content: { application/json: { schema: { $ref: '#/components/schemas/ApiError' } } }
+    NotFoundError:
+      description: Resource not found
+      content: { application/json: { schema: { $ref: '#/components/schemas/ApiError' } } }
+    RateLimitError:
+      description: Request rate exceeded
+      headers:
+        Retry-After: { schema: { type: integer } }
+      content: { application/json: { schema: { $ref: '#/components/schemas/ApiError' } } }

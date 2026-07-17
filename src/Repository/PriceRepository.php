@@ -22,6 +22,129 @@ class PriceRepository
         return $date ?: date('Y-m-d');
     }
 
+    public function getLatestImportTime(): ?string
+    {
+        $value = $this->db->query('SELECT MAX(imported_at) FROM prices')->fetchColumn();
+        return $value !== false && $value !== null ? (string) $value : null;
+    }
+
+    /** @return list<array<string,mixed>> */
+    public function getCurrentPrices(int $stationId, string $date): array
+    {
+        $statement = $this->db->prepare(
+            'SELECT ft.slug AS fuel, ft.name AS fuel_name, p.price, p.price_date AS source_date
+             FROM prices p
+             JOIN fuel_types ft ON ft.id = p.fuel_type_id
+             WHERE p.station_id = :station_id AND p.price_date = :date
+             ORDER BY ft.id'
+        );
+        $statement->execute([':station_id' => $stationId, ':date' => $date]);
+        return array_map(static function (array $row): array {
+            $row['price'] = (float) $row['price'];
+            return $row;
+        }, $statement->fetchAll());
+    }
+
+    /** @return list<array<string,mixed>> */
+    public function getHistoryRange(int $stationId, string $fuel, string $from, string $to, int $limit = 366): array
+    {
+        $statement = $this->db->prepare(
+            'SELECT p.price_date AS date, p.price, ft.slug AS fuel
+             FROM prices p
+             JOIN fuel_types ft ON ft.id = p.fuel_type_id
+             WHERE p.station_id = :station_id AND ft.slug = :fuel
+               AND p.price_date BETWEEN :date_from AND :date_to
+             ORDER BY p.price_date ASC
+             LIMIT :limit'
+        );
+        $statement->bindValue(':station_id', $stationId, \PDO::PARAM_INT);
+        $statement->bindValue(':fuel', $fuel);
+        $statement->bindValue(':date_from', $from);
+        $statement->bindValue(':date_to', $to);
+        $statement->bindValue(':limit', $limit, \PDO::PARAM_INT);
+        $statement->execute();
+        return array_map(static function (array $row): array {
+            $row['price'] = (float) $row['price'];
+            return $row;
+        }, $statement->fetchAll());
+    }
+
+    /** @return list<array<string,mixed>> */
+    public function getRankings(string $fuel, string $date, array $scope, int $limit): array
+    {
+        $where = ['ft.slug = :fuel', 'p.price_date = :date'];
+        $params = [':fuel' => $fuel, ':date' => $date];
+        foreach (['city' => 's.city', 'municipality' => 's.municipality', 'brand' => 'b.name'] as $key => $column) {
+            if (($scope[$key] ?? '') !== '') {
+                $where[] = "{$column} = :{$key}";
+                $params[":{$key}"] = (string) $scope[$key];
+            }
+        }
+
+        $statement = $this->db->prepare(
+            'SELECT s.id, s.public_id, s.name, s.address, s.city, s.municipality,
+                    s.lat, s.lng, b.name AS brand, ft.slug AS fuel,
+                    p.price, p.price_date AS source_date
+             FROM prices p
+             JOIN stations s ON s.id = p.station_id
+             JOIN brands b ON b.id = s.brand_id
+             JOIN fuel_types ft ON ft.id = p.fuel_type_id
+             WHERE ' . implode(' AND ', $where) . '
+             ORDER BY p.price ASC, s.public_id ASC LIMIT :limit'
+        );
+        foreach ($params as $key => $value) {
+            $statement->bindValue($key, $value);
+        }
+        $statement->bindValue(':limit', $limit, \PDO::PARAM_INT);
+        $statement->execute();
+        return array_map(static function (array $row): array {
+            $row['id'] = $row['public_id'];
+            unset($row['public_id']);
+            $row['price'] = (float) $row['price'];
+            $row['lat'] = $row['lat'] !== null ? (float) $row['lat'] : null;
+            $row['lng'] = $row['lng'] !== null ? (float) $row['lng'] : null;
+            return $row;
+        }, $statement->fetchAll());
+    }
+
+    /** @return array{national:array<string,mixed>,regions:list<array<string,mixed>>} */
+    public function getStatistics(string $fuel, string $date): array
+    {
+        $statement = $this->db->prepare(
+            'SELECT COUNT(*) AS station_count, MIN(p.price) AS min_price,
+                    MAX(p.price) AS max_price, AVG(p.price) AS average_price
+             FROM prices p JOIN fuel_types ft ON ft.id = p.fuel_type_id
+             WHERE ft.slug = :fuel AND p.price_date = :date'
+        );
+        $statement->execute([':fuel' => $fuel, ':date' => $date]);
+        $national = $statement->fetch() ?: [];
+
+        $regionsStatement = $this->db->prepare(
+            'SELECT s.municipality, COUNT(*) AS station_count, MIN(p.price) AS min_price,
+                    MAX(p.price) AS max_price, AVG(p.price) AS average_price
+             FROM prices p
+             JOIN fuel_types ft ON ft.id = p.fuel_type_id
+             JOIN stations s ON s.id = p.station_id
+             WHERE ft.slug = :fuel AND p.price_date = :date AND s.municipality IS NOT NULL
+             GROUP BY s.municipality
+             ORDER BY average_price ASC, s.municipality ASC'
+        );
+        $regionsStatement->execute([':fuel' => $fuel, ':date' => $date]);
+
+        $cast = static function (array $row): array {
+            $row['station_count'] = (int) ($row['station_count'] ?? 0);
+            foreach (['min_price', 'max_price', 'average_price'] as $key) {
+                $row[$key] = $row[$key] !== null ? round((float) $row[$key], 3) : null;
+            }
+            return $row;
+        };
+
+        return [
+            'national' => $cast($national),
+            'regions' => array_map($cast, $regionsStatement->fetchAll()),
+        ];
+    }
+
     /**
      * Best price per major city for a given fuel and date.
      * Returns associative array keyed by city name.
