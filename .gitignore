@@ -1,0 +1,44 @@
+# ── Dependencies ─────────────────────────────────────────────
+/vendor/
+/composer.lock
+
+# ── Environment & secrets ─────────────────────────────────────
+.env
+*.env.local
+*.env.*.local
+
+# ── DDEV ──────────────────────────────────────────────────────
+.ddev/.gitignore
+.ddev/config.*.yaml
+.ddev/docker-compose.*.yaml
+.ddev/.homeadditions/
+
+# ── Downloaded data files (not committed) ─────────────────────
+*.xlsx
+*.xls
+*.csv
+
+# ── User uploads ──────────────────────────────────────────────
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# ── Temp / cache ──────────────────────────────────────────────
+/tmp/
+/var/
+*.cache
+
+# ── OS / editor ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
+/logs/
+
+# ── PHP ───────────────────────────────────────────────────────
+*.phar

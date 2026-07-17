@@ -1,0 +1,13 @@
+name: kuras-pricer
+type: php
+docroot: public
+php_version: "8.2"
+webserver_type: nginx-fpm
+database:
+  type: mysql
+  version: "8.0"
+router_http_port: "80"
+router_https_port: "443"
+hooks:
+  post-start:
+    - exec: "[ -f /var/www/html/vendor/autoload.php ] || composer install --working-dir=/var/www/html"
