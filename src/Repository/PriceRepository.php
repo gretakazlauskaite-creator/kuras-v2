@@ -232,6 +232,12 @@ class PriceRepository
 
     public function getFuelTypes(): array
     {
+        return $this->db->query("SELECT * FROM fuel_types WHERE slug != 'pb98' ORDER BY id")->fetchAll();
+    }
+
+    /** All known types for ingestion, including types absent from the current public source. */
+    public function getAllFuelTypes(): array
+    {
         return $this->db->query('SELECT * FROM fuel_types ORDER BY id')->fetchAll();
     }
 
