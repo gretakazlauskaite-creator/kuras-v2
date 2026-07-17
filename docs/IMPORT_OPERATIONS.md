@@ -20,6 +20,14 @@ If parsing, validation, or publishing fails, the last known-good public prices
 remain unchanged. Re-running the same checksum creates a `duplicate` ledger row
 and makes no price changes. A process lock prevents overlapping cron runs.
 
+The current official workbook is a long table: `Įmonė`, `Savivaldybė`,
+`Adresas`, `Degalų tipas`, `Kaina (EUR/l)`, `Pateikimo data`. Each station/fuel
+pair is a separate row. The parser aggregates those rows into one station and
+cross-checks the workbook's `Pateikimo data` against the date published on the
+LEA page. As of 2026-07-17 the source contains `Dyzelinas`, `95 benzinas`, and
+`SND`; Pb98 remains supported by the parser but is not required or exposed as
+available source data.
+
 ## Production setup
 
 Apply `migrations/005_trusted_imports.sql` before enabling the new command. Set
