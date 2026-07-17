@@ -18,8 +18,12 @@ ddev start
 # 2. Install dependencies
 ddev composer install
 
-# 3. Create DB schema + seed fuel types
+# 3. Create DB schema and apply migrations in numeric order
 ddev mysql < migrations/001_init.sql
+ddev mysql < migrations/002_normalize_location.sql
+ddev mysql < migrations/003_add_indexes.sql
+ddev mysql < migrations/004_fix_city_names.sql
+ddev mysql < migrations/005_trusted_imports.sql
 
 # 4. Copy env config
 cp .env.example .env
@@ -35,15 +39,29 @@ ddev launch
 ## Import Script
 
 ```bash
-# Import today
+# Discover the latest official LEA workbook and its real source date
 ddev exec php bin/import.php
 
-# Import for specific date (dry run)
-ddev exec php bin/import.php --date=2024-01-15 --dry-run
+# Validate the latest source without changing the database
+ddev exec php bin/import.php --dry-run
 
-# Skip geocoding / alerts
-ddev exec php bin/import.php --skip-geocode --skip-alerts
+# Import an archived file. The date must be supplied explicitly.
+ddev exec php bin/import.php \
+  --file=/var/www/html/archive/lea-2026-07-17.xlsx \
+  --source-date=2026-07-17 \
+  --allow-backfill \
+  --skip-alerts
+
+# Geocoding remains opt-in
+ddev exec php bin/import.php --geocode-new --skip-alerts
 ```
+
+Each downloaded workbook is stored under `IMPORT_STORAGE_PATH` by source date
+and SHA-256 checksum. Every attempt is recorded in `import_runs`. A batch is
+published only after its date, required columns, station identities, prices,
+duplicates, row counts, and change against the previous batch pass validation.
+Publishing runs in one database transaction, so a rejected or failed import
+leaves the last known-good public prices unchanged.
 
 ## Cron (production)
 
@@ -77,4 +95,6 @@ migrations/     SQL schema
 
 ## Data Source
 
-Prices from [ena.lt](https://www.ena.lt/degalu-kainos-degalinese/) updated daily before 10:00 AM.
+Prices come from the [official LEA page](https://www.ena.lt/degalu-kainos-degalinese/).
+LEA collects and publishes the 10:00 prices on working days; this source is
+daily official data, not real-time data.
