@@ -72,6 +72,14 @@ final class ImportValidator
             }
         }
 
+        if (count($parsed->sourceDates) > 1) {
+            $errors[] = 'Excel faile rastos kelios skirtingos pateikimo datos: ' . implode(', ', $parsed->sourceDates) . '.';
+        } elseif (count($parsed->sourceDates) === 1 && $parsed->sourceDates[0] !== $sourceDate) {
+            $errors[] = "Excel pateikimo data {$parsed->sourceDates[0]} nesutampa su LEA puslapio data {$sourceDate}.";
+        } elseif ($parsed->sourceDates === []) {
+            $warnings[] = 'Excel faile nerasta pateikimo data; naudojama oficialaus LEA puslapio data.';
+        }
+
         foreach (['pb98', 'lpg'] as $optionalSlug) {
             if (!in_array($optionalSlug, $parsed->detectedFuelSlugs, true)) {
                 $warnings[] = "Nerastas pasirinktinis kuro stulpelis: {$optionalSlug}.";
@@ -123,6 +131,7 @@ final class ImportValidator
             'stations' => count($parsed->stations),
             'prices' => $parsed->priceCount(),
             'fuel_columns' => implode(',', $parsed->detectedFuelSlugs),
+            'workbook_dates' => implode(',', $parsed->sourceDates),
         ]);
     }
 
