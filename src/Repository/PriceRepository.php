@@ -8,9 +8,9 @@ class PriceRepository
 {
     private \PDO $db;
 
-    public function __construct()
+    public function __construct(?\PDO $db = null)
     {
-        $this->db = Database::getInstance();
+        $this->db = $db ?? Database::getInstance();
     }
 
     /**
@@ -199,23 +199,46 @@ class PriceRepository
         return $stmt2->fetch() ?: null;
     }
 
-    public function insertPrice(int $stationId, int $fuelTypeId, float $price, string $date): void
+    public function insertPrice(
+        int $stationId,
+        int $fuelTypeId,
+        float $price,
+        string $date,
+        ?int $importRunId = null,
+    ): void
     {
         $stmt = $this->db->prepare(
-            'INSERT IGNORE INTO prices (station_id, fuel_type_id, price, price_date)
-             VALUES (:station_id, :fuel_type_id, :price, :price_date)'
+            'INSERT INTO prices (station_id, fuel_type_id, price, price_date, import_run_id)
+             VALUES (:station_id, :fuel_type_id, :price, :price_date, :import_run_id)
+             ON DUPLICATE KEY UPDATE
+                price = VALUES(price),
+                import_run_id = VALUES(import_run_id),
+                imported_at = CURRENT_TIMESTAMP'
         );
         $stmt->execute([
             ':station_id'  => $stationId,
             ':fuel_type_id' => $fuelTypeId,
             ':price'        => $price,
             ':price_date'   => $date,
+            ':import_run_id' => $importRunId,
         ]);
+    }
+
+    public function deleteByDate(string $date): void
+    {
+        $statement = $this->db->prepare('DELETE FROM prices WHERE price_date = :price_date');
+        $statement->execute([':price_date' => $date]);
     }
 
     public function getFuelTypes(): array
     {
         return $this->db->query("SELECT * FROM fuel_types WHERE slug != 'pb98' ORDER BY id")->fetchAll();
+    }
+
+    /** All known types for ingestion, including types absent from the current public source. */
+    public function getAllFuelTypes(): array
+    {
+        return $this->db->query('SELECT * FROM fuel_types ORDER BY id')->fetchAll();
     }
 
     public function getFuelTypeBySlug(string $slug): ?array

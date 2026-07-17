@@ -5,234 +5,275 @@ declare(strict_types=1);
 
 require_once dirname(__DIR__) . '/src/Bootstrap.php';
 
-use App\Service\ImportService;
 use App\Service\AlertService;
 use App\Service\BestPriceService;
+use App\Service\Import\LeaSource;
+use App\Service\Import\LeaSourceLocator;
+use App\Service\Import\XlsxFileValidator;
+use App\Service\ImportService;
 
-// ── Parse CLI arguments ──────────────────────────────────────
-$opts       = getopt('', ['date:', 'dry-run', 'geocode-new', 'skip-alerts', 'help']);
-$dryRun     = isset($opts['dry-run']);
-$date       = $opts['date'] ?? date('Y-m-d');
-$geocodeNew = isset($opts['geocode-new']); // opt-in: geocode only if new stations appeared
-$skipAlerts = isset($opts['skip-alerts']);
+$options = getopt('', [
+    'file:',
+    'source-date:',
+    'dry-run',
+    'allow-backfill',
+    'geocode-new',
+    'skip-alerts',
+    'help',
+]);
 
-if (isset($opts['help'])) {
-    echo <<<HELP
+if (isset($options['help'])) {
+    echo <<<'HELP'
 Usage: php bin/import.php [options]
 
-Options:
-  --date=YYYY-MM-DD    Import prices for specific date (default: today)
-  --dry-run            Parse file but do not write to DB
-  --geocode-new        Geocode any newly discovered stations after import
-  --skip-alerts        Skip price alert checks
-  --help               Show this help
+Without --file, the command discovers the latest workbook and its source date
+from the official LEA page.
 
-Note: for bulk geocoding of all stations run  php bin/geocode.php
+Options:
+  --file=/path/file.xlsx       Import a local LEA workbook
+  --source-date=YYYY-MM-DD     Required with --file; never inferred from today
+  --dry-run                    Parse and validate without writing to the database
+  --allow-backfill             Allow an older or archived source date
+  --geocode-new                Geocode newly discovered stations after publish
+  --skip-alerts                Skip price alert checks
+  --help                       Show this help
 
 HELP;
     exit(0);
 }
 
-// ── LEA Excel URL ────────────────────────────────────────────
-// The file is updated daily; we download it fresh each run.
-$leaUrl = 'https://www.ena.lt/degalu-kainos-degalinese/';
-
-log_msg("Starting import for date: $date" . ($dryRun ? ' [DRY RUN]' : ''));
-
-// ── 1. Download Excel ────────────────────────────────────────
-$tmpFile = sys_get_temp_dir() . '/lea_prices_' . $date . '.xlsx';
-
-if (!file_exists($tmpFile)) {
-    log_msg("Fetching Excel from LEA ...");
-    $xlsxData = fetch_lea_excel($leaUrl);
-
-    if ($xlsxData === null) {
-        log_error("Failed to download Excel file. Aborting.");
-        exit(1);
-    }
-
-    if (!is_valid_xlsx($xlsxData)) {
-        log_error("Downloaded content is not a valid XLSX file (got HTML or unexpected data). Aborting.");
-        log_error("First 200 bytes: " . substr(bin2hex($xlsxData), 0, 400));
-        exit(1);
-    }
-
-    file_put_contents($tmpFile, $xlsxData);
-    log_msg("Saved to $tmpFile (" . round(strlen($xlsxData) / 1024) . " KB)");
-} else {
-    log_msg("Using cached file: $tmpFile");
-    // Validate cached file too — it may have been a bad download from a previous run
-    $cached = file_get_contents($tmpFile);
-    if (!is_valid_xlsx($cached)) {
-        log_msg("Cached file is not valid XLSX — deleting and re-downloading ...");
-        unlink($tmpFile);
-        $xlsxData = fetch_lea_excel($leaUrl);
-        if ($xlsxData === null || !is_valid_xlsx($xlsxData)) {
-            log_error("Re-download also failed or returned invalid content. Aborting.");
-            exit(1);
-        }
-        file_put_contents($tmpFile, $xlsxData);
-        log_msg("Saved fresh file to $tmpFile (" . round(strlen($xlsxData) / 1024) . " KB)");
-    }
-}
-
-// ── 2. Import ────────────────────────────────────────────────
-$importer = new ImportService();
+$dryRun = isset($options['dry-run']);
+$allowBackfill = isset($options['allow-backfill']);
+$geocodeNew = isset($options['geocode-new']);
+$skipAlerts = isset($options['skip-alerts']);
+$manualFile = isset($options['file']) ? (string) $options['file'] : null;
+$manualDate = isset($options['source-date']) ? (string) $options['source-date'] : null;
 
 try {
-    $importer->importFromFile($tmpFile, $date, $dryRun);
-} catch (\Throwable $e) {
-    log_error("Import failed: " . $e->getMessage());
-    notify_admin_error($e->getMessage());
+    $importLock = acquire_import_lock();
+    if ($manualFile !== null) {
+        if ($manualDate === null || !is_valid_date($manualDate)) {
+            throw new RuntimeException('Naudojant --file būtina teisinga --source-date=YYYY-MM-DD reikšmė.');
+        }
+        if (!is_file($manualFile) || !is_readable($manualFile)) {
+            throw new RuntimeException("Vietinis failas nerastas arba neperskaitomas: {$manualFile}");
+        }
+
+        $source = new LeaSource(
+            pageUrl: 'manual-import',
+            downloadUrl: 'manual-file://' . basename($manualFile),
+            sourceDate: $manualDate,
+        );
+        $downloadedFile = $manualFile;
+    } else {
+        log_message('Tikrinamas oficialus LEA puslapis...');
+        $pageHtml = http_get(LeaSourceLocator::PAGE_URL, false);
+        $source = (new LeaSourceLocator())->locate($pageHtml, LeaSourceLocator::PAGE_URL);
+        log_message("Rastas {$source->sourceDate} šaltinis. Atsisiunčiamas Excel failas...");
+        $downloadedFile = download_to_temporary_file($source->downloadUrl);
+    }
+
+    (new XlsxFileValidator())->assertValid($downloadedFile);
+    $checksum = hash_file('sha256', $downloadedFile);
+    if ($checksum === false) {
+        throw new RuntimeException('Nepavyko apskaičiuoti šaltinio failo kontrolinės sumos.');
+    }
+
+    $storedFile = store_immutable_source($downloadedFile, $source->sourceDate, $checksum);
+    log_message("Šaltinis išsaugotas: {$storedFile}");
+    log_message('SHA-256: ' . $checksum);
+
+    $importer = new ImportService();
+    $result = $importer->importFromFile(
+        filePath: $storedFile,
+        sourceDate: $source->sourceDate,
+        sourcePageUrl: $source->pageUrl,
+        sourceUrl: $source->downloadUrl,
+        checksum: $checksum,
+        dryRun: $dryRun,
+        allowBackfill: $allowBackfill,
+    );
+
+    foreach ($result->validation->warnings as $warning) {
+        log_message('ĮSPĖJIMAS: ' . $warning);
+    }
+    foreach ($result->validation->errors as $error) {
+        log_error($error);
+    }
+
+    if ($result->status === 'rejected') {
+        $message = 'LEA importas atmestas. Vieši duomenys nepakeisti.';
+        log_error($message);
+        notify_admin_error($message . "\n" . implode("\n", $result->validation->errors));
+        exit(2);
+    }
+
+    if ($result->status === 'duplicate') {
+        log_message('Tas pats šaltinio failas jau publikuotas. Pakeitimų nėra.');
+        exit(0);
+    }
+
+    if ($dryRun) {
+        log_message(
+            "Patikra sėkminga: {$result->stationCount} degalinių, {$result->priceCount} kainų. Duomenų bazė nepakeista.",
+        );
+        exit(0);
+    }
+
+    log_message(
+        "Atominis publikavimas baigtas: {$result->priceCount} kainų, {$result->newStationCount} naujų degalinių.",
+    );
+
+    if ($geocodeNew && $result->newStationCount > 0) {
+        log_message("Geokoduojamos {$result->newStationCount} naujos degalinės...");
+        log_message('Geokoduota: ' . $importer->geocodeNewStations());
+    }
+
+    (new BestPriceService())->invalidateCache();
+    if (!$skipAlerts) {
+        $sent = (new AlertService())->checkAndSend();
+        log_message("Išsiųsta kainų pranešimų: {$sent}");
+    }
+
+    log_message('Importas baigtas sėkmingai.');
+    exit(0);
+} catch (Throwable $exception) {
+    log_error($exception->getMessage());
+    notify_admin_error($exception->getMessage());
     exit(1);
 }
 
-log_msg("Imported {$importer->importedPrices} prices, {$importer->newStations} new stations.");
-
-// ── 3. Geocode newly added stations (opt-in) ─────────────────
-if (!$dryRun && $geocodeNew && $importer->newStations > 0) {
-    log_msg("Geocoding {$importer->newStations} new station(s) ...");
-    $geocoded = $importer->geocodeNewStations();
-    log_msg("Geocoded $geocoded station(s).");
-} elseif (!$dryRun && $importer->newStations > 0) {
-    log_msg("Note: {$importer->newStations} new station(s) without coordinates — run php bin/geocode.php to geocode.");
-}
-
-// ── 4. Invalidate cache ───────────────────────────────────────
-if (!$dryRun) {
-    (new BestPriceService())->invalidateCache();
-    log_msg("APCu cache invalidated.");
-}
-
-// ── 5. Check price alerts ────────────────────────────────────
-if (!$dryRun && !$skipAlerts) {
-    log_msg("Checking price alerts ...");
-    $alertService = new AlertService();
-    $sent = $alertService->checkAndSend();
-    log_msg("Sent $sent alert emails.");
-}
-
-log_msg("Done.");
-exit(0);
-
-// ── Helpers ──────────────────────────────────────────────────
-
-function fetch_lea_excel(string $pageUrl): ?string
+function download_to_temporary_file(string $url): string
 {
-    $ua = 'Mozilla/5.0 (compatible; kuras.pricer.lt/1.0; contact: admin@kuras.pricer.lt)';
+    $data = http_get($url, true);
+    $temporaryFile = tempnam(sys_get_temp_dir(), 'lea_');
+    if ($temporaryFile === false || file_put_contents($temporaryFile, $data, LOCK_EX) === false) {
+        throw new RuntimeException('Nepavyko saugiai išsaugoti atsisiųsto LEA failo.');
+    }
 
-    // ── Step 1: Scrape the LEA page to find today's SharePoint link ──
-    $html    = curl_get($pageUrl, $ua);
-    $xlsxUrl = null;
+    return $temporaryFile;
+}
 
-    if ($html) {
-        // The page embeds SharePoint sharing links — grab the last (most recent) one
-        preg_match_all(
-            '/href=["\'](' . preg_quote('https://ltenergagen.sharepoint.com', '/') . '[^"\']+)["\']/',
-            $html,
-            $matches
-        );
-        if (!empty($matches[1])) {
-            // Last occurrence = most recent day
-            $sharingUrl = end($matches[1]);
-            // Append &download=1 to trigger direct file redirect
-            $xlsxUrl = $sharingUrl . (str_contains($sharingUrl, '?') ? '&' : '?') . 'download=1';
-            log_msg("Found SharePoint link: $xlsxUrl");
+function http_get(string $url, bool $binary): string
+{
+    $userAgent = 'kuras.pricer.lt/2.0 (+https://kuras.pricer.lt/)';
+
+    if (function_exists('curl_init')) {
+        $handle = curl_init($url);
+        curl_setopt_array($handle, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_MAXREDIRS => 8,
+            CURLOPT_CONNECTTIMEOUT => 15,
+            CURLOPT_TIMEOUT => 90,
+            CURLOPT_USERAGENT => $userAgent,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_SSL_VERIFYHOST => 2,
+            CURLOPT_ENCODING => '',
+            CURLOPT_HTTPHEADER => [$binary
+                ? 'Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/octet-stream;q=0.9,*/*;q=0.1'
+                : 'Accept: text/html,application/xhtml+xml;q=0.9,*/*;q=0.1'],
+        ]);
+        $data = curl_exec($handle);
+        $error = curl_error($handle);
+        $status = (int) curl_getinfo($handle, CURLINFO_HTTP_CODE);
+        curl_close($handle);
+
+        if ($data === false || $error !== '') {
+            throw new RuntimeException('HTTP užklausa nepavyko: ' . $error);
         }
+        if ($status < 200 || $status >= 300) {
+            throw new RuntimeException("HTTP užklausa grąžino {$status} būseną.");
+        }
+
+        return (string) $data;
     }
 
-    // ── Fallback: hardcoded current link ─────────────────────────────
-    if (!$xlsxUrl) {
-        log_msg("Could not scrape page, using fallback SharePoint URL.");
-        $xlsxUrl = 'https://ltenergagen.sharepoint.com/:x:/s/intra/doc/IQDRHKinqYi1S4QH6WeTSxLUATgT_VjMdvpnTH3cNxePBFA?e=mZhpxb&download=1';
-    }
-
-    // ── Step 2: Download with cURL (follows redirects + cookie jar) ──
-    log_msg("Downloading from: $xlsxUrl");
-    return curl_get($xlsxUrl, $ua, true);
-}
-
-/**
- * HTTP GET via cURL.
- * @param bool $binary  If true, returns raw bytes (for xlsx); otherwise string.
- */
-function curl_get(string $url, string $ua, bool $binary = false): ?string
-{
-    if (!function_exists('curl_init')) {
-        // Fallback: shell curl
-        $cookieFile = sys_get_temp_dir() . '/lea_curl_cookies.txt';
-        $tmpOut     = tempnam(sys_get_temp_dir(), 'lea_');
-        $cmd = sprintf(
-            'curl -sL -o %s -c %s -b %s -A %s %s 2>&1',
-            escapeshellarg($tmpOut),
-            escapeshellarg($cookieFile),
-            escapeshellarg($cookieFile),
-            escapeshellarg($ua),
-            escapeshellarg($url)
-        );
-        exec($cmd, $out, $code);
-        if ($code !== 0 || !file_exists($tmpOut)) return null;
-        $data = file_get_contents($tmpOut);
-        unlink($tmpOut);
-        return $data ?: null;
-    }
-
-    $cookieFile = sys_get_temp_dir() . '/lea_curl_cookies.txt';
-
-    $ch = curl_init($url);
-    curl_setopt_array($ch, [
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_MAXREDIRS      => 10,
-        CURLOPT_TIMEOUT        => 60,
-        CURLOPT_USERAGENT      => $ua,
-        CURLOPT_SSL_VERIFYPEER => true,
-        CURLOPT_SSL_VERIFYHOST => 2,
-        CURLOPT_COOKIEJAR      => $cookieFile,
-        CURLOPT_COOKIEFILE     => $cookieFile,
-        CURLOPT_ENCODING       => '',  // accept gzip/deflate
-        CURLOPT_HTTPHEADER     => [
-            'Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,*/*',
+    $context = stream_context_create([
+        'http' => [
+            'method' => 'GET',
+            'header' => "User-Agent: {$userAgent}\r\n",
+            'timeout' => 90,
+            'follow_location' => 1,
+            'max_redirects' => 8,
+            'ignore_errors' => false,
         ],
+        'ssl' => ['verify_peer' => true, 'verify_peer_name' => true],
     ]);
-
-    $data = curl_exec($ch);
-    $err  = curl_error($ch);
-    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
-
-    if ($err) {
-        log_error("cURL error: $err");
-        return null;
-    }
-    if ($code >= 400) {
-        log_error("HTTP $code downloading $url");
-        return null;
+    $data = @file_get_contents($url, false, $context);
+    if ($data === false) {
+        throw new RuntimeException('HTTP užklausa nepavyko, o PHP cURL plėtinys neįdiegtas.');
     }
 
-    return $data ?: null;
+    return $data;
 }
 
-function log_msg(string $msg): void
+function store_immutable_source(string $inputFile, string $sourceDate, string $checksum): string
 {
-    echo '[' . date('H:i:s') . '] ' . $msg . "\n";
+    $basePath = (string) ($_ENV['IMPORT_STORAGE_PATH'] ?? dirname(__DIR__) . '/var/imports');
+    $directory = rtrim($basePath, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $sourceDate;
+    if (!is_dir($directory) && !mkdir($directory, 0770, true) && !is_dir($directory)) {
+        throw new RuntimeException("Nepavyko sukurti šaltinių saugyklos: {$directory}");
+    }
+
+    $target = $directory . DIRECTORY_SEPARATOR . $checksum . '.xlsx';
+    if (realpath($inputFile) === realpath($target)) {
+        return $target;
+    }
+    if (is_file($target)) {
+        $existingChecksum = hash_file('sha256', $target);
+        if (!hash_equals($checksum, (string) $existingChecksum)) {
+            throw new RuntimeException('Šaltinių saugykloje aptiktas failo kontrolinės sumos neatitikimas.');
+        }
+        return $target;
+    }
+
+    if (!copy($inputFile, $target)) {
+        throw new RuntimeException('Nepavyko nukopijuoti LEA failo į nekintamą saugyklą.');
+    }
+    chmod($target, 0440);
+    return $target;
 }
 
-function log_error(string $msg): void
+/** @return resource */
+function acquire_import_lock()
 {
-    fwrite(STDERR, '[ERROR] ' . $msg . "\n");
-    error_log('[import.php] ' . $msg);
+    $basePath = (string) ($_ENV['IMPORT_STORAGE_PATH'] ?? dirname(__DIR__) . '/var/imports');
+    if (!is_dir($basePath) && !mkdir($basePath, 0770, true) && !is_dir($basePath)) {
+        throw new RuntimeException("Nepavyko sukurti importo saugyklos: {$basePath}");
+    }
+
+    $handle = fopen(rtrim($basePath, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . '.import.lock', 'c');
+    if ($handle === false || !flock($handle, LOCK_EX | LOCK_NB)) {
+        throw new RuntimeException('Kitas LEA importas jau vyksta. Šis paleidimas sustabdytas.');
+    }
+
+    return $handle;
 }
 
-/** XLSX files are ZIP archives — they start with the PK magic bytes. */
-function is_valid_xlsx(string $data): bool
+function is_valid_date(string $date): bool
 {
-    return strlen($data) > 4 && substr($data, 0, 2) === 'PK';
+    $parsed = DateTimeImmutable::createFromFormat('!Y-m-d', $date);
+    return $parsed !== false && $parsed->format('Y-m-d') === $date;
 }
 
-function notify_admin_error(string $msg): void
+function log_message(string $message): void
+{
+    echo '[' . date('H:i:s') . '] ' . $message . "\n";
+}
+
+function log_error(string $message): void
+{
+    fwrite(STDERR, '[KLAIDA] ' . $message . "\n");
+    error_log('[import.php] ' . $message);
+}
+
+function notify_admin_error(string $message): void
 {
     $adminEmail = $_ENV['ADMIN_EMAIL'] ?? null;
-    if (!$adminEmail) return;
-    @mail($adminEmail, '[kuras.pricer.lt] Import ERROR', $msg);
+    if (!is_string($adminEmail) || !filter_var($adminEmail, FILTER_VALIDATE_EMAIL)) {
+        return;
+    }
+
+    @mail($adminEmail, '[kuras.pricer.lt] LEA importo klaida', $message);
 }
