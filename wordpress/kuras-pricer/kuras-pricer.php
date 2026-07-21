@@ -2,9 +2,9 @@
 /**
  * Plugin Name: Kuras Pricer
  * Description: LEA kuro kainų paieška, reitingai, žemėlapis ir degalinių puslapiai Pricer.lt svetainei.
- * Version: 0.3.0
+ * Version: 0.3.1
  * Requires at least: 6.4
- * Requires PHP: 8.2
+ * Requires PHP: 8.1
  * Author: Pricer.lt
  * Text Domain: kuras-pricer
  */
@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('KURAS_PRICER_VERSION', '0.3.0');
+define('KURAS_PRICER_VERSION', '0.3.1');
 define('KURAS_PRICER_FILE', __FILE__);
 define('KURAS_PRICER_PATH', plugin_dir_path(__FILE__));
 define('KURAS_PRICER_URL', plugin_dir_url(__FILE__));

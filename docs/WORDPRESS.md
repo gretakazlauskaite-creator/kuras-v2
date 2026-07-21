@@ -4,6 +4,9 @@ Phase 3 adds the installable plugin in `wordpress/kuras-pricer`. WordPress remai
 the presentation, editorial, advertising and SEO layer; it never imports LEA
 files and does not own fuel-price tables.
 
+The plugin supports PHP 8.1 and newer. This requirement is intentionally
+independent from the backend service, which remains on PHP 8.2.
+
 ## Install on staging
 
 1. Copy `wordpress/kuras-pricer` to `wp-content/plugins/kuras-pricer`.

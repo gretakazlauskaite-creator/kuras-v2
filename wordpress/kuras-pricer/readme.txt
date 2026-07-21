@@ -1,8 +1,8 @@
 === Kuras Pricer ===
 Contributors: pricer
 Requires at least: 6.4
-Requires PHP: 8.2
-Stable tag: 0.3.0
+Requires PHP: 8.1
+Stable tag: 0.3.1
 License: Proprietary
 
 LEA kuro kainų paieška ir Pricer.lt WordPress integracija.
