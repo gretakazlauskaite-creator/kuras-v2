@@ -24,6 +24,7 @@ ddev mysql < migrations/002_normalize_location.sql
 ddev mysql < migrations/003_add_indexes.sql
 ddev mysql < migrations/004_fix_city_names.sql
 ddev mysql < migrations/005_trusted_imports.sql
+ddev mysql < migrations/006_core_api.sql
 
 # 4. Copy env config
 cp .env.example .env
@@ -98,3 +99,14 @@ migrations/     SQL schema
 Prices come from the [official LEA page](https://www.ena.lt/degalu-kainos-degalinese/).
 LEA collects and publishes the 10:00 prices on working days; this source is
 daily official data, not real-time data.
+
+## Public API v1 and review screen
+
+The versioned API starts at `/api/v1`. Its source-of-truth contract is documented
+in [`docs/openapi.yaml`](docs/openapi.yaml). Every price response includes the
+actual source date and last successful import time. Public collection endpoints
+have bounded pagination, validation, short-lived caching, deterministic sorting,
+and consistent JSON errors.
+
+Open `/preview` for the temporary product-review screen. It consumes only API v1
+and is intentionally separate from the final WordPress/​Pricer.lt presentation.

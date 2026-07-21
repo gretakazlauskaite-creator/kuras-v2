@@ -37,8 +37,7 @@ class Router
 
         http_response_code(404);
         if (str_starts_with($path, '/api/')) {
-            header('Content-Type: application/json');
-            echo json_encode(['error' => 'Not found']);
+            \App\Http\JsonResponse::error('not_found', 'API maršrutas nerastas.', 404);
         } else {
             require dirname(__DIR__) . '/templates/404.php';
         }

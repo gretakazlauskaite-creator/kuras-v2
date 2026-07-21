@@ -3,7 +3,7 @@
 /**
  * Batch geocode all stations that lack coordinates.
  * Usage:  php bin/geocode.php [--limit=N] [--dry-run]
- * Nominatim rate-limit: 1 req/s — 700 stations ≈ 12 min
+ * Requires GEOCODING_ENDPOINT for a contracted or self-hosted provider.
  */
 
 require __DIR__ . '/../src/Bootstrap.php';
@@ -102,7 +102,7 @@ do {
         }
 
         if ($coords) {
-            $stationRepo->updateCoordinates($s['id'], $coords['lat'], $coords['lng']);
+            $stationRepo->updateCoordinates($s['id'], $coords['lat'], $coords['lng'], $coords['provider'], $coords['confidence']);
             echo "✓ {$coords['lat']}, {$coords['lng']}\n";
             $done++;
         } else {

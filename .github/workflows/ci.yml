@@ -11,13 +11,31 @@ permissions:
 jobs:
   php-tests:
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: kuras_test
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -proot"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=20
+    env:
+      TEST_DB_DSN: mysql:host=127.0.0.1;port=3306;dbname=kuras_test;charset=utf8mb4
+      TEST_DB_USER: root
+      TEST_DB_PASS: root
     steps:
       - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          extensions: mbstring, zip
+          extensions: mbstring, zip, pdo_mysql
           coverage: none
       - run: composer validate --strict --no-check-lock
       - run: composer install --no-interaction --prefer-dist
+      - run: php tests/bootstrap-database.php
       - run: composer check
