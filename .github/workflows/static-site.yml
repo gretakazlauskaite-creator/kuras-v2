@@ -37,7 +37,7 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          extensions: mbstring, zip
+          extensions: curl, mbstring, zip
           coverage: none
       - run: composer install --no-interaction --prefer-dist --no-dev
       - name: Download, validate and publish latest LEA data

@@ -38,7 +38,7 @@ try {
     } else {
         $pageHtml = http_get(LeaSourceLocator::PAGE_URL);
         $source = (new LeaSourceLocator())->locate($pageHtml);
-        $temporaryFile = download_file($source->downloadUrl);
+        $temporaryFile = download_file($source->downloadUrl, $source->pageUrl);
         $file = $temporaryFile;
     }
 
@@ -113,24 +113,70 @@ try {
     }
 }
 
-function http_get(string $url): string
+function http_get(string $url, ?string $referer = null): string
 {
-    $context = stream_context_create(['http' => [
-        'timeout' => 45,
-        'user_agent' => 'KurasPricerBot/1.0 (+https://kuras.pricer.lt)',
-        'follow_location' => 1,
-        'max_redirects' => 5,
-    ]]);
-    $body = @file_get_contents($url, false, $context);
-    if ($body === false || trim($body) === '') {
-        throw new RuntimeException("Nepavyko atsisiųsti: {$url}");
+    if (!extension_loaded('curl')) {
+        throw new RuntimeException('LEA atsisiuntimui būtinas PHP cURL plėtinys.');
     }
-    return $body;
+
+    $parts = parse_url($url);
+    if (strtolower((string) ($parts['scheme'] ?? '')) !== 'https') {
+        throw new RuntimeException('LEA atsisiuntimui leidžiami tik HTTPS adresai.');
+    }
+
+    $lastError = 'nežinoma tinklo klaida';
+    for ($attempt = 1; $attempt <= 3; ++$attempt) {
+        $handle = curl_init($url);
+        if ($handle === false) {
+            throw new RuntimeException('Nepavyko inicijuoti cURL.');
+        }
+
+        curl_setopt_array($handle, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_CONNECTTIMEOUT => 20,
+            CURLOPT_TIMEOUT => 90,
+            CURLOPT_USERAGENT => 'Mozilla/5.0 (compatible; KurasPricerBot/1.0; +https://kuras.pricer.lt)',
+            CURLOPT_HTTPHEADER => [
+                'Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/octet-stream,text/html;q=0.9,*/*;q=0.8',
+                'Accept-Language: lt-LT,lt;q=0.9,en;q=0.7',
+            ],
+            CURLOPT_ENCODING => '',
+            CURLOPT_COOKIEFILE => '',
+            CURLOPT_AUTOREFERER => true,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_SSL_VERIFYHOST => 2,
+            CURLOPT_PROTOCOLS => CURLPROTO_HTTPS,
+            CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTPS,
+        ]);
+        if ($referer !== null) {
+            curl_setopt($handle, CURLOPT_REFERER, $referer);
+        }
+
+        $body = curl_exec($handle);
+        $status = (int) curl_getinfo($handle, CURLINFO_RESPONSE_CODE);
+        $curlError = curl_error($handle);
+        curl_close($handle);
+
+        if (is_string($body) && $body !== '' && $status >= 200 && $status < 300) {
+            return $body;
+        }
+
+        $lastError = $curlError !== '' ? $curlError : "HTTP {$status}";
+        if ($attempt < 3 && ($status === 0 || $status === 408 || $status === 429 || $status >= 500)) {
+            usleep(500000 * $attempt);
+            continue;
+        }
+        break;
+    }
+
+    throw new RuntimeException("Nepavyko atsisiųsti {$url} ({$lastError}).");
 }
 
-function download_file(string $url): string
+function download_file(string $url, string $referer): string
 {
-    $body = http_get($url);
+    $body = http_get($url, $referer);
     $path = tempnam(sys_get_temp_dir(), 'lea-static-');
     if ($path === false || file_put_contents($path, $body) === false) {
         throw new RuntimeException('Nepavyko išsaugoti laikino LEA failo.');
