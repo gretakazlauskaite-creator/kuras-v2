@@ -33,6 +33,9 @@ php bin/build-static.php --output=dist --previous-data=static/data/current.json
 The previous PHP/MySQL API remains as reference code. The WordPress prototype
 is preserved separately in draft PR #4; neither is required by this MVP.
 
+The public application can still appear inside the existing WordPress page with
+one Custom HTML block and no plugin. See `docs/WORDPRESS_EMBED.md`.
+
 ## Import Script
 
 ```bash

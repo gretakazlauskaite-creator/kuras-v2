@@ -9,7 +9,7 @@ use PhpOffice\PhpSpreadsheet\Shared\Date as ExcelDate;
 
 final class LeaWorkbookParser
 {
-    public const VERSION = 'lea-xlsx-v2';
+    public const VERSION = 'lea-xlsx-v3';
 
     /** @var array<string,list<string>> */
     private const COLUMN_ALIASES = [
@@ -84,16 +84,21 @@ final class LeaWorkbookParser
                 continue;
             }
 
-            ++$rawRowCount;
             $brand = $this->normalizeBrand($this->cell($cells, $columnMap, 'brand'));
             $address = $this->cell($cells, $columnMap, 'address');
             $municipality = $this->normalizeMunicipality($this->cell($cells, $columnMap, 'municipality'));
             $city = $this->deriveCity($this->cell($cells, $columnMap, 'city'), $address, $municipality);
             $fuelLabel = $this->cell($cells, $columnMap, 'fuel_type');
-            $fuelSlug = $this->mapFuelLabel($fuelLabel);
             $priceRaw = $this->cell($cells, $columnMap, 'price');
+            $sourceDateRaw = $this->cell($cells, $columnMap, 'source_date');
+            if ($fuelLabel === '' && $priceRaw === '' && $sourceDateRaw === '') {
+                continue;
+            }
+
+            ++$rawRowCount;
+            $fuelSlug = $this->mapFuelLabel($fuelLabel);
             $price = $this->parsePrice($priceRaw);
-            $sourceDate = $this->parseSourceDate($this->cell($cells, $columnMap, 'source_date'));
+            $sourceDate = $this->parseSourceDate($sourceDateRaw);
 
             if ($sourceDate !== null) {
                 $sourceDates[$sourceDate] = true;
@@ -123,7 +128,19 @@ final class LeaWorkbookParser
             }
 
             if (isset($groupedStations[$stationKey]['prices'][$fuelSlug])) {
-                $issues[] = "Eilutė {$rowIndex}: pasikartojanti {$fuelSlug} kaina tai pačiai degalinei.";
+                $existingPrice = $groupedStations[$stationKey]['prices'][$fuelSlug];
+                if (abs($existingPrice - $price) < 0.000001) {
+                    continue;
+                }
+                $issues[] = sprintf(
+                    'Eilutė %d: pasikartojanti %s kaina nesutampa (%s / %s: %.3f ir %.3f).',
+                    $rowIndex,
+                    $fuelSlug,
+                    $brand,
+                    $address,
+                    $existingPrice,
+                    $price,
+                );
                 continue;
             }
             $groupedStations[$stationKey]['prices'][$fuelSlug] = $price;
