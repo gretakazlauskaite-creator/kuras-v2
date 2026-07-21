@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Palygink oficialias Lietuvos degalinių kainas pagal miestą, tinklą ir degalų rūšį.">
+  <title>Degalų kainos Lietuvoje | Pricer.lt</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3ynQJqRFYRoqaFhFVnK7Hc3fqw6kM=" crossorigin="">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <header class="site-header"><div class="shell"><a class="logo" href="https://pricer.lt/" aria-label="Pricer.lt">PRICER<span>.LT</span></a><nav><a href="https://pricer.lt/">Naujienos</a><a href="#kainos">Kuro kainos</a><a href="#apie">Apie duomenis</a></nav></div></header>
+  <main class="app" id="kainos">
+    <section class="hero"><div class="shell hero-grid"><div><p class="eyebrow">Oficialūs LEA duomenys</p><h1>Rask pigesnius degalus šalia savęs</h1><p class="lead">Palygink Lietuvos degalinių kainas pagal miestą, tinklą ar degalų rūšį – vienoje aiškioje vietoje.</p><p class="source" data-source><span></span>Kraunami naujausi duomenys…</p></div><dl class="summary"><div><dt>Vidutinė kaina</dt><dd data-average>—</dd></div><div><dt>Mažiausia kaina</dt><dd data-minimum>—</dd></div><div><dt>Degalinių su kaina</dt><dd data-count>—</dd></div></dl></div></section>
+    <div class="shell content">
+      <div class="notice" data-notice hidden role="status"></div>
+      <div class="fuel-tabs" data-fuels role="tablist" aria-label="Degalų rūšis"></div>
+      <form class="filters" data-filters>
+        <label class="search"><span>Paieška</span><input data-search type="search" placeholder="Miestas, adresas ar tinklas"></label>
+        <label><span>Miestas</span><select data-city><option value="">Visa Lietuva</option></select></label>
+        <label><span>Tinklas</span><select data-brand><option value="">Visi tinklai</option></select></label>
+        <label><span>Rūšiavimas</span><select data-sort><option value="price-asc">Pigiausi pirmiausia</option><option value="price-desc">Brangiausi pirmiausia</option><option value="name">Pagal pavadinimą</option><option value="distance" disabled>Pagal atstumą</option></select></label>
+        <button class="primary" type="submit">Rodyti kainas</button>
+      </form>
+      <section class="top"><header class="section-head"><div><p class="eyebrow">Pigiausi pagal pasirinktus filtrus</p><h2>Degalinių TOP 3</h2></div><strong data-top-fuel>—</strong></header><div class="top-grid" data-top></div></section>
+      <div class="view-tabs" role="tablist"><button class="active" data-view-button="list" type="button">Kainų sąrašas</button><button data-view-button="map" type="button">Žemėlapis</button></div>
+      <div class="results">
+        <section class="panel list-panel" data-view="list"><header class="panel-head"><div><p class="eyebrow">Kainų lentelė</p><h2>Degalinės</h2></div><span data-results-count>—</span></header><div class="table-wrap"><table><thead><tr><th>Degalinė</th><th>Vieta</th><th>Kaina</th></tr></thead><tbody data-table></tbody></table></div><nav class="pagination"><button data-prev type="button">Atgal</button><span data-page>—</span><button data-next type="button">Toliau</button></nav></section>
+        <section class="panel map-panel" data-view="map"><header class="panel-head"><div><p class="eyebrow">Žemėlapis</p><h2>Kainos aplinkui</h2></div><button class="location" data-locate type="button">Naudoti mano vietą</button></header><p class="consent">Vieta naudojama tik artimiausioms degalinėms parodyti ir nėra išsaugoma.</p><div class="map" data-map></div><p class="map-note" data-map-note>Žemėlapis kraunamas…</p></section>
+      </div>
+      <aside class="data-note" id="apie"><b>i</b><div><strong>Kaip atnaujinamos kainos?</strong><p>LEA skelbia darbo dienomis 10:00 val. surinktas kainas. GitHub kasdien patikrina šaltinį ir svetainę atnaujina tik tada, kai visas failas praeina automatines patikras.</p><a href="https://www.ena.lt/degalu-kainos-degalinese/" rel="external">Duomenų šaltinis – LEA</a></div></aside>
+    </div>
+  </main>
+  <footer><div class="shell">Kuro kainų palyginimas · Pricer.lt</div></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="data/current.js"></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

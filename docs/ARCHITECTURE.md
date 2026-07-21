@@ -6,26 +6,28 @@
 LEA page and source workbook
         |
         v
-scheduled ingestion worker
+scheduled GitHub Actions worker
         |
         +--> immutable raw source + checksum
         |
         v
-staging parser and validation report
+versioned parser and validation report
         |
         v
-atomic publish to core database
+atomic static snapshot (JSON + HTML)
         |
-        +--> versioned public API --> WordPress plugin/blocks --> kuras.pricer.lt
+        +--> review hosting --> kuras.pricer.lt after DNS approval
         |
-        +--> monitoring, alerts, exports, analytics
+        +--> artifacts, monitoring and future history exports
 ```
 
 ## Components
 
-### Backend service
+### GitHub ingestion and static publisher
 
-Use a maintained PHP framework and supported PHP release so scheduling, queues, validation, database migrations, structured logging, rate limiting, and tests follow established conventions. The current custom MVC code is reference material, not the long-term framework.
+The MVP uses a reviewed PHP command in GitHub Actions. It shares the existing
+versioned LEA parser and validation rules, then emits a bounded JSON snapshot.
+There is no runtime PHP server, database or WordPress dependency.
 
 Responsibilities:
 
@@ -33,12 +35,16 @@ Responsibilities:
 - Retain raw files and import metadata.
 - Parse, normalize, validate, stage, and atomically publish prices.
 - Resolve stable station identities and coordinate overrides.
-- Serve station, price, ranking, history, map, and health APIs.
-- Run alerts and operational jobs through a queue rather than web requests.
+- Generate the public snapshot only after complete validation.
+- Preserve the raw source and validation report as a workflow artifact.
+- Keep the last successful deployment live when a later import fails.
 
-### Database
+### Data storage
 
-Use MySQL 8 with a separate application schema from WordPress. Important additions beyond the legacy schema:
+For the first static milestone, the current validated snapshot is committed as
+`static/data/current.json` and every successful commit provides basic history.
+Workflow artifacts retain the raw workbook and validation report. A database or
+object store becomes necessary before long-term station history and alerts.
 
 - `source_files` for URL, source date, checksum, storage key, and retrieval metadata.
 - `import_runs` for state, timing, parser version, counts, validation, and errors.
@@ -49,7 +55,9 @@ Use MySQL 8 with a separate application schema from WordPress. Important additio
 
 ### WordPress integration
 
-A dedicated `kuras-pricer` plugin owns presentation integration:
+WordPress is not required to run the fuel application. It may later provide
+Pricer article cards through its public REST API. The previous plugin is retained
+only as reference and rollback material.
 
 - Server-rendered blocks or shortcodes for best prices, rankings, and tables.
 - Interactive map application backed by the public API.
@@ -57,7 +65,8 @@ A dedicated `kuras-pricer` plugin owns presentation integration:
 - Pricer.lt design tokens, navigation, ad slots, analytics, and consent integration.
 - Pricer news queries by an agreed category/tag, with cached article cards.
 
-WordPress must keep showing the last known-good data if the API has a temporary failure, together with the source date.
+The static deployment always displays its source date and keeps serving the last
+known-good snapshot when an import fails.
 
 ### Maps and geocoding
 
@@ -99,4 +108,3 @@ WordPress must keep showing the last known-good data if the API has a temporary 
 ## Automation boundary
 
 Routine work can be automated: imports, validation, tests, dependency PRs, deploys, monitoring, backups, and incident diagnostics. Human approval remains necessary for legal/data-use decisions, production credentials, provider contracts, major product changes, visual acceptance, and risky production operations.
-
