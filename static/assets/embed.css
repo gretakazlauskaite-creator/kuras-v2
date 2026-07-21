@@ -1,0 +1,4 @@
+.embedded body{background:transparent}
+.embedded .site-header,.embedded footer{display:none}
+.embedded .hero{padding-top:48px}
+.embedded .content{padding-bottom:30px}

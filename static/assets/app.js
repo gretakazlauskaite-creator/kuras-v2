@@ -1,5 +1,7 @@
 (() => {
   'use strict';
+  const embedded = new URLSearchParams(window.location.search).get('embed') === '1';
+  if (embedded) document.documentElement.classList.add('embedded');
   const fuelLabels = {pb95:'Pb 95',pb98:'Pb 98',diesel:'Dyzelinas',lpg:'Dujos'};
   const state = {data:null,fuel:'pb95',page:1,perPage:15,lat:null,lng:null,map:null,markers:null};
   const $ = selector => document.querySelector(selector);
@@ -30,5 +32,7 @@
   function renderAll(){renderTabs();const rows=fuelStations();renderSummary(rows);renderTop(rows);renderTable(rows);renderMap(rows);}
   function locate(){if(!navigator.geolocation)return;navigator.geolocation.getCurrentPosition(p=>{state.lat=p.coords.latitude;state.lng=p.coords.longitude;$('[data-sort] option[value="distance"]').disabled=false;$('[data-sort]').value='distance';state.page=1;renderAll();if(state.map)state.map.setView([state.lat,state.lng],11);$('[data-locate]').textContent='Vieta nustatyta';},()=>{$('[data-notice]').hidden=false;$('[data-notice]').textContent='Vietos nustatyti nepavyko. Patikrink naršyklės leidimą.';});}
   async function start(){try{if(window.__KURAS_DATA){state.data=window.__KURAS_DATA;}else{const response=await fetch('data/current.json',{cache:'no-store'});if(!response.ok)throw new Error();state.data=await response.json();}options('[data-city]',new Set(state.data.stations.map(s=>s.city).filter(Boolean)),'Visa Lietuva');options('[data-brand]',new Set(state.data.stations.map(s=>s.brand).filter(Boolean)),'Visi tinklai');renderSource();renderAll();}catch(_){const n=$('[data-notice]');n.hidden=false;n.textContent='Kainų failo gauti nepavyko. Automatinis atnaujinimas išsaugojo paskutinę gerą versiją.';}}
+  function publishHeight(){if(!embedded||window.parent===window)return;window.parent.postMessage({type:'kuras-pricer:height',height:Math.ceil(document.documentElement.scrollHeight)},'*');}
+  if(embedded){if('ResizeObserver' in window)new ResizeObserver(publishHeight).observe(document.body);window.addEventListener('load',publishHeight);}
   $('[data-filters]').onsubmit=e=>{e.preventDefault();state.page=1;renderAll();};$('[data-prev]').onclick=()=>{state.page--;renderTable(fuelStations());};$('[data-next]').onclick=()=>{state.page++;renderTable(fuelStations());};$('[data-locate]').onclick=locate;document.querySelectorAll('[data-view-button]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-view-button]').forEach(x=>x.classList.toggle('active',x===b));$('.results').classList.toggle('show-map',b.dataset.viewButton==='map');if(state.map)setTimeout(()=>state.map.invalidateSize(),50);});start();
 })();

@@ -53,9 +53,11 @@ jobs:
             dist/data/current.js
           retention-days: 7
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: lea-import-${{ github.run_id }}
           path: var/import-artifact
+          if-no-files-found: warn
           retention-days: 90
 
   save-snapshot:

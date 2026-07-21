@@ -48,6 +48,13 @@ try {
         throw new RuntimeException('Nepavyko apskaičiuoti šaltinio failo kontrolinės sumos.');
     }
 
+    if ($archiveOutput !== null) {
+        recreate_directory($archiveOutput);
+        if (!copy($file, $archiveOutput . '/source-' . $source->sourceDate . '-' . $checksum . '.xlsx')) {
+            throw new RuntimeException('Nepavyko išsaugoti tikrinimo šaltinio kopijos.');
+        }
+    }
+
     $parsed = (new LeaWorkbookParser())->parse($file);
     $previous = read_previous_data($previousDataPath);
     $validator = $fixtureMode
@@ -65,6 +72,17 @@ try {
         fwrite(STDERR, "ĮSPĖJIMAS: {$warning}\n");
     }
     if (!$validation->isValid()) {
+        if ($archiveOutput !== null) {
+            write_json($archiveOutput . '/import-report.json', [
+                'status' => 'rejected',
+                'source_date' => $source->sourceDate,
+                'checked_at' => gmdate('c'),
+                'checksum_sha256' => $checksum,
+                'validation' => $validation->metrics,
+                'warnings' => $validation->warnings,
+                'errors' => $validation->errors,
+            ]);
+        }
         throw new RuntimeException("LEA duomenų patikra nepavyko:\n- " . implode("\n- ", $validation->errors));
     }
 
@@ -92,10 +110,6 @@ try {
     ]);
 
     if ($archiveOutput !== null) {
-        recreate_directory($archiveOutput);
-        if (!copy($file, $archiveOutput . '/source-' . $source->sourceDate . '-' . $checksum . '.xlsx')) {
-            throw new RuntimeException('Nepavyko išsaugoti tikrinimo šaltinio kopijos.');
-        }
         if (!copy($output . '/data/import-report.json', $archiveOutput . '/import-report.json')) {
             throw new RuntimeException('Nepavyko išsaugoti importo ataskaitos kopijos.');
         }
