@@ -110,3 +110,11 @@ and consistent JSON errors.
 
 Open `/preview` for the temporary product-review screen. It consumes only API v1
 and is intentionally separate from the final WordPress/​Pricer.lt presentation.
+
+## WordPress experience
+
+The installable Phase 3 plugin lives in `wordpress/kuras-pricer`. It provides the
+Gutenberg block and `[kuras_pricer]` shortcode, a cached API proxy, mobile-first
+filters/table/map with opt-in GPS, rankings, station history pages, Pricer news
+cards, and an ad-slot hook. Staging installation and acceptance checks are in
+[`docs/WORDPRESS.md`](docs/WORDPRESS.md).

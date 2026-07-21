@@ -17,7 +17,7 @@
         "import": "php bin/import.php",
         "test": "phpunit",
         "check": [
-            "@php -r '$files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(\"src\")); foreach ($files as $file) { if ($file->getExtension() === \"php\") { passthru(\"php -l \" . escapeshellarg($file->getPathname()), $code); if ($code !== 0) exit($code); }}'",
+            "@php -r '$roots = [\"src\", \"wordpress\"]; foreach ($roots as $root) { $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root)); foreach ($files as $file) { if ($file->getExtension() === \"php\") { passthru(\"php -l \" . escapeshellarg($file->getPathname()), $code); if ($code !== 0) exit($code); }} }'",
             "@php -l bin/import.php",
             "@test"
         ]
