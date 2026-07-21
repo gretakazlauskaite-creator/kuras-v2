@@ -39,3 +39,18 @@ jobs:
       - run: composer install --no-interaction --prefer-dist
       - run: php tests/bootstrap-database.php
       - run: composer check
+
+  static-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, zip
+          coverage: none
+      - run: composer install --no-interaction --prefer-dist
+      - name: Build from the sanitized LEA fixture
+        run: php bin/build-static.php --file=tests/Fixtures/lea_prices_valid.xlsx --source-date=2026-07-17 --fixture --output=dist --archive-output=var/import-artifact
+      - name: Verify generated public files
+        run: test -s dist/index.html && test -s dist/data/current.json && test -s dist/data/current.js && test -s dist/data/import-report.json && test -s var/import-artifact/import-report.json

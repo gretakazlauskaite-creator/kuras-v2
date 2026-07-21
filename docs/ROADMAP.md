@@ -48,18 +48,19 @@ Acceptance:
 
 - All MVP queries return correct source dates and deterministic results within agreed performance budgets.
 
-## Phase 3 — WordPress experience
+## Phase 3 — GitHub-first static experience
 
 Deliverables:
 
-- `kuras-pricer` WordPress plugin and configurable API client.
+- Standalone static application and generated public JSON contract.
 - Mobile-first homepage, sortable table, detailed filters, map with GPS consent, rankings, station pages, and history charts.
 - Pricer.lt visual tokens and editorial/ad integration.
-- Cached Pricer news cards by approved category/tag.
+- Automated GitHub Pages review deployment and later production static hosting.
+- Optional Pricer news cards through the public WordPress REST API.
 
 Acceptance:
 
-- The main user journeys work on representative mobile and desktop sizes, including graceful API failure and stale-data states.
+- The main user journeys work on representative mobile and desktop sizes, including graceful failed-import and stale-data states, without a WordPress plugin.
 
 ## Phase 4 — SEO, accessibility, and growth
 
@@ -94,4 +95,3 @@ Acceptance:
 - Email/notification provider and incident channel.
 - Legal confirmation for LEA data reuse, attribution, privacy, cookies, and alerts.
 - MVP languages and which nice-to-have features move after launch.
-

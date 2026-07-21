@@ -1,0 +1,97 @@
+name: Fuel data and static site
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'static/**'
+      - 'bin/build-static.php'
+      - 'src/Service/StaticDataExporter.php'
+      - 'src/Service/Import/**'
+      - '.github/workflows/static-site.yml'
+  schedule:
+    - cron: '30 11 * * 1-5'
+      timezone: Europe/Vilnius
+  push:
+    branches: [main]
+    paths:
+      - 'static/**'
+      - '!static/data/**'
+      - 'bin/build-static.php'
+      - 'src/Service/StaticDataExporter.php'
+      - 'src/Service/Import/**'
+      - '.github/workflows/static-site.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, zip
+          coverage: none
+      - run: composer install --no-interaction --prefer-dist --no-dev
+      - name: Download, validate and publish latest LEA data
+        run: php bin/build-static.php --output=dist --previous-data=static/data/current.json --archive-output=var/import-artifact
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: validated-snapshot
+          path: |
+            dist/data/current.json
+            dist/data/current.js
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lea-import-${{ github.run_id }}
+          path: var/import-artifact
+          retention-days: 90
+
+  save-snapshot:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: validated-snapshot
+          path: var/snapshot
+      - name: Save the latest validated snapshot in GitHub
+        continue-on-error: true
+        run: |
+          cp var/snapshot/current.json static/data/current.json
+          cp var/snapshot/current.js static/data/current.js
+          git config user.name "kuras-data-bot"
+          git config user.email "kuras-data-bot@users.noreply.github.com"
+          git add static/data/current.json static/data/current.js
+          git diff --cached --quiet || git commit -m "Update LEA fuel prices [skip ci]"
+          git push
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy GitHub Pages preview
+        id: deployment
+        uses: actions/deploy-pages@v4

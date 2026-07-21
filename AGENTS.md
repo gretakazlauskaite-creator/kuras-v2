@@ -2,7 +2,7 @@
 
 ## Product goal
 
-Build and operate a Lithuanian fuel-price comparison platform whose routine data ingestion, validation, publishing, testing, deployment, and monitoring are automated. WordPress is the public presentation, editorial, and SEO layer. Fuel-price ingestion and business logic live outside WordPress behind a versioned API.
+Build and operate a Lithuanian fuel-price comparison platform whose routine data ingestion, validation, publishing, testing, deployment, and monitoring are automated. The MVP is a GitHub-first static application: GitHub Actions produces a validated public JSON snapshot and deployable HTML. WordPress remains only an optional editorial source, not a runtime dependency.
 
 ## Source-of-truth rules
 
@@ -15,11 +15,12 @@ Build and operate a Lithuanian fuel-price comparison platform whose routine data
 
 ## Architecture guardrails
 
-- Keep WordPress themes and blocks presentation-only. They consume the public API and must not scrape LEA or own price tables.
-- Keep ingestion, station identity, price history, geocoding, rankings, and alerts in the backend service.
+- Keep the public static application presentation-only. It consumes the generated public JSON and must not scrape LEA in visitors' browsers.
+- Keep ingestion, validation, station identity, price history, geocoding, and publishing in reviewed GitHub automation or a future replaceable backend service.
 - Hide third-party providers behind interfaces so data, map tiles, geocoding, mail, and monitoring providers can be replaced without rewriting product logic.
 - Do not use the public Nominatim endpoint for recurring bulk geocoding. Use a compliant provider or a self-hosted service and cache results.
 - Do not expose secrets, raw database credentials, admin defaults, or provider tokens in the repository.
+- Never publish a failed or partial candidate. A failed GitHub job must leave the last successful Pages deployment and committed snapshot untouched.
 
 ## Quality and security
 
@@ -37,4 +38,3 @@ Build and operate a Lithuanian fuel-price comparison platform whose routine data
 3. Run formatting, static analysis, unit tests, integration tests, and the source-fixture import test.
 4. Open a draft PR with a concise risk and rollback note.
 5. Merge only after the milestone acceptance criteria are satisfied.
-
