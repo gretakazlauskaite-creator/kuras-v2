@@ -1,0 +1,4224 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-07-22T12:42:25.476Z",
+  "source": {
+    "name": "OpenStreetMap fuel stations",
+    "url": "https://www.openstreetmap.org/",
+    "license": "ODbL"
+  },
+  "summary": {
+    "lea_stations": 728,
+    "osm_fuel_stations": 772,
+    "matched_stations": 526
+  },
+  "stations": {
+    "00f145887f5d0fce": {
+      "latitude": 55.584861,
+      "longitude": 24.87846,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 207228828
+    },
+    "020008e55dccec84": {
+      "latitude": 54.672591,
+      "longitude": 25.198263,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13683469649
+    },
+    "020980b3b68efd01": {
+      "latitude": 54.949877,
+      "longitude": 23.873822,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 544257640
+    },
+    "029bbbdd08ffffb0": {
+      "latitude": 54.699246,
+      "longitude": 25.260196,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13667420955
+    },
+    "02dad939801edd20": {
+      "latitude": 55.594182,
+      "longitude": 23.179498,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 217178756
+    },
+    "036c484dcacb1054": {
+      "latitude": 55.137823,
+      "longitude": 24.193392,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1006831779
+    },
+    "038eb09588218f0b": {
+      "latitude": 55.922144,
+      "longitude": 23.297115,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 88060843
+    },
+    "038fef4bff644f97": {
+      "latitude": 54.736921,
+      "longitude": 25.232031,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 69358093
+    },
+    "039a7a3d39bb1c88": {
+      "latitude": 55.719216,
+      "longitude": 21.141137,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 88726335
+    },
+    "03c1a99e1560286f": {
+      "latitude": 54.655065,
+      "longitude": 25.270667,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13670133438
+    },
+    "0511daaaeb4f8e14": {
+      "latitude": 55.242038,
+      "longitude": 24.742922,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13711450012
+    },
+    "05d6871cb45fc466": {
+      "latitude": 54.66267,
+      "longitude": 25.234738,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 52087174
+    },
+    "05f356054bb37dae": {
+      "latitude": 54.713882,
+      "longitude": 25.209003,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1274642719
+    },
+    "063c1315e5a7bfc0": {
+      "latitude": 54.90257,
+      "longitude": 23.762834,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 757487019
+    },
+    "06bdb472c9a07b59": {
+      "latitude": 54.218344,
+      "longitude": 24.565626,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 227111274
+    },
+    "06dd23216b3907e5": {
+      "latitude": 55.541326,
+      "longitude": 25.134941,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 959781929
+    },
+    "0707c2b17d1423e9": {
+      "latitude": 55.897885,
+      "longitude": 23.351706,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 258573448
+    },
+    "074cc33d6c53e093": {
+      "latitude": 55.904952,
+      "longitude": 23.328068,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 258573449
+    },
+    "075919812db700db": {
+      "latitude": 55.656655,
+      "longitude": 21.182442,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 159676059
+    },
+    "07be3ef9855fb3a8": {
+      "latitude": 55.521162,
+      "longitude": 24.312649,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 768606592
+    },
+    "07ca40aab34bf635": {
+      "latitude": 54.555675,
+      "longitude": 23.375495,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 893455745
+    },
+    "07cff068e052d4f3": {
+      "latitude": 56.069531,
+      "longitude": 24.387881,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 3764340045
+    },
+    "0914e63df36174f8": {
+      "latitude": 55.286579,
+      "longitude": 23.972186,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 132365094
+    },
+    "094ade8d60714519": {
+      "latitude": 55.922503,
+      "longitude": 23.357955,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 202944662
+    },
+    "0a881c973d915a93": {
+      "latitude": 54.925266,
+      "longitude": 23.890489,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 262873173
+    },
+    "0a9dd546026a53d5": {
+      "latitude": 54.927344,
+      "longitude": 23.999206,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 541530419
+    },
+    "0ac5f668876bd49e": {
+      "latitude": 55.30088,
+      "longitude": 20.979876,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13683535225
+    },
+    "0b05a4a45d2d0cee": {
+      "latitude": 54.339851,
+      "longitude": 23.163063,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 232568821
+    },
+    "0b066e24f4384a94": {
+      "latitude": 55.738859,
+      "longitude": 24.310136,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 443185372
+    },
+    "0bef8bbad5f58f20": {
+      "latitude": 55.692789,
+      "longitude": 21.179784,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 145034736
+    },
+    "0ca14a5481138903": {
+      "latitude": 55.786103,
+      "longitude": 22.670903,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 520745385
+    },
+    "0caf82e7e841cf65": {
+      "latitude": 54.694191,
+      "longitude": 25.263426,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 93272968
+    },
+    "0cdace7119e06604": {
+      "latitude": 54.710143,
+      "longitude": 25.162054,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 131571137
+    },
+    "0d8482327cd462be": {
+      "latitude": 54.633296,
+      "longitude": 25.150729,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 81555330
+    },
+    "0e45a451a6509ac2": {
+      "latitude": 55.688911,
+      "longitude": 21.155177,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13659529017
+    },
+    "0e9e5313197b8de2": {
+      "latitude": 54.82821,
+      "longitude": 23.873085,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 372853765
+    },
+    "0edfe45490062af0": {
+      "latitude": 55.773185,
+      "longitude": 23.656166,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 151241464
+    },
+    "0f3e136f3ae3926f": {
+      "latitude": 55.255114,
+      "longitude": 25.990569,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 714474231
+    },
+    "0fd6d265753c1266": {
+      "latitude": 56.259407,
+      "longitude": 21.530114,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 602228631
+    },
+    "1121116e3a7a042b": {
+      "latitude": 54.784139,
+      "longitude": 22.873383,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 553282037
+    },
+    "11dec71ed5cc11ce": {
+      "latitude": 54.644204,
+      "longitude": 25.207018,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13653607315
+    },
+    "127640853d0adc0f": {
+      "latitude": 56.099199,
+      "longitude": 23.26583,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 203114542
+    },
+    "1328837809b0bc62": {
+      "latitude": 56.115276,
+      "longitude": 24.470681,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 236961354
+    },
+    "13e91bbd5a2ffc46": {
+      "latitude": 55.464594,
+      "longitude": 21.47036,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 100072705
+    },
+    "146f96e760b2da8b": {
+      "latitude": 56.003941,
+      "longitude": 22.244746,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 207910665
+    },
+    "150fba2822319177": {
+      "latitude": 54.903137,
+      "longitude": 23.982734,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 501755498
+    },
+    "167851809177a46c": {
+      "latitude": 54.681006,
+      "longitude": 25.411992,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1111737935
+    },
+    "16c0a8da72841abc": {
+      "latitude": 55.727745,
+      "longitude": 24.348805,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13670157501
+    },
+    "17127be7a4840568": {
+      "latitude": 54.913149,
+      "longitude": 23.926074,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 375587655
+    },
+    "17434d9b952b5a9e": {
+      "latitude": 55.720816,
+      "longitude": 21.152496,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 209017906
+    },
+    "17c989dc40b89544": {
+      "latitude": 54.93392,
+      "longitude": 23.917579,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 315867766
+    },
+    "182e849bbad37002": {
+      "latitude": 54.554367,
+      "longitude": 23.362362,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 893455731
+    },
+    "184208d6c2a67906": {
+      "latitude": 54.671609,
+      "longitude": 25.270089,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13667439039
+    },
+    "1a0feb827d70350a": {
+      "latitude": 54.927091,
+      "longitude": 23.661991,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 592952590
+    },
+    "1a51806485e32c97": {
+      "latitude": 55.748582,
+      "longitude": 24.393264,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 403490809
+    },
+    "1a5fdcebafa295df": {
+      "latitude": 54.906862,
+      "longitude": 23.872822,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13668332605
+    },
+    "1a8ee63241163849": {
+      "latitude": 54.71083,
+      "longitude": 25.24042,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 62379075
+    },
+    "1ad3af459e3a9474": {
+      "latitude": 55.974982,
+      "longitude": 24.740128,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1414964656
+    },
+    "1b1af9efdc6ecd65": {
+      "latitude": 55.248294,
+      "longitude": 22.303029,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 231589034
+    },
+    "1bb563fe187da981": {
+      "latitude": 54.842546,
+      "longitude": 23.849681,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 951700614
+    },
+    "1c5ada49088a548f": {
+      "latitude": 55.704051,
+      "longitude": 24.381162,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 573405602
+    },
+    "1d55f517b99c46d8": {
+      "latitude": 55.903078,
+      "longitude": 21.830166,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 220850035
+    },
+    "1d6b1f41246edc41": {
+      "latitude": 55.076799,
+      "longitude": 22.751884,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 376167778
+    },
+    "1e37622046e229ce": {
+      "latitude": 54.658115,
+      "longitude": 23.033243,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 211456305
+    },
+    "1e3e795af942a324": {
+      "latitude": 55.265316,
+      "longitude": 22.308834,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1323298029
+    },
+    "1e41eeba5c66ff6a": {
+      "latitude": 54.652953,
+      "longitude": 25.272204,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 148831857
+    },
+    "1e7c3d504bcb686a": {
+      "latitude": 54.384753,
+      "longitude": 24.049992,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 131114720
+    },
+    "1ed97c5ad1269ca3": {
+      "latitude": 55.917865,
+      "longitude": 23.297526,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 1023445174
+    },
+    "1f421d976f025d70": {
+      "latitude": 54.668402,
+      "longitude": 25.111677,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 54893256
+    },
+    "2187dd1d3091c657": {
+      "latitude": 56.014812,
+      "longitude": 22.951435,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 193341680
+    },
+    "21e5d93ea92ac89b": {
+      "latitude": 55.661111,
+      "longitude": 21.176217,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 554965069
+    },
+    "2301bb91cecd2c3b": {
+      "latitude": 54.917685,
+      "longitude": 23.863066,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 213435023
+    },
+    "23805911bbfb07fc": {
+      "latitude": 54.928358,
+      "longitude": 23.97391,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 703331637
+    },
+    "23b0749b14a2eee4": {
+      "latitude": 54.889459,
+      "longitude": 23.804647,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 921432566
+    },
+    "24a1420ce467c02b": {
+      "latitude": 54.918224,
+      "longitude": 24.039668,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 397161195
+    },
+    "26304af2d24edbfe": {
+      "latitude": 55.753881,
+      "longitude": 21.131339,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 88726345
+    },
+    "263140d76f543917": {
+      "latitude": 54.917376,
+      "longitude": 24.0348,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 557959907
+    },
+    "2644c24b010aa655": {
+      "latitude": 54.924924,
+      "longitude": 23.942323,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 146533349
+    },
+    "26bd42187ded7e38": {
+      "latitude": 54.894833,
+      "longitude": 23.944193,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13686908424
+    },
+    "27963ca0f2cde41e": {
+      "latitude": 54.658288,
+      "longitude": 25.158852,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13657007197
+    },
+    "29a7d9f4e6380edb": {
+      "latitude": 54.669561,
+      "longitude": 25.279054,
+      "confidence": 0.664,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 72845352
+    },
+    "2a702a957536f3dc": {
+      "latitude": 54.578844,
+      "longitude": 24.170639,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 128537763
+    },
+    "2a8e17ba268bd1a9": {
+      "latitude": 54.651514,
+      "longitude": 25.269463,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 60304101
+    },
+    "2a9bc98a34d496cf": {
+      "latitude": 54.621285,
+      "longitude": 25.24294,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 66890804
+    },
+    "2aee5ef34e6fdd22": {
+      "latitude": 55.944428,
+      "longitude": 25.585563,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 383987038
+    },
+    "2af1b8b5943e6efc": {
+      "latitude": 55.999265,
+      "longitude": 22.989712,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 210603064
+    },
+    "2be9ecf3ba33399e": {
+      "latitude": 55.706468,
+      "longitude": 21.363521,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 177140270
+    },
+    "2ceed89bef368038": {
+      "latitude": 54.692177,
+      "longitude": 25.34667,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 152855125
+    },
+    "2d99740c4b0cf795": {
+      "latitude": 54.855105,
+      "longitude": 24.013124,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 208463968
+    },
+    "2e2bb244e4d0f7b2": {
+      "latitude": 55.913609,
+      "longitude": 23.336876,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 860338267
+    },
+    "2e7c3aacce34a3fa": {
+      "latitude": 54.921391,
+      "longitude": 23.810536,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 423863442
+    },
+    "2fb6d862ccf5e8b0": {
+      "latitude": 54.893051,
+      "longitude": 23.995804,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 7687514036
+    },
+    "30511d5ec4ee02eb": {
+      "latitude": 54.866449,
+      "longitude": 23.889465,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 577401453
+    },
+    "30630c8ceb92799a": {
+      "latitude": 54.658989,
+      "longitude": 23.947042,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 265748725
+    },
+    "30e8ecebc7f1f84e": {
+      "latitude": 54.703039,
+      "longitude": 25.204132,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 215547024
+    },
+    "3106e17b3a9e135a": {
+      "latitude": 55.058135,
+      "longitude": 24.263465,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 208172198
+    },
+    "3138f2fad05a2655": {
+      "latitude": 55.490064,
+      "longitude": 22.20019,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 519104414
+    },
+    "3297da8bb94e8a07": {
+      "latitude": 56.317211,
+      "longitude": 22.88483,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 254489203
+    },
+    "3329f2919cd1a19a": {
+      "latitude": 54.410822,
+      "longitude": 23.206909,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 252949804
+    },
+    "3344949e1c467ce0": {
+      "latitude": 55.485331,
+      "longitude": 22.170538,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 288905347
+    },
+    "3351761306958eb1": {
+      "latitude": 54.381862,
+      "longitude": 23.99309,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 238166779
+    },
+    "339916235bfcb433": {
+      "latitude": 55.928755,
+      "longitude": 23.297596,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 119839984
+    },
+    "33e0a42cd599dc95": {
+      "latitude": 55.240861,
+      "longitude": 24.739606,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 496318850
+    },
+    "3406eb35118257f8": {
+      "latitude": 55.811676,
+      "longitude": 23.550089,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 149418988
+    },
+    "34c3a7cc31050ff6": {
+      "latitude": 54.592805,
+      "longitude": 23.389533,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 132641453
+    },
+    "357c4f24daef11cf": {
+      "latitude": 54.767712,
+      "longitude": 25.272528,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 207762455
+    },
+    "36218b4ebf1c4df0": {
+      "latitude": 54.624255,
+      "longitude": 25.11171,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13711543980
+    },
+    "36b24d18819089a9": {
+      "latitude": 56.283874,
+      "longitude": 21.83306,
+      "confidence": 0.493,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 288567713
+    },
+    "36d77fea657a0e4b": {
+      "latitude": 54.922867,
+      "longitude": 23.869879,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 203002646
+    },
+    "37dd39263a773a4c": {
+      "latitude": 55.731763,
+      "longitude": 24.303178,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1032346020
+    },
+    "386905b44a16dbed": {
+      "latitude": 54.630629,
+      "longitude": 24.92215,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 106700881
+    },
+    "387d881c916f4832": {
+      "latitude": 55.412998,
+      "longitude": 22.821887,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 747119076
+    },
+    "393084a6bfc9efae": {
+      "latitude": 54.933611,
+      "longitude": 23.965773,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 217389600
+    },
+    "3946ccc380a24ac7": {
+      "latitude": 55.485903,
+      "longitude": 22.199627,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1488972362
+    },
+    "39b35e0522d020b4": {
+      "latitude": 54.935605,
+      "longitude": 23.870146,
+      "confidence": 0.793,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 374355878
+    },
+    "3aa94aabd2b30507": {
+      "latitude": 55.827525,
+      "longitude": 21.184985,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 100888342
+    },
+    "3be850ed2689c040": {
+      "latitude": 55.923548,
+      "longitude": 23.350098,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 167208207
+    },
+    "3c100f94b553b6f5": {
+      "latitude": 54.779293,
+      "longitude": 25.342092,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13722096826
+    },
+    "3c770d65adf4447d": {
+      "latitude": 54.883335,
+      "longitude": 23.893643,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 138515573
+    },
+    "3c9c23e5c62746eb": {
+      "latitude": 55.093725,
+      "longitude": 24.282756,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 432317471
+    },
+    "3d613f70ce0e0aa8": {
+      "latitude": 54.861356,
+      "longitude": 23.958806,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 339780194
+    },
+    "3e86544bc2cc3081": {
+      "latitude": 54.72635,
+      "longitude": 25.326577,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 54180832
+    },
+    "3e965595b75cfed7": {
+      "latitude": 55.825519,
+      "longitude": 23.523302,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1520884470
+    },
+    "3f49db2efef4c777": {
+      "latitude": 55.693867,
+      "longitude": 21.140271,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 356166277
+    },
+    "403e330447109187": {
+      "latitude": 54.666766,
+      "longitude": 25.250796,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 525229885
+    },
+    "405c968027b9726c": {
+      "latitude": 54.899048,
+      "longitude": 23.959926,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 264954098
+    },
+    "406d2c5bd7f9e048": {
+      "latitude": 54.64104,
+      "longitude": 25.184135,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 114980385
+    },
+    "40aae504a295de2f": {
+      "latitude": 54.75485,
+      "longitude": 25.271346,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 316975203
+    },
+    "410b612edf1576ca": {
+      "latitude": 55.236251,
+      "longitude": 22.297101,
+      "confidence": 0.6,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 2264382520
+    },
+    "417a73ad69fc9b01": {
+      "latitude": 54.71554,
+      "longitude": 25.291023,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 86177524
+    },
+    "41a791cb516aad59": {
+      "latitude": 54.685908,
+      "longitude": 25.430592,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 59507747
+    },
+    "41ecb60d085191ab": {
+      "latitude": 55.751451,
+      "longitude": 21.173238,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 226623663
+    },
+    "4214444381b136fa": {
+      "latitude": 54.586901,
+      "longitude": 23.384638,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 92146489
+    },
+    "429e8b121bd59806": {
+      "latitude": 54.959125,
+      "longitude": 23.866828,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 190273153
+    },
+    "44ddcc0801a412c8": {
+      "latitude": 55.684387,
+      "longitude": 21.149622,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13647536710
+    },
+    "45667cd85291e82f": {
+      "latitude": 55.980452,
+      "longitude": 23.857986,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 132264299
+    },
+    "457aef38f03959a2": {
+      "latitude": 55.704149,
+      "longitude": 21.160898,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 88660563
+    },
+    "459350347d037414": {
+      "latitude": 54.938358,
+      "longitude": 23.898308,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13672735233
+    },
+    "460d05a454e57832": {
+      "latitude": 54.887534,
+      "longitude": 23.921144,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 316969022
+    },
+    "467d48ea235cfa5f": {
+      "latitude": 55.687592,
+      "longitude": 21.144858,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 356193608
+    },
+    "46850b3fb508aa1a": {
+      "latitude": 54.597205,
+      "longitude": 25.315157,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 240232936
+    },
+    "4742215db9880458": {
+      "latitude": 55.753172,
+      "longitude": 24.312038,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 208022542
+    },
+    "478c7e224a670c3a": {
+      "latitude": 54.647521,
+      "longitude": 25.304071,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 78329689
+    },
+    "47e5f6fa6ae808c1": {
+      "latitude": 54.388337,
+      "longitude": 23.820095,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1526705268
+    },
+    "47f0f5721c6e337f": {
+      "latitude": 54.789442,
+      "longitude": 24.672754,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13705519946
+    },
+    "488eea31a5b5c305": {
+      "latitude": 56.194828,
+      "longitude": 24.77215,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 504843693
+    },
+    "48eebf85c83ac89e": {
+      "latitude": 55.125445,
+      "longitude": 26.145335,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 243451296
+    },
+    "48f0578f52f59352": {
+      "latitude": 55.656837,
+      "longitude": 21.183759,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 159676073
+    },
+    "49258852c5cc3d89": {
+      "latitude": 55.844573,
+      "longitude": 24.978987,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 252425264
+    },
+    "496ef1557ed2f796": {
+      "latitude": 55.710092,
+      "longitude": 24.37231,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 249535577
+    },
+    "4b213407578a8122": {
+      "latitude": 55.711795,
+      "longitude": 21.265047,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 367958732
+    },
+    "4b35b0453767ca20": {
+      "latitude": 54.790715,
+      "longitude": 24.669701,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1101414308
+    },
+    "4bc212fcb2f37953": {
+      "latitude": 55.90935,
+      "longitude": 23.319477,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 56128316
+    },
+    "4ce07faf0144405d": {
+      "latitude": 54.951532,
+      "longitude": 23.893635,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 227751055
+    },
+    "4dba419df7ba6e09": {
+      "latitude": 54.918009,
+      "longitude": 23.873666,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 200298634
+    },
+    "4e6a488c2133ed29": {
+      "latitude": 55.497002,
+      "longitude": 25.630778,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 212346305
+    },
+    "4e9efb6cd713804f": {
+      "latitude": 54.815962,
+      "longitude": 24.433443,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 798759087
+    },
+    "4ea8b5742d2b672b": {
+      "latitude": 55.355239,
+      "longitude": 21.680072,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13246669859
+    },
+    "4fe7e0117fde4caf": {
+      "latitude": 54.368151,
+      "longitude": 23.183766,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1456823877
+    },
+    "4ffa3ef62c3b1215": {
+      "latitude": 54.674226,
+      "longitude": 25.222726,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 93121090
+    },
+    "504f3a1c731bfcd3": {
+      "latitude": 55.890571,
+      "longitude": 21.278271,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 171687137
+    },
+    "50909a3f4aedbe52": {
+      "latitude": 54.702836,
+      "longitude": 25.263915,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 101510341
+    },
+    "51578cc378b9bf76": {
+      "latitude": 55.271716,
+      "longitude": 22.286496,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 1828713291
+    },
+    "5170c199863beb26": {
+      "latitude": 54.64334,
+      "longitude": 23.053086,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 213414943
+    },
+    "51869236c87230b7": {
+      "latitude": 54.695952,
+      "longitude": 25.43208,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 485489936
+    },
+    "51919c665437976e": {
+      "latitude": 54.952714,
+      "longitude": 23.083272,
+      "confidence": 0.493,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 606841819
+    },
+    "51e50e07cb51d26f": {
+      "latitude": 54.722213,
+      "longitude": 25.317142,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 225910582
+    },
+    "5257efe5879a1ada": {
+      "latitude": 55.477828,
+      "longitude": 25.581565,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 303670722
+    },
+    "52c37d3f85a6e12f": {
+      "latitude": 55.095503,
+      "longitude": 24.312665,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13702016270
+    },
+    "52cc384359648ced": {
+      "latitude": 54.703204,
+      "longitude": 25.257448,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 105854007
+    },
+    "5400a8cfc0c4d3b2": {
+      "latitude": 54.68084,
+      "longitude": 25.207628,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13669717242
+    },
+    "55930e0212b7f83c": {
+      "latitude": 54.706733,
+      "longitude": 25.304138,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 107289015
+    },
+    "559a0ac224e64246": {
+      "latitude": 54.728062,
+      "longitude": 25.327011,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 57403731
+    },
+    "55c11164548db2a4": {
+      "latitude": 55.675197,
+      "longitude": 21.153034,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 283547174
+    },
+    "56706f5d23bbf4ca": {
+      "latitude": 54.658914,
+      "longitude": 25.161129,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 265989350
+    },
+    "56a60f064fa8534a": {
+      "latitude": 54.873241,
+      "longitude": 25.073457,
+      "confidence": 0.864,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 85081546
+    },
+    "58540143351d9097": {
+      "latitude": 55.974461,
+      "longitude": 23.868935,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 123257632
+    },
+    "586644159342118b": {
+      "latitude": 54.379116,
+      "longitude": 23.528583,
+      "confidence": 0.493,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 154406767
+    },
+    "5977f9748c8619bf": {
+      "latitude": 55.389993,
+      "longitude": 23.130763,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 190112414
+    },
+    "59ecad4a9bd7ba50": {
+      "latitude": 56.063662,
+      "longitude": 24.425768,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 372473458
+    },
+    "5a1a1702d717d3b9": {
+      "latitude": 55.796467,
+      "longitude": 24.888841,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 495156090
+    },
+    "5a485a1c0e03f1db": {
+      "latitude": 54.562124,
+      "longitude": 23.36619,
+      "confidence": 0.864,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 264069042
+    },
+    "5b0a69fdc57a6ad1": {
+      "latitude": 55.75759,
+      "longitude": 24.367712,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 460179697
+    },
+    "5b495ae5bfd989d5": {
+      "latitude": 54.715634,
+      "longitude": 25.228708,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 60558651
+    },
+    "5b76a4276dce8ebe": {
+      "latitude": 55.954642,
+      "longitude": 23.316203,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 317174992
+    },
+    "5dbe41f74c7877c7": {
+      "latitude": 56.260729,
+      "longitude": 21.529823,
+      "confidence": 0.721,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 346366096
+    },
+    "5ecfb37f1c8783a9": {
+      "latitude": 54.915805,
+      "longitude": 23.984205,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 138513098
+    },
+    "5f1614155aec6272": {
+      "latitude": 54.703385,
+      "longitude": 25.415938,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 211336525
+    },
+    "5fdefd9c3471c720": {
+      "latitude": 55.944112,
+      "longitude": 23.331404,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 198178204
+    },
+    "5fece81fd5b8cd98": {
+      "latitude": 54.914313,
+      "longitude": 23.887732,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 617687897
+    },
+    "603f646953ad115c": {
+      "latitude": 56.01921,
+      "longitude": 25.222173,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 255642786
+    },
+    "60e12795d3fec055": {
+      "latitude": 54.720862,
+      "longitude": 25.284788,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 95018034
+    },
+    "60e320f5c2a0061f": {
+      "latitude": 55.581651,
+      "longitude": 21.285336,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 284675711
+    },
+    "6123c60880d59288": {
+      "latitude": 55.801777,
+      "longitude": 23.56378,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 366541987
+    },
+    "6127e276218f93d4": {
+      "latitude": 55.274233,
+      "longitude": 23.944967,
+      "confidence": 0.85,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 420902979
+    },
+    "614225e6116569df": {
+      "latitude": 54.864337,
+      "longitude": 24.436549,
+      "confidence": 0.65,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 568431044
+    },
+    "6149be42edad63e6": {
+      "latitude": 54.702817,
+      "longitude": 25.288245,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 62036608
+    },
+    "6223414a66ce9d12": {
+      "latitude": 54.771033,
+      "longitude": 23.765466,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 152695131
+    },
+    "623eafa70acfe23a": {
+      "latitude": 55.86352,
+      "longitude": 21.217736,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 171687136
+    },
+    "6255351957ab8007": {
+      "latitude": 54.651113,
+      "longitude": 25.150232,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 53223540
+    },
+    "6289ea7545c562cb": {
+      "latitude": 54.68643,
+      "longitude": 25.05403,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 536146644
+    },
+    "630dc429142350f2": {
+      "latitude": 54.439594,
+      "longitude": 25.327344,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 207227255
+    },
+    "639d22c15a14e70f": {
+      "latitude": 55.693081,
+      "longitude": 21.174775,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 98042396
+    },
+    "63adaba8f70b2699": {
+      "latitude": 55.946725,
+      "longitude": 25.591046,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 383987012
+    },
+    "63f2676c4d1d6cc8": {
+      "latitude": 54.727651,
+      "longitude": 25.235269,
+      "confidence": 0.721,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13914201256
+    },
+    "63fe62ed9563fb22": {
+      "latitude": 54.676777,
+      "longitude": 25.309607,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13707273704
+    },
+    "641e90405281283b": {
+      "latitude": 54.671001,
+      "longitude": 25.236624,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 87731623
+    },
+    "64b9c53e0c86e0cd": {
+      "latitude": 55.934183,
+      "longitude": 25.585699,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 122991246
+    },
+    "657f4ad66a64cb94": {
+      "latitude": 54.628488,
+      "longitude": 23.958653,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 162605575
+    },
+    "65b4fd3dc015a259": {
+      "latitude": 55.778835,
+      "longitude": 24.3648,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 760670394
+    },
+    "65bea082f9f65961": {
+      "latitude": 54.717552,
+      "longitude": 25.304486,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13663094330
+    },
+    "666ea5b6f53a4a65": {
+      "latitude": 54.932427,
+      "longitude": 23.918039,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1116107813
+    },
+    "66cc049eb72464d6": {
+      "latitude": 54.671031,
+      "longitude": 25.192116,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 32869222
+    },
+    "66e10e1efe8a8c5c": {
+      "latitude": 55.370657,
+      "longitude": 23.119297,
+      "confidence": 0.507,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 170732587
+    },
+    "675a3cd7d8205d91": {
+      "latitude": 55.217336,
+      "longitude": 25.403309,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 190769410
+    },
+    "67db18d4b4e945a2": {
+      "latitude": 54.86734,
+      "longitude": 23.887298,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 177478241
+    },
+    "684afe7fab71911c": {
+      "latitude": 55.660874,
+      "longitude": 21.178123,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1264505964
+    },
+    "68fa28d595a0568d": {
+      "latitude": 54.424648,
+      "longitude": 24.0035,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 257625280
+    },
+    "697450bbbeaf2502": {
+      "latitude": 55.713769,
+      "longitude": 21.386589,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 98781944
+    },
+    "698da168c3f9386f": {
+      "latitude": 54.414022,
+      "longitude": 24.010181,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 98034422
+    },
+    "69a9ea5e44505733": {
+      "latitude": 55.728693,
+      "longitude": 24.338933,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 496318856
+    },
+    "6a2eb5c84587cc39": {
+      "latitude": 54.322346,
+      "longitude": 23.145199,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 259634831
+    },
+    "6a5f806a344125c0": {
+      "latitude": 54.971632,
+      "longitude": 23.858813,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1528551129
+    },
+    "6b3f03679ad51e67": {
+      "latitude": 55.91625,
+      "longitude": 23.247172,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 748403238
+    },
+    "6bca9be8f467ab27": {
+      "latitude": 55.51185,
+      "longitude": 25.600011,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 192586002
+    },
+    "6c43270b24bd249c": {
+      "latitude": 55.709517,
+      "longitude": 24.374754,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13669672167
+    },
+    "6c85eacb18336fd8": {
+      "latitude": 54.578086,
+      "longitude": 24.52152,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 174324135
+    },
+    "6cd8e0847eb5a46c": {
+      "latitude": 54.667999,
+      "longitude": 25.264717,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 6768838306
+    },
+    "6d83c52c3acccbaa": {
+      "latitude": 55.683219,
+      "longitude": 21.160446,
+      "confidence": 0.721,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 98885067
+    },
+    "6ec34b266b82aa99": {
+      "latitude": 54.80944,
+      "longitude": 23.853675,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 579578696
+    },
+    "6f9a1bf6dfc472d1": {
+      "latitude": 55.733843,
+      "longitude": 24.263559,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 768606564
+    },
+    "6fae9c99b748c238": {
+      "latitude": 54.720222,
+      "longitude": 25.246298,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 69287317
+    },
+    "6fb2ebfc65ca3501": {
+      "latitude": 56.310489,
+      "longitude": 23.380782,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 218732739
+    },
+    "704c5e798e7170f1": {
+      "latitude": 55.238257,
+      "longitude": 22.297783,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 217418223
+    },
+    "71c29ac68b82b4c3": {
+      "latitude": 55.608522,
+      "longitude": 21.594013,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13110221401
+    },
+    "71e165db48945021": {
+      "latitude": 55.970747,
+      "longitude": 23.587348,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 181736105
+    },
+    "71e4afdfb3c7db31": {
+      "latitude": 55.884456,
+      "longitude": 21.22153,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 171687135
+    },
+    "728c66db73430596": {
+      "latitude": 54.582227,
+      "longitude": 24.31778,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 926788264
+    },
+    "72e9d0254a0bd428": {
+      "latitude": 56.238578,
+      "longitude": 22.750722,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 354661715
+    },
+    "730155ab326da11c": {
+      "latitude": 55.737226,
+      "longitude": 26.272949,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 198168191
+    },
+    "730fc93341e3381e": {
+      "latitude": 55.736851,
+      "longitude": 24.387186,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 246422274
+    },
+    "7470bc01f8a698df": {
+      "latitude": 54.92184,
+      "longitude": 24.047717,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 809324100
+    },
+    "75ee866c652f4c6f": {
+      "latitude": 54.721544,
+      "longitude": 25.294982,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 209022449
+    },
+    "7621cfa4999cad75": {
+      "latitude": 54.636407,
+      "longitude": 23.074779,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 208267405
+    },
+    "762a75ea7498218b": {
+      "latitude": 54.717902,
+      "longitude": 25.295698,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 80180008
+    },
+    "766ff699239cb706": {
+      "latitude": 54.901261,
+      "longitude": 23.854435,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 138517469
+    },
+    "767da05284d6af49": {
+      "latitude": 56.20133,
+      "longitude": 24.749022,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 507363403
+    },
+    "769b9db6a35fe7c6": {
+      "latitude": 55.327181,
+      "longitude": 26.17448,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 470850807
+    },
+    "773251699a32e9ce": {
+      "latitude": 55.704958,
+      "longitude": 21.163557,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 145036838
+    },
+    "77381f532996324a": {
+      "latitude": 55.915622,
+      "longitude": 21.078379,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 498822464
+    },
+    "774a9a79870d6f59": {
+      "latitude": 54.897553,
+      "longitude": 23.95835,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 515191833
+    },
+    "784b80638ab7d83b": {
+      "latitude": 55.35595,
+      "longitude": 21.46861,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 288901912
+    },
+    "78e1ff1932bbb8d9": {
+      "latitude": 54.605465,
+      "longitude": 23.404855,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 3364226055
+    },
+    "79e6b5d7bc055e6d": {
+      "latitude": 55.810473,
+      "longitude": 24.368814,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 494203276
+    },
+    "7a844a91a4365e62": {
+      "latitude": 54.784549,
+      "longitude": 24.654228,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 429624533
+    },
+    "7af4604d36bb9eb4": {
+      "latitude": 55.070371,
+      "longitude": 24.26355,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 211338672
+    },
+    "7afb398ddeaab564": {
+      "latitude": 55.140426,
+      "longitude": 21.903404,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 353663202
+    },
+    "7b176343b32582f1": {
+      "latitude": 55.096966,
+      "longitude": 23.806249,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 549924341
+    },
+    "7be2b19aaa3b735b": {
+      "latitude": 54.533804,
+      "longitude": 23.353361,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 209140377
+    },
+    "7c94a84368f9cc3c": {
+      "latitude": 54.849519,
+      "longitude": 23.967095,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 236747158
+    },
+    "7ccb805b06eb0931": {
+      "latitude": 54.85926,
+      "longitude": 23.837118,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 460772547
+    },
+    "7db2aec79e0206e2": {
+      "latitude": 55.269121,
+      "longitude": 24.810119,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 373941249
+    },
+    "7de45ba969bc3ff0": {
+      "latitude": 55.594946,
+      "longitude": 26.456392,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 838177498
+    },
+    "7f57dd6f55f95cf3": {
+      "latitude": 55.594585,
+      "longitude": 26.438715,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 59739111
+    },
+    "7f5a48fa6b2b1c56": {
+      "latitude": 54.933454,
+      "longitude": 23.968372,
+      "confidence": 0.721,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 148746104
+    },
+    "7f8f10dd372cf437": {
+      "latitude": 55.522041,
+      "longitude": 25.086365,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 242507667
+    },
+    "7fc791a1a46cc7ec": {
+      "latitude": 55.370315,
+      "longitude": 23.13212,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 635006970
+    },
+    "8073a43593fbb872": {
+      "latitude": 55.881845,
+      "longitude": 23.205267,
+      "confidence": 0.914,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 74197861
+    },
+    "809678719a6003c1": {
+      "latitude": 56.207671,
+      "longitude": 24.770803,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 215263404
+    },
+    "80d2b3d1e2555a62": {
+      "latitude": 55.411646,
+      "longitude": 22.83106,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1355946371
+    },
+    "80e7f3aefc39edeb": {
+      "latitude": 55.242386,
+      "longitude": 22.249679,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 225173105
+    },
+    "810c8470f5e9b43f": {
+      "latitude": 55.73063,
+      "longitude": 24.316109,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13665484505
+    },
+    "8145623906e55665": {
+      "latitude": 54.880907,
+      "longitude": 23.894229,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 138515574
+    },
+    "81634376393e32dc": {
+      "latitude": 54.662961,
+      "longitude": 25.342381,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 954219970
+    },
+    "81df1eca88ec2c8d": {
+      "latitude": 55.94062,
+      "longitude": 23.326275,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 183778091
+    },
+    "821f70a593ed28a8": {
+      "latitude": 54.753617,
+      "longitude": 25.211747,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 933794415
+    },
+    "82607e0b4b7b3ffe": {
+      "latitude": 54.695316,
+      "longitude": 25.218269,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 60488621
+    },
+    "8291c054c05a3586": {
+      "latitude": 55.938804,
+      "longitude": 21.880146,
+      "confidence": 0.493,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 267015775
+    },
+    "83027d6a79a565eb": {
+      "latitude": 54.908154,
+      "longitude": 23.865267,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 317969767
+    },
+    "83527cd29bfcfb2a": {
+      "latitude": 54.320393,
+      "longitude": 23.139868,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1010242617
+    },
+    "84b76dfc38acefba": {
+      "latitude": 55.954347,
+      "longitude": 23.255956,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 266899258
+    },
+    "86d09c5ebe8431cb": {
+      "latitude": 55.244262,
+      "longitude": 22.303731,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 231194633
+    },
+    "88179e2ce7737a76": {
+      "latitude": 55.731743,
+      "longitude": 24.340694,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 213530199
+    },
+    "886d22f980d56098": {
+      "latitude": 55.70908,
+      "longitude": 24.373359,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 202675074
+    },
+    "89e26bcae61eca37": {
+      "latitude": 54.648101,
+      "longitude": 25.212476,
+      "confidence": 0.721,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 314952707
+    },
+    "8a55012a57d00004": {
+      "latitude": 56.302047,
+      "longitude": 22.342443,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 496318893
+    },
+    "8b00cf4b050f5ce0": {
+      "latitude": 54.43621,
+      "longitude": 23.205005,
+      "confidence": 0.879,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 365532681
+    },
+    "8b85fdab4f36aa57": {
+      "latitude": 54.76035,
+      "longitude": 25.201562,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1498521258
+    },
+    "8c226d3e5669bc2f": {
+      "latitude": 55.718442,
+      "longitude": 21.932375,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 384868516
+    },
+    "8c5e6ce5992091da": {
+      "latitude": 54.681932,
+      "longitude": 25.314007,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 198691254
+    },
+    "8c74f753a3f7d849": {
+      "latitude": 56.300407,
+      "longitude": 22.36067,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 542147707
+    },
+    "8cb66639294a1084": {
+      "latitude": 54.702556,
+      "longitude": 25.21902,
+      "confidence": 0.721,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13667358802
+    },
+    "8e1ed3cec157f47b": {
+      "latitude": 54.239512,
+      "longitude": 23.82307,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 155837832
+    },
+    "8e8eab0daa7c36d2": {
+      "latitude": 55.728377,
+      "longitude": 24.332338,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13670244138
+    },
+    "8e9b11f1a10a4ade": {
+      "latitude": 55.702069,
+      "longitude": 21.138034,
+      "confidence": 0.829,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 839434748
+    },
+    "8ebd0891c950797c": {
+      "latitude": 54.78373,
+      "longitude": 23.876407,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 373615203
+    },
+    "90ff05343c974294": {
+      "latitude": 55.032262,
+      "longitude": 24.967125,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 167996659
+    },
+    "9114f2ff76d64f73": {
+      "latitude": 54.411314,
+      "longitude": 24.06765,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 131113226
+    },
+    "91355a8cb4fe2e74": {
+      "latitude": 55.948082,
+      "longitude": 23.320396,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 170790928
+    },
+    "9152e6d3f10de7e0": {
+      "latitude": 54.395037,
+      "longitude": 24.0379,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 98013287
+    },
+    "91536758ef054a67": {
+      "latitude": 55.374734,
+      "longitude": 23.880805,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 268939705
+    },
+    "9171da402890ec97": {
+      "latitude": 54.9272,
+      "longitude": 24.043043,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 499149380
+    },
+    "9257336f688434d2": {
+      "latitude": 55.681738,
+      "longitude": 21.185178,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 98585546
+    },
+    "926e8552d4eecf1e": {
+      "latitude": 55.906051,
+      "longitude": 23.259504,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13697838635
+    },
+    "9293dcadba9e5a1e": {
+      "latitude": 54.364644,
+      "longitude": 24.837273,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 221711110
+    },
+    "93928d1d545b069d": {
+      "latitude": 54.705121,
+      "longitude": 25.214994,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13716816287
+    },
+    "93ee2a025dd5564e": {
+      "latitude": 54.549682,
+      "longitude": 25.68004,
+      "confidence": 0.521,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 198771732
+    },
+    "943c87b9f0f96e70": {
+      "latitude": 54.613926,
+      "longitude": 25.309,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 689269896
+    },
+    "94bec4e7a3083981": {
+      "latitude": 55.266503,
+      "longitude": 22.311547,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 176640981
+    },
+    "9519986a2982ee5d": {
+      "latitude": 55.977118,
+      "longitude": 22.26512,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 205089211
+    },
+    "957a4a5b44162671": {
+      "latitude": 55.706074,
+      "longitude": 21.202593,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13704912029
+    },
+    "960683b7c539c0b6": {
+      "latitude": 54.927502,
+      "longitude": 23.972213,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "relation",
+      "osm_id": 6204388
+    },
+    "9705e9027138200c": {
+      "latitude": 54.911934,
+      "longitude": 23.956739,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 253515245
+    },
+    "97103c5ca60979fb": {
+      "latitude": 55.693503,
+      "longitude": 21.413752,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1224504784
+    },
+    "975b56c4b240565e": {
+      "latitude": 55.266997,
+      "longitude": 22.309806,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13667484401
+    },
+    "97f2779f017683e0": {
+      "latitude": 54.90158,
+      "longitude": 23.895021,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 418120985
+    },
+    "994644459e173b6b": {
+      "latitude": 55.704439,
+      "longitude": 21.221613,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 142691643
+    },
+    "9947e3daf9258c13": {
+      "latitude": 55.166905,
+      "longitude": 23.994837,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 938040880
+    },
+    "995b9bc72a3f1cf5": {
+      "latitude": 54.64337,
+      "longitude": 25.053254,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 60417745
+    },
+    "9a13046f1787e3e2": {
+      "latitude": 55.728446,
+      "longitude": 21.132588,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 502778427
+    },
+    "9a2766f6894beeaf": {
+      "latitude": 54.667353,
+      "longitude": 25.173843,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 123709378
+    },
+    "9a3963b52d83f4d8": {
+      "latitude": 54.38752,
+      "longitude": 24.031866,
+      "confidence": 0.95,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1537789301
+    },
+    "9a8433fd50505e30": {
+      "latitude": 54.73595,
+      "longitude": 25.265445,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 241107698
+    },
+    "9ab4611cfa034719": {
+      "latitude": 54.929352,
+      "longitude": 23.973469,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13702206402
+    },
+    "9b5db9434e7e5ed9": {
+      "latitude": 54.256437,
+      "longitude": 24.547086,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 227448271
+    },
+    "9cb4bba419f8f823": {
+      "latitude": 56.055938,
+      "longitude": 24.407185,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 89353493
+    },
+    "9cf1397361aecd86": {
+      "latitude": 54.885151,
+      "longitude": 24.006013,
+      "confidence": 0.721,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 244466141
+    },
+    "9d4dadbb1b6f9f23": {
+      "latitude": 54.751409,
+      "longitude": 25.266398,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 125676082
+    },
+    "9f94c0d8b44f64af": {
+      "latitude": 54.56261,
+      "longitude": 23.332366,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13648422954
+    },
+    "a0ab03b27f0e7c06": {
+      "latitude": 55.214652,
+      "longitude": 25.437988,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1493525098
+    },
+    "a0bdc68b404886f0": {
+      "latitude": 55.712512,
+      "longitude": 21.381957,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13663043361
+    },
+    "a100f1c93be7204f": {
+      "latitude": 54.656647,
+      "longitude": 25.292038,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 241801065
+    },
+    "a16371808eecb6f2": {
+      "latitude": 55.498552,
+      "longitude": 25.58397,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 189216021
+    },
+    "a1b978f5ea5f467a": {
+      "latitude": 55.358775,
+      "longitude": 21.503188,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 12779334209
+    },
+    "a2204a444a71e414": {
+      "latitude": 55.905255,
+      "longitude": 23.260333,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 396916500
+    },
+    "a27f24e836072218": {
+      "latitude": 54.403011,
+      "longitude": 24.037101,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 98350716
+    },
+    "a2d132647c68565f": {
+      "latitude": 54.775219,
+      "longitude": 24.810495,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 268935648
+    },
+    "a2f22c9cafccc995": {
+      "latitude": 55.956351,
+      "longitude": 23.308428,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 189687539
+    },
+    "a355ec8f2970f69d": {
+      "latitude": 55.666436,
+      "longitude": 21.172644,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 273474457
+    },
+    "a3e668e043722672": {
+      "latitude": 54.880912,
+      "longitude": 24.009787,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 117564238
+    },
+    "a40f0d88dc6fb089": {
+      "latitude": 54.901021,
+      "longitude": 24.031175,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13664350107
+    },
+    "a42b8d5b5daacbf1": {
+      "latitude": 55.730318,
+      "longitude": 21.124733,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 565885756
+    },
+    "a478c43ca739b16d": {
+      "latitude": 56.224623,
+      "longitude": 23.601098,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 213521931
+    },
+    "a50a2f051e003a2c": {
+      "latitude": 55.717487,
+      "longitude": 24.371238,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 433068385
+    },
+    "a5e524ea71b20adb": {
+      "latitude": 55.634821,
+      "longitude": 22.945432,
+      "confidence": 0.507,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 286805659
+    },
+    "a6cdea0f6ae50b58": {
+      "latitude": 54.658667,
+      "longitude": 25.266614,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 229567197
+    },
+    "a7c3821d8f1de222": {
+      "latitude": 55.508516,
+      "longitude": 25.096183,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 208064914
+    },
+    "a8325d56e86d213e": {
+      "latitude": 55.484335,
+      "longitude": 22.587915,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1027119300
+    },
+    "a87910ec7c1a3ed1": {
+      "latitude": 54.558275,
+      "longitude": 23.275315,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1105328437
+    },
+    "a98f6421e5721bf7": {
+      "latitude": 55.957734,
+      "longitude": 23.316086,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 280782451
+    },
+    "aaa0234178d2bc5c": {
+      "latitude": 54.408962,
+      "longitude": 24.005187,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13712099894
+    },
+    "aae3868c41e26078": {
+      "latitude": 54.724043,
+      "longitude": 25.282353,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 62200455
+    },
+    "ab47c63203f1670d": {
+      "latitude": 55.40157,
+      "longitude": 22.597764,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 249359691
+    },
+    "ac4de7aa455a1039": {
+      "latitude": 55.719401,
+      "longitude": 21.928502,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 266522080
+    },
+    "ac75982ddb1a5e45": {
+      "latitude": 54.935091,
+      "longitude": 23.966293,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 200395104
+    },
+    "acfc40cd1eac9cdb": {
+      "latitude": 54.855087,
+      "longitude": 24.441726,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 233361764
+    },
+    "ad088210293be1c0": {
+      "latitude": 54.711947,
+      "longitude": 25.270644,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13666456071
+    },
+    "ad897f9dc667be49": {
+      "latitude": 54.567757,
+      "longitude": 23.339328,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 265435822
+    },
+    "ad9ed97b3d47bed7": {
+      "latitude": 54.72239,
+      "longitude": 25.271059,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 62201400
+    },
+    "aec7c1bf9cb1ae46": {
+      "latitude": 55.703183,
+      "longitude": 21.164792,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13660982335
+    },
+    "af06e8fc15510e18": {
+      "latitude": 56.315902,
+      "longitude": 22.302462,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 452304922
+    },
+    "af6681d387d9ee55": {
+      "latitude": 54.835746,
+      "longitude": 25.460124,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 150898562
+    },
+    "b07c7691410058b2": {
+      "latitude": 54.928402,
+      "longitude": 23.92897,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 135036854
+    },
+    "b08a6070d92cf045": {
+      "latitude": 55.518728,
+      "longitude": 23.773585,
+      "confidence": 0.579,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 184888557
+    },
+    "b090a19feb46e95e": {
+      "latitude": 55.898292,
+      "longitude": 21.839864,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 220905000
+    },
+    "b0b4df338ee5c0ca": {
+      "latitude": 54.723219,
+      "longitude": 25.241427,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 1826283215
+    },
+    "b0ed4d01d5b22d69": {
+      "latitude": 54.959108,
+      "longitude": 23.864258,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 560286246
+    },
+    "b122dace32720e3c": {
+      "latitude": 54.386479,
+      "longitude": 24.033046,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 97946524
+    },
+    "b161a99c997269df": {
+      "latitude": 55.561903,
+      "longitude": 21.308737,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 311921426
+    },
+    "b218bddcffa55e3e": {
+      "latitude": 55.252505,
+      "longitude": 23.967981,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 468143705
+    },
+    "b29465e68087b66b": {
+      "latitude": 54.65266,
+      "longitude": 25.305701,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 181674855
+    },
+    "b3d8d111195ffb10": {
+      "latitude": 54.735756,
+      "longitude": 25.258461,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 69413040
+    },
+    "b440311f562a8ec0": {
+      "latitude": 55.815451,
+      "longitude": 23.543683,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 149466992
+    },
+    "b44a686986f986c3": {
+      "latitude": 54.723477,
+      "longitude": 25.232948,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 60609015
+    },
+    "b558dbde43379d8c": {
+      "latitude": 56.301233,
+      "longitude": 22.349841,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 496318890
+    },
+    "b58ec46e106daa51": {
+      "latitude": 55.914666,
+      "longitude": 21.077903,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 73430025
+    },
+    "b59304ebd70b3149": {
+      "latitude": 55.240813,
+      "longitude": 22.30533,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 217420816
+    },
+    "b6257d06a1604cfc": {
+      "latitude": 54.923481,
+      "longitude": 24.072104,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1526680463
+    },
+    "b6dd7e1164721e60": {
+      "latitude": 55.342868,
+      "longitude": 21.496699,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 8747549832
+    },
+    "b722c6447a807cfa": {
+      "latitude": 54.566072,
+      "longitude": 23.380345,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 8788480618
+    },
+    "b72c2fb2dc636751": {
+      "latitude": 54.70171,
+      "longitude": 25.009811,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1033217026
+    },
+    "b76204b8ba849bf0": {
+      "latitude": 54.814613,
+      "longitude": 23.87258,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 365177422
+    },
+    "b781f697c526cd47": {
+      "latitude": 55.512321,
+      "longitude": 25.643937,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 446337403
+    },
+    "b794f46c2fa4318c": {
+      "latitude": 55.926401,
+      "longitude": 23.307632,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 605061302
+    },
+    "b898ec657a30d6c9": {
+      "latitude": 54.475795,
+      "longitude": 23.221689,
+      "confidence": 0.643,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1306914839
+    },
+    "b8ae4e7d6610cfc2": {
+      "latitude": 55.278109,
+      "longitude": 23.959972,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13659425097
+    },
+    "ba33fb88f5c5d7d5": {
+      "latitude": 54.09462,
+      "longitude": 23.871438,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 209138450
+    },
+    "ba3a69031e017792": {
+      "latitude": 54.894163,
+      "longitude": 23.914201,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 138809868
+    },
+    "bba7bfaf75d2255d": {
+      "latitude": 54.92009,
+      "longitude": 23.94876,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 540437602
+    },
+    "bbfdbccb3cf6323c": {
+      "latitude": 54.67721,
+      "longitude": 25.255644,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13648464032
+    },
+    "bc22fa6fb90bb16f": {
+      "latitude": 55.291472,
+      "longitude": 23.960557,
+      "confidence": 0.65,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 558890154
+    },
+    "bc8acae1f829caaa": {
+      "latitude": 55.045839,
+      "longitude": 24.942732,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 167995478
+    },
+    "bdae290ee6dbbd57": {
+      "latitude": 54.945364,
+      "longitude": 23.045768,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 171128490
+    },
+    "be1c2b9b24ebfe0b": {
+      "latitude": 55.919884,
+      "longitude": 21.857074,
+      "confidence": 0.507,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 219798102
+    },
+    "be67b425035c2084": {
+      "latitude": 54.701579,
+      "longitude": 25.263713,
+      "confidence": 0.664,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13659609375
+    },
+    "bf6ad113e6579d19": {
+      "latitude": 54.936167,
+      "longitude": 23.885321,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13680398794
+    },
+    "bf78c8101afd8608": {
+      "latitude": 54.913328,
+      "longitude": 23.911651,
+      "confidence": 0.507,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13706449888
+    },
+    "c028bb4eaf31b0ec": {
+      "latitude": 54.669143,
+      "longitude": 25.278796,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1312226821
+    },
+    "c11860a527623f77": {
+      "latitude": 55.920259,
+      "longitude": 23.292992,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13653476384
+    },
+    "c13ec2ebd4dbf596": {
+      "latitude": 54.695079,
+      "longitude": 25.298113,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 29497021
+    },
+    "c144dbbdbfd23390": {
+      "latitude": 56.024845,
+      "longitude": 21.264989,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 287573086
+    },
+    "c260f4a449a3870e": {
+      "latitude": 54.660837,
+      "longitude": 25.23339,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 77685143
+    },
+    "c35f8b6849616919": {
+      "latitude": 54.956397,
+      "longitude": 23.904919,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 629230637
+    },
+    "c3aa09cb82580829": {
+      "latitude": 54.622939,
+      "longitude": 25.110291,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 58657295
+    },
+    "c3f796cbd35ede88": {
+      "latitude": 54.933389,
+      "longitude": 23.943533,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 331597125
+    },
+    "c40a29ebbbf8848e": {
+      "latitude": 55.168504,
+      "longitude": 26.015165,
+      "confidence": 0.65,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 244961497
+    },
+    "c42401c1e94a9e02": {
+      "latitude": 54.878741,
+      "longitude": 23.934306,
+      "confidence": 0.664,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 138641611
+    },
+    "c4beebb7bc2c9073": {
+      "latitude": 55.599178,
+      "longitude": 26.419846,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 828733294
+    },
+    "c639510e72fc8d18": {
+      "latitude": 54.936118,
+      "longitude": 23.895942,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 315867770
+    },
+    "c6bbdfe8f443885d": {
+      "latitude": 54.894045,
+      "longitude": 24.006599,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 536146646
+    },
+    "c73a71f83f411775": {
+      "latitude": 55.312027,
+      "longitude": 24.786625,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 388045152
+    },
+    "c787a89bb298a65f": {
+      "latitude": 55.692421,
+      "longitude": 21.153759,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 227549187
+    },
+    "c7e38012c14a727b": {
+      "latitude": 54.73986,
+      "longitude": 25.276171,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 275924280
+    },
+    "c84404becc5bea12": {
+      "latitude": 55.979091,
+      "longitude": 23.136226,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 441251620
+    },
+    "c867e5c2fe9aa55a": {
+      "latitude": 54.852234,
+      "longitude": 23.176943,
+      "confidence": 0.536,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 170987575
+    },
+    "c8f35013d471daad": {
+      "latitude": 54.169132,
+      "longitude": 24.207744,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 577784419
+    },
+    "c9ced0e770baeb21": {
+      "latitude": 54.661844,
+      "longitude": 25.235444,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 52087214
+    },
+    "ca2d32f09c0ca4e4": {
+      "latitude": 55.490061,
+      "longitude": 25.650986,
+      "confidence": 0.664,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 303670948
+    },
+    "ca89da87522f255f": {
+      "latitude": 55.916474,
+      "longitude": 23.301953,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 56128321
+    },
+    "cbba8cdb303bc063": {
+      "latitude": 54.424452,
+      "longitude": 23.23195,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 252976677
+    },
+    "cbcf5c1f1684a4a0": {
+      "latitude": 54.576227,
+      "longitude": 23.371504,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 91645099
+    },
+    "ccc4855d26b2acc6": {
+      "latitude": 54.702354,
+      "longitude": 25.264959,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 89495640
+    },
+    "cd0abdf6f34e2cef": {
+      "latitude": 55.721872,
+      "longitude": 24.391453,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 410103630
+    },
+    "cd488b4ad155e9c0": {
+      "latitude": 56.305283,
+      "longitude": 22.342488,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 206358044
+    },
+    "cdb06c747ce05083": {
+      "latitude": 56.258563,
+      "longitude": 23.621841,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13665464729
+    },
+    "cdd55d89a291fff3": {
+      "latitude": 54.736144,
+      "longitude": 25.231125,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 127789995
+    },
+    "ceb7ee5443fb5b14": {
+      "latitude": 54.913822,
+      "longitude": 23.906841,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 375425374
+    },
+    "cf14de3b73f30991": {
+      "latitude": 54.704173,
+      "longitude": 25.267084,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 126448269
+    },
+    "cf72599b1f4c31c7": {
+      "latitude": 54.708845,
+      "longitude": 25.189749,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13648217001
+    },
+    "cfa7c553f921c064": {
+      "latitude": 55.593991,
+      "longitude": 25.83345,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 191125734
+    },
+    "d0051665ecc2935a": {
+      "latitude": 54.713792,
+      "longitude": 25.277078,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 87209443
+    },
+    "d20409f299c4e929": {
+      "latitude": 54.723663,
+      "longitude": 25.191125,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 325295768
+    },
+    "d2059155c82b87e3": {
+      "latitude": 56.004969,
+      "longitude": 22.240229,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13665713563
+    },
+    "d31fb8d4fe67f72d": {
+      "latitude": 54.72149,
+      "longitude": 25.256115,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13669571191
+    },
+    "d39ebacff449f71f": {
+      "latitude": 54.622777,
+      "longitude": 25.105006,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 58657135
+    },
+    "d3dad55c80f02137": {
+      "latitude": 54.789169,
+      "longitude": 24.676056,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 333144985
+    },
+    "d3ebbfee043aea9b": {
+      "latitude": 55.495321,
+      "longitude": 25.574845,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 163630071
+    },
+    "d47bc4a8479ad8b1": {
+      "latitude": 54.818877,
+      "longitude": 23.858137,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 671922744
+    },
+    "d47e4d4841dde9b8": {
+      "latitude": 54.816978,
+      "longitude": 24.436628,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 134069839
+    },
+    "d4ab867cc4447151": {
+      "latitude": 54.671123,
+      "longitude": 25.262349,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 59557193
+    },
+    "d4abce18f7382322": {
+      "latitude": 55.717653,
+      "longitude": 21.151688,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13683337924
+    },
+    "d4baf48f7f056a87": {
+      "latitude": 55.424305,
+      "longitude": 24.920495,
+      "confidence": 0.507,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1294756971
+    },
+    "d57caaf6901a7414": {
+      "latitude": 54.920143,
+      "longitude": 23.952836,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 141227119
+    },
+    "d5888298ebe45e3d": {
+      "latitude": 55.707811,
+      "longitude": 21.245739,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 404379649
+    },
+    "d58ac2e027a91208": {
+      "latitude": 56.302454,
+      "longitude": 22.345424,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 604034504
+    },
+    "d5a3c2babc0573d9": {
+      "latitude": 55.719396,
+      "longitude": 24.348867,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13685314857
+    },
+    "d6ea02e68dd3f321": {
+      "latitude": 55.952254,
+      "longitude": 25.589768,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 108672730
+    },
+    "d76fd7b5846ae04d": {
+      "latitude": 54.931419,
+      "longitude": 23.950806,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13666590269
+    },
+    "d7704d066f3180c8": {
+      "latitude": 54.905026,
+      "longitude": 23.899559,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 317990823
+    },
+    "d7de598316f69dc9": {
+      "latitude": 56.194303,
+      "longitude": 22.677907,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 991638813
+    },
+    "d84ccdb1582d8544": {
+      "latitude": 54.508707,
+      "longitude": 23.90986,
+      "confidence": 0.493,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 438260472
+    },
+    "d916041948dd4eab": {
+      "latitude": 55.320288,
+      "longitude": 24.874659,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 997709081
+    },
+    "d9c7c28fef979206": {
+      "latitude": 56.27001,
+      "longitude": 21.547148,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 203378031
+    },
+    "da5c06948e8708bb": {
+      "latitude": 56.01288,
+      "longitude": 21.103715,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 2922181875
+    },
+    "dab82226623e4d80": {
+      "latitude": 56.201931,
+      "longitude": 24.737796,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1197254995
+    },
+    "dbdd3349341f17fc": {
+      "latitude": 55.920168,
+      "longitude": 23.425998,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 202794029
+    },
+    "dc5e40a4f0f35601": {
+      "latitude": 56.314458,
+      "longitude": 22.311005,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 199793871
+    },
+    "dcadbce1b7156b96": {
+      "latitude": 55.246189,
+      "longitude": 24.743188,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 416550611
+    },
+    "dd3fa31adca7635d": {
+      "latitude": 54.730564,
+      "longitude": 25.239019,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 434492288
+    },
+    "de3da3d8001aaab5": {
+      "latitude": 55.495669,
+      "longitude": 25.581784,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1328678479
+    },
+    "df8d28d25e852e0d": {
+      "latitude": 54.569169,
+      "longitude": 25.18781,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 56226064
+    },
+    "dfdaa578e650a4b6": {
+      "latitude": 55.597425,
+      "longitude": 26.403398,
+      "confidence": 0.507,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 549403004
+    },
+    "e055e086db779482": {
+      "latitude": 54.665014,
+      "longitude": 25.246407,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 77498864
+    },
+    "e095915cf1c9cf53": {
+      "latitude": 55.099109,
+      "longitude": 24.315952,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 563079416
+    },
+    "e0bd8d0f4c4ed15a": {
+      "latitude": 54.907762,
+      "longitude": 23.874128,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 585453953
+    },
+    "e14ac8ce70b4df8d": {
+      "latitude": 54.557191,
+      "longitude": 23.354077,
+      "confidence": 0.914,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 429820539
+    },
+    "e1b5bd04d2486396": {
+      "latitude": 54.713356,
+      "longitude": 25.209436,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 592456824
+    },
+    "e2d36bf88c0a10f3": {
+      "latitude": 54.387085,
+      "longitude": 24.026292,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 14015607739
+    },
+    "e4317252f3c47afd": {
+      "latitude": 54.627305,
+      "longitude": 24.948549,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 458657320
+    },
+    "e438589dd12e9eb9": {
+      "latitude": 54.408141,
+      "longitude": 24.016647,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 97946501
+    },
+    "e4e4eba2ccf74d03": {
+      "latitude": 55.4958,
+      "longitude": 25.583046,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 163619977
+    },
+    "e5b2c5b62439d0bf": {
+      "latitude": 54.911403,
+      "longitude": 24.021052,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 5198473897
+    },
+    "e628430bdde2113a": {
+      "latitude": 55.999879,
+      "longitude": 22.947656,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 192092481
+    },
+    "e669f7b4dfe25836": {
+      "latitude": 55.386097,
+      "longitude": 23.04309,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 374170830
+    },
+    "e6ae7037784485cb": {
+      "latitude": 55.669665,
+      "longitude": 21.158614,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 283556119
+    },
+    "e706560318f554a4": {
+      "latitude": 55.732169,
+      "longitude": 21.376195,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 404371931
+    },
+    "e71057036a20f119": {
+      "latitude": 54.711904,
+      "longitude": 25.293066,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 80000929
+    },
+    "e75105544d550989": {
+      "latitude": 55.505003,
+      "longitude": 25.620944,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 163634812
+    },
+    "e7fbc0b00bd3aaa1": {
+      "latitude": 55.714396,
+      "longitude": 24.335409,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 511014726
+    },
+    "e80ea7ee3e693055": {
+      "latitude": 55.748211,
+      "longitude": 24.390858,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 194901254
+    },
+    "e8b468d7f5eec24d": {
+      "latitude": 54.718581,
+      "longitude": 25.300621,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 79865353
+    },
+    "e8e47ade70340c06": {
+      "latitude": 54.640483,
+      "longitude": 25.26748,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 207773479
+    },
+    "e8fe7e10f965d62e": {
+      "latitude": 55.643434,
+      "longitude": 22.92558,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 201924864
+    },
+    "e90f51fb5efbb5c2": {
+      "latitude": 54.707518,
+      "longitude": 24.995979,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 557638442
+    },
+    "e942cce607f66549": {
+      "latitude": 54.903836,
+      "longitude": 23.835314,
+      "confidence": 0.764,
+      "match_method": "osm-fuel-address",
+      "osm_type": "relation",
+      "osm_id": 12505971
+    },
+    "e9fca2b813483e65": {
+      "latitude": 54.709199,
+      "longitude": 25.228042,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 77103483
+    },
+    "ea7b196a39b5b8fd": {
+      "latitude": 55.731737,
+      "longitude": 24.342429,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 195605161
+    },
+    "ea7ea3b4022b9f82": {
+      "latitude": 56.043859,
+      "longitude": 21.815696,
+      "confidence": 0.85,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 321960916
+    },
+    "ea81f5cfca34d2d5": {
+      "latitude": 54.317946,
+      "longitude": 25.381581,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 108137013
+    },
+    "ead199b8a7c4a9ae": {
+      "latitude": 54.673423,
+      "longitude": 25.224068,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13658269328
+    },
+    "eb2835a838354407": {
+      "latitude": 54.030244,
+      "longitude": 23.983284,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 391444563
+    },
+    "eb750885e4f52fd6": {
+      "latitude": 55.258212,
+      "longitude": 22.294567,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 3450978965
+    },
+    "eb89234546ea585c": {
+      "latitude": 54.908167,
+      "longitude": 23.992968,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 286890450
+    },
+    "eb9c07e50ff8e775": {
+      "latitude": 55.332015,
+      "longitude": 26.167142,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 207229401
+    },
+    "eba25cc6b5cfd7d7": {
+      "latitude": 54.633668,
+      "longitude": 25.304716,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13717196565
+    },
+    "ec3392fb22167218": {
+      "latitude": 54.695998,
+      "longitude": 25.3001,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 880301115
+    },
+    "eea3fd1b3c4010cf": {
+      "latitude": 55.461287,
+      "longitude": 22.693182,
+      "confidence": 0.521,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 426332572
+    },
+    "eef80ee3dce48493": {
+      "latitude": 54.916253,
+      "longitude": 23.954042,
+      "confidence": 0.714,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13686158277
+    },
+    "f0e2ea15fa93d19d": {
+      "latitude": 54.560364,
+      "longitude": 23.365926,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13653223035
+    },
+    "f152bec26bce4806": {
+      "latitude": 54.565142,
+      "longitude": 23.368552,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 263977475
+    },
+    "f1d7c80acebe00e1": {
+      "latitude": 54.77115,
+      "longitude": 24.820983,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 53175964
+    },
+    "f25d0691091dcb2a": {
+      "latitude": 54.914457,
+      "longitude": 23.900227,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 1938001413
+    },
+    "f2d9b2a24dcf7955": {
+      "latitude": 54.927221,
+      "longitude": 23.974786,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 70128535
+    },
+    "f2fc366ef5e602bb": {
+      "latitude": 54.774143,
+      "longitude": 23.889616,
+      "confidence": 0.771,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 292717740
+    },
+    "f3de2d027613d110": {
+      "latitude": 55.71135,
+      "longitude": 21.263065,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1300977418
+    },
+    "f4398d4a736b2445": {
+      "latitude": 55.668161,
+      "longitude": 21.208649,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 270860648
+    },
+    "f4d99ba8104939e7": {
+      "latitude": 54.383845,
+      "longitude": 23.659403,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1088675839
+    },
+    "f5572466ca6df56c": {
+      "latitude": 54.647623,
+      "longitude": 23.029248,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 95745509
+    },
+    "f6a10d2739450f53": {
+      "latitude": 55.698573,
+      "longitude": 21.167328,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 171629853
+    },
+    "f6b401021e606e78": {
+      "latitude": 55.072068,
+      "longitude": 24.294842,
+      "confidence": 0.921,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 211913599
+    },
+    "f7527ffaa1996e52": {
+      "latitude": 54.780741,
+      "longitude": 25.273909,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 431111596
+    },
+    "f9dcee580bfaf50d": {
+      "latitude": 53.999893,
+      "longitude": 23.98796,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 123722358
+    },
+    "fa66288df5a5b952": {
+      "latitude": 55.370962,
+      "longitude": 23.133138,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 170732562
+    },
+    "fb1844389d634c0b": {
+      "latitude": 55.912682,
+      "longitude": 23.274004,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 706216151
+    },
+    "fbabd293442b4d43": {
+      "latitude": 55.924804,
+      "longitude": 23.334034,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 852881082
+    },
+    "fc76688f9b24b0e3": {
+      "latitude": 55.082362,
+      "longitude": 24.270939,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 211438393
+    },
+    "fc8db0019483f36b": {
+      "latitude": 54.010181,
+      "longitude": 23.993238,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 100015207
+    },
+    "fcf7663abf1a63da": {
+      "latitude": 55.024575,
+      "longitude": 24.985538,
+      "confidence": 0.971,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 226515152
+    },
+    "fcf925f27b183658": {
+      "latitude": 54.72609,
+      "longitude": 24.236361,
+      "confidence": 0.65,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 1052346242
+    },
+    "fd74e7127441ce67": {
+      "latitude": 54.677462,
+      "longitude": 25.078684,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 571087024
+    },
+    "fddc4c237822db6e": {
+      "latitude": 55.565931,
+      "longitude": 21.995579,
+      "confidence": 0.593,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 291744457
+    },
+    "fddcba447650e22a": {
+      "latitude": 54.975105,
+      "longitude": 25.744883,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 345291658
+    },
+    "fef15254cb0a441c": {
+      "latitude": 54.916231,
+      "longitude": 23.986675,
+      "confidence": 1,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 138513099
+    },
+    "ffbed50cc730675b": {
+      "latitude": 55.826051,
+      "longitude": 24.979937,
+      "confidence": 0.564,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 249848019
+    },
+    "ffcb7b9d8964db59": {
+      "latitude": 54.59535,
+      "longitude": 24.02672,
+      "confidence": 0.986,
+      "match_method": "osm-fuel-address",
+      "osm_type": "way",
+      "osm_id": 687021973
+    },
+    "ffe6f2406313cfbe": {
+      "latitude": 54.933809,
+      "longitude": 23.867742,
+      "confidence": 0.793,
+      "match_method": "osm-fuel-address",
+      "osm_type": "node",
+      "osm_id": 13716836731
+    }
+  }
+}

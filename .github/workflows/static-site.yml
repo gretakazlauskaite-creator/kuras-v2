@@ -6,6 +6,8 @@ on:
     paths:
       - 'static/**'
       - 'bin/build-static.php'
+      - 'bin/build-coordinate-cache.mjs'
+      - 'resources/station-coordinates.json'
       - 'src/Service/StaticDataExporter.php'
       - 'src/Service/Import/**'
       - '.github/workflows/static-site.yml'
@@ -18,6 +20,8 @@ on:
       - 'static/**'
       - '!static/data/**'
       - 'bin/build-static.php'
+      - 'bin/build-coordinate-cache.mjs'
+      - 'resources/station-coordinates.json'
       - 'src/Service/StaticDataExporter.php'
       - 'src/Service/Import/**'
       - '.github/workflows/static-site.yml'
