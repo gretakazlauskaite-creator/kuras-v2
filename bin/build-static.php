@@ -12,9 +12,9 @@ use App\Service\Import\LeaWorkbookParser;
 use App\Service\Import\XlsxFileValidator;
 use App\Service\StaticDataExporter;
 
-$options = getopt('', ['file:', 'source-date:', 'output:', 'previous-data:', 'archive-output:', 'fixture', 'help']);
+$options = getopt('', ['file:', 'source-date:', 'output:', 'previous-data:', 'archive-output:', 'coordinates:', 'fixture', 'help']);
 if (isset($options['help'])) {
-    echo "Usage: php bin/build-static.php [--file=prices.xlsx --source-date=YYYY-MM-DD --fixture] [--output=dist] [--previous-data=file.json] [--archive-output=path]\n";
+    echo "Usage: php bin/build-static.php [--file=prices.xlsx --source-date=YYYY-MM-DD --fixture] [--output=dist] [--previous-data=file.json] [--archive-output=path] [--coordinates=file.json]\n";
     exit(0);
 }
 
@@ -24,6 +24,9 @@ $previousDataPath = isset($options['previous-data'])
     ? (string) $options['previous-data']
     : $output . '/data/current.json';
 $archiveOutput = isset($options['archive-output']) ? (string) $options['archive-output'] : null;
+$coordinatesPath = isset($options['coordinates'])
+    ? (string) $options['coordinates']
+    : $root . '/resources/station-coordinates.json';
 $fixtureMode = isset($options['fixture']);
 $temporaryFile = null;
 
@@ -91,7 +94,8 @@ try {
     $generatedAt = ($previous['source']['checksum_sha256'] ?? null) === $checksum
         ? (string) ($previous['source']['generated_at'] ?? gmdate('c'))
         : gmdate('c');
-    $payload = (new StaticDataExporter())->export(
+    $coordinates = read_coordinate_data($coordinatesPath);
+    $payload = (new StaticDataExporter($coordinates))->export(
         parsed: $parsed,
         sourceDate: $source->sourceDate,
         generatedAt: $generatedAt,
@@ -206,6 +210,17 @@ function read_previous_data(string $path): array
     }
     $data = json_decode((string) file_get_contents($path), true);
     return is_array($data) && !($data['demo'] ?? false) ? $data : [];
+}
+
+/** @return array<string,array<string,mixed>> */
+function read_coordinate_data(string $path): array
+{
+    if (!is_file($path)) {
+        return [];
+    }
+
+    $data = json_decode((string) file_get_contents($path), true, flags: JSON_THROW_ON_ERROR);
+    return is_array($data['stations'] ?? null) ? $data['stations'] : [];
 }
 
 function recreate_directory(string $path): void

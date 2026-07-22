@@ -8,6 +8,11 @@ use App\Service\Import\ParsedImport;
 
 final class StaticDataExporter
 {
+    /** @param array<string,array<string,mixed>> $coordinates */
+    public function __construct(private readonly array $coordinates = [])
+    {
+    }
+
     /** @return array<string,mixed> */
     public function export(
         ParsedImport $parsed,
@@ -18,16 +23,18 @@ final class StaticDataExporter
     ): array {
         $stations = array_map(function (array $station): array {
             $identity = $this->key($station['brand']) . '|' . $this->key($station['address']);
+            $id = substr(hash('sha256', $identity), 0, 16);
+            $coordinate = $this->validCoordinate($this->coordinates[$id] ?? null);
 
             return [
-                'id' => substr(hash('sha256', $identity), 0, 16),
+                'id' => $id,
                 'name' => $station['brand'],
                 'brand' => $station['brand'],
                 'address' => $station['address'],
                 'city' => $station['city'],
                 'municipality' => $station['municipality'],
-                'latitude' => null,
-                'longitude' => null,
+                'latitude' => $coordinate['latitude'] ?? null,
+                'longitude' => $coordinate['longitude'] ?? null,
                 'prices' => $station['prices'],
             ];
         }, $parsed->stations);
@@ -51,6 +58,10 @@ final class StaticDataExporter
             ],
             'summary' => [
                 'station_count' => count($stations),
+                'coordinate_count' => count(array_filter(
+                    $stations,
+                    static fn (array $station): bool => $station['latitude'] !== null && $station['longitude'] !== null,
+                )),
                 'price_count' => $parsed->priceCount(),
                 'fuels' => $parsed->detectedFuelSlugs,
             ],
@@ -62,5 +73,24 @@ final class StaticDataExporter
     {
         $value = mb_strtolower(trim($value));
         return (string) preg_replace('/\s+/u', ' ', $value);
+    }
+
+    /**
+     * @param mixed $coordinate
+     * @return array{latitude:float,longitude:float}|null
+     */
+    private function validCoordinate(mixed $coordinate): ?array
+    {
+        if (!is_array($coordinate) || !is_numeric($coordinate['latitude'] ?? null) || !is_numeric($coordinate['longitude'] ?? null)) {
+            return null;
+        }
+
+        $latitude = (float) $coordinate['latitude'];
+        $longitude = (float) $coordinate['longitude'];
+        if ($latitude < 53.8 || $latitude > 56.5 || $longitude < 20.6 || $longitude > 26.9) {
+            return null;
+        }
+
+        return ['latitude' => $latitude, 'longitude' => $longitude];
     }
 }
