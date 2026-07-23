@@ -9,7 +9,7 @@ use PhpOffice\PhpSpreadsheet\Shared\Date as ExcelDate;
 
 final class LeaWorkbookParser
 {
-    public const VERSION = 'lea-xlsx-v3';
+    public const VERSION = 'lea-xlsx-v4';
 
     /** @var array<string,list<string>> */
     private const COLUMN_ALIASES = [
@@ -35,6 +35,11 @@ final class LeaWorkbookParser
         'Panevėžio m. sav.' => 'Panevėžys',
         'Alytaus m. sav.' => 'Alytus',
         'Marijampolės sav.' => 'Marijampolė',
+    ];
+
+    /** @var array<string,string> */
+    private const CITY_ALIASES = [
+        'panevežys' => 'Panevėžys',
     ];
 
     /** @var list<string> */
@@ -403,19 +408,44 @@ final class LeaWorkbookParser
 
     private function deriveCity(string $city, string $address, string $municipality): string
     {
-        $city = trim($city);
+        $city = $this->normalizeCity($city);
         if ($city !== '') {
             return $city;
         }
 
-        $candidate = trim(explode(',', $address, 2)[0]);
-        $looksLikeStreet = (bool) preg_match('/\d|\b(g|pr|al|pl|šosin|plentas|gatv)\b\.?/ui', $candidate);
-        if ($candidate !== '' && mb_strtolower($candidate) !== 'lietuva' && !$looksLikeStreet) {
-            return $candidate;
+        $addressParts = array_values(array_filter(
+            array_map('trim', explode(',', $address)),
+            static fn (string $part): bool => $part !== '',
+        ));
+        foreach ($addressParts as $part) {
+            if (preg_match('/^(.+?\s(?:k|vs|mstl)\.)(?:\s|$)/ui', $part, $match)) {
+                return $this->normalizeCity($match[1]);
+            }
+            if (preg_match('/^(.+?\s(?:kaimas|viensėdis|miestelis))(?:\s|$)/ui', $part, $match)) {
+                return $this->normalizeCity($match[1]);
+            }
         }
 
-        return self::MUNICIPALITY_CITY_MAP[$municipality]
+        $candidate = $addressParts[0] ?? '';
+        $looksLikeStreet = (bool) preg_match('/\d|\b(g|pr|al|pl|šosin|plentas|gatv)\b\.?/ui', $candidate);
+        if ($candidate !== '' && mb_strtolower($candidate) !== 'lietuva' && !$looksLikeStreet) {
+            return $this->normalizeCity($candidate);
+        }
+
+        $fallback = self::MUNICIPALITY_CITY_MAP[$municipality]
             ?? trim((string) preg_replace('/\s*(r\.\s*sav\.|m\.\s*sav\.|sav\.)\s*$/ui', '', $municipality));
+
+        return $this->normalizeCity($fallback);
+    }
+
+    private function normalizeCity(string $value): string
+    {
+        $value = trim((string) preg_replace('/\s+/u', ' ', $value));
+        if ($value === '') {
+            return '';
+        }
+
+        return self::CITY_ALIASES[mb_strtolower($value)] ?? $value;
     }
 
     private function normalizeBrand(string $raw): string

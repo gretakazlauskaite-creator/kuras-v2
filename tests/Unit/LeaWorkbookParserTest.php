@@ -68,6 +68,32 @@ final class LeaWorkbookParserTest extends TestCase
         self::assertStringContainsString('1.399 ir 1.999', $parsed->issues[0]);
     }
 
+    public function testItUsesTheSettlementFromTheAddressInsteadOfTheDistrictName(): void
+    {
+        $file = $this->workbookWithExtraRows([
+            ['Viada', 'Prienų r. sav.', 'Grigaliūnų k. 11, 59281', 'Dyzelinas', 1.499, 46220],
+            ['Eniris', 'Plungės r. sav.', 'Minijos g. 1, Aleksandravo k., 90390', 'Dyzelinas', 1.499, 46220],
+            ['Saurida', 'Akmenės r. sav.', 'Pašakarnių k. Pašakarnių g. 1, 85271', 'Dyzelinas', 1.499, 46220],
+            ['Neste', 'Panevėžio m. sav.', 'Panevežys, Testų g. 1, 35100', 'Dyzelinas', 1.499, 46220],
+        ]);
+
+        try {
+            $parsed = (new LeaWorkbookParser())->parse($file);
+        } finally {
+            unlink($file);
+        }
+
+        $citiesByAddress = [];
+        foreach ($parsed->stations as $station) {
+            $citiesByAddress[$station['address']] = $station['city'];
+        }
+
+        self::assertSame('Grigaliūnų k.', $citiesByAddress['Grigaliūnų k. 11, 59281']);
+        self::assertSame('Aleksandravo k.', $citiesByAddress['Minijos g. 1, Aleksandravo k., 90390']);
+        self::assertSame('Pašakarnių k.', $citiesByAddress['Pašakarnių k. Pašakarnių g. 1, 85271']);
+        self::assertSame('Panevėžys', $citiesByAddress['Panevežys, Testų g. 1, 35100']);
+    }
+
     /** @param list<list<mixed>> $rows */
     private function workbookWithExtraRows(array $rows): string
     {
