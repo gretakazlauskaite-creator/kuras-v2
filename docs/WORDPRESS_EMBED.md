@@ -13,7 +13,7 @@ no importer.
    other than the GitHub Pages review address.
 
 ```html
-<div id="kuras-pricer-embed" style="width:100%;max-width:none">
+<div id="kuras-pricer-embed" style="position:relative;isolation:isolate;z-index:1;width:100%;max-width:none;pointer-events:auto!important">
   <iframe
     id="kuras-pricer-frame"
     src="https://gretakazlauskaite-creator.github.io/kuras-v2/?embed=1"
@@ -21,13 +21,15 @@ no importer.
     loading="eager"
     scrolling="no"
     allow="geolocation"
-    style="display:block;width:100%;min-height:1600px;border:0"
+    style="position:relative;z-index:1;display:block;width:100%;min-height:1600px;border:0;pointer-events:auto!important;touch-action:auto"
   ></iframe>
 </div>
 <script>
 (function () {
   var frame = document.getElementById('kuras-pricer-frame');
   var allowedOrigin = 'https://gretakazlauskaite-creator.github.io';
+  frame.style.setProperty('pointer-events', 'auto', 'important');
+  frame.style.touchAction = 'auto';
   window.addEventListener('message', function (event) {
     if (event.origin !== allowedOrigin || event.source !== frame.contentWindow) return;
     if (!event.data || event.data.type !== 'kuras-pricer:height') return;
