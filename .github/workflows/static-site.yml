@@ -2,6 +2,12 @@ name: Fuel data and static site
 
 on:
   workflow_dispatch:
+    inputs:
+      refresh_data:
+        description: 'Atsisiųsti naujausius LEA duomenis'
+        required: true
+        type: boolean
+        default: true
   pull_request:
     paths:
       - 'static/**'
@@ -39,17 +45,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh_data)
         with:
           php-version: '8.2'
           extensions: curl, mbstring, zip
           coverage: none
-      - run: composer install --no-interaction --prefer-dist --no-dev
+      - if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh_data)
+        run: composer install --no-interaction --prefer-dist --no-dev
       - name: Download, validate and publish latest LEA data
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh_data)
         run: php bin/build-static.php --output=dist --previous-data=static/data/current.json --archive-output=var/import-artifact
+      - name: Prepare site with the last validated fuel snapshot
+        if: github.event_name == 'push' || github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && !inputs.refresh_data)
+        run: |
+          test -s static/data/current.json
+          test -s static/data/current.js
+          mkdir -p dist
+          cp -R static/. dist/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
       - uses: actions/upload-artifact@v4
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh_data)
         with:
           name: validated-snapshot
           path: |
@@ -57,7 +74,7 @@ jobs:
             dist/data/current.js
           retention-days: 7
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh_data))
         with:
           name: lea-import-${{ github.run_id }}
           path: var/import-artifact
@@ -65,7 +82,7 @@ jobs:
           retention-days: 90
 
   save-snapshot:
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh_data))
     needs: build
     runs-on: ubuntu-latest
     permissions:
