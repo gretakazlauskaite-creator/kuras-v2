@@ -65,6 +65,8 @@ jobs:
           grep -q 'data-coordinate-coverage' dist/index.html
           grep -q 'data-map-legend' dist/index.html
           grep -q 'data-station-id' static/assets/app.js
+          grep -q 'mapsSearchUrl' static/assets/app.js
+          grep -q 'naujausią LEA paskelbtą datą' dist/index.html
           if grep -R -q 'GitHub' dist; then
             echo "Public site must not mention internal GitHub infrastructure."
             exit 1
