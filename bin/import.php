@@ -66,11 +66,11 @@ try {
         );
         $downloadedFile = $manualFile;
     } else {
-        log_message('Tikrinamas oficialus LEA puslapis...');
-        $pageHtml = http_get(LeaSourceLocator::PAGE_URL, false);
-        $source = (new LeaSourceLocator())->locate($pageHtml, LeaSourceLocator::PAGE_URL);
+        log_message('Tikrinamas oficialus LEA kainų archyvas...');
+        $pageHtml = http_get(LeaSourceLocator::ARCHIVE_URL, false);
+        $source = (new LeaSourceLocator())->locate($pageHtml, LeaSourceLocator::ARCHIVE_URL);
         log_message("Rastas {$source->sourceDate} šaltinis. Atsisiunčiamas Excel failas...");
-        $downloadedFile = download_to_temporary_file($source->downloadUrl);
+        $downloadedFile = download_to_temporary_file($source->downloadUrl, $source->pageUrl);
     }
 
     (new XlsxFileValidator())->assertValid($downloadedFile);
@@ -143,9 +143,9 @@ try {
     exit(1);
 }
 
-function download_to_temporary_file(string $url): string
+function download_to_temporary_file(string $url, string $referer): string
 {
-    $data = http_get($url, true);
+    $data = http_get($url, true, $referer);
     $temporaryFile = tempnam(sys_get_temp_dir(), 'lea_');
     if ($temporaryFile === false || file_put_contents($temporaryFile, $data, LOCK_EX) === false) {
         throw new RuntimeException('Nepavyko saugiai išsaugoti atsisiųsto LEA failo.');
@@ -154,7 +154,7 @@ function download_to_temporary_file(string $url): string
     return $temporaryFile;
 }
 
-function http_get(string $url, bool $binary): string
+function http_get(string $url, bool $binary, ?string $referer = null): string
 {
     $userAgent = 'kuras.pricer.lt/2.0 (+https://kuras.pricer.lt/)';
 
@@ -170,10 +170,17 @@ function http_get(string $url, bool $binary): string
             CURLOPT_SSL_VERIFYPEER => true,
             CURLOPT_SSL_VERIFYHOST => 2,
             CURLOPT_ENCODING => '',
+            CURLOPT_COOKIEFILE => '',
+            CURLOPT_AUTOREFERER => true,
+            CURLOPT_PROTOCOLS => CURLPROTO_HTTPS,
+            CURLOPT_REDIR_PROTOCOLS => CURLPROTO_HTTPS,
             CURLOPT_HTTPHEADER => [$binary
                 ? 'Accept: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/octet-stream;q=0.9,*/*;q=0.1'
                 : 'Accept: text/html,application/xhtml+xml;q=0.9,*/*;q=0.1'],
         ]);
+        if ($referer !== null) {
+            curl_setopt($handle, CURLOPT_REFERER, $referer);
+        }
         $data = curl_exec($handle);
         $error = curl_error($handle);
         $status = (int) curl_getinfo($handle, CURLINFO_HTTP_CODE);
@@ -192,7 +199,8 @@ function http_get(string $url, bool $binary): string
     $context = stream_context_create([
         'http' => [
             'method' => 'GET',
-            'header' => "User-Agent: {$userAgent}\r\n",
+            'header' => "User-Agent: {$userAgent}\r\n"
+                . ($referer !== null ? "Referer: {$referer}\r\n" : ''),
             'timeout' => 90,
             'follow_location' => 1,
             'max_redirects' => 8,
