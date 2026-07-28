@@ -18,3 +18,11 @@
 .fuel-tabs,.filters,.view-tabs{position:relative;z-index:10}
 .fuel-tabs button,.view-tabs button,.filters button,.filters input,.filters select,.pagination button,.location{pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:rgba(50,111,148,.16)}
 .map-panel,.leaflet-container{isolation:isolate}
+.nearby-bar{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:-24px 0 42px;padding:18px 21px;border:1px solid #cfe0e9;border-radius:12px;background:linear-gradient(105deg,#f4f9fc,#fff);box-shadow:0 12px 32px #3149580b}
+.nearby-bar .eyebrow{margin:0 0 5px}
+.nearby-bar strong,.nearby-bar span{display:block}
+.nearby-bar strong{font-size:18px}
+.nearby-bar span{margin-top:4px;color:var(--muted);font-size:12px}
+.nearby-bar .location{flex:0 0 auto;background:var(--blue);color:#fff}
+.location.is-ready{border-color:#b8dfc8;background:#eaf7ef;color:var(--green)}
+@media(max-width:680px){.nearby-bar{align-items:stretch;flex-direction:column;margin-top:-26px;gap:14px}.nearby-bar .location{width:100%}}
