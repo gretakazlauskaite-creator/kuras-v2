@@ -39,8 +39,8 @@ try {
         }
         $source = new LeaSource('fixture', 'fixture://' . basename($file), $sourceDate);
     } else {
-        $pageHtml = http_get(LeaSourceLocator::PAGE_URL);
-        $source = (new LeaSourceLocator())->locate($pageHtml);
+        $pageHtml = http_get(LeaSourceLocator::ARCHIVE_URL);
+        $source = (new LeaSourceLocator())->locate($pageHtml, LeaSourceLocator::ARCHIVE_URL);
         $temporaryFile = download_file($source->downloadUrl, $source->pageUrl);
         $file = $temporaryFile;
     }
