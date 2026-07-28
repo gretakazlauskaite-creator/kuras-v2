@@ -18,7 +18,7 @@ on:
       - 'src/Service/Import/**'
       - '.github/workflows/static-site.yml'
   schedule:
-    - cron: '30 11 * * 1-5'
+    - cron: '30 11,14,17 * * 1-5'
       timezone: Europe/Vilnius
   push:
     branches: [main]
