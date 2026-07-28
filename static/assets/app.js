@@ -12,6 +12,10 @@
   const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
   const value = selector => $(selector).value.trim();
   const hasCoordinates = station => station?.latitude!=null&&station?.longitude!=null&&Number.isFinite(Number(station.latitude))&&Number.isFinite(Number(station.longitude));
+  const mapsSearchUrl = station => {
+    const query=[station?.name||station?.brand,station?.address,station?.city,station?.municipality,'Lietuva'].filter(Boolean).join(', ');
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+  };
 
   function distance(aLat,aLng,bLat,bLng){const r=6371,dLat=(bLat-aLat)*Math.PI/180,dLng=(bLng-aLng)*Math.PI/180;const a=Math.sin(dLat/2)**2+Math.cos(aLat*Math.PI/180)*Math.cos(bLat*Math.PI/180)*Math.sin(dLng/2)**2;return r*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));}
   function fuelStations(){
@@ -25,7 +29,7 @@
       .sort((a,b) => {const mode=value('[data-sort]');if(mode==='price-desc')return b.prices[state.fuel]-a.prices[state.fuel];if(mode==='name')return a.brand.localeCompare(b.brand,'lt');if(mode==='distance')return ((a.distance_km??Infinity)-(b.distance_km??Infinity))||(a.prices[state.fuel]-b.prices[state.fuel]);return a.prices[state.fuel]-b.prices[state.fuel];});
   }
   function options(selector,items,first){$(selector).innerHTML=`<option value="">${first}</option>`+[...items].sort((a,b)=>a.localeCompare(b,'lt')).map(item=>`<option>${escapeHtml(item)}</option>`).join('');}
-  function renderSource(){const s=state.data.source,node=$('[data-source]');node.classList.toggle('demo',Boolean(state.data.demo));const generated=new Date(s.generated_at);const time=Number.isNaN(generated.getTime())?s.generated_at:new Intl.DateTimeFormat('lt-LT',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Vilnius'}).format(generated);node.lastChild.textContent=` ${state.data.demo?'Demonstraciniai duomenys':'Duomenų data: '+s.source_date} · atnaujinta ${time}`;if(state.data.demo){const n=$('[data-notice]');n.hidden=false;n.className='notice info';n.textContent='Kol įjungsime kasdienį atnaujinimą, rodoma saugi demonstracinė duomenų kopija.';}}
+  function renderSource(){const s=state.data.source,node=$('[data-source]');node.classList.toggle('demo',Boolean(state.data.demo));const generated=new Date(s.generated_at);const time=Number.isNaN(generated.getTime())?s.generated_at:new Intl.DateTimeFormat('lt-LT',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Vilnius'}).format(generated);node.lastChild.textContent=` ${state.data.demo?'Demonstraciniai duomenys':'Naujausia LEA data: '+s.source_date} · patikrinta ${time}`;if(state.data.demo){const n=$('[data-notice]');n.hidden=false;n.className='notice info';n.textContent='Kol įjungsime kasdienį atnaujinimą, rodoma saugi demonstracinė duomenų kopija.';}}
   function renderTabs(){const fuels=state.data.summary.fuels.filter(f=>fuelLabels[f]);if(!fuels.includes(state.fuel))state.fuel=fuels[0];$('[data-fuels]').innerHTML=fuels.map(f=>`<button type="button" class="${f===state.fuel?'active':''}" data-fuel="${f}">${fuelLabels[f]} <small>${integer(state.data.stations.filter(s=>s.prices?.[f]!=null).length)}</small></button>`).join('');document.querySelectorAll('[data-fuel]').forEach(b=>b.onclick=()=>{state.fuel=b.dataset.fuel;state.page=1;renderAll();});}
   function renderSummary(rows){const prices=rows.map(s=>Number(s.prices[state.fuel]));$('[data-average]').textContent=euro(prices.length?prices.reduce((a,b)=>a+b,0)/prices.length:null);$('[data-minimum]').textContent=euro(prices.length?Math.min(...prices):null);$('[data-count]').textContent=integer(rows.length);}
   function renderTop(rows){const nearby=value('[data-sort]')==='distance'&&state.lat!=null;$('[data-top-kicker]').textContent=nearby?'Iš degalinių su patikrinta vieta':'Pigiausi pagal pasirinktus filtrus';$('[data-top-title]').textContent=nearby?'Artimiausios degalinės':'Degalinių TOP 3';$('[data-top-fuel]').textContent=fuelLabels[state.fuel];$('[data-top]').innerHTML=rows.slice(0,3).map((s,i)=>`<article class="top-card"><span class="rank">${i+1}</span><div class="station-copy"><strong>${escapeHtml(s.brand)}</strong><small>${escapeHtml(s.address)}${s.city?', '+escapeHtml(s.city):''}${s.distance_km!=null?' · '+s.distance_km.toFixed(1)+' km':''}</small></div><span class="price">${euro(s.prices[state.fuel])}</span></article>`).join('')||'<p class="empty">Pagal pasirinktus filtrus kainų nerasta.</p>';}
@@ -40,8 +44,10 @@
     $('[data-table]').innerHTML=shown.map(s=>{
       const id=String(s.id);
       const selected=id===state.selectedStationId;
-      const label=`Rodyti degalinę ${s.name||s.brand} žemėlapyje`;
-      return `<tr class="station-row${selected?' is-selected':''}" data-station-id="${escapeHtml(id)}" tabindex="0" role="button" aria-label="${escapeHtml(label)}" aria-pressed="${selected?'true':'false'}"><td><span class="station-name">${escapeHtml(s.name||s.brand)}</span><span class="brand">${escapeHtml(s.brand)}</span></td><td><span class="address">${escapeHtml(s.address)}<br>${escapeHtml(s.city||s.municipality||'')}${s.distance_km!=null?' · '+s.distance_km.toFixed(1)+' km':''}</span></td><td><strong class="price">${euro(s.prices[state.fuel])}</strong><span class="brand">už litrą</span></td></tr>`;
+      const mapped=hasCoordinates(s);
+      const label=mapped?`Rodyti degalinę ${s.name||s.brand} žemėlapyje`:`Ieškoti degalinės ${s.name||s.brand} žemėlapyje pagal adresą`;
+      const mapStatus=mapped?'':`<span class="map-status">Vieta tikslinama · atidaryti pagal adresą <span aria-hidden="true">↗</span></span>`;
+      return `<tr class="station-row${selected?' is-selected':''}${mapped?'':' needs-map'}" data-station-id="${escapeHtml(id)}" tabindex="0" role="button" aria-label="${escapeHtml(label)}" aria-pressed="${selected?'true':'false'}"><td><span class="station-name">${escapeHtml(s.name||s.brand)}</span><span class="brand">${escapeHtml(s.brand)}</span></td><td><span class="address">${escapeHtml(s.address)}<br>${escapeHtml(s.city||s.municipality||'')}${s.distance_km!=null?' · '+s.distance_km.toFixed(1)+' km':''}</span>${mapStatus}</td><td><strong class="price">${euro(s.prices[state.fuel])}</strong><span class="brand">už litrą</span></td></tr>`;
     }).join('')||'<tr><td colspan="3" class="empty">Pagal pasirinktus filtrus degalinių nerasta.</td></tr>';
     $$('[data-table] [data-station-id]').forEach(row=>{
       const select=()=>selectStation(row.dataset.stationId);
@@ -108,8 +114,10 @@
   }
   function selectStation(id){
     const station=state.data?.stations.find(item=>String(item.id)===String(id));
-    if(!station||!hasCoordinates(station)){
-      showNotice('Šios degalinės vieta žemėlapyje dar nepatvirtinta. Galite rinktis kitą degalinę arba ieškoti pagal miestą.','info');
+    if(!station)return;
+    if(!hasCoordinates(station)){
+      window.open(mapsSearchUrl(station),'_blank','noopener,noreferrer');
+      showNotice('Tiksli šios degalinės vieta dar tikslinama. Atidarėme žemėlapio paiešką pagal oficialų LEA adresą.','info');
       return;
     }
     state.selectedStationId=String(id);
