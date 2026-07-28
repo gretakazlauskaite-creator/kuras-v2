@@ -7,6 +7,7 @@ namespace App\Service\Import;
 final class LeaSourceLocator
 {
     public const PAGE_URL = 'https://www.ena.lt/degalu-kainos-degalinese/';
+    public const ARCHIVE_URL = 'https://www.ena.lt/dk-visa-informacija/';
 
     public function locate(string $html, string $pageUrl = self::PAGE_URL): LeaSource
     {
@@ -15,32 +16,82 @@ final class LeaSourceLocator
         }
 
         preg_match_all(
-            '/<a\b[^>]*href\s*=\s*(["\'])(?<href>.*?)\1[^>]*>(?<label>.*?)<\/a>/isu',
+            '/<a\b(?<attributes>[^>]*)>(?<label>.*?)<\/a>/isu',
             $html,
             $links,
             PREG_SET_ORDER,
         );
 
-        foreach (array_reverse($links) as $link) {
-            $label = $this->normalizeText(strip_tags((string) $link['label']));
-            if (!preg_match('/naujausios\s+degalų\s+kainos.*?(?<date>\d{4}-\d{2}-\d{2})/iu', $label, $match)) {
+        $candidates = [];
+        foreach ($links as $link) {
+            $attributes = (string) $link['attributes'];
+            $href = $this->attributeValue($attributes, 'href');
+            if ($href === null) {
                 continue;
             }
 
-            $sourceDate = $this->validateDate($match['date']);
-            $downloadUrl = html_entity_decode((string) $link['href'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $label = $this->normalizeText(strip_tags((string) $link['label']));
+            $title = $this->normalizeText((string) ($this->attributeValue($attributes, 'title') ?? ''));
+            $date = $this->extractSourceDate($title, $label);
+            if ($date === null) {
+                continue;
+            }
+
+            $sourceDate = $this->validateDate($date);
+            $downloadUrl = html_entity_decode($href, ENT_QUOTES | ENT_HTML5, 'UTF-8');
             $this->assertAllowedDownloadUrl($downloadUrl);
 
-            return new LeaSource(
-                pageUrl: $pageUrl,
-                downloadUrl: $this->withDownloadFlag($downloadUrl),
-                sourceDate: $sourceDate,
+            $candidates[] = [
+                'sourceDate' => $sourceDate,
+                'downloadUrl' => $this->withDownloadFlag($downloadUrl),
+            ];
+        }
+
+        if ($candidates === []) {
+            throw new \RuntimeException(
+                'LEA puslapyje nerasta datuota degalų kainų failo nuoroda. Importas sustabdytas.',
             );
         }
 
-        throw new \RuntimeException(
-            'LEA puslapyje nerasta nuoroda „Naujausios degalų kainos (YYYY-MM-DD)“. Importas sustabdytas.',
+        usort(
+            $candidates,
+            static fn (array $left, array $right): int => $right['sourceDate'] <=> $left['sourceDate'],
         );
+        $latest = $candidates[0];
+
+        return new LeaSource(
+            pageUrl: $pageUrl,
+            downloadUrl: $latest['downloadUrl'],
+            sourceDate: $latest['sourceDate'],
+        );
+    }
+
+    private function attributeValue(string $attributes, string $name): ?string
+    {
+        $quotedName = preg_quote($name, '/');
+        if (!preg_match(
+            "/\\b{$quotedName}\\s*=\\s*(?:\"(?<double>[^\"]*)\"|'(?<single>[^']*)')/isu",
+            $attributes,
+            $match,
+            PREG_UNMATCHED_AS_NULL,
+        )) {
+            return null;
+        }
+
+        return $match['double'] ?? $match['single'];
+    }
+
+    private function extractSourceDate(string $title, string $label): ?string
+    {
+        if (preg_match('/^degalų\s+kainos\s+(?<date>\d{4}-\d{2}-\d{2})$/iu', $title, $match)) {
+            return $match['date'];
+        }
+
+        if (preg_match('/naujausios\s+degalų\s+kainos.*?(?<date>\d{4}-\d{2}-\d{2})/iu', $label, $match)) {
+            return $match['date'];
+        }
+
+        return null;
     }
 
     private function normalizeText(string $text): string
