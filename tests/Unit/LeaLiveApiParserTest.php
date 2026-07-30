@@ -24,7 +24,7 @@ final class LeaLiveApiParserTest extends TestCase
         self::assertSame(['pb95', 'diesel', 'lpg'], $snapshot->parsed->detectedFuelSlugs);
 
         $station = $snapshot->parsed->stations[0];
-        self::assertSame('station-1', $station['source_id']);
+        self::assertMatchesRegularExpression('/^[a-f0-9]{32}$/', $station['source_id']);
         self::assertSame('Testas', $station['brand']);
         self::assertSame('Alytus', $station['city']);
         self::assertSame(54.40333915, $station['latitude']);

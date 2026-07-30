@@ -54,18 +54,19 @@ final class LeaLiveApiParser
                 continue;
             }
 
-            $stationUuid = trim((string) ($record['uuid'] ?? ''));
             $address = trim((string) ($record['address'] ?? ''));
             $municipality = trim((string) ($record['municipality'] ?? ''));
             $company = trim((string) ($record['company_name'] ?? ''));
             $stationName = trim((string) ($record['gas_station_name'] ?? ''));
             $brand = $stationName !== '' ? $stationName : $company;
+            $latitude = $this->coordinate($record['latitude'] ?? null);
+            $longitude = $this->coordinate($record['longitude'] ?? null);
             $fuelType = trim((string) ($record['fuel_type'] ?? ''));
             $fuelSlug = self::FUEL_MAP[$fuelType] ?? null;
             $price = is_numeric($record['price'] ?? null) ? (float) $record['price'] : null;
 
-            if ($stationUuid === '' || $brand === '' || $address === '') {
-                $issues[] = "API įrašas {$rowNumber}: trūksta degalinės identifikatoriaus, pavadinimo arba adreso.";
+            if ($brand === '' || $address === '') {
+                $issues[] = "API įrašas {$rowNumber}: trūksta degalinės pavadinimo arba adreso.";
                 continue;
             }
             if ($fuelSlug === null) {
@@ -79,33 +80,44 @@ final class LeaLiveApiParser
                 continue;
             }
 
+            // LEA's `uuid` identifies the individual price submission, not the
+            // physical station. Build a stable station identity from the public
+            // station fields so all fuel types end up under one map marker.
+            $stationKey = $this->stationKey(
+                $company,
+                $stationName,
+                $municipality,
+                $address,
+                $latitude,
+                $longitude,
+            );
             $detectedFuels[$fuelSlug] = true;
-            if (!isset($stations[$stationUuid])) {
-                $stations[$stationUuid] = [
-                    'source_id' => $stationUuid,
+            if (!isset($stations[$stationKey])) {
+                $stations[$stationKey] = [
+                    'source_id' => $stationKey,
                     'brand' => $brand,
                     'address' => $address,
                     'city' => $this->deriveCity($address, $municipality),
                     'municipality' => $municipality !== '' ? $municipality : null,
-                    'latitude' => $this->coordinate($record['latitude'] ?? null),
-                    'longitude' => $this->coordinate($record['longitude'] ?? null),
+                    'latitude' => $latitude,
+                    'longitude' => $longitude,
                     'prices' => [],
                     '_submitted' => [],
                 ];
             }
 
             $submittedAt = trim((string) ($record['submitted_at'] ?? ''));
-            $previousSubmittedAt = $stations[$stationUuid]['_submitted'][$fuelSlug] ?? null;
+            $previousSubmittedAt = $stations[$stationKey]['_submitted'][$fuelSlug] ?? null;
             if (
-                isset($stations[$stationUuid]['prices'][$fuelSlug])
+                isset($stations[$stationKey]['prices'][$fuelSlug])
                 && is_string($previousSubmittedAt)
                 && $submittedAt <= $previousSubmittedAt
             ) {
                 continue;
             }
 
-            $stations[$stationUuid]['prices'][$fuelSlug] = $price;
-            $stations[$stationUuid]['_submitted'][$fuelSlug] = $submittedAt;
+            $stations[$stationKey]['prices'][$fuelSlug] = $price;
+            $stations[$stationKey]['_submitted'][$fuelSlug] = $submittedAt;
         }
 
         foreach ($stations as &$station) {
@@ -145,5 +157,30 @@ final class LeaLiveApiParser
     private function coordinate(mixed $value): ?float
     {
         return is_numeric($value) ? (float) $value : null;
+    }
+
+    private function stationKey(
+        string $company,
+        string $stationName,
+        string $municipality,
+        string $address,
+        ?float $latitude,
+        ?float $longitude,
+    ): string {
+        $identity = implode('|', [
+            $this->normalize($company),
+            $this->normalize($stationName),
+            $this->normalize($municipality),
+            $this->normalize($address),
+            $latitude === null ? '' : sprintf('%.7F', $latitude),
+            $longitude === null ? '' : sprintf('%.7F', $longitude),
+        ]);
+
+        return substr(hash('sha256', $identity), 0, 32);
+    }
+
+    private function normalize(string $value): string
+    {
+        return (string) preg_replace('/\s+/u', ' ', mb_strtolower(trim($value)));
     }
 }
