@@ -7,7 +7,16 @@ namespace App\Service\Import;
 final readonly class ParsedImport
 {
     /**
-     * @param list<array{brand:string,address:string,city:string,municipality:?string,prices:array<string,float>}> $stations
+     * @param list<array{
+     *   source_id?:string,
+     *   brand:string,
+     *   address:string,
+     *   city:string,
+     *   municipality:?string,
+     *   latitude?:?float,
+     *   longitude?:?float,
+     *   prices:array<string,float>
+     * }> $stations
      * @param list<string> $detectedFuelSlugs
      * @param list<string> $issues
      * @param list<string> $sourceDates

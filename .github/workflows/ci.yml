@@ -54,6 +54,8 @@ jobs:
         run: node --check static/assets/app.js
       - name: Build from the sanitized LEA fixture
         run: php bin/build-static.php --file=tests/Fixtures/lea_prices_valid.xlsx --source-date=2026-07-17 --fixture --output=dist --archive-output=var/import-artifact
+      - name: Build from the sanitized live LEA API fixture
+        run: php bin/build-static.php --file=tests/Fixtures/lea_live_api.json --source-date=2026-07-30 --fixture --output=dist-api --archive-output=var/api-import-artifact
       - name: Verify generated public files
         run: |
           test -s dist/index.html
@@ -68,39 +70,10 @@ jobs:
           grep -q 'data-station-id' static/assets/app.js
           grep -q 'mapsSearchUrl' static/assets/app.js
           grep -q 'data/status.json' static/assets/app.js
-          grep -q 'naujausią LEA paskelbtą datą' dist/index.html
+          grep -q 'oficialiame LEA kainų portale' dist/index.html
+          grep -q 'lea-live-api-v1' dist-api/data/current.json
+          grep -q '2026-07-30T10:30:03+03:00' dist-api/data/current.json
           if grep -R -q 'GitHub' dist; then
             echo "Public site must not mention internal GitHub infrastructure."
             exit 1
           fi
-
-  inspect-live-lea-api:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Inspect public LEA API contract
-        shell: bash
-        run: |
-          set -euo pipefail
-          curl --fail --silent --show-error --location \
-            --header 'Accept: application/json' \
-            'https://api-degalukainos.ena.lt/api/v1/read/prices/latest' \
-            --output /tmp/lea-latest.json
-          echo "bytes=$(wc -c < /tmp/lea-latest.json)"
-          jq '
-            {
-              root_type: type,
-              root_keys: (if type == "object" then keys else [] end),
-              root_length: (if type == "array" then length else null end),
-              array_shapes: (
-                [paths(arrays) as $path |
-                  (getpath($path)) as $value |
-                  {
-                    path: $path,
-                    length: ($value | length),
-                    first_type: (if ($value | length) > 0 then ($value[0] | type) else null end),
-                    first_keys: (if (($value | length) > 0 and (($value[0] | type) == "object")) then ($value[0] | keys) else [] end)
-                  }
-                ][0:20]
-              )
-            }
-          ' /tmp/lea-latest.json

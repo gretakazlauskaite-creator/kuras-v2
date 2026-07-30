@@ -73,11 +73,11 @@ final class ImportValidator
         }
 
         if (count($parsed->sourceDates) > 1) {
-            $errors[] = 'Excel faile rastos kelios skirtingos pateikimo datos: ' . implode(', ', $parsed->sourceDates) . '.';
+            $errors[] = 'Šaltinyje rastos kelios skirtingos pateikimo datos: ' . implode(', ', $parsed->sourceDates) . '.';
         } elseif (count($parsed->sourceDates) === 1 && $parsed->sourceDates[0] !== $sourceDate) {
-            $errors[] = "Excel pateikimo data {$parsed->sourceDates[0]} nesutampa su LEA puslapio data {$sourceDate}.";
+            $errors[] = "Šaltinio pateikimo data {$parsed->sourceDates[0]} nesutampa su LEA paskelbta data {$sourceDate}.";
         } elseif ($parsed->sourceDates === []) {
-            $warnings[] = 'Excel faile nerasta pateikimo data; naudojama oficialaus LEA puslapio data.';
+            $warnings[] = 'Šaltinyje nerasta pateikimo data; naudojama oficiali LEA paskelbta data.';
         }
 
         foreach (['pb98', 'lpg'] as $optionalSlug) {

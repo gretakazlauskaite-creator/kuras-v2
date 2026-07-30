@@ -64,4 +64,34 @@ final class StaticDataExporterTest extends TestCase
         self::assertNull($payload['stations'][0]['latitude']);
         self::assertNull($payload['stations'][0]['longitude']);
     }
+
+    public function testItPrefersOfficialApiCoordinatesAndExposesTheApiUpdateTime(): void
+    {
+        $parsed = new ParsedImport([[
+            'source_id' => 'official-station-id',
+            'brand' => 'Testas',
+            'address' => 'Alytus, Testų g. 1',
+            'city' => 'Alytus',
+            'municipality' => 'Alytaus m. sav.',
+            'latitude' => 54.40333915,
+            'longitude' => 24.03722399,
+            'prices' => ['pb95' => 1.699],
+        ]], ['pb95'], 1);
+
+        $payload = (new StaticDataExporter())->export(
+            parsed: $parsed,
+            sourceDate: '2026-07-30',
+            generatedAt: '2026-07-30T07:31:00Z',
+            sourcePageUrl: 'https://degalukainos.ena.lt/',
+            checksum: str_repeat('b', 64),
+            parserVersion: 'lea-live-api-v1',
+            sourceUpdatedAt: '2026-07-30T10:30:03+03:00',
+        );
+
+        self::assertSame(1, $payload['summary']['coordinate_count']);
+        self::assertSame(54.40333915, $payload['stations'][0]['latitude']);
+        self::assertSame(24.03722399, $payload['stations'][0]['longitude']);
+        self::assertSame('lea-live-api-v1', $payload['source']['parser_version']);
+        self::assertSame('2026-07-30T10:30:03+03:00', $payload['source']['source_updated_at']);
+    }
 }
