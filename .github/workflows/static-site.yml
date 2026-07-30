@@ -50,7 +50,10 @@ jobs:
         run: |
           set -euo pipefail
           curl --fail --silent --show-error --location \
+            --user-agent 'Mozilla/5.0' \
             --header 'Accept: application/json' \
+            --header 'Origin: https://degalukainos.ena.lt' \
+            --header 'Referer: https://degalukainos.ena.lt/' \
             'https://api-degalukainos.ena.lt/api/v1/read/prices/latest' \
             --output /tmp/lea-latest.json
           echo "bytes=$(wc -c < /tmp/lea-latest.json)"
