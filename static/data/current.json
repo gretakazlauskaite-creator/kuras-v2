@@ -5,15 +5,15 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-07-30",
-        "generated_at": "2026-07-30T08:24:46+00:00",
-        "checksum_sha256": "1761bdf1b70c1629741f2d37df77792b057af81e0f1be5ffd26d1d829a11fab3",
+        "generated_at": "2026-07-30T10:34:03+00:00",
+        "checksum_sha256": "e641f764d3728921471b3eb035dbaf7bf5058036feeab6a855c79c743c8242f7",
         "parser_version": "lea-live-api-v1",
-        "source_updated_at": "2026-07-30T10:30:03+03:00"
+        "source_updated_at": "2026-07-30T12:40:33+03:00"
     },
     "summary": {
-        "station_count": 755,
-        "coordinate_count": 740,
-        "price_count": 2055,
+        "station_count": 759,
+        "coordinate_count": 744,
+        "price_count": 2066,
         "fuels": [
             "pb95",
             "diesel",
@@ -2360,14 +2360,14 @@
             }
         },
         {
-            "id": "5cc69637bd90b2d2",
+            "id": "2d33baf286853458",
             "name": "Circle K",
             "brand": "Circle K",
             "address": "Girėnų k., Kauno g. 68, 71129",
             "city": "Girėnų k.",
             "municipality": "Šakių r. sav.",
-            "latitude": 54.95313053,
-            "longitude": 23.08379485,
+            "latitude": 54.95283843,
+            "longitude": 23.08015059,
             "prices": {
                 "pb95": 1.897,
                 "diesel": 2.127,
@@ -2405,14 +2405,14 @@
             }
         },
         {
-            "id": "4961718ab220e12b",
+            "id": "46d04d75faefe782",
             "name": "Circle K",
             "brand": "Circle K",
             "address": "Jurbarkas, Muitinės g. 34A, 74106",
             "city": "Jurbarkas",
             "municipality": "Jurbarko r. sav.",
-            "latitude": 55.07694564,
-            "longitude": 22.7520303,
+            "latitude": 55.07687545,
+            "longitude": 22.75185569,
             "prices": {
                 "pb95": 1.897,
                 "diesel": 2.127
@@ -3652,6 +3652,51 @@
             }
         },
         {
+            "id": "9c84ad1f6123aad8",
+            "name": "Degta",
+            "brand": "Degta",
+            "address": "Anykščiai, Vienuolio g. 34A, 29148",
+            "city": "Anykščiai",
+            "municipality": "Anykščių r. sav.",
+            "latitude": 55.5226002,
+            "longitude": 25.0879884,
+            "prices": {
+                "pb95": 1.799,
+                "diesel": 1.989,
+                "lpg": 0.709
+            }
+        },
+        {
+            "id": "f8a62d2e134ea02a",
+            "name": "Degta",
+            "brand": "Degta",
+            "address": "Rokiškis, Respublikos g. 113B, 42150",
+            "city": "Rokiškis",
+            "municipality": "Rokiškio r. sav.",
+            "latitude": 55.9466824,
+            "longitude": 25.591055,
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.103,
+                "lpg": 0.839
+            }
+        },
+        {
+            "id": "b7e882b13836783f",
+            "name": "Degta",
+            "brand": "Degta",
+            "address": "Vievis, Kauno g. 55A, 21371",
+            "city": "Vievis",
+            "municipality": "Elektrėnų sav.",
+            "latitude": 54.7752192,
+            "longitude": 24.8104952,
+            "prices": {
+                "pb95": 1.949,
+                "diesel": 2.169,
+                "lpg": 0.839
+            }
+        },
+        {
             "id": "53ef0f6744da8613",
             "name": "Deguva",
             "brand": "Deguva",
@@ -3749,14 +3794,14 @@
             }
         },
         {
-            "id": "8c23833723c4ba66",
+            "id": "96512dc3ef9bb225",
             "name": "EU Verslas",
             "brand": "EU Verslas",
             "address": "Jovaišiškės k., Telšių g. 127, 90107",
             "city": "Jovaišiškės k.",
             "municipality": "Plungės r. sav.",
-            "latitude": 55.90791004,
-            "longitude": 21.87184704,
+            "latitude": 55.90807594,
+            "longitude": 21.87150917,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.989,
@@ -3764,14 +3809,14 @@
             }
         },
         {
-            "id": "e618aca7e8573f4e",
+            "id": "c9dd8ca36b670685",
             "name": "EU Verslas",
             "brand": "EU Verslas",
             "address": "Mažeikiai, Viekšnių g. 24, 89235",
             "city": "Mažeikiai",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.3042092,
-            "longitude": 22.3602577,
+            "latitude": 56.30424052,
+            "longitude": 22.36034828,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.989,
@@ -3779,28 +3824,28 @@
             }
         },
         {
-            "id": "eb5a71488093bd93",
+            "id": "1936a3ec21cd36b2",
             "name": "EU Verslas",
             "brand": "EU Verslas",
             "address": "Plungė, Rietavo g. 109, 90106",
             "city": "Plungė",
             "municipality": "Plungės r. sav.",
-            "latitude": 55.8956358,
-            "longitude": 21.8620648,
+            "latitude": 55.8956274,
+            "longitude": 21.86206183,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.989
             }
         },
         {
-            "id": "349c5c8de8b267b9",
+            "id": "dfa88a243b9a26bb",
             "name": "EU Verslas",
             "brand": "EU Verslas",
             "address": "Plungė, Stoties g. 7C, 90115",
             "city": "Plungė",
             "municipality": "Plungės r. sav.",
-            "latitude": 55.9203765,
-            "longitude": 21.8321274,
+            "latitude": 55.92037282,
+            "longitude": 21.83227625,
             "prices": {
                 "pb95": 1.79,
                 "diesel": 1.99,
@@ -4641,14 +4686,14 @@
             }
         },
         {
-            "id": "fd46ceb99ddc2618",
+            "id": "cd7457c3628fa062",
             "name": "Gelvybė",
             "brand": "Gelvybė",
             "address": "Kiduliai, Sūduvos g. 3, 71400",
             "city": "Kiduliai",
             "municipality": "Šakių r. sav.",
-            "latitude": 55.0638386,
-            "longitude": 22.7807167,
+            "latitude": 55.06387545,
+            "longitude": 22.7807238,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.059,
@@ -4656,57 +4701,57 @@
             }
         },
         {
-            "id": "3e803fb187360ca6",
+            "id": "3831147f0af2500c",
             "name": "Gelvybė",
             "brand": "Gelvybė",
             "address": "Mozūriškiai, Mozūriškių 10, 71382",
             "city": "Mozūriškiai",
             "municipality": "Šakių r. sav.",
-            "latitude": 55.02149943,
-            "longitude": 22.97142801,
+            "latitude": 55.02160289,
+            "longitude": 22.96955865,
             "prices": {
                 "pb95": 1.82,
                 "diesel": 2.03
             }
         },
         {
-            "id": "cbdd18996d4fba35",
+            "id": "d32313597e3735a4",
             "name": "Gelvybė",
             "brand": "Gelvybė",
             "address": "Rūdos k., Marijampolės g. 8, 70313",
             "city": "Rūdos k.",
             "municipality": "Vilkaviškio r. sav.",
-            "latitude": 54.60204111,
-            "longitude": 23.1948645,
+            "latitude": 54.60190628,
+            "longitude": 23.19493466,
             "prices": {
-                "pb95": 1.729,
-                "diesel": 1.929,
+                "pb95": 1.759,
+                "diesel": 1.959,
                 "lpg": 0.73
             }
         },
         {
-            "id": "c1822ae53159927c",
+            "id": "88f0d241ec815f8f",
             "name": "Gelvybė",
             "brand": "Gelvybė",
             "address": "Seredžius, S. Šimkaus g. 69, 74425",
             "city": "Seredžius",
             "municipality": "Jurbarko r. sav.",
-            "latitude": 55.0789086,
-            "longitude": 23.3969234,
+            "latitude": 55.07883072,
+            "longitude": 23.39670955,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.03
             }
         },
         {
-            "id": "81abeba82e970aa2",
+            "id": "b387054baa9017e2",
             "name": "Gelvybė",
             "brand": "Gelvybė",
             "address": "Šakiai, V. Kudirkos g. 11D, 71124",
             "city": "Šakiai",
             "municipality": "Šakių r. sav.",
-            "latitude": 54.9541387,
-            "longitude": 23.0246372,
+            "latitude": 54.95418698,
+            "longitude": 23.02456981,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.059,
@@ -5201,14 +5246,14 @@
             }
         },
         {
-            "id": "fe6485e4e0b234b7",
+            "id": "40fd03853aee2588",
             "name": "Junasa",
             "brand": "Junasa",
             "address": "Gruzdžiai, M. Katiliškio g. 50, 81428",
             "city": "Gruzdžiai",
             "municipality": "Šiaulių r. sav.",
-            "latitude": 56.0992272,
-            "longitude": 23.2658189,
+            "latitude": 56.09973108,
+            "longitude": 23.26565865,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.989,
@@ -5216,14 +5261,14 @@
             }
         },
         {
-            "id": "8c0d097e5498961b",
+            "id": "d12ffa1907bb0960",
             "name": "Junasa",
             "brand": "Junasa",
             "address": "Šiauliai, Bačiūnų g. 12a, 77109",
             "city": "Šiauliai",
             "municipality": "Šiaulių m. sav.",
-            "latitude": 55.8979296,
-            "longitude": 23.3517196,
+            "latitude": 55.89789464,
+            "longitude": 23.35174183,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.989,
@@ -5231,14 +5276,14 @@
             }
         },
         {
-            "id": "0206bf35fd2cf7d6",
+            "id": "9ca23d2552a2ef7d",
             "name": "Junasa",
             "brand": "Junasa",
             "address": "Šiauliai, Žemaitės g. 131c, 76175",
             "city": "Šiauliai",
             "municipality": "Šiaulių m. sav.",
-            "latitude": 55.9481053,
-            "longitude": 23.3204268,
+            "latitude": 55.94801517,
+            "longitude": 23.32052749,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.959,
@@ -5454,66 +5499,66 @@
             }
         },
         {
-            "id": "cdcf1e161fe0fc5f",
+            "id": "c440671d39eeb1a2",
             "name": "Madalva",
             "brand": "Madalva",
             "address": "Gineikių k., 75445",
             "city": "Gineikių k.",
             "municipality": "Šilalės r. sav.",
-            "latitude": 55.53663639,
-            "longitude": 22.49490581,
+            "latitude": 55.54188502,
+            "longitude": 22.49162063,
             "prices": {
                 "lpg": 0.75
             }
         },
         {
-            "id": "981529e285318e66",
+            "id": "6db7d5a872538056",
             "name": "Madalva",
             "brand": "Madalva",
             "address": "Plungė, Lentpjūvės g. 10A, 90118",
             "city": "Plungė",
             "municipality": "Plungės r. sav.",
-            "latitude": 55.9214099,
-            "longitude": 21.8525815,
+            "latitude": 55.92139497,
+            "longitude": 21.85263657,
             "prices": {
                 "lpg": 0.66
             }
         },
         {
-            "id": "786b58a0f1630be3",
+            "id": "cf79e87822dec9b5",
             "name": "Madalva",
             "brand": "Madalva",
             "address": "Tauragė, Dariaus ir Girėno g. 49, 72221",
             "city": "Tauragė",
             "municipality": "Tauragės r. sav.",
-            "latitude": 55.258347,
-            "longitude": 22.294142,
+            "latitude": 55.2582747,
+            "longitude": 22.29462552,
             "prices": {
                 "lpg": 0.66
             }
         },
         {
-            "id": "4bf4325c1aef66ff",
+            "id": "9213682531e0565f",
             "name": "Madalva",
             "brand": "Madalva",
             "address": "Tauragė, Pramonės g. 10A, 72359",
             "city": "Tauragė",
             "municipality": "Tauragės r. sav.",
-            "latitude": 55.2364476,
-            "longitude": 22.2967893,
+            "latitude": 55.23631436,
+            "longitude": 22.2969472,
             "prices": {
                 "lpg": 0.66
             }
         },
         {
-            "id": "11ab6e11d1b1f276",
+            "id": "49c3b9f18c50fde6",
             "name": "Madalva",
             "brand": "Madalva",
             "address": "Žygaičių k., Žygaičių g. 2, 73282",
             "city": "Žygaičių k.",
             "municipality": "Tauragės r. sav.",
-            "latitude": 55.30544462,
-            "longitude": 22.04046386,
+            "latitude": 55.3039813,
+            "longitude": 22.04142297,
             "prices": {
                 "pb95": 1.76,
                 "diesel": 1.94,
@@ -5746,28 +5791,28 @@
             }
         },
         {
-            "id": "95eb52f5d559bb2e",
+            "id": "dacdf0f22a5bb3c1",
             "name": "Mindega",
             "brand": "Mindega",
             "address": "Šėta, Ramygalos g. 55, 58129",
             "city": "Šėta",
             "municipality": "Kėdainių r. sav.",
-            "latitude": 55.2903578,
-            "longitude": 24.2529976,
+            "latitude": 55.29043244,
+            "longitude": 24.25254785,
             "prices": {
                 "pb95": 1.76,
                 "diesel": 2.01
             }
         },
         {
-            "id": "c981752cf684da7e",
+            "id": "fed39901e23f92b2",
             "name": "Naftrus",
             "brand": "Naftrus",
             "address": "Degučių k., Topolių g. 1, 83291",
             "city": "Degučių k.",
             "municipality": "Pakruojo r. sav.",
-            "latitude": 55.97081253,
-            "longitude": 23.5874237,
+            "latitude": 55.97066533,
+            "longitude": 23.58759774,
             "prices": {
                 "pb95": 1.8,
                 "diesel": 2,
@@ -5775,14 +5820,14 @@
             }
         },
         {
-            "id": "e40d429d091e0247",
+            "id": "694f48a565a1529e",
             "name": "Naftrus",
             "brand": "Naftrus",
             "address": "Raseiniai, Vilniaus g. 3B, 60187",
             "city": "Raseiniai",
             "municipality": "Raseinių r. sav.",
-            "latitude": 55.3703149,
-            "longitude": 23.1321196,
+            "latitude": 55.37045452,
+            "longitude": 23.13227649,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999,
@@ -5790,14 +5835,14 @@
             }
         },
         {
-            "id": "a51b04eff474370c",
+            "id": "74300fe17aa61b32",
             "name": "Naftrus",
             "brand": "Naftrus",
             "address": "Slabados k., Pievų g. 19, 60109",
             "city": "Slabados k.",
             "municipality": "Raseinių r. sav.",
-            "latitude": 55.38617012,
-            "longitude": 23.04307556,
+            "latitude": 55.38602523,
+            "longitude": 23.04256551,
             "prices": {
                 "pb95": 1.83,
                 "diesel": 2.01,
@@ -5805,14 +5850,14 @@
             }
         },
         {
-            "id": "f3ed64d9722b21b9",
+            "id": "a1008c72b5537e5a",
             "name": "Naftrus",
             "brand": "Naftrus",
             "address": "Ylių k., Šilo g. 1, 60389",
             "city": "Ylių k.",
             "municipality": "Raseinių r. sav.",
-            "latitude": 55.4133242,
-            "longitude": 22.82195043,
+            "latitude": 55.41329448,
+            "longitude": 22.82192472,
             "prices": {
                 "pb95": 1.8,
                 "diesel": 2,
@@ -5835,14 +5880,14 @@
             }
         },
         {
-            "id": "a70d1f3d9f6d04a5",
+            "id": "34d3b9872213eaf5",
             "name": "Narjanta",
             "brand": "Narjanta",
             "address": "Dvariškių vs. 2, 40402",
             "city": "Dvariškių vs. 2",
             "municipality": "Kupiškio r. sav.",
-            "latitude": 55.7705222,
-            "longitude": 24.7550445,
+            "latitude": 55.77341402,
+            "longitude": 24.75432742,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.029,
@@ -5880,14 +5925,14 @@
             }
         },
         {
-            "id": "f2891a0646c4c603",
+            "id": "9201be224ae60618",
             "name": "Narjanta",
             "brand": "Narjanta",
             "address": "Troškūnai, Vilniaus g. 32, 29306",
             "city": "Troškūnai",
             "municipality": "Anykščių r. sav.",
-            "latitude": 55.5848527,
-            "longitude": 24.8784603,
+            "latitude": 55.58490114,
+            "longitude": 24.878353,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 1.999,
@@ -5895,14 +5940,14 @@
             }
         },
         {
-            "id": "3c8aad0f3ff95412",
+            "id": "18e42af1d06308aa",
             "name": "Narjanta",
             "brand": "Narjanta",
             "address": "Vabalninkas, S. Nėries g. 35, 41341",
             "city": "Vabalninkas",
             "municipality": "Biržų r. sav.",
-            "latitude": 55.9749782,
-            "longitude": 24.7401225,
+            "latitude": 55.97494629,
+            "longitude": 24.74019418,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.069,
@@ -5924,28 +5969,28 @@
             }
         },
         {
-            "id": "73b52bb882d0775f",
+            "id": "9e9efc81d57b4d8d",
             "name": "Neste Artojo",
             "brand": "Neste Artojo",
             "address": "Klaipėda, Artojo g. 2, 92105",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.7168107,
-            "longitude": 21.150527,
+            "latitude": 55.71767746,
+            "longitude": 21.15173274,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 1.999
             }
         },
         {
-            "id": "344bfe6d422a98ec",
+            "id": "154774b378cefabe",
             "name": "Neste Ateities",
             "brand": "Neste Ateities",
             "address": "Kaunas, Ateities pl. 50B, 52106",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9260285,
-            "longitude": 24.0605624,
+            "latitude": 54.92621497,
+            "longitude": 24.06032415,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 1.989
@@ -5966,84 +6011,84 @@
             }
         },
         {
-            "id": "0b69eaf89d4f6916",
+            "id": "012dc52dc5919c65",
             "name": "Neste Babilonas",
             "brand": "Neste Babilonas",
             "address": "Panevežys, Klaipėdos g. 144B, 37376",
             "city": "Panevežys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.73063,
-            "longitude": 24.316109,
+            "latitude": 55.73066174,
+            "longitude": 24.31609133,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 2.029
             }
         },
         {
-            "id": "674af36eeb946787",
+            "id": "51f545f400823109",
             "name": "Neste Baltijos",
             "brand": "Neste Baltijos",
             "address": "Klaipėda, Šilutės pl. 30, 91177",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.6930895,
-            "longitude": 21.1747696,
+            "latitude": 55.69313682,
+            "longitude": 21.17500963,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
             }
         },
         {
-            "id": "cea180ad6abc0ba2",
+            "id": "bb9a5493583ceb3d",
             "name": "Neste Basanavičiaus",
             "brand": "Neste Basanavičiaus",
             "address": "Utena, J. Basanavičiaus g. 129, 28216",
             "city": "Utena",
             "municipality": "Utenos r. sav.",
-            "latitude": 55.5051789,
-            "longitude": 25.6248833,
+            "latitude": 55.50509587,
+            "longitude": 25.62460582,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.029
             }
         },
         {
-            "id": "13e92d200afa0831",
+            "id": "a4f26bbc7dddbb36",
             "name": "Neste Birželio",
             "brand": "Neste Birželio",
             "address": "Kaunas, Birželio 23-iosios g. 23A, 50220",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9159784,
-            "longitude": 23.9535991,
+            "latitude": 54.91624068,
+            "longitude": 23.95403333,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.989
             }
         },
         {
-            "id": "954584fa13fd63f1",
+            "id": "b4bbc2b804a579bd",
             "name": "Neste Domeikavos",
             "brand": "Neste Domeikavos",
             "address": "Kumpių k., Vakarų g. 14, 47425",
             "city": "Kumpių k.",
             "municipality": "Kauno r. sav.",
-            "latitude": 54.95043433,
-            "longitude": 23.87396224,
+            "latitude": 54.94988175,
+            "longitude": 23.87381207,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.019
             }
         },
         {
-            "id": "ab0c3935171436a0",
+            "id": "57712d1a94ab8b56",
             "name": "Neste Dubijos",
             "brand": "Neste Dubijos",
             "address": "Šiauliai, Dubijos g. 18A, 77172",
             "city": "Šiauliai",
             "municipality": "Šiaulių m. sav.",
-            "latitude": 55.9293669,
-            "longitude": 23.2941339,
+            "latitude": 55.92929146,
+            "longitude": 23.29432274,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.019
@@ -6064,28 +6109,28 @@
             }
         },
         {
-            "id": "5134d2c74a209e94",
+            "id": "cf5305f5cfa7e053",
             "name": "Neste Elektrėnų",
             "brand": "Neste Elektrėnų",
             "address": "Elektrėnai, Sabališkių g. 1U, 26141",
             "city": "Elektrėnai",
             "municipality": "Elektrėnų sav.",
-            "latitude": 54.7890725,
-            "longitude": 24.6724424,
+            "latitude": 54.78951932,
+            "longitude": 24.6727424,
             "prices": {
                 "pb95": 1.869,
                 "diesel": 2.049
             }
         },
         {
-            "id": "d89c7ac7d1780109",
+            "id": "54b84e30239e2bed",
             "name": "Neste Europos",
             "brand": "Neste Europos",
             "address": "Kaunas, Europos pr. 43, 46329",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8758012,
-            "longitude": 23.912098,
+            "latitude": 54.87533761,
+            "longitude": 23.91149586,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.039
@@ -6120,70 +6165,70 @@
             }
         },
         {
-            "id": "4753c877dc7eeb3a",
+            "id": "4d371769e66b78fa",
             "name": "Neste Gegužių",
             "brand": "Neste Gegužių",
             "address": "Šiauliai, Gegužių g. 28, 78348",
             "city": "Šiauliai",
             "municipality": "Šiaulių m. sav.",
-            "latitude": 55.9059107,
-            "longitude": 23.2587205,
+            "latitude": 55.90607227,
+            "longitude": 23.25950627,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
             }
         },
         {
-            "id": "56949142b2d74eab",
+            "id": "09cec8dce0cfbe40",
             "name": "Neste IKI",
             "brand": "Neste IKI",
             "address": "Panevėžys, Klaipėdos g. 81, 37106",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7283773,
-            "longitude": 24.3323377,
+            "latitude": 55.72842472,
+            "longitude": 24.33235879,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.044
             }
         },
         {
-            "id": "823c1a702abb1ad9",
+            "id": "afb8a7b62b16c7e9",
             "name": "Neste Islandijos",
             "brand": "Neste Islandijos",
             "address": "Kaunas, Islandijos pl. 191E, 49168",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9314194,
-            "longitude": 23.9508055,
+            "latitude": 54.93142643,
+            "longitude": 23.9508213,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999
             }
         },
         {
-            "id": "96d3ac6aa74ca2da",
+            "id": "895c51ff3c1b3672",
             "name": "Neste Jakų",
             "brand": "Neste Jakų",
             "address": "Jakų k., Vilniaus pl. 9, 96322",
             "city": "Jakų k.",
             "municipality": "Klaipėdos r. sav.",
-            "latitude": 55.70643586,
-            "longitude": 21.23819784,
+            "latitude": 55.70660388,
+            "longitude": 21.23857198,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999
             }
         },
         {
-            "id": "7877b8b031e830f9",
+            "id": "492371504384d7e3",
             "name": "Neste Jonavos",
             "brand": "Neste Jonavos",
             "address": "Kaunas, Jonavos g. 110, 44136",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9133284,
-            "longitude": 23.9116506,
+            "latitude": 54.91330579,
+            "longitude": 23.91162096,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.019
@@ -6204,42 +6249,42 @@
             }
         },
         {
-            "id": "cf4a2846b2f15890",
+            "id": "b4559c7af39d70d0",
             "name": "Neste Kalantos",
             "brand": "Neste Kalantos",
             "address": "Kaunas, R. Kalantos g. 27, 52303",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8950704,
-            "longitude": 23.9859176,
+            "latitude": 54.89507456,
+            "longitude": 23.9859429,
             "prices": {
                 "pb95": 1.814,
                 "diesel": 2.014
             }
         },
         {
-            "id": "206ed7caa4d961bf",
+            "id": "4e85eff11823b4ae",
             "name": "Neste Kalvarijos 1",
             "brand": "Neste Kalvarijos 1",
             "address": "Salaperaugio k., Europos g. 1, 69286",
             "city": "Salaperaugio k.",
             "municipality": "Kalvarijos sav.",
-            "latitude": 54.32998718,
-            "longitude": 23.15021154,
+            "latitude": 54.32982918,
+            "longitude": 23.15021843,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.029
             }
         },
         {
-            "id": "5b455dc09ee371fd",
+            "id": "b15ee3fb876d920e",
             "name": "Neste Kalvarijos 2",
             "brand": "Neste Kalvarijos 2",
             "address": "N. Valios k., Europos g. 6, 69270",
             "city": "N. Valios k.",
             "municipality": "Kalvarijos sav.",
-            "latitude": 54.32832999,
-            "longitude": 23.15056689,
+            "latitude": 54.32824715,
+            "longitude": 23.15056195,
             "prices": {
                 "diesel": 2.029
             }
@@ -6273,42 +6318,42 @@
             }
         },
         {
-            "id": "8845f2e02aafa249",
+            "id": "6ad5c5fd5636aeee",
             "name": "Neste Klaipėdos",
             "brand": "Neste Klaipėdos",
             "address": "Panevėžys, Klaipėdos g. 66,  35193",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7277452,
-            "longitude": 24.3488051,
+            "latitude": 55.72778019,
+            "longitude": 24.34883948,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.049
             }
         },
         {
-            "id": "d8973adab00df159",
+            "id": "e1e5678e3b6aa3de",
             "name": "Neste Kuršių",
             "brand": "Neste Kuršių",
             "address": "Kaunas, Kuršių g. 1, 48106",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9361672,
-            "longitude": 23.8853207,
+            "latitude": 54.93617743,
+            "longitude": 23.88528448,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.019
             }
         },
         {
-            "id": "fce1bdee47913e61",
+            "id": "0fd3ae80eedc40e9",
             "name": "Neste Kėdainiai",
             "brand": "Neste Kėdainiai",
             "address": "Kėdainiai, J. Basanavičiaus g. 91E, 57356",
             "city": "Kėdainiai",
             "municipality": "Kėdainių r. sav.",
-            "latitude": 55.2781085,
-            "longitude": 23.959972,
+            "latitude": 55.27812915,
+            "longitude": 23.95995689,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.049
@@ -6371,28 +6416,28 @@
             }
         },
         {
-            "id": "ab9db56cbc3e5db2",
+            "id": "2581863e524a1ea1",
             "name": "Neste Mažeikių",
             "brand": "Neste Mažeikių",
             "address": "Mažeikiai, M. Daukšos g. 29, 89132",
             "city": "Mažeikiai",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.3012334,
-            "longitude": 22.3498409,
+            "latitude": 56.30125177,
+            "longitude": 22.34984919,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999
             }
         },
         {
-            "id": "5991ab7cad253b57",
+            "id": "bbe7118864b6c4ab",
             "name": "Neste Minijos",
             "brand": "Neste Minijos",
             "address": "Klaipėda, Minijos g. 119, 93231",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.6847139,
-            "longitude": 21.1505231,
+            "latitude": 55.6844148,
+            "longitude": 21.14962984,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
@@ -6413,56 +6458,56 @@
             }
         },
         {
-            "id": "c0bbc123e508419a",
+            "id": "a51b3045cad97b36",
             "name": "Neste Molėtų",
             "brand": "Neste Molėtų",
             "address": "Molėtai, Aplinkkelio g. 165, 33134",
             "city": "Molėtai",
             "municipality": "Molėtų r. sav.",
-            "latitude": 55.22148797,
-            "longitude": 25.43630393,
+            "latitude": 55.22158553,
+            "longitude": 25.43648772,
             "prices": {
                 "pb95": 1.784,
                 "diesel": 2.014
             }
         },
         {
-            "id": "74abbc4e9af2cf48",
+            "id": "2224b806ce53a44d",
             "name": "Neste Muravos",
             "brand": "Neste Muravos",
             "address": "Kaunas, Savanorių pr. 441C, 49185",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.92935433,
-            "longitude": 23.97347557,
+            "latitude": 54.92937829,
+            "longitude": 23.97344608,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.989
             }
         },
         {
-            "id": "d57b16d8f39c0836",
+            "id": "e03f9464a3c60fc7",
             "name": "Neste Nemuno",
             "brand": "Neste Nemuno",
             "address": "Panevėžys, Margirio g. 1B, 36248",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7193962,
-            "longitude": 24.3488668,
+            "latitude": 55.7194182,
+            "longitude": 24.34887409,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.029
             }
         },
         {
-            "id": "a8e07c595136f820",
+            "id": "3e6bfca808d2e862",
             "name": "Neste Nikola",
             "brand": "Neste Nikola",
             "address": "Ylių k., Pušyno g. 11, 60389",
             "city": "Ylių k.",
             "municipality": "Raseinių r. sav.",
-            "latitude": 55.41189006,
-            "longitude": 22.83065693,
+            "latitude": 55.41180526,
+            "longitude": 22.83067426,
             "prices": {
                 "pb95": 1.849,
                 "diesel": 2.049
@@ -6483,14 +6528,14 @@
             }
         },
         {
-            "id": "1ddfaf516c7675d2",
+            "id": "93abff5c51202fe3",
             "name": "Neste Pabradės",
             "brand": "Neste Pabradės",
             "address": "Pabradė, Vilniaus g. 94, 18177",
             "city": "Pabradė",
             "municipality": "Švenčionių r. sav.",
-            "latitude": 54.9785371,
-            "longitude": 25.7566235,
+            "latitude": 54.97878559,
+            "longitude": 25.75627752,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.049
@@ -6511,14 +6556,14 @@
             }
         },
         {
-            "id": "0249bc0508bfd7d3",
+            "id": "11211063ba4fcc53",
             "name": "Neste Pasvalio r.",
             "brand": "Neste Pasvalio r.",
             "address": "Raubonių k., Ąžuolpamūšio g. 1A, 39447",
             "city": "Raubonių k.",
             "municipality": "Pasvalio r. sav.",
-            "latitude": 56.11532092,
-            "longitude": 24.47066383,
+            "latitude": 56.11515934,
+            "longitude": 24.47056855,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.049
@@ -6539,28 +6584,28 @@
             }
         },
         {
-            "id": "6babf6dff7c70bc2",
+            "id": "1d2d9d60f2cf5855",
             "name": "Neste Plento",
             "brand": "Neste Plento",
             "address": "Gudžionių k., Šilų sen., Plento g. 7, 55462",
             "city": "Gudžionių k.",
             "municipality": "Jonavos r. sav.",
-            "latitude": 55.09556056,
-            "longitude": 24.31208848,
+            "latitude": 55.09548702,
+            "longitude": 24.312631,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
             }
         },
         {
-            "id": "0ec45ede37738122",
+            "id": "72337ca0a53e3d27",
             "name": "Neste Pramonės",
             "brand": "Neste Pramonės",
             "address": "Kaunas, Pramonės pr. 6A, 51267",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9099418,
-            "longitude": 23.9837672,
+            "latitude": 54.90996075,
+            "longitude": 23.98372534,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.014
@@ -6581,56 +6626,56 @@
             }
         },
         {
-            "id": "1c735a525947ec90",
+            "id": "7a4d316291b3a2b3",
             "name": "Neste Radviliškio",
             "brand": "Neste Radviliškio",
             "address": "Radviliškis, Versmės g. 2, 82197",
             "city": "Radviliškis",
             "municipality": "Radviliškio r. sav.",
-            "latitude": 55.8142724,
-            "longitude": 23.5460383,
+            "latitude": 55.81393383,
+            "longitude": 23.54574116,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.029
             }
         },
         {
-            "id": "c798c3263d9fd35c",
+            "id": "b2a06484accb62bc",
             "name": "Neste Ramučių",
             "brand": "Neste Ramučių",
             "address": "Ramučių k., Vijoklių g. 1C, 54467",
             "city": "Ramučių k.",
             "municipality": "Kauno r. sav.",
-            "latitude": 54.94830449,
-            "longitude": 24.01794698,
+            "latitude": 54.94834483,
+            "longitude": 24.01782278,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
             }
         },
         {
-            "id": "7e7ae7092bf5cbda",
+            "id": "325df49f668b21c4",
             "name": "Neste Ramygalos",
             "brand": "Neste Ramygalos",
             "address": "Panevėžys, Ramygalos g. 145B, 36225",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.709517,
-            "longitude": 24.3747541,
+            "latitude": 55.7095446,
+            "longitude": 24.37474543,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.029
             }
         },
         {
-            "id": "768e4da6be567db2",
+            "id": "44cf560ed6286740",
             "name": "Neste Raudondvario",
             "brand": "Neste Raudondvario",
             "address": "Kaunas, Raudondvario pl. 103, 47185",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9068617,
-            "longitude": 23.8728216,
+            "latitude": 54.90684397,
+            "longitude": 23.87286134,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.019
@@ -6651,14 +6696,14 @@
             }
         },
         {
-            "id": "96fc0e0052a1557c",
+            "id": "91c6d8f75f9277b1",
             "name": "Neste Santaikos",
             "brand": "Neste Santaikos",
             "address": "Alytus, Santaikos g. 34A, 62123",
             "city": "Alytus",
             "municipality": "Alytaus m. sav.",
-            "latitude": 54.3870841,
-            "longitude": 24.0262949,
+            "latitude": 54.3871462,
+            "longitude": 24.02632757,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 2.029
@@ -6707,28 +6752,28 @@
             }
         },
         {
-            "id": "f262b426dbd4fb87",
+            "id": "ab67aba043b3e7b0",
             "name": "Neste Sendvario",
             "brand": "Neste Sendvario",
             "address": "Klaipėda, Šilutės pl. 5C, 91109",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.7031833,
-            "longitude": 21.1647917,
+            "latitude": 55.70317515,
+            "longitude": 21.16478469,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
             }
         },
         {
-            "id": "8cfa1dfe63441885",
+            "id": "04e7c1e07fe158f2",
             "name": "Neste Smiltelės",
             "brand": "Neste Smiltelės",
             "address": "Klaipėda, Smiltelės g. 17, 95188",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.6698479,
-            "longitude": 21.1929514,
+            "latitude": 55.67008471,
+            "longitude": 21.19290936,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
@@ -6749,14 +6794,14 @@
             }
         },
         {
-            "id": "a60f98bd9fffcf1e",
+            "id": "de77fba52acb4cc0",
             "name": "Neste Stoties",
             "brand": "Neste Stoties",
             "address": "Marijampolė, Stoties g. 4C, 68112",
             "city": "Marijampolė",
             "municipality": "Marijampolės sav.",
-            "latitude": 54.5603639,
-            "longitude": 23.3659257,
+            "latitude": 54.5603953,
+            "longitude": 23.36592312,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999
@@ -6777,42 +6822,42 @@
             }
         },
         {
-            "id": "6e29e074c646ce52",
+            "id": "a08910839f53ee53",
             "name": "Neste Sudmantų",
             "brand": "Neste Sudmantų",
             "address": "Sudmantų k., Sendvario g. 2, 96327",
             "city": "Sudmantų k.",
             "municipality": "Klaipėdos r. sav.",
-            "latitude": 55.70621164,
-            "longitude": 21.20265473,
+            "latitude": 55.70607105,
+            "longitude": 21.20258886,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.019
             }
         },
         {
-            "id": "80372ec0cba3b72d",
+            "id": "9a4092a837f1f0e4",
             "name": "Neste Taikos",
             "brand": "Neste Taikos",
             "address": "Klaipėda, Taikos pr. 60, 93225",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.68884905,
-            "longitude": 21.1550997,
+            "latitude": 55.68892678,
+            "longitude": 21.15516377,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
             }
         },
         {
-            "id": "b4927398ff07a2e8",
+            "id": "e451abcb7f673b33",
             "name": "Neste Taikos žiedo",
             "brand": "Neste Taikos žiedo",
             "address": "Kaunas, Taikos pr. 80A, 50441",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.91221129,
-            "longitude": 23.9725879,
+            "latitude": 54.91210539,
+            "longitude": 23.97261751,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999
@@ -6833,56 +6878,56 @@
             }
         },
         {
-            "id": "33d3bcafa2b3e59e",
+            "id": "94601f13bbb22442",
             "name": "Neste Tarpučių",
             "brand": "Neste Tarpučių",
             "address": "Marijampolė, Vilkaviškio g. 61D, 68153",
             "city": "Marijampolė",
             "municipality": "Marijampolės sav.",
-            "latitude": 54.5626096,
-            "longitude": 23.3323659,
+            "latitude": 54.56257376,
+            "longitude": 23.33242248,
             "prices": {
                 "pb95": 1.794,
                 "diesel": 1.994
             }
         },
         {
-            "id": "3c6894698fdf975e",
+            "id": "0d47d180e8fdf145",
             "name": "Neste Tauragės",
             "brand": "Neste Tauragės",
             "address": "Tauragė, Dariaus ir Girėno g. 130A, 72194",
             "city": "Tauragė",
             "municipality": "Tauragės r. sav.",
-            "latitude": 55.2653157,
-            "longitude": 22.3088337,
+            "latitude": 55.26530031,
+            "longitude": 22.30879847,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 1.999
             }
         },
         {
-            "id": "f3556d1de2592ab7",
+            "id": "738ecf90bb0ce13a",
             "name": "Neste Telšių",
             "brand": "Neste Telšių",
             "address": "Gaudikaičių k., Šiaulių pl. 1A, 87100",
             "city": "Gaudikaičių k.",
             "municipality": "Telšių r. sav.",
-            "latitude": 56.00486276,
-            "longitude": 22.24022828,
+            "latitude": 56.00499642,
+            "longitude": 22.24023016,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.049
             }
         },
         {
-            "id": "ba01b34b42187437",
+            "id": "1153d5bfc0f2b5d8",
             "name": "Neste Tilžės",
             "brand": "Neste Tilžės",
             "address": "Šiauliai, Tilžės g. 72, 78140",
             "city": "Šiauliai",
             "municipality": "Šiaulių m. sav.",
-            "latitude": 55.9200839,
-            "longitude": 23.2932849,
+            "latitude": 55.92028679,
+            "longitude": 23.29299782,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.019
@@ -6903,42 +6948,42 @@
             }
         },
         {
-            "id": "f85cfede2fe947d8",
+            "id": "1aeec9c21e9839b0",
             "name": "Neste Tunelio",
             "brand": "Neste Tunelio",
             "address": "Kaunas, Tunelio g. 26, 44391",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8946555,
-            "longitude": 23.9442777,
+            "latitude": 54.89482331,
+            "longitude": 23.94423536,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.019
             }
         },
         {
-            "id": "7a763bf2a38122dc",
+            "id": "bd36c963be5af744",
             "name": "Neste Ukmergės",
             "brand": "Neste Ukmergės",
             "address": "Ukmergė, Kauno g. 45B, 20119",
             "city": "Ukmergė",
             "municipality": "Ukmergės r. sav.",
-            "latitude": 55.2420375,
-            "longitude": 24.7429222,
+            "latitude": 55.24205427,
+            "longitude": 24.74290832,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.019
             }
         },
         {
-            "id": "541be554af0a88c1",
+            "id": "018cb7c8b7243ec0",
             "name": "Neste Veiverių",
             "brand": "Neste Veiverių",
             "address": "Kaunas, Veiverių g. 132D, 46337",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.875505,
-            "longitude": 23.89097,
+            "latitude": 54.87574128,
+            "longitude": 23.8909283,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.029
@@ -6959,84 +7004,84 @@
             }
         },
         {
-            "id": "1b32f4578493b808",
+            "id": "6ba8521da00518a3",
             "name": "Neste Volvo",
             "brand": "Neste Volvo",
             "address": "Kaunas, Vakarinis aplinkkelis 18, 48182",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8986536,
-            "longitude": 23.9071189,
+            "latitude": 54.93380582,
+            "longitude": 23.86774429,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.039
             }
         },
         {
-            "id": "4156c6e8f3cda2fb",
+            "id": "bcb0b9c52b0acf03",
             "name": "Neste Šilagalio k.",
             "brand": "Neste Šilagalio k.",
             "address": "Šilagalio k., Panevėžio aplinkl. 7, 36224",
             "city": "Šilagalio k.",
             "municipality": "Panevėžio r. sav.",
-            "latitude": 55.67052491,
-            "longitude": 24.34841468,
+            "latitude": 55.67039884,
+            "longitude": 24.34842719,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.024
             }
         },
         {
-            "id": "8b3b485ebf7a0cd8",
+            "id": "1850c099dd0526f2",
             "name": "Neste Šilagalio žiedo",
             "brand": "Neste Šilagalio žiedo",
             "address": "Šilagalio k., Panevėžio aplinkl. 22, 36258",
             "city": "Šilagalio k.",
             "municipality": "Panevėžio r. sav.",
-            "latitude": 55.67304932,
-            "longitude": 24.334227,
+            "latitude": 55.6730312,
+            "longitude": 24.33425114,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 2.014
             }
         },
         {
-            "id": "565aaba593cc2b9b",
+            "id": "21691c4ef12e6e0a",
             "name": "Neste Šilalės r.",
             "brand": "Neste Šilalės r.",
             "address": "Katyčių k., 75493",
             "city": "Katyčių k.",
             "municipality": "Šilalės r. sav.",
-            "latitude": 55.52172674,
-            "longitude": 22.3657721,
+            "latitude": 55.52118315,
+            "longitude": 22.36597948,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.039
             }
         },
         {
-            "id": "9f1fb87da63fe4d8",
+            "id": "12b27127a824edf2",
             "name": "Neste Šilutės",
             "brand": "Neste Šilutės",
             "address": "Klaipėda, Plieno g. 1, 95112",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.6733047,
-            "longitude": 21.2015302,
+            "latitude": 55.67296055,
+            "longitude": 21.20099933,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
             }
         },
         {
-            "id": "20a6ef9fc1368f06",
+            "id": "4b5b07b916a186fb",
             "name": "Neste Ūdrijos",
             "brand": "Neste Ūdrijos",
             "address": "Alytus, Ūdrijos g. 31, 62411",
             "city": "Alytus",
             "municipality": "Alytaus m. sav.",
-            "latitude": 54.408962,
-            "longitude": 24.0051873,
+            "latitude": 54.40896245,
+            "longitude": 24.00518818,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 2.029
@@ -7057,14 +7102,14 @@
             }
         },
         {
-            "id": "1e862004f34a56a0",
+            "id": "195d5e77e1f86f7c",
             "name": "Neste Žemaičių",
             "brand": "Neste Žemaičių",
             "address": "Kaunas, Žemaičių pl. 26, 48256",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9255312,
-            "longitude": 23.8917929,
+            "latitude": 54.92551059,
+            "longitude": 23.89179378,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999
@@ -7693,42 +7738,56 @@
             }
         },
         {
-            "id": "ee0f9f1477dba26e",
+            "id": "21fcf23a123ac03f",
             "name": "RV",
             "brand": "RV",
             "address": "Mažeikiai, Algirdo g. 42, 89101",
             "city": "Mažeikiai",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.3159426,
-            "longitude": 22.3142841,
+            "latitude": 56.31857887,
+            "longitude": 22.31892788,
             "prices": {
                 "lpg": 0.71
             }
         },
         {
-            "id": "91aab2cfe158353e",
+            "id": "716559b5f0ab8433",
             "name": "RV",
             "brand": "RV",
             "address": "Mažeikiai, Daukšos g. 29 / Žemaitijos g. 69, 89132",
             "city": "Mažeikiai",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.30111742,
-            "longitude": 22.34978672,
+            "latitude": 56.31888105,
+            "longitude": 22.31891853,
             "prices": {
                 "lpg": 0.73
             }
         },
         {
-            "id": "bcc7232f7733dc41",
+            "id": "f57860048e48a374",
             "name": "RV",
             "brand": "RV",
             "address": "Švenčionys, Mokyklos g. 23, 18111",
             "city": "Švenčionys",
             "municipality": "Švenčionių r. sav.",
-            "latitude": 55.137806,
-            "longitude": 26.155728,
+            "latitude": 55.13841406,
+            "longitude": 26.1565448,
             "prices": {
                 "lpg": 0.85
+            }
+        },
+        {
+            "id": "01156a5b279e88c5",
+            "name": "RV Transport",
+            "brand": "RV Transport",
+            "address": "Kazlavo k. 4, 69285",
+            "city": "Kazlavo k. 4",
+            "municipality": "Kalvarijos sav.",
+            "latitude": 54.32908297,
+            "longitude": 23.14838336,
+            "prices": {
+                "pb95": 1.82,
+                "diesel": 2.02
             }
         },
         {
@@ -8988,14 +9047,14 @@
             }
         },
         {
-            "id": "d5a7d060455bad61",
+            "id": "f3f7f11bcc896fa2",
             "name": "UAB GINDANA degalai laivams",
             "brand": "UAB GINDANA degalai laivams",
             "address": "Klaipėda, Priešpilio g. 5, 91240",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.7041452,
-            "longitude": 21.129605,
+            "latitude": 55.70413979,
+            "longitude": 21.12956596,
             "prices": {
                 "pb95": 1.81,
                 "diesel": 1.99
@@ -11003,14 +11062,14 @@
             }
         },
         {
-            "id": "8161d4ca91513ab1",
+            "id": "257aa372a7b1b540",
             "name": "VIRŠI Lietuva",
             "brand": "VIRŠI Lietuva",
             "address": "Pasūduonės k., L.Taunio g. 3, 69331",
             "city": "Pasūduonės k.",
             "municipality": "Marijampolės sav.",
-            "latitude": 54.5711728,
-            "longitude": 23.3385123,
+            "latitude": 54.47583948,
+            "longitude": 23.22134553,
             "prices": {
                 "pb95": 1.804,
                 "diesel": 2.014,
@@ -11073,8 +11132,8 @@
             "longitude": 24.18939578,
             "prices": {
                 "pb95": 1.87,
-                "diesel": 1.99,
-                "lpg": 0.87
+                "diesel": 2.02,
+                "lpg": 0.86
             }
         },
         {
