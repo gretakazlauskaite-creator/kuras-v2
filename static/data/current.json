@@ -5,8 +5,8 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-07-30",
-        "generated_at": "2026-07-30T12:54:49+00:00",
-        "checksum_sha256": "4b5f25fd9a2697d8568f17760c113a9b2e2443886107310cf0565d4d7be4efe3",
+        "generated_at": "2026-07-30T16:00:17+00:00",
+        "checksum_sha256": "42a3da405f68e0ae2a4b8c89d9084c1964416cfe94f8f45e95abf2d8a397ef3a",
         "parser_version": "lea-live-api-v1",
         "source_updated_at": "2026-07-30T12:40:33+03:00"
     },
@@ -1584,14 +1584,14 @@
             }
         },
         {
-            "id": "28e89ef1648cf887",
+            "id": "c7c6fff8e2033b1b",
             "name": "Baltic Petroleum",
             "brand": "Baltic Petroleum",
             "address": "Salaperaugio k., Europos g. 9, 69286",
             "city": "Salaperaugio k.",
             "municipality": "Kalvarijos sav.",
-            "latitude": 54.32427494,
-            "longitude": 23.14468194,
+            "latitude": 54.32426372,
+            "longitude": 23.14466022,
             "prices": {
                 "pb95": 1.869,
                 "diesel": 2.099,
@@ -5865,14 +5865,14 @@
             }
         },
         {
-            "id": "811d11b5893f5534",
+            "id": "3811dd82b9df151d",
             "name": "Narjanta",
             "brand": "Narjanta",
             "address": "Aleksandrijos k., Kikonių g. 10, 40335",
             "city": "Aleksandrijos k.",
             "municipality": "Kupiškio r. sav.",
-            "latitude": 55.83425913,
-            "longitude": 25.0093349,
+            "latitude": 55.83425341,
+            "longitude": 25.00932459,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.099,
@@ -5895,14 +5895,14 @@
             }
         },
         {
-            "id": "4f75b69c727abd5b",
+            "id": "cc95a989227c09aa",
             "name": "Narjanta",
             "brand": "Narjanta",
             "address": "Pumpučiai, Pumpučių g. 25, 29253",
             "city": "Pumpučiai",
             "municipality": "Anykščių r. sav.",
-            "latitude": 55.4243113,
-            "longitude": 24.9204947,
+            "latitude": 55.67584312,
+            "longitude": 25.35867408,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.099,
@@ -5910,14 +5910,14 @@
             }
         },
         {
-            "id": "9f42a4eb433e1c36",
+            "id": "5cc61eb58748f120",
             "name": "Narjanta",
             "brand": "Narjanta",
             "address": "Sausalaukės k. 2, 29345",
             "city": "Sausalaukės k. 2",
             "municipality": "Anykščių r. sav.",
-            "latitude": 55.67591302,
-            "longitude": 25.35870293,
+            "latitude": 55.67583971,
+            "longitude": 25.35866829,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.029,
@@ -7607,27 +7607,27 @@
             }
         },
         {
-            "id": "61bebf18a59decf2",
+            "id": "73298ccec813927e",
             "name": "Osijos dujos",
             "brand": "Osijos dujos",
             "address": "Osijos k., Pamiškės g. 1, 70205",
             "city": "Osijos k.",
             "municipality": "Vilkaviškio r. sav.",
-            "latitude": 54.63654646,
-            "longitude": 23.0060656,
+            "latitude": 54.63650296,
+            "longitude": 23.00654875,
             "prices": {
                 "lpg": 0.8
             }
         },
         {
-            "id": "d84811e509938ae4",
+            "id": "ea1e5997dcdea113",
             "name": "Pakelės namai",
             "brand": "Pakelės namai",
             "address": "Škilinpamūšio k., Liepų g. 4, 39421",
             "city": "Škilinpamūšio k.",
             "municipality": "Pasvalio r. sav.",
-            "latitude": 56.26729867,
-            "longitude": 24.37087685,
+            "latitude": 56.26753355,
+            "longitude": 24.37097378,
             "prices": {
                 "pb95": 1.81,
                 "diesel": 2.1,
@@ -7635,14 +7635,14 @@
             }
         },
         {
-            "id": "93bff59cdef61d6e",
+            "id": "95292c93ce56dda5",
             "name": "Pakelės namai",
             "brand": "Pakelės namai",
             "address": "Škilinpamūšio k., Pasienio g. 10, 39421",
             "city": "Škilinpamūšio k.",
             "municipality": "Pasvalio r. sav.",
-            "latitude": 56.27180496,
-            "longitude": 24.36813022,
+            "latitude": 56.27250031,
+            "longitude": 24.36796682,
             "prices": {
                 "pb95": 1.81,
                 "diesel": 2.1,
@@ -7650,27 +7650,27 @@
             }
         },
         {
-            "id": "9f8fbc0eb7344ec8",
+            "id": "6ac51e8b5fdf340d",
             "name": "Plovimo sistemos",
             "brand": "Plovimo sistemos",
             "address": "Šiauliai, Gegužių g. 28, 78322",
             "city": "Šiauliai",
             "municipality": "Šiaulių m. sav.",
-            "latitude": 55.9059107,
-            "longitude": 23.2587205,
+            "latitude": 55.90621528,
+            "longitude": 23.25912984,
             "prices": {
                 "lpg": 0.729
             }
         },
         {
-            "id": "0ab78458cfd18ff8",
+            "id": "9f590f9549695fe6",
             "name": "Plungės lagūna",
             "brand": "Plungės lagūna",
             "address": "Rietavas, Plungės g. 32, 90313",
             "city": "Rietavas",
             "municipality": "Rietavo sav.",
-            "latitude": 55.7350721,
-            "longitude": 21.9240545,
+            "latitude": 55.73496531,
+            "longitude": 21.92401379,
             "prices": {
                 "pb95": 1.854,
                 "diesel": 2.116,
@@ -7678,14 +7678,14 @@
             }
         },
         {
-            "id": "d36bc557a22d2fcd",
+            "id": "50d5d78581828b29",
             "name": "Prie Luksto",
             "brand": "Prie Luksto",
             "address": "Telšiai, Masčio g. 21, 87139",
             "city": "Telšiai",
             "municipality": "Telšių r. sav.",
-            "latitude": 55.9757001,
-            "longitude": 22.2636566,
+            "latitude": 55.97576248,
+            "longitude": 22.26366425,
             "prices": {
                 "pb95": 1.905,
                 "diesel": 2.115,
@@ -7693,14 +7693,14 @@
             }
         },
         {
-            "id": "46db756910b4813a",
+            "id": "b5edb2a647b46a1d",
             "name": "Propano ir butano dujų centras",
             "brand": "Propano ir butano dujų centras",
             "address": "Cirkliškio k., Aukštaičių g. 2A, 18122",
             "city": "Cirkliškio k.",
             "municipality": "Švenčionių r. sav.",
-            "latitude": 55.12007725,
-            "longitude": 26.13128741,
+            "latitude": 55.12005773,
+            "longitude": 26.13142971,
             "prices": {
                 "pb95": 1.92,
                 "diesel": 2.14,
@@ -7708,14 +7708,14 @@
             }
         },
         {
-            "id": "06f2c5152326da53",
+            "id": "e8145137459fe8c2",
             "name": "Propano ir butano dujų centras",
             "brand": "Propano ir butano dujų centras",
             "address": "Ignalina, Švenčionių g. 35, 30132",
             "city": "Ignalina",
             "municipality": "Ignalinos r. sav.",
-            "latitude": 55.3271809,
-            "longitude": 26.1744803,
+            "latitude": 55.32950374,
+            "longitude": 26.16385539,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.089,
@@ -7777,28 +7777,28 @@
             }
         },
         {
-            "id": "01156a5b279e88c5",
+            "id": "c1163c7c849dab08",
             "name": "RV Transport",
             "brand": "RV Transport",
             "address": "Kazlavo k. 4, 69285",
             "city": "Kazlavo k. 4",
             "municipality": "Kalvarijos sav.",
-            "latitude": 54.32908297,
-            "longitude": 23.14838336,
+            "latitude": 54.32896988,
+            "longitude": 23.1484464,
             "prices": {
                 "pb95": 1.82,
                 "diesel": 2.02
             }
         },
         {
-            "id": "60d5509df0568146",
+            "id": "3b83f1024ebe5691",
             "name": "Regusa",
             "brand": "Regusa",
             "address": "Gavaltuvos k., Sodo g. 11, 69370",
             "city": "Gavaltuvos k.",
             "municipality": "Marijampolės sav.",
-            "latitude": 54.5711728,
-            "longitude": 23.3385123,
+            "latitude": 54.67677045,
+            "longitude": 23.41801347,
             "prices": {
                 "pb95": 1.82,
                 "diesel": 2.01,
@@ -7806,14 +7806,14 @@
             }
         },
         {
-            "id": "96ab5342aa93160e",
+            "id": "338cbc0fcc1021ee",
             "name": "Regusa",
             "brand": "Regusa",
             "address": "Jūrės k., Medelyno g. 4A, 69446",
             "city": "Jūrės k.",
             "municipality": "Kazlų Rūdos sav.",
-            "latitude": 54.76926136,
-            "longitude": 23.48656117,
+            "latitude": 54.8500758,
+            "longitude": 23.96587232,
             "prices": {
                 "pb95": 1.86,
                 "diesel": 2.05,
@@ -7836,14 +7836,14 @@
             }
         },
         {
-            "id": "ddcdd7e1f6fa231c",
+            "id": "09c6cdf5558e213e",
             "name": "Regusa",
             "brand": "Regusa",
             "address": "Kazlų Rūda, S. Daukanto g. 19D, 69430",
             "city": "Kazlų Rūda",
             "municipality": "Kazlų Rūdos sav.",
-            "latitude": 54.7392942,
-            "longitude": 23.4962233,
+            "latitude": 54.73959117,
+            "longitude": 23.49568398,
             "prices": {
                 "pb95": 1.86,
                 "diesel": 2.05,
@@ -7851,14 +7851,14 @@
             }
         },
         {
-            "id": "7430138f87e21d2b",
+            "id": "16b11b40e112109d",
             "name": "Regusa",
             "brand": "Regusa",
             "address": "Kybartai, J. Basanavičiaus g. 45A, 70417",
             "city": "Kybartai",
             "municipality": "Vilkaviškio r. sav.",
-            "latitude": 54.6387352,
-            "longitude": 22.7632799,
+            "latitude": 54.63850721,
+            "longitude": 22.76327716,
             "prices": {
                 "pb95": 1.88,
                 "diesel": 2.05,
@@ -8044,14 +8044,14 @@
             }
         },
         {
-            "id": "9dffa290f9587000",
+            "id": "6bd2dc4013e461cc",
             "name": "Saurida",
             "brand": "Saurida",
             "address": "Kreivukės k., 69232",
             "city": "Kreivukės k.",
             "municipality": "Kalvarijos sav.",
-            "latitude": 54.40739419,
-            "longitude": 23.22097541,
+            "latitude": 54.40733298,
+            "longitude": 23.22100491,
             "prices": {
                 "lpg": 0.72
             }
@@ -8190,14 +8190,14 @@
             }
         },
         {
-            "id": "b513f96e6a073c24",
+            "id": "a926c800824810ca",
             "name": "Saurida",
             "brand": "Saurida",
             "address": "Pašvenčio k., 74218",
             "city": "Pašvenčio k.",
             "municipality": "Jurbarko r. sav.",
-            "latitude": 55.0839161,
-            "longitude": 22.6069418,
+            "latitude": 55.08231765,
+            "longitude": 22.61092267,
             "prices": {
                 "pb95": 1.83,
                 "diesel": 1.98,
@@ -8560,14 +8560,14 @@
             }
         },
         {
-            "id": "0b8ac198671739f7",
+            "id": "f8358f2ae19aa7c3",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Alytaus k., 64464",
             "city": "Alytaus k.",
             "municipality": "Alytaus r. sav.",
-            "latitude": 54.4071385,
-            "longitude": 24.1017634,
+            "latitude": 54.40773067,
+            "longitude": 24.08521954,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8575,28 +8575,28 @@
             }
         },
         {
-            "id": "9b97388116500c72",
+            "id": "10526fdfecd73385",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Alytus, Santaikos g. 28 B, 62123",
             "city": "Alytus",
             "municipality": "Alytaus m. sav.",
-            "latitude": 54.3875212,
-            "longitude": 24.0318563,
+            "latitude": 54.40763497,
+            "longitude": 24.08515544,
             "prices": {
                 "pb95": 1.699,
                 "diesel": 1.927
             }
         },
         {
-            "id": "6905af9e72e8903a",
+            "id": "2090829e21138581",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Gustaičių k., 59296",
             "city": "Gustaičių k.",
             "municipality": "Prienų r. sav.",
-            "latitude": 54.5030384,
-            "longitude": 23.3751337,
+            "latitude": 54.73842126,
+            "longitude": 23.71035892,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8604,14 +8604,14 @@
             }
         },
         {
-            "id": "ea433e62891ff5d8",
+            "id": "5d767a026c07f459",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Kaniūkų k., 64104",
             "city": "Kaniūkų k.",
             "municipality": "Alytaus r. sav.",
-            "latitude": 54.3653049,
-            "longitude": 24.1060877,
+            "latitude": 54.36604328,
+            "longitude": 24.12186902,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8619,14 +8619,14 @@
             }
         },
         {
-            "id": "e965d59a775b240d",
+            "id": "761d94f25f2746cc",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Kantališkių k., 69841",
             "city": "Kantališkių k.",
             "municipality": "Marijampolės sav.",
-            "latitude": 54.8881365,
-            "longitude": 23.7869836,
+            "latitude": 54.63445071,
+            "longitude": 23.43639714,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8634,14 +8634,14 @@
             }
         },
         {
-            "id": "74139b696ee9e3c0",
+            "id": "e7fe7c01632659e3",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Klaipėda, Minijos g. 90, 93239",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.6864932,
-            "longitude": 21.145677,
+            "latitude": 55.68528783,
+            "longitude": 21.1471005,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8649,14 +8649,14 @@
             }
         },
         {
-            "id": "be31ff8604d4fe13",
+            "id": "5a1506e15d2cce92",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Kreivukė, Turgaus g. 4, 69232",
             "city": "Kreivukė",
             "municipality": "Kalvarijos sav.",
-            "latitude": 54.4108297,
-            "longitude": 23.2069152,
+            "latitude": 54.41091631,
+            "longitude": 23.20671774,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8664,14 +8664,14 @@
             }
         },
         {
-            "id": "3283c9dd3e78f945",
+            "id": "8e066a6fc02f8e07",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Kupiškis, Panevėžio g. 9, 40134",
             "city": "Kupiškis",
             "municipality": "Kupiškio r. sav.",
-            "latitude": 55.8260509,
-            "longitude": 24.9799373,
+            "latitude": 55.82603892,
+            "longitude": 24.97951392,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8679,14 +8679,14 @@
             }
         },
         {
-            "id": "c2190b45a246ff04",
+            "id": "d20742b824a866b4",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Miklusėnai, Kauno g. 1, 62461",
             "city": "Miklusėnai",
             "municipality": "Alytaus r. sav.",
-            "latitude": 54.428042,
-            "longitude": 24.0013991,
+            "latitude": 54.42803816,
+            "longitude": 24.0012011,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8694,14 +8694,14 @@
             }
         },
         {
-            "id": "29f8ad501b53c0a3",
+            "id": "822bd334a1459091",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Paliūniškio k., Žemdirbių g. 15, 38440",
             "city": "Paliūniškio k.",
             "municipality": "Panevėžio r. sav.",
-            "latitude": 55.78768975,
-            "longitude": 24.43927113,
+            "latitude": 55.78756925,
+            "longitude": 24.43920971,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8709,14 +8709,14 @@
             }
         },
         {
-            "id": "61168fa9b9a388d9",
+            "id": "07befe24ffd5e7f5",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Ramučių k., Erdvės g. 78, 54463",
             "city": "Ramučių k.",
             "municipality": "Kauno r. sav.",
-            "latitude": 54.92898574,
-            "longitude": 24.03821167,
+            "latitude": 54.92905072,
+            "longitude": 24.03811456,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8724,14 +8724,14 @@
             }
         },
         {
-            "id": "bf90a1b6f421d568",
+            "id": "cd1b185f6d2e98b3",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Utena, Palangos g. 66, 28140",
             "city": "Utena",
             "municipality": "Utenos r. sav.",
-            "latitude": 55.4985476,
-            "longitude": 25.5839697,
+            "latitude": 55.49857993,
+            "longitude": 25.58371001,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8739,14 +8739,14 @@
             }
         },
         {
-            "id": "565c2b4f449796b2",
+            "id": "e8e3455538bcd4bf",
             "name": "Stateta",
             "brand": "Stateta",
             "address": "Vilnius, Ukmergės g. 246, 06120",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7231463,
-            "longitude": 25.2410592,
+            "latitude": 54.72324911,
+            "longitude": 25.24175616,
             "prices": {
                 "pb95": 1.749,
                 "diesel": 1.949,
@@ -8754,14 +8754,14 @@
             }
         },
         {
-            "id": "c77cad1dabd24ded",
+            "id": "8efe6428440cd574",
             "name": "Tomega",
             "brand": "Tomega",
             "address": "Druskininkai, Gardino g. 98, 66225",
             "city": "Druskininkai",
             "municipality": "Druskininkų sav.",
-            "latitude": 53.9901794,
-            "longitude": 24.0057031,
+            "latitude": 53.99029291,
+            "longitude": 24.00567101,
             "prices": {
                 "pb95": 1.85,
                 "diesel": 2.05,
@@ -8769,55 +8769,55 @@
             }
         },
         {
-            "id": "417ff65d86cab116",
+            "id": "15143130448f1a72",
             "name": "Tomega",
             "brand": "Tomega",
             "address": "Dumblės k., 17178",
             "city": "Dumblės k.",
             "municipality": "Šalčininkų r. sav.",
-            "latitude": 55.2488589,
-            "longitude": 25.7713575,
+            "latitude": 54.16015419,
+            "longitude": 25.00989858,
             "prices": {
                 "pb95": 1.909,
                 "diesel": 2.139
             }
         },
         {
-            "id": "18b7f783cf6f0e42",
+            "id": "5415fc669cdfb5f7",
             "name": "Tomega",
             "brand": "Tomega",
             "address": "Tartoko k., 17127",
             "city": "Tartoko k.",
             "municipality": "Šalčininkų r. sav.",
-            "latitude": 54.4568792,
-            "longitude": 25.2794664,
+            "latitude": 54.30592204,
+            "longitude": 25.36089318,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.129
             }
         },
         {
-            "id": "6eb49702a6de11c1",
+            "id": "c022a756d3058d9f",
             "name": "Topgas",
             "brand": "Topgas",
             "address": "Kaišiadorys, Paukštininkų g. 13, 56161",
             "city": "Kaišiadorys",
             "municipality": "Kaišiadorių r. sav.",
-            "latitude": 54.865105,
-            "longitude": 24.434153,
+            "latitude": 54.86513266,
+            "longitude": 24.4341538,
             "prices": {
                 "lpg": 0.73
             }
         },
         {
-            "id": "aba4116ee0c1fe72",
+            "id": "17e653f12dffc279",
             "name": "Topgas",
             "brand": "Topgas",
             "address": "Slavinčiškis, Slavinčiškio g. 18, 40333",
             "city": "Slavinčiškis",
             "municipality": "Kupiškio r. sav.",
-            "latitude": 55.8324305,
-            "longitude": 25.0200782,
+            "latitude": 55.83154966,
+            "longitude": 25.0198713,
             "prices": {
                 "lpg": 0.71
             }
@@ -9927,14 +9927,14 @@
             }
         },
         {
-            "id": "356c9ff83f79819d",
+            "id": "21c7f0de23fbeb9b",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kretingsodžio k., 97100",
             "city": "Kretingsodžio k.",
             "municipality": "Kretingos r. sav.",
-            "latitude": 55.89613056,
-            "longitude": 21.22105171,
+            "latitude": 55.89597614,
+            "longitude": 21.22109589,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9942,14 +9942,14 @@
             }
         },
         {
-            "id": "e973d4aa02c5703c",
+            "id": "f61993b90d3f9bcd",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kumpių k., Verslo g. 13A, 54311",
             "city": "Kumpių k.",
             "municipality": "Kauno r. sav.",
-            "latitude": 54.95921707,
-            "longitude": 23.8668086,
+            "latitude": 54.95894115,
+            "longitude": 23.8668101,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9957,14 +9957,14 @@
             }
         },
         {
-            "id": "501273cfe0c6ac66",
+            "id": "7a96365788295443",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kuodaičių k., 75101",
             "city": "Kuodaičių k.",
             "municipality": "Šilalės r. sav.",
-            "latitude": 55.56361908,
-            "longitude": 22.19413124,
+            "latitude": 55.5687,
+            "longitude": 22.17763305,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.099,
@@ -9972,14 +9972,14 @@
             }
         },
         {
-            "id": "a2865be1a3f4bb23",
+            "id": "84ba93b724d838b1",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kupiškis, Pergalės g. 15, 40109",
             "city": "Kupiškis",
             "municipality": "Kupiškio r. sav.",
-            "latitude": 55.8445748,
-            "longitude": 24.9789992,
+            "latitude": 55.84453064,
+            "longitude": 24.97901461,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.059,
@@ -9987,14 +9987,14 @@
             }
         },
         {
-            "id": "0ef1c133946299a5",
+            "id": "91f6d72d7ee6abd7",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kuršėnai, Vilniaus g. 38A, 81136",
             "city": "Kuršėnai",
             "municipality": "Šiaulių r. sav.",
-            "latitude": 55.9998764,
-            "longitude": 22.9476558,
+            "latitude": 55.99995113,
+            "longitude": 22.94763082,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -10002,14 +10002,14 @@
             }
         },
         {
-            "id": "3cca1f59d9601146",
+            "id": "4c730f57ada72726",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kužiai, Draugystės g. 2, 80260",
             "city": "Kužiai",
             "municipality": "Šiaulių r. sav.",
-            "latitude": 55.9790958,
-            "longitude": 23.1362281,
+            "latitude": 55.97918705,
+            "longitude": 23.13626254,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -10017,14 +10017,14 @@
             }
         },
         {
-            "id": "d68d22b6bbc9975e",
+            "id": "de57ddbed8fe6ecd",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Lazdijai, Turistų g. 32, 67102",
             "city": "Lazdijai",
             "municipality": "Lazdijų r. sav.",
-            "latitude": 54.2286056,
-            "longitude": 23.5281023,
+            "latitude": 54.22879793,
+            "longitude": 23.52839268,
             "prices": {
                 "pb95": 1.869,
                 "diesel": 2.069,
@@ -10032,14 +10032,14 @@
             }
         },
         {
-            "id": "3f5970f8fb06bc8f",
+            "id": "1b82dac6c3672975",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Margavos k., 54471",
             "city": "Margavos k.",
             "municipality": "Kauno r. sav.",
-            "latitude": 54.9553244,
-            "longitude": 23.9545908,
+            "latitude": 54.95951291,
+            "longitude": 24.03932068,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.079,
@@ -10047,14 +10047,14 @@
             }
         },
         {
-            "id": "b3ca0e340a43feba",
+            "id": "21e8b34eab3092dc",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Marijampolė, Geležinkelio g. 5, 68305",
             "city": "Marijampolė",
             "municipality": "Marijampolės sav.",
-            "latitude": 54.5543671,
-            "longitude": 23.3623615,
+            "latitude": 54.55419458,
+            "longitude": 23.36226549,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.059,
@@ -10062,14 +10062,14 @@
             }
         },
         {
-            "id": "c7dd160c2eef5be6",
+            "id": "9b08134f4a21e809",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Marijampolė, J. Ambrazevičiaus-Brazaičio g. 2, 68161",
             "city": "Marijampolė",
             "municipality": "Marijampolės sav.",
-            "latitude": 54.567734,
-            "longitude": 23.3393257,
+            "latitude": 54.56770974,
+            "longitude": 23.3395483,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.059,
@@ -10077,14 +10077,14 @@
             }
         },
         {
-            "id": "2f84e42f2f50ee5e",
+            "id": "0e4aa6676e05ccab",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Mačiūnų k., Kauno pl. 40, 59157",
             "city": "Mačiūnų k.",
             "municipality": "Prienų r. sav.",
-            "latitude": 54.66140115,
-            "longitude": 23.9464181,
+            "latitude": 54.65896706,
+            "longitude": 23.94713467,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.099,
@@ -10092,14 +10092,14 @@
             }
         },
         {
-            "id": "f43225d3bde1c7a1",
+            "id": "9f7f592420b98205",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Mažeikiai, Montuotojų g. 2A, 89101",
             "city": "Mažeikiai",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.3155909,
-            "longitude": 22.3027474,
+            "latitude": 56.31592712,
+            "longitude": 22.30241721,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.039,
@@ -10107,14 +10107,14 @@
             }
         },
         {
-            "id": "384797f4aeabc760",
+            "id": "62f39020f63e3ae1",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Mažeikiai, Žemaitijos g. 75, 89132",
             "city": "Mažeikiai",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.3003937,
-            "longitude": 22.3606684,
+            "latitude": 56.30031398,
+            "longitude": 22.36061772,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.039,
@@ -10122,14 +10122,14 @@
             }
         },
         {
-            "id": "c7e46f73fc79394a",
+            "id": "92d421e5a9c9b467",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Molėtai, Vilniaus g. 101, 33112",
             "city": "Molėtai",
             "municipality": "Molėtų r. sav.",
-            "latitude": 55.2228435,
-            "longitude": 25.4045087,
+            "latitude": 55.22398062,
+            "longitude": 25.40553384,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.089,
@@ -10137,14 +10137,14 @@
             }
         },
         {
-            "id": "efce924561d00746",
+            "id": "33791544cd3baf7b",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Pabradė, Vilniaus g. 116B, 18177",
             "city": "Pabradė",
             "municipality": "Švenčionių r. sav.",
-            "latitude": 54.975098,
-            "longitude": 25.7448545,
+            "latitude": 54.97512409,
+            "longitude": 25.74487885,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.129,
@@ -10152,14 +10152,14 @@
             }
         },
         {
-            "id": "1b6fdfba075db14a",
+            "id": "11a3d5f04c9dbe0d",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Pakruojis, Vytauto Didžiojo g. 98, 83162",
             "city": "Pakruojis",
             "municipality": "Pakruojo r. sav.",
-            "latitude": 55.9804581,
-            "longitude": 23.8579672,
+            "latitude": 55.98038194,
+            "longitude": 23.85781168,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.099,
@@ -10167,14 +10167,14 @@
             }
         },
         {
-            "id": "df57d4c69e968e4d",
+            "id": "e62491ae14afbca1",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Panevėžys, J. Janonio g. 28A, 35101",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7388746,
-            "longitude": 24.3101357,
+            "latitude": 55.73877397,
+            "longitude": 24.31032094,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.059,
@@ -10182,14 +10182,14 @@
             }
         },
         {
-            "id": "854e74cf864b6ab3",
+            "id": "db8a1958aa3410e8",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Panevėžys, Navadolio g. 31, 36252",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.714597,
-            "longitude": 24.3351417,
+            "latitude": 55.71446003,
+            "longitude": 24.33526571,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.059,
@@ -10197,14 +10197,14 @@
             }
         },
         {
-            "id": "550d1ef9f348e40f",
+            "id": "9ec058d886c6e967",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Panevėžys, Pušaloto g. 193A, 191A",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.75339552,
-            "longitude": 24.31225475,
+            "latitude": 55.75324014,
+            "longitude": 24.31220219,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.059,
@@ -10212,14 +10212,14 @@
             }
         },
         {
-            "id": "387226c807606c33",
+            "id": "59c95e123c0839cd",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Panevėžys, Ramygalos g. 155, 36224",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7040549,
-            "longitude": 24.3811573,
+            "latitude": 55.70403668,
+            "longitude": 24.38094886,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.059,
@@ -10227,14 +10227,14 @@
             }
         },
         {
-            "id": "a5ad29e6b8383451",
+            "id": "cdebae7852d7c66a",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Panevėžys, Ramygalos g. 186G, 36224",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7090681,
-            "longitude": 24.3733489,
+            "latitude": 55.7091917,
+            "longitude": 24.37348296,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.059,
@@ -10242,14 +10242,14 @@
             }
         },
         {
-            "id": "70e0b280009f86cb",
+            "id": "3a2d4ffb054a8584",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Panevėžys, Senamiesčio g. 116A, 35115",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7485748,
-            "longitude": 24.3932637,
+            "latitude": 55.74862561,
+            "longitude": 24.39317728,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.059,
@@ -10257,14 +10257,14 @@
             }
         },
         {
-            "id": "821a38f9fa120561",
+            "id": "57e476abf295703a",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Panevėžys, Venslaviškio g. 16, 35116",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7368227,
-            "longitude": 24.3871183,
+            "latitude": 55.7368525,
+            "longitude": 24.38712468,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.059,
@@ -10272,14 +10272,14 @@
             }
         },
         {
-            "id": "f856b1b723d629c0",
+            "id": "86f71fdd718bb4ae",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Pasvalys, Vilniaus g. 50, 39177",
             "city": "Pasvalys",
             "municipality": "Pasvalio r. sav.",
-            "latitude": 56.0559385,
-            "longitude": 24.407185,
+            "latitude": 56.05600758,
+            "longitude": 24.40740435,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.099,
@@ -10287,28 +10287,28 @@
             }
         },
         {
-            "id": "f5da090164ac4480",
+            "id": "1ea2d704c7aea429",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Pelucmurgių k., Muitinės g. 35, 69270",
             "city": "Pelucmurgių k.",
             "municipality": "Kalvarijos sav.",
-            "latitude": 54.33995552,
-            "longitude": 23.16308238,
+            "latitude": 54.33980186,
+            "longitude": 23.16305666,
             "prices": {
                 "pb95": 1.929,
                 "diesel": 2.149
             }
         },
         {
-            "id": "8153daaa33492fe2",
+            "id": "baf5e06da032b5d7",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Plungė, J. Tumo-Vaižganto g. 102, 90160",
             "city": "Plungė",
             "municipality": "Plungės r. sav.",
-            "latitude": 55.9030643,
-            "longitude": 21.8302735,
+            "latitude": 55.90302589,
+            "longitude": 21.83031772,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.129,
@@ -10316,14 +10316,14 @@
             }
         },
         {
-            "id": "1e42550e90fe70ee",
+            "id": "d4421e22748c71f7",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Plungė, Žaltakalnio g. 10, 90158",
             "city": "Plungė",
             "municipality": "Plungės r. sav.",
-            "latitude": 55.8982917,
-            "longitude": 21.8398638,
+            "latitude": 55.89838026,
+            "longitude": 21.8400709,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.129,
@@ -10331,14 +10331,14 @@
             }
         },
         {
-            "id": "d3befb96ba1bb41b",
+            "id": "f0624856ff6f4428",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Ramygala, Vienkiemio g. 1B, 38262",
             "city": "Ramygala",
             "municipality": "Panevėžio r. sav.",
-            "latitude": 55.5211854,
-            "longitude": 24.3126597,
+            "latitude": 55.52118374,
+            "longitude": 24.31279248,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -10346,14 +10346,14 @@
             }
         },
         {
-            "id": "b6edbfd861565ae8",
+            "id": "c79c4ec04b9b050a",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Rokiškis, Panevėžio g. 5, 42163",
             "city": "Rokiškis",
             "municipality": "Rokiškio r. sav.",
-            "latitude": 55.9701913,
-            "longitude": 25.5566415,
+            "latitude": 55.94453714,
+            "longitude": 25.58523075,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -10361,14 +10361,14 @@
             }
         },
         {
-            "id": "3fa15dc2cdf7a381",
+            "id": "4f6b1479f822a14f",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Rokiškis, Žemaitės g. 2C, 42164",
             "city": "Rokiškis",
             "municipality": "Rokiškio r. sav.",
-            "latitude": 55.9342668,
-            "longitude": 25.5856468,
+            "latitude": 55.93428888,
+            "longitude": 25.58561018,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -10376,14 +10376,14 @@
             }
         },
         {
-            "id": "47f440fb5e88c8a1",
+            "id": "599a0eef56ad4107",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Skuodas, Vilniaus g. 50, 98119",
             "city": "Skuodas",
             "municipality": "Skuodo r. sav.",
-            "latitude": 56.2700001,
-            "longitude": 21.5471476,
+            "latitude": 56.26997931,
+            "longitude": 21.54722164,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -11092,14 +11092,14 @@
             }
         },
         {
-            "id": "2ff20da4e74181ac",
+            "id": "6badf2721ea32047",
             "name": "Velseka",
             "brand": "Velseka",
             "address": "Kupiškis, Panevėžio g. 5, 40134",
             "city": "Kupiškis",
             "municipality": "Kupiškio r. sav.",
-            "latitude": 55.82749878,
-            "longitude": 24.98566304,
+            "latitude": 55.82748974,
+            "longitude": 24.98569522,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.959,
@@ -11166,14 +11166,14 @@
             }
         },
         {
-            "id": "33ab012aa7e0a2a3",
+            "id": "45aa3a26f22b4e70",
             "name": "Šventosios investicijos",
             "brand": "Šventosios investicijos",
             "address": "Palanga (Šventoji), Elijos g. 26, 00319",
             "city": "Palanga (Šventoji)",
             "municipality": "Palangos m. sav.",
-            "latitude": 56.0128416,
-            "longitude": 21.1035918,
+            "latitude": 56.01299671,
+            "longitude": 21.10379214,
             "prices": {
                 "pb95": 1.919,
                 "diesel": 2.169,
