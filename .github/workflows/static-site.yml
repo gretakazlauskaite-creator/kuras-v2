@@ -83,7 +83,13 @@ jobs:
           api_base, token = config
           request = urllib.request.Request(
               api_base + '/read/prices/latest',
-              headers={'Accept': 'application/json', 'Authorization': 'Bearer ' + token},
+              headers={
+                  'Accept': 'application/json',
+                  'Authorization': 'Bearer ' + token,
+                  'Origin': origin,
+                  'Referer': origin + '/',
+                  'User-Agent': 'Mozilla/5.0',
+              },
           )
           with urllib.request.urlopen(request, timeout=30) as response:
               payload = json.load(response)
