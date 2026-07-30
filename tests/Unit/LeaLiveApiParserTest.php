@@ -18,7 +18,7 @@ final class LeaLiveApiParserTest extends TestCase
 
         self::assertSame('2026-07-30', $snapshot->sourceDate);
         self::assertSame('2026-07-30T10:30:03+03:00', $snapshot->lastUpdated);
-        self::assertSame(5, $snapshot->parsed->rawRowCount);
+        self::assertSame(6, $snapshot->parsed->rawRowCount);
         self::assertCount(2, $snapshot->parsed->stations);
         self::assertSame(4, $snapshot->parsed->priceCount());
         self::assertSame(['pb95', 'diesel', 'lpg'], $snapshot->parsed->detectedFuelSlugs);

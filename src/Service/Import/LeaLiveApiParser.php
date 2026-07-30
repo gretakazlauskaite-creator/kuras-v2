@@ -73,7 +73,9 @@ final class LeaLiveApiParser
                 continue;
             }
             if ($price === null) {
-                $issues[] = "API įrašas {$rowNumber}: kaina nėra skaičius.";
+                // LEA includes declared fuel types whose price has not been
+                // submitted yet. An unavailable price must not reject the
+                // otherwise valid daily snapshot.
                 continue;
             }
 
