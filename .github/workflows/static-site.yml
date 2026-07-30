@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect live LEA portal API configuration
+      - name: Inspect live LEA API response contract
         if: github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
@@ -52,7 +52,7 @@ jobs:
           mkdir -p /tmp/lea-assets
           curl --fail --silent --show-error --location 'https://degalukainos.ena.lt/' --output /tmp/lea-assets/index.html
           python3 <<'PY'
-          import pathlib, re, subprocess
+          import json, pathlib, re, subprocess, urllib.request
           root = pathlib.Path('/tmp/lea-assets')
           origin = 'https://degalukainos.ena.lt'
           queue, seen = ['/assets/FuelPriceSiteApp-B0VY_iNc.js'], set()
@@ -67,24 +67,39 @@ jobs:
                       if path not in seen and path not in queue:
                           queue.append(path)
           discover((root / 'index.html').read_text(errors='ignore'))
+          config = None
           while queue and len(seen) < 30:
               path = queue.pop(0)
               seen.add(path)
               target = root / pathlib.Path(path).name
               subprocess.run(['curl', '--fail', '--silent', '--show-error', '--location', origin + path, '--output', str(target)], check=True)
-              discover(target.read_text(errors='ignore'))
-          print('assets=' + ','.join(sorted(p.name for p in root.glob('*.js'))))
-          for file in sorted(root.glob('*.js')):
-              text = file.read_text(errors='ignore')
-              for needle in ('prices/latest', 'Authorization', 'authorization', 'Bearer', 'api-degalukainos'):
-                  pos = text.find(needle)
-                  if pos < 0:
-                      continue
-                  context = text[max(0, pos - 500):pos + 800]
-                  context = re.sub(r'(?<!https://)([A-Za-z0-9_.-]{28,})', '<redacted-long-value>', context)
-                  print(f'--- {file.name} :: {needle} ---')
-                  print(context)
+              text = target.read_text(errors='ignore')
+              discover(text)
+              match = re.search(r'apiBase:"([^"]+)",token:"([^"]+)"', text)
+              if match:
+                  config = match.groups()
+          if not config:
+              raise SystemExit('Portal API configuration not found')
+          api_base, token = config
+          request = urllib.request.Request(
+              api_base + '/read/prices/latest',
+              headers={'Accept': 'application/json', 'Authorization': 'Bearer ' + token},
+          )
+          with urllib.request.urlopen(request, timeout=30) as response:
+              payload = json.load(response)
+          (root / 'latest.json').write_text(json.dumps(payload, ensure_ascii=False))
+          print(f'api_base={api_base}; token_length={len(token)}; response_saved=yes')
           PY
+          jq '
+            . as $root |
+            {
+              root_type: type,
+              root_keys: keys,
+              metadata: ($root | del(.data)),
+              data_length: ($root.data | length),
+              first_data: $root.data[0]
+            }
+          ' /tmp/lea-assets/latest.json
       - uses: shivammathur/setup-php@v2
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh_data)
         with:
