@@ -1,0 +1,40 @@
+name: Inspect live LEA API
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect public LEA API contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location \
+            --header 'Accept: application/json' \
+            'https://api-degalukainos.ena.lt/api/v1/read/prices/latest' \
+            --output /tmp/lea-latest.json
+          echo "bytes=$(wc -c < /tmp/lea-latest.json)"
+          jq '
+            {
+              root_type: type,
+              root_keys: (if type == "object" then keys else [] end),
+              root_length: (if type == "array" then length else null end),
+              array_shapes: (
+                [paths(arrays) as $path |
+                  (getpath($path)) as $value |
+                  {
+                    path: $path,
+                    length: ($value | length),
+                    first_type: (if ($value | length) > 0 then ($value[0] | type) else null end),
+                    first_keys: (if (($value | length) > 0 and (($value[0] | type) == "object")) then ($value[0] | keys) else [] end)
+                  }
+                ][0:20]
+              )
+            }
+          ' /tmp/lea-latest.json
