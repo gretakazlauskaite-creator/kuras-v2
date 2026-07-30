@@ -55,11 +55,17 @@ jobs:
           import pathlib, re, subprocess
           root = pathlib.Path('/tmp/lea-assets')
           origin = 'https://degalukainos.ena.lt'
-          queue, seen = [], set()
+          queue, seen = ['/assets/FuelPriceSiteApp-B0VY_iNc.js'], set()
           def discover(text):
-              for path in re.findall(r'(?:https://degalukainos\.ena\.lt)?(/assets/[A-Za-z0-9._-]+\.js)', text):
-                  if path not in seen and path not in queue:
-                      queue.append(path)
+              patterns = [
+                  r'(?:https://degalukainos\.ena\.lt)?(/assets/[A-Za-z0-9._-]+\.js)',
+                  r'["\']\./([A-Za-z0-9._-]+\.js)["\']',
+              ]
+              for pattern in patterns:
+                  for value in re.findall(pattern, text):
+                      path = value if value.startswith('/assets/') else '/assets/' + value
+                      if path not in seen and path not in queue:
+                          queue.append(path)
           discover((root / 'index.html').read_text(errors='ignore'))
           while queue and len(seen) < 30:
               path = queue.pop(0)
