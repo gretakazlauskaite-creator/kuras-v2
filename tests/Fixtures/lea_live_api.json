@@ -1,0 +1,89 @@
+{
+  "last_updated": "2026-07-30 10:30:03",
+  "data": [
+    {
+      "uuid": "price-1",
+      "company_name": "AB Testas",
+      "gas_station_name": "Testas",
+      "municipality": "Alytaus m. sav.",
+      "address": "Alytus, Kauno g. 73, 62107",
+      "latitude": "54.40333915",
+      "longitude": "24.03722399",
+      "fuel_types": ["benzinas_95", "dyzelinas", "snd"],
+      "fuel_type": "benzinas_95",
+      "price": "1.759",
+      "submitted_at": "2026-07-30 09:30:31",
+      "logo_url": "https://api-degalukainos.ena.lt/storage/gas_stations/example.png"
+    },
+    {
+      "uuid": "price-2",
+      "company_name": "AB Testas",
+      "gas_station_name": "Testas",
+      "municipality": "Alytaus m. sav.",
+      "address": "Alytus, Kauno g. 73, 62107",
+      "latitude": "54.40333915",
+      "longitude": "24.03722399",
+      "fuel_types": ["benzinas_95", "dyzelinas", "snd"],
+      "fuel_type": "dyzelinas",
+      "price": "1.649",
+      "submitted_at": "2026-07-30 09:30:31",
+      "logo_url": null
+    },
+    {
+      "uuid": "price-3",
+      "company_name": "AB Testas",
+      "gas_station_name": "Testas",
+      "municipality": "Alytaus m. sav.",
+      "address": "Alytus, Kauno g. 73, 62107",
+      "latitude": "54.40333915",
+      "longitude": "24.03722399",
+      "fuel_types": ["benzinas_95", "dyzelinas", "snd"],
+      "fuel_type": "dyzelinas",
+      "price": "1.699",
+      "submitted_at": "2026-07-29 09:30:31",
+      "logo_url": null
+    },
+    {
+      "uuid": "price-4",
+      "company_name": "AB Testas",
+      "gas_station_name": "Testas",
+      "municipality": "Alytaus m. sav.",
+      "address": "Alytus, Kauno g. 73, 62107",
+      "latitude": "54.40333915",
+      "longitude": "24.03722399",
+      "fuel_types": ["benzinas_95", "dyzelinas", "snd"],
+      "fuel_type": "snd",
+      "price": "0.799",
+      "submitted_at": "2026-07-30 09:30:31",
+      "logo_url": null
+    },
+    {
+      "uuid": "price-5",
+      "company_name": "UAB Antras",
+      "gas_station_name": "",
+      "municipality": "Vilniaus m. sav.",
+      "address": "Vilnius, Testų g. 1",
+      "latitude": "54.687157",
+      "longitude": "25.279652",
+      "fuel_types": ["benzinas_95"],
+      "fuel_type": "benzinas_95",
+      "price": "1.689",
+      "submitted_at": "2026-07-30 10:15:00",
+      "logo_url": null
+    },
+    {
+      "uuid": "price-6",
+      "company_name": "UAB Be kainos",
+      "gas_station_name": "Be kainos",
+      "municipality": "Vilniaus m. sav.",
+      "address": "Vilnius, Gedimino pr. 1",
+      "latitude": "54.6872",
+      "longitude": "25.2797",
+      "fuel_types": ["benzinas_95"],
+      "fuel_type": "benzinas_95",
+      "price": null,
+      "submitted_at": null,
+      "logo_url": null
+    }
+  ]
+}

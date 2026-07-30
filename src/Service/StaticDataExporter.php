@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\Service\Import\ParsedImport;
+use App\Service\Import\LeaWorkbookParser;
 
 final class StaticDataExporter
 {
@@ -20,11 +21,18 @@ final class StaticDataExporter
         string $generatedAt,
         string $sourcePageUrl,
         string $checksum,
+        string $parserVersion = LeaWorkbookParser::VERSION,
+        ?string $sourceUpdatedAt = null,
     ): array {
         $stations = array_map(function (array $station): array {
-            $identity = $this->key($station['brand']) . '|' . $this->key($station['address']);
+            $identity = isset($station['source_id']) && $station['source_id'] !== ''
+                ? 'lea-api|' . $station['source_id']
+                : $this->key($station['brand']) . '|' . $this->key($station['address']);
             $id = substr(hash('sha256', $identity), 0, 16);
-            $coordinate = $this->validCoordinate($this->coordinates[$id] ?? null);
+            $coordinate = $this->validCoordinate([
+                'latitude' => $station['latitude'] ?? null,
+                'longitude' => $station['longitude'] ?? null,
+            ]) ?? $this->validCoordinate($this->coordinates[$id] ?? null);
 
             return [
                 'id' => $id,
@@ -45,17 +53,22 @@ final class StaticDataExporter
             $right['brand'], $right['city'], $right['address'],
         ]);
 
+        $source = [
+            'name' => 'Lietuvos energetikos agentūra (LEA)',
+            'page_url' => $sourcePageUrl,
+            'source_date' => $sourceDate,
+            'generated_at' => $generatedAt,
+            'checksum_sha256' => $checksum,
+            'parser_version' => $parserVersion,
+        ];
+        if ($sourceUpdatedAt !== null) {
+            $source['source_updated_at'] = $sourceUpdatedAt;
+        }
+
         return [
             'schema_version' => 1,
             'demo' => false,
-            'source' => [
-                'name' => 'Lietuvos energetikos agentūra (LEA)',
-                'page_url' => $sourcePageUrl,
-                'source_date' => $sourceDate,
-                'generated_at' => $generatedAt,
-                'checksum_sha256' => $checksum,
-                'parser_version' => Import\LeaWorkbookParser::VERSION,
-            ],
+            'source' => $source,
             'summary' => [
                 'station_count' => count($stations),
                 'coordinate_count' => count(array_filter(

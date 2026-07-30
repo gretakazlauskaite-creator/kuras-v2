@@ -6,8 +6,9 @@ declare(strict_types=1);
 require_once dirname(__DIR__) . '/vendor/autoload.php';
 
 use App\Service\Import\ImportValidator;
+use App\Service\Import\LeaLiveApiParser;
 use App\Service\Import\LeaSource;
-use App\Service\Import\LeaSourceLocator;
+use App\Service\Import\LeaPortalConfigLocator;
 use App\Service\Import\LeaWorkbookParser;
 use App\Service\Import\XlsxFileValidator;
 use App\Service\StaticDataExporter;
@@ -28,37 +29,70 @@ $coordinatesPath = isset($options['coordinates'])
     ? (string) $options['coordinates']
     : $root . '/resources/station-coordinates.json';
 $fixtureMode = isset($options['fixture']);
-$temporaryFile = null;
+$sourceUpdatedAt = null;
+$parserVersion = LeaWorkbookParser::VERSION;
 
-try {
-    if (isset($options['file'])) {
+if (isset($options['file'])) {
         $file = (string) $options['file'];
         $sourceDate = (string) ($options['source-date'] ?? '');
         if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $sourceDate)) {
             throw new RuntimeException('Naudojant --file būtina nurodyti --source-date=YYYY-MM-DD.');
         }
         $source = new LeaSource('fixture', 'fixture://' . basename($file), $sourceDate);
-    } else {
-        $pageHtml = http_get(LeaSourceLocator::ARCHIVE_URL);
-        $source = (new LeaSourceLocator())->locate($pageHtml, LeaSourceLocator::ARCHIVE_URL);
-        $temporaryFile = download_file($source->downloadUrl, $source->pageUrl);
-        $file = $temporaryFile;
-    }
+        if (strtolower((string) pathinfo($file, PATHINFO_EXTENSION)) === 'json') {
+            $sourceBody = file_get_contents($file);
+            if (!is_string($sourceBody)) {
+                throw new RuntimeException('Nepavyko perskaityti LEA JSON failo.');
+            }
+            $snapshot = (new LeaLiveApiParser())->parse($sourceBody);
+            if ($snapshot->sourceDate !== $sourceDate) {
+                throw new RuntimeException(
+                    "LEA API data {$snapshot->sourceDate} nesutampa su nurodyta šaltinio data {$sourceDate}.",
+                );
+            }
+            $parsed = $snapshot->parsed;
+            $sourceUpdatedAt = $snapshot->lastUpdated;
+            $parserVersion = LeaLiveApiParser::VERSION;
+            $sourceExtension = 'json';
+        } else {
+            (new XlsxFileValidator())->assertValid($file);
+            $parsed = (new LeaWorkbookParser())->parse($file);
+            $sourceBody = file_get_contents($file);
+            if (!is_string($sourceBody)) {
+                throw new RuntimeException('Nepavyko perskaityti LEA Excel failo.');
+            }
+            $sourceExtension = 'xlsx';
+        }
+} else {
+        $portalHtml = http_get(LeaPortalConfigLocator::PORTAL_URL);
+        $config = (new LeaPortalConfigLocator())->locate(
+            $portalHtml,
+            static fn (string $url, ?string $referer): string => http_get($url, $referer),
+        );
+        $apiUrl = rtrim($config->apiBase, '/') . '/read/prices/latest';
+        $sourceBody = http_get_lea_api($apiUrl, $config->token);
+        $snapshot = (new LeaLiveApiParser())->parse($sourceBody);
+        $source = new LeaSource(
+            pageUrl: LeaPortalConfigLocator::PORTAL_URL,
+            downloadUrl: $apiUrl,
+            sourceDate: $snapshot->sourceDate,
+        );
+        $parsed = $snapshot->parsed;
+        $sourceUpdatedAt = $snapshot->lastUpdated;
+        $parserVersion = LeaLiveApiParser::VERSION;
+        $sourceExtension = 'json';
+}
 
-    (new XlsxFileValidator())->assertValid($file);
-    $checksum = hash_file('sha256', $file);
-    if ($checksum === false) {
-        throw new RuntimeException('Nepavyko apskaičiuoti šaltinio failo kontrolinės sumos.');
-    }
+$checksum = hash('sha256', $sourceBody);
 
     if ($archiveOutput !== null) {
         recreate_directory($archiveOutput);
-        if (!copy($file, $archiveOutput . '/source-' . $source->sourceDate . '-' . $checksum . '.xlsx')) {
+        $archiveSource = $archiveOutput . '/source-' . $source->sourceDate . '-' . $checksum . '.' . $sourceExtension;
+        if (file_put_contents($archiveSource, $sourceBody) === false) {
             throw new RuntimeException('Nepavyko išsaugoti tikrinimo šaltinio kopijos.');
         }
     }
 
-    $parsed = (new LeaWorkbookParser())->parse($file);
     $previous = read_previous_data($previousDataPath);
     $validator = $fixtureMode
         ? new ImportValidator(minimumStations: 1, minimumPrices: 1, maximumSourceAgeDays: 3650)
@@ -101,12 +135,15 @@ try {
         generatedAt: $generatedAt,
         sourcePageUrl: $source->pageUrl,
         checksum: $checksum,
+        parserVersion: $parserVersion,
+        sourceUpdatedAt: $sourceUpdatedAt,
     );
     write_json($output . '/data/current.json', $payload);
     write_javascript_data($output . '/data/current.js', $payload);
     write_json($output . '/data/import-report.json', [
         'status' => 'published',
         'source_date' => $source->sourceDate,
+        'source_updated_at' => $sourceUpdatedAt,
         'generated_at' => $payload['source']['generated_at'],
         'checksum_sha256' => $checksum,
         'validation' => $validation->metrics,
@@ -119,17 +156,12 @@ try {
         }
     }
 
-    echo sprintf(
-        "Statinė svetainė paruošta: %d degalinių, %d kainų, data %s.\n",
-        count($parsed->stations),
-        $parsed->priceCount(),
-        $source->sourceDate,
-    );
-} finally {
-    if ($temporaryFile !== null && is_file($temporaryFile)) {
-        unlink($temporaryFile);
-    }
-}
+echo sprintf(
+    "Statinė svetainė paruošta: %d degalinių, %d kainų, data %s.\n",
+    count($parsed->stations),
+    $parsed->priceCount(),
+    $source->sourceDate,
+);
 
 function http_get(string $url, ?string $referer = null): string
 {
@@ -192,14 +224,46 @@ function http_get(string $url, ?string $referer = null): string
     throw new RuntimeException("Nepavyko atsisiųsti {$url} ({$lastError}).");
 }
 
-function download_file(string $url, string $referer): string
+function http_get_lea_api(string $url, string $token): string
 {
-    $body = http_get($url, $referer);
-    $path = tempnam(sys_get_temp_dir(), 'lea-static-');
-    if ($path === false || file_put_contents($path, $body) === false) {
-        throw new RuntimeException('Nepavyko išsaugoti laikino LEA failo.');
+    if (!extension_loaded('curl')) {
+        throw new RuntimeException('LEA API atsisiuntimui būtinas PHP cURL plėtinys.');
     }
-    return $path;
+
+    $handle = curl_init($url);
+    if ($handle === false) {
+        throw new RuntimeException('Nepavyko inicijuoti LEA API užklausos.');
+    }
+
+    curl_setopt_array($handle, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_FOLLOWLOCATION => false,
+        CURLOPT_CONNECTTIMEOUT => 20,
+        CURLOPT_TIMEOUT => 90,
+        CURLOPT_USERAGENT => 'Mozilla/5.0 (compatible; KurasPricerBot/1.0; +https://kuras.pricer.lt)',
+        CURLOPT_HTTPHEADER => [
+            'Accept: application/json',
+            'Authorization: Bearer ' . $token,
+            'Origin: ' . rtrim(LeaPortalConfigLocator::PORTAL_URL, '/'),
+            'Referer: ' . LeaPortalConfigLocator::PORTAL_URL,
+        ],
+        CURLOPT_ENCODING => '',
+        CURLOPT_SSL_VERIFYPEER => true,
+        CURLOPT_SSL_VERIFYHOST => 2,
+        CURLOPT_PROTOCOLS => CURLPROTO_HTTPS,
+    ]);
+
+    $body = curl_exec($handle);
+    $status = (int) curl_getinfo($handle, CURLINFO_RESPONSE_CODE);
+    $curlError = curl_error($handle);
+    curl_close($handle);
+
+    if (!is_string($body) || $body === '' || $status < 200 || $status >= 300) {
+        $error = $curlError !== '' ? $curlError : "HTTP {$status}";
+        throw new RuntimeException("Nepavyko atsisiųsti LEA API duomenų ({$error}).");
+    }
+
+    return $body;
 }
 
 /** @return array<string,mixed> */
