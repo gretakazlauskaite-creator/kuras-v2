@@ -44,37 +44,41 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Inspect public LEA API contract
+      - name: Inspect live LEA portal API configuration
         if: github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
           set -euo pipefail
-          curl --fail --silent --show-error --location \
-            --user-agent 'Mozilla/5.0' \
-            --header 'Accept: application/json' \
-            --header 'Origin: https://degalukainos.ena.lt' \
-            --header 'Referer: https://degalukainos.ena.lt/' \
-            'https://api-degalukainos.ena.lt/api/v1/read/prices/latest' \
-            --output /tmp/lea-latest.json
-          echo "bytes=$(wc -c < /tmp/lea-latest.json)"
-          jq '
-            {
-              root_type: type,
-              root_keys: (if type == "object" then keys else [] end),
-              root_length: (if type == "array" then length else null end),
-              array_shapes: (
-                [paths(arrays) as $path |
-                  (getpath($path)) as $value |
-                  {
-                    path: $path,
-                    length: ($value | length),
-                    first_type: (if ($value | length) > 0 then ($value[0] | type) else null end),
-                    first_keys: (if (($value | length) > 0 and (($value[0] | type) == "object")) then ($value[0] | keys) else [] end)
-                  }
-                ][0:20]
-              )
-            }
-          ' /tmp/lea-latest.json
+          mkdir -p /tmp/lea-assets
+          curl --fail --silent --show-error --location 'https://degalukainos.ena.lt/' --output /tmp/lea-assets/index.html
+          python3 <<'PY'
+          import pathlib, re, subprocess
+          root = pathlib.Path('/tmp/lea-assets')
+          origin = 'https://degalukainos.ena.lt'
+          queue, seen = [], set()
+          def discover(text):
+              for path in re.findall(r'(?:https://degalukainos\.ena\.lt)?(/assets/[A-Za-z0-9._-]+\.js)', text):
+                  if path not in seen and path not in queue:
+                      queue.append(path)
+          discover((root / 'index.html').read_text(errors='ignore'))
+          while queue and len(seen) < 30:
+              path = queue.pop(0)
+              seen.add(path)
+              target = root / pathlib.Path(path).name
+              subprocess.run(['curl', '--fail', '--silent', '--show-error', '--location', origin + path, '--output', str(target)], check=True)
+              discover(target.read_text(errors='ignore'))
+          print('assets=' + ','.join(sorted(p.name for p in root.glob('*.js'))))
+          for file in sorted(root.glob('*.js')):
+              text = file.read_text(errors='ignore')
+              for needle in ('prices/latest', 'Authorization', 'authorization', 'Bearer', 'api-degalukainos'):
+                  pos = text.find(needle)
+                  if pos < 0:
+                      continue
+                  context = text[max(0, pos - 500):pos + 800]
+                  context = re.sub(r'(?<!https://)([A-Za-z0-9_.-]{28,})', '<redacted-long-value>', context)
+                  print(f'--- {file.name} :: {needle} ---')
+                  print(context)
+          PY
       - uses: shivammathur/setup-php@v2
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh_data)
         with:
