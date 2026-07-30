@@ -5,14 +5,14 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-07-30",
-        "generated_at": "2026-07-30T10:34:03+00:00",
-        "checksum_sha256": "e641f764d3728921471b3eb035dbaf7bf5058036feeab6a855c79c743c8242f7",
+        "generated_at": "2026-07-30T12:54:49+00:00",
+        "checksum_sha256": "4b5f25fd9a2697d8568f17760c113a9b2e2443886107310cf0565d4d7be4efe3",
         "parser_version": "lea-live-api-v1",
         "source_updated_at": "2026-07-30T12:40:33+03:00"
     },
     "summary": {
         "station_count": 759,
-        "coordinate_count": 744,
+        "coordinate_count": 743,
         "price_count": 2066,
         "fuels": [
             "pb95",
@@ -1032,14 +1032,14 @@
             }
         },
         {
-            "id": "4f13ed83e2f8a16c",
+            "id": "294f9e8adba15a6b",
             "name": "Baltic Petroleum",
             "brand": "Baltic Petroleum",
             "address": "Kelmė, Putvinskio g. 29, 86113",
             "city": "Kelmė",
             "municipality": "Kelmės r. sav.",
-            "latitude": 55.6412613,
-            "longitude": 22.9268833,
+            "latitude": 55.64120559,
+            "longitude": 22.92737617,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 1.999,
@@ -3166,14 +3166,14 @@
             }
         },
         {
-            "id": "02f4a75b111d1c56",
+            "id": "3d168a4c0cc38926",
             "name": "Circle K",
             "brand": "Circle K",
             "address": "Truikių k., Pramogų g. 4, 90110",
             "city": "Truikių k.",
             "municipality": "Plungės r. sav.",
-            "latitude": 55.93907917,
-            "longitude": 21.88013955,
+            "latitude": 55.93901908,
+            "longitude": 21.88009127,
             "prices": {
                 "pb95": 1.846,
                 "diesel": 2.116,
@@ -4598,14 +4598,14 @@
             }
         },
         {
-            "id": "bf445f5032d5f212",
+            "id": "7a720e11570d25f6",
             "name": "Gazimpeksas",
             "brand": "Gazimpeksas",
             "address": "Telšiai, Mažeikių g. 7A, 87101",
             "city": "Telšiai",
             "municipality": "Telšių r. sav.",
-            "latitude": 56.0005217,
-            "longitude": 22.2472702,
+            "latitude": 56.00052967,
+            "longitude": 22.24738508,
             "prices": {
                 "lpg": 0.72
             }
@@ -5291,14 +5291,14 @@
             }
         },
         {
-            "id": "6e07744efb208d19",
+            "id": "ad42fdc355ffed41",
             "name": "Kriketas",
             "brand": "Kriketas",
             "address": "Trakai, Senkelio g. 13, 21107",
             "city": "Trakai",
             "municipality": "Trakų r. sav.",
-            "latitude": 54.6308624,
-            "longitude": 24.9225879,
+            "latitude": 54.63073536,
+            "longitude": 24.92213754,
             "prices": {
                 "pb95": 1.879,
                 "diesel": 2.099,
@@ -5306,14 +5306,14 @@
             }
         },
         {
-            "id": "da33172765b78eed",
+            "id": "c32323e3d11cba92",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Alytaus g. 59, Krosnos k., 67443",
             "city": "Alytaus g. 59",
             "municipality": "Lazdijų r. sav.",
-            "latitude": 54.0450971,
-            "longitude": 23.526838,
+            "latitude": 54.37908395,
+            "longitude": 23.5285495,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.989,
@@ -5321,14 +5321,14 @@
             }
         },
         {
-            "id": "52c1398951fab1b6",
+            "id": "42368d2791fb3303",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Bačkonių k., Pastrėvio g. 1A, 56240",
             "city": "Bačkonių k.",
             "municipality": "Kaišiadorių r. sav.",
-            "latitude": 54.80252223,
-            "longitude": 24.50219651,
+            "latitude": null,
+            "longitude": null,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.049,
@@ -5336,14 +5336,14 @@
             }
         },
         {
-            "id": "a4ed5496d6bae305",
+            "id": "2b65097a3af65905",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Kalnuotės 1 k. 15130",
             "city": "Kalnuotės 1 k. 15130",
             "municipality": "Vilniaus r. sav.",
-            "latitude": 54.94474499,
-            "longitude": 25.34429593,
+            "latitude": 54.94469576,
+            "longitude": 25.34424273,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999,
@@ -5351,14 +5351,14 @@
             }
         },
         {
-            "id": "88fc1312d77c143b",
+            "id": "a0af6016b51d3aec",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Mažeikiai, Laižuvos g. 82d, 89213",
             "city": "Mažeikiai",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.3137433,
-            "longitude": 22.3682032,
+            "latitude": 56.31360111,
+            "longitude": 22.36826858,
             "prices": {
                 "pb95": 1.769,
                 "diesel": 1.949,
@@ -5366,13 +5366,13 @@
             }
         },
         {
-            "id": "fb59c2cc370a54d7",
+            "id": "1322f4b30f80a7d3",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Ruoščių k. 1, 57109",
             "city": "Ruoščių k. 1",
             "municipality": "Kėdainių r. sav.",
-            "latitude": 55.33610931,
+            "latitude": 55.33618253,
             "longitude": 23.91491716,
             "prices": {
                 "pb95": 1.783,
@@ -5381,14 +5381,14 @@
             }
         },
         {
-            "id": "e18d93ceff675acc",
+            "id": "5260feb8dbbd0bf0",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Skabeikių k. 4, 85233",
             "city": "Skabeikių k. 4",
             "municipality": "Akmenės r. sav.",
-            "latitude": 56.16007402,
-            "longitude": 22.76078014,
+            "latitude": 56.16014254,
+            "longitude": 22.76073507,
             "prices": {
                 "pb95": 1.739,
                 "diesel": 1.959,
@@ -5396,14 +5396,14 @@
             }
         },
         {
-            "id": "310a3af5b1f05205",
+            "id": "56478e194c52d243",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Stripinių k., Skuodo g. 7, 98347",
             "city": "Stripinių k.",
             "municipality": "Skuodo r. sav.",
-            "latitude": 56.28405517,
-            "longitude": 21.8331285,
+            "latitude": 56.28388299,
+            "longitude": 21.83305372,
             "prices": {
                 "pb95": 1.79,
                 "diesel": 1.95,
@@ -5411,14 +5411,14 @@
             }
         },
         {
-            "id": "c7538bd753bb807b",
+            "id": "7693fbc6a761a805",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Tryškiai, Beržų g. 24/Drąsiųjų g. 7, 88155",
             "city": "Tryškiai",
             "municipality": "Telšių r. sav.",
-            "latitude": 56.06215909,
-            "longitude": 22.58245635,
+            "latitude": 56.06254871,
+            "longitude": 22.58247782,
             "prices": {
                 "pb95": 1.89,
                 "diesel": 2.12,
@@ -5426,14 +5426,14 @@
             }
         },
         {
-            "id": "1e505aa5ba470413",
+            "id": "19c1a57754d5989f",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Užventis, Žemaitės g. 52, 86343",
             "city": "Užventis",
             "municipality": "Kelmės r. sav.",
-            "latitude": 55.7861028,
-            "longitude": 22.6709028,
+            "latitude": 55.78626896,
+            "longitude": 22.67103988,
             "prices": {
                 "pb95": 1.81,
                 "diesel": 1.99,
@@ -5470,14 +5470,14 @@
             }
         },
         {
-            "id": "091445f760ac51bf",
+            "id": "6781071b7c76ae4f",
             "name": "Leosta",
             "brand": "Leosta",
             "address": "Luokė, Telšių g. 66, 88236",
             "city": "Luokė",
             "municipality": "Telšių r. sav.",
-            "latitude": 55.9013437,
-            "longitude": 22.5062918,
+            "latitude": 55.90135275,
+            "longitude": 22.50630756,
             "prices": {
                 "pb95": 1.92,
                 "diesel": 2.1,
@@ -5485,14 +5485,14 @@
             }
         },
         {
-            "id": "e4047c2c978fae40",
+            "id": "8b2a60a5a88c7583",
             "name": "Littaura",
             "brand": "Littaura",
             "address": "Tauragė, Pramonės g. 6, 72324",
             "city": "Tauragė",
             "municipality": "Tauragės r. sav.",
-            "latitude": 55.2382714,
-            "longitude": 22.297675,
+            "latitude": 55.23830084,
+            "longitude": 22.29774041,
             "prices": {
                 "pb95": 1.79,
                 "diesel": 1.99
@@ -5581,14 +5581,14 @@
             }
         },
         {
-            "id": "7d3ed84933f3dd96",
+            "id": "f7d25f60980bf9e1",
             "name": "Milda",
             "brand": "Milda",
             "address": "Kretinga, Tiekėjų g. 34a, 97187",
             "city": "Kretinga",
             "municipality": "Kretingos r. sav.",
-            "latitude": 55.884461,
-            "longitude": 21.2215329,
+            "latitude": 55.88446681,
+            "longitude": 21.22162825,
             "prices": {
                 "pb95": 1.92,
                 "diesel": 2.13,
@@ -5596,14 +5596,14 @@
             }
         },
         {
-            "id": "9e9dba103f824e2f",
+            "id": "4ca8621285e61d42",
             "name": "Milda",
             "brand": "Milda",
             "address": "Laivių k., Platelių g. 1a, 97317",
             "city": "Laivių k.",
             "municipality": "Kretingos r. sav.",
-            "latitude": 56.06314868,
-            "longitude": 21.58208793,
+            "latitude": 56.06316548,
+            "longitude": 21.58209235,
             "prices": {
                 "pb95": 1.93,
                 "diesel": 2.14,
@@ -5611,14 +5611,14 @@
             }
         },
         {
-            "id": "ce92c4443291815c",
+            "id": "dd0e623e6e902d8d",
             "name": "Milda",
             "brand": "Milda",
             "address": "Mardosų k., Alytaus pl. 2, 59240",
             "city": "Mardosų k.",
             "municipality": "Prienų r. sav.",
-            "latitude": 54.50892131,
-            "longitude": 23.90965871,
+            "latitude": 54.50894152,
+            "longitude": 23.90953504,
             "prices": {
                 "pb95": 1.76,
                 "diesel": 1.98,
@@ -5626,14 +5626,14 @@
             }
         },
         {
-            "id": "8ee1abecd2ff6ae2",
+            "id": "2af1b88680fbc52c",
             "name": "Milda",
             "brand": "Milda",
             "address": "Minijos g. 1, Aleksandravo k., 90390",
             "city": "Minijos g. 1",
             "municipality": "Plungės r. sav.",
-            "latitude": 55.92908509,
-            "longitude": 21.61996234,
+            "latitude": 55.92923165,
+            "longitude": 21.6199133,
             "prices": {
                 "pb95": 1.79,
                 "diesel": 1.99,
@@ -5641,14 +5641,14 @@
             }
         },
         {
-            "id": "672e7d8b92b18d15",
+            "id": "93ac7435a22bd9ed",
             "name": "Milda",
             "brand": "Milda",
             "address": "Pagėgiai, Klaipėdos g. 6b, 99290",
             "city": "Pagėgiai",
             "municipality": "Pagėgių sav.",
-            "latitude": 55.1404171,
-            "longitude": 21.9034153,
+            "latitude": 55.14044207,
+            "longitude": 21.90325589,
             "prices": {
                 "pb95": 1.83,
                 "diesel": 2.03,
@@ -5656,14 +5656,14 @@
             }
         },
         {
-            "id": "0ad84c148d405619",
+            "id": "f53666f6e522faaf",
             "name": "Milda",
             "brand": "Milda",
             "address": "Plungė, Dariaus ir Girėno g. 31, 90118",
             "city": "Plungė",
             "municipality": "Plungės r. sav.",
-            "latitude": 55.919887,
-            "longitude": 21.8570671,
+            "latitude": 55.91994008,
+            "longitude": 21.85709942,
             "prices": {
                 "pb95": 1.75,
                 "diesel": 1.95,
@@ -5671,14 +5671,14 @@
             }
         },
         {
-            "id": "455889b4565132d8",
+            "id": "8142dee9a12c1bf2",
             "name": "Milda",
             "brand": "Milda",
             "address": "Rainių k., Telšių g. 2B, 88401",
             "city": "Rainių k.",
             "municipality": "Telšių r. sav.",
-            "latitude": 55.95663469,
-            "longitude": 22.3012509,
+            "latitude": 55.95661542,
+            "longitude": 22.30115967,
             "prices": {
                 "pb95": 1.89,
                 "diesel": 2.09,
@@ -5686,14 +5686,14 @@
             }
         },
         {
-            "id": "4f31f2e91a9a18d7",
+            "id": "520ec9b24a7c354d",
             "name": "Milda",
             "brand": "Milda",
             "address": "Raseiniai, Jurbarko g. 34, 60180",
             "city": "Raseiniai",
             "municipality": "Raseinių r. sav.",
-            "latitude": 55.3706566,
-            "longitude": 23.1192973,
+            "latitude": 55.3706348,
+            "longitude": 23.1198939,
             "prices": {
                 "pb95": 1.79,
                 "diesel": 1.99,
@@ -5701,14 +5701,14 @@
             }
         },
         {
-            "id": "c6285cd4437c7d98",
+            "id": "9df0e3cff9a4fda4",
             "name": "Milda",
             "brand": "Milda",
             "address": "Rimšų k., Tauragės g. 29, 74280",
             "city": "Rimšų k.",
             "municipality": "Jurbarko r. sav.",
-            "latitude": 55.2620176,
-            "longitude": 22.69179627,
+            "latitude": 55.26204357,
+            "longitude": 22.69181995,
             "prices": {
                 "pb95": 1.85,
                 "diesel": 2.03,
@@ -5716,14 +5716,14 @@
             }
         },
         {
-            "id": "41b905762dd7e9b6",
+            "id": "12c0ae66700ba67a",
             "name": "Milda",
             "brand": "Milda",
             "address": "Skaudvilė, Adakavo g. 1, 73435",
             "city": "Skaudvilė",
             "municipality": "Tauragės r. sav.",
-            "latitude": 55.4015729,
-            "longitude": 22.5977437,
+            "latitude": 55.40159838,
+            "longitude": 22.5977644,
             "prices": {
                 "pb95": 1.85,
                 "diesel": 2.03,
@@ -5731,14 +5731,14 @@
             }
         },
         {
-            "id": "9f983174beadaf83",
+            "id": "dffb62825d1008ed",
             "name": "Milda",
             "brand": "Milda",
             "address": "Telšiai, Mažeikių g. 1, 87101",
             "city": "Telšiai",
             "municipality": "Telšių r. sav.",
-            "latitude": 56.3019443,
-            "longitude": 22.322252,
+            "latitude": 55.99974214,
+            "longitude": 22.24134565,
             "prices": {
                 "pb95": 1.89,
                 "diesel": 2.12,
@@ -5746,14 +5746,14 @@
             }
         },
         {
-            "id": "77261b068cb1ab60",
+            "id": "fbaedc2bfee85186",
             "name": "Milda",
             "brand": "Milda",
             "address": "Vabalų k., Paršežerio g. 1, 75406",
             "city": "Vabalų k.",
             "municipality": "Šilalės r. sav.",
-            "latitude": 55.61982446,
-            "longitude": 22.24643163,
+            "latitude": 55.61976015,
+            "longitude": 22.24641341,
             "prices": {
                 "pb95": 1.84,
                 "diesel": 2.03,
@@ -5761,14 +5761,14 @@
             }
         },
         {
-            "id": "67821765a4f2e149",
+            "id": "b39b6f90da4e0b51",
             "name": "Milda",
             "brand": "Milda",
             "address": "Šilalė, Rytinio Kelio g. 2a, 75122",
             "city": "Šilalė",
             "municipality": "Šilalės r. sav.",
-            "latitude": 55.4859035,
-            "longitude": 22.1996267,
+            "latitude": 55.48590577,
+            "longitude": 22.19940808,
             "prices": {
                 "pb95": 1.77,
                 "diesel": 1.99,
@@ -5776,14 +5776,14 @@
             }
         },
         {
-            "id": "fa5b186ada1919c1",
+            "id": "e45b930a36889f13",
             "name": "Milda",
             "brand": "Milda",
             "address": "Žemaičių Naumiestis, Klaipėdos g. 76, 99206",
             "city": "Žemaičių Naumiestis",
             "municipality": "Šilutės r. sav.",
-            "latitude": 55.3552823,
-            "longitude": 21.6800586,
+            "latitude": 55.35530481,
+            "longitude": 21.68003241,
             "prices": {
                 "pb95": 1.83,
                 "diesel": 2.03,
@@ -5955,14 +5955,14 @@
             }
         },
         {
-            "id": "d28b0ac47e80438e",
+            "id": "a7c406a447ceb480",
             "name": "Neste Architektų",
             "brand": "Neste Architektų",
             "address": "Vilnius, Architektų g. 130, 04216",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6808398,
-            "longitude": 25.2076283,
+            "latitude": 54.68085604,
+            "longitude": 25.2076123,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.039
@@ -5997,14 +5997,14 @@
             }
         },
         {
-            "id": "5c03314f71e4cd2e",
+            "id": "77c7edcdad5b1d0b",
             "name": "Neste Autoturgaus",
             "brand": "Neste Autoturgaus",
             "address": "Utena, Kupiškio g. 12, 28135",
             "city": "Utena",
             "municipality": "Utenos r. sav.",
-            "latitude": 55.4844205,
-            "longitude": 25.5796835,
+            "latitude": 55.48153495,
+            "longitude": 25.57886011,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 1.999
@@ -6095,14 +6095,14 @@
             }
         },
         {
-            "id": "8b965f5c41a43adf",
+            "id": "8d0887869daa3bce",
             "name": "Neste Eišiškių",
             "brand": "Neste Eišiškių",
             "address": "Vilnius, Eišiškių pl. 82, 02200",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6212846,
-            "longitude": 25.2429403,
+            "latitude": 54.6213243,
+            "longitude": 25.24291719,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.029
@@ -6137,28 +6137,28 @@
             }
         },
         {
-            "id": "8909cd14c7219fab",
+            "id": "32bdc34b2d838f1a",
             "name": "Neste Gabijos",
             "brand": "Neste Gabijos",
             "address": "Vilnius, Ukmergės g. 296, 12105",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7361438,
-            "longitude": 25.2311187,
+            "latitude": 54.7361926,
+            "longitude": 25.23107129,
             "prices": {
                 "pb95": 1.794,
                 "diesel": 1.994
             }
         },
         {
-            "id": "660ce65e9dcdf761",
+            "id": "2261956b23fee776",
             "name": "Neste Gariūnų",
             "brand": "Neste Gariūnų",
             "address": "Vilnius, Gariūnų g. 55, 02300",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6583266,
-            "longitude": 25.1592954,
+            "latitude": 54.65831512,
+            "longitude": 25.15884432,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.019
@@ -6235,14 +6235,14 @@
             }
         },
         {
-            "id": "8a14acf9fd024c03",
+            "id": "ede6dce5ac6d96a4",
             "name": "Neste Justiniškių",
             "brand": "Neste Justiniškių",
             "address": "Vilnius, Rygos g. 2, 05259",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.71563,
-            "longitude": 25.2287063,
+            "latitude": 54.71560308,
+            "longitude": 25.22894257,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.019
@@ -6290,28 +6290,28 @@
             }
         },
         {
-            "id": "3c3180ae3c024ee8",
+            "id": "b8bd09221a940b58",
             "name": "Neste Kauno",
             "brand": "Neste Kauno",
             "address": "Vilnius, Kauno g. 26, 03212",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6716123,
-            "longitude": 25.270971,
+            "latitude": 54.67162,
+            "longitude": 25.27010479,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.049
             }
         },
         {
-            "id": "3a9e601d534cbb52",
+            "id": "6afa2e5aeeb18c62",
             "name": "Neste Kirtimų",
             "brand": "Neste Kirtimų",
             "address": "Vilnius, Dariaus ir Girėno g. 17, 02169",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6552621,
-            "longitude": 25.2702703,
+            "latitude": 54.65506269,
+            "longitude": 25.2707125,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.039
@@ -6360,56 +6360,56 @@
             }
         },
         {
-            "id": "5095e72d6971f4e6",
+            "id": "dfa326dcee3e86d1",
             "name": "Neste Lazdynų",
             "brand": "Neste Lazdynų",
             "address": "Vilnius, Erfurto g. 41, 04226",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6728103,
-            "longitude": 25.1979479,
+            "latitude": 54.67261311,
+            "longitude": 25.19828086,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.029
             }
         },
         {
-            "id": "d8c03e632019b196",
+            "id": "ce8d2b64c74f70e3",
             "name": "Neste Liepkalnio",
             "brand": "Neste Liepkalnio",
             "address": "Vilnius, Servečės g. 2, 02121",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6341739,
-            "longitude": 25.3045356,
+            "latitude": 54.63377618,
+            "longitude": 25.30449719,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.019
             }
         },
         {
-            "id": "c88156c38e15f1a9",
+            "id": "e4258adb814a60d8",
             "name": "Neste Litexpo",
             "brand": "Neste Litexpo",
             "address": "Vilnius, Parodų g. 1A, 04133",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6734231,
-            "longitude": 25.2240676,
+            "latitude": 54.67343871,
+            "longitude": 25.22405147,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.039
             }
         },
         {
-            "id": "376eead1f23fb425",
+            "id": "a6f58955e779a9f4",
             "name": "Neste Lukšio",
             "brand": "Neste Lukšio",
             "address": "Vilnius, P. Lukšio g. 22, 09108",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7119036,
-            "longitude": 25.293073,
+            "latitude": 54.71195348,
+            "longitude": 25.2930421,
             "prices": {
                 "pb95": 1.769,
                 "diesel": 1.989
@@ -6444,14 +6444,14 @@
             }
         },
         {
-            "id": "f6a15b829df817ee",
+            "id": "d7b77e1471f005ab",
             "name": "Neste Minties",
             "brand": "Neste Minties",
             "address": "Vilnius, Žirmūnų g. 54C, 08233",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7067448,
-            "longitude": 25.304138,
+            "latitude": 54.70674499,
+            "longitude": 25.30416264,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 1.994
@@ -6514,14 +6514,14 @@
             }
         },
         {
-            "id": "ae2b9c0397b9bafd",
+            "id": "956e034ca8873569",
             "name": "Neste Ozo",
             "brand": "Neste Ozo",
             "address": "Vilnius, Geležinio Vilko g. 63, 08104",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7119474,
-            "longitude": 25.2706441,
+            "latitude": 54.71194857,
+            "longitude": 25.27062107,
             "prices": {
                 "pb95": 1.794,
                 "diesel": 2.014
@@ -6542,14 +6542,14 @@
             }
         },
         {
-            "id": "19437cd6ec2f13b7",
+            "id": "07d03c61e87106f4",
             "name": "Neste Panerių",
             "brand": "Neste Panerių",
             "address": "Vilnius, Panerių g. 42, 03202",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.66802045,
-            "longitude": 25.26428718,
+            "latitude": 54.66800392,
+            "longitude": 25.264745,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.029
@@ -6570,14 +6570,14 @@
             }
         },
         {
-            "id": "6efacb69a4bc85f3",
+            "id": "6951e5449ef4d4f6",
             "name": "Neste Pilaitės",
             "brand": "Neste Pilaitės",
             "address": "Vilnius, Pilaitės pr. 27, 06269",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7094735,
-            "longitude": 25.1898838,
+            "latitude": 54.70886335,
+            "longitude": 25.18973269,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 1.989
@@ -6612,14 +6612,14 @@
             }
         },
         {
-            "id": "407c7a87e271064d",
+            "id": "c2cabb34b292fda9",
             "name": "Neste RIMI",
             "brand": "Neste RIMI",
             "address": "Vilnius, Kedrų g. 2, 03159",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6772095,
-            "longitude": 25.2556439,
+            "latitude": 54.67723152,
+            "longitude": 25.25564009,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.059
@@ -6682,14 +6682,14 @@
             }
         },
         {
-            "id": "22bf7a3b0f766b18",
+            "id": "f84ad82cf95b5ba5",
             "name": "Neste Saltoniškių",
             "brand": "Neste Saltoniškių",
             "address": "Vilnius, Geležinio Vilko g. 37A, 08104",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7013241,
-            "longitude": 25.2638052,
+            "latitude": 54.70159069,
+            "longitude": 25.2637035,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.039
@@ -6710,42 +6710,42 @@
             }
         },
         {
-            "id": "a81afad6fb1d0b64",
+            "id": "8f581a9fac1b898a",
             "name": "Neste Santariškių",
             "brand": "Neste Santariškių",
             "address": "Vilnius, Molėtų pl. 8, 08426",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.75485,
-            "longitude": 25.271346,
+            "latitude": 54.75488718,
+            "longitude": 25.27125497,
             "prices": {
                 "pb95": 1.774,
                 "diesel": 1.994
             }
         },
         {
-            "id": "8e48b744fb4f4989",
+            "id": "244a04f9ce50f9c3",
             "name": "Neste Savanorių 1",
             "brand": "Neste Savanorių 1",
             "address": "Vilnius, Savanorių pr. 220A, 02301",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6440341,
-            "longitude": 25.2074576,
+            "latitude": 54.64420273,
+            "longitude": 25.20700105,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 1.989
             }
         },
         {
-            "id": "501d8c3637245c52",
+            "id": "847fc0308dbb913e",
             "name": "Neste Savanorių 2",
             "brand": "Neste Savanorių 2",
             "address": "Vilnius, Savanorių pr. 187, 02300",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.646852,
-            "longitude": 25.2103082,
+            "latitude": 54.6481153,
+            "longitude": 25.21246187,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.999
@@ -6780,14 +6780,14 @@
             }
         },
         {
-            "id": "e07ac85edcf74cc5",
+            "id": "ca54d0638edd923b",
             "name": "Neste Stanevičiaus",
             "brand": "Neste Stanevičiaus",
             "address": "Vilnius, S. Stanevičiaus g. 3, 07131",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7214903,
-            "longitude": 25.2561146,
+            "latitude": 54.7215145,
+            "longitude": 25.25609519,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 1.994
@@ -6808,14 +6808,14 @@
             }
         },
         {
-            "id": "be56b45e7a9ef242",
+            "id": "8232aa9ff4e937d0",
             "name": "Neste Subačiaus",
             "brand": "Neste Subačiaus",
             "address": "Vilnius, Subačiaus g. 64, 11342",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6767354,
-            "longitude": 25.3092992,
+            "latitude": 54.6767547,
+            "longitude": 25.30961868,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.029
@@ -6864,14 +6864,14 @@
             }
         },
         {
-            "id": "816fdff790874245",
+            "id": "3ec6f842b8e7f789",
             "name": "Neste Talino",
             "brand": "Neste Talino",
             "address": "Vilnius, Talino g. 2C, 05200",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7138968,
-            "longitude": 25.2096844,
+            "latitude": 54.71389839,
+            "longitude": 25.20897449,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999
@@ -6934,14 +6934,14 @@
             }
         },
         {
-            "id": "36f2e2344b0de4a1",
+            "id": "e6b114f67c0b9dce",
             "name": "Neste Trakų Vokės",
             "brand": "Neste Trakų Vokės",
             "address": "Vilnius, J. Tiškevičiaus g. 19, 02231",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6244066,
-            "longitude": 25.1119814,
+            "latitude": 54.62430171,
+            "longitude": 25.11168144,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.999
@@ -6990,14 +6990,14 @@
             }
         },
         {
-            "id": "cb7007fa0bfca554",
+            "id": "0b1ea7130066a468",
             "name": "Neste Viršuliškių",
             "brand": "Neste Viršuliškių",
             "address": "Vilnius, Justiniškių g. 14B, 05131",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7049091,
-            "longitude": 25.2147007,
+            "latitude": 54.70514157,
+            "longitude": 25.21498724,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.029
@@ -7088,14 +7088,14 @@
             }
         },
         {
-            "id": "22d7a0d866c9e433",
+            "id": "6f4ff585ab694299",
             "name": "Neste Žalgirio",
             "brand": "Neste Žalgirio",
             "address": "Vilnius, Geležinio Vilko g. 41, 09300",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7040978,
-            "longitude": 25.2668956,
+            "latitude": 54.70411134,
+            "longitude": 25.26689437,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 2.039
@@ -7116,28 +7116,28 @@
             }
         },
         {
-            "id": "baf76d8a214250c5",
+            "id": "6f8f88ab31d9fb2d",
             "name": "Neste Žirmūnų",
             "brand": "Neste Žirmūnų",
             "address": "Vilnius, Žirmūnų g. 68B, 09113",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.7174439,
-            "longitude": 25.3044407,
+            "latitude": 54.7175698,
+            "longitude": 25.30451201,
             "prices": {
                 "pb95": 1.779,
                 "diesel": 1.999
             }
         },
         {
-            "id": "2813fd06e4e5e14d",
+            "id": "3cd539231570cfda",
             "name": "Neste Žirnių",
             "brand": "Neste Žirnių",
             "address": "Vilnius, Žirnių g. 17, 02118",
             "city": "Vilnius",
             "municipality": "Vilniaus m. sav.",
-            "latitude": 54.6566534,
-            "longitude": 25.2920381,
+            "latitude": 54.65654975,
+            "longitude": 25.29212601,
             "prices": {
                 "pb95": 1.819,
                 "diesel": 2.029
@@ -9017,14 +9017,14 @@
             }
         },
         {
-            "id": "0cdc1b1565987427",
+            "id": "76d74cd8c86aa604",
             "name": "Tripletas",
             "brand": "Tripletas",
             "address": "Mažeikiai, Sedos g. 16, 89233",
             "city": "Mažeikiai",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.3052828,
-            "longitude": 22.3424876,
+            "latitude": 56.30530435,
+            "longitude": 22.34252813,
             "prices": {
                 "pb95": 1.7,
                 "diesel": 1.9,
@@ -9032,14 +9032,14 @@
             }
         },
         {
-            "id": "ecc7cb600bb7651b",
+            "id": "348b06050ca5b284",
             "name": "Tumasa",
             "brand": "Tumasa",
             "address": "Židikai, Mažeikių g. 10, 89442",
             "city": "Židikai",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.3176397,
-            "longitude": 22.0135973,
+            "latitude": 56.31799412,
+            "longitude": 22.01862611,
             "prices": {
                 "pb95": 1.8,
                 "diesel": 1.95,
@@ -9061,27 +9061,27 @@
             }
         },
         {
-            "id": "aba9a1e4140d29e6",
+            "id": "6092d67fbd2f2238",
             "name": "Utentra",
             "brand": "Utentra",
             "address": "Utena, Pramonės g. 16, 28119",
             "city": "Utena",
             "municipality": "Utenos r. sav.",
-            "latitude": 55.4946795,
-            "longitude": 25.6458529,
+            "latitude": 55.49470397,
+            "longitude": 25.64582108,
             "prices": {
                 "diesel": 1.979
             }
         },
         {
-            "id": "2839689b6a904672",
+            "id": "68026f7e03589101",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Alytus, Naujoji g. 27, 62175",
             "city": "Alytus",
             "municipality": "Alytaus m. sav.",
-            "latitude": 54.4140414,
-            "longitude": 24.0101635,
+            "latitude": 54.41401437,
+            "longitude": 24.00998629,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.059,
@@ -9089,14 +9089,14 @@
             }
         },
         {
-            "id": "581e4b706ee8a09a",
+            "id": "cdf8ad8f4fffcfac",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Alytus, Ulonų g. 33B, 62136",
             "city": "Alytus",
             "municipality": "Alytaus m. sav.",
-            "latitude": 54.3847857,
-            "longitude": 24.0500261,
+            "latitude": 54.38466569,
+            "longitude": 24.05025809,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.059,
@@ -9104,14 +9104,14 @@
             }
         },
         {
-            "id": "6a2acd54a86da43c",
+            "id": "6d5ca38bb7b23d19",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Anykščiai, A. Vienuolio g. 34, 29148",
             "city": "Anykščiai",
             "municipality": "Anykščių r. sav.",
-            "latitude": 55.522041,
-            "longitude": 25.0863648,
+            "latitude": 55.52195398,
+            "longitude": 25.0866871,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -9119,14 +9119,14 @@
             }
         },
         {
-            "id": "bbe7d5e2534bafd4",
+            "id": "50084c7a380bcc6e",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Anykščiai, Piliakalnio g. 9, 29109",
             "city": "Anykščiai",
             "municipality": "Anykščių r. sav.",
-            "latitude": 55.5413265,
-            "longitude": 25.1349412,
+            "latitude": 55.54126944,
+            "longitude": 25.1347699,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -9134,14 +9134,14 @@
             }
         },
         {
-            "id": "8aadb71556bc257c",
+            "id": "d2c95497f6adfd3e",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Aukštelkės k., Ilgoji g. 1, 80184",
             "city": "Aukštelkės k.",
             "municipality": "Šiaulių r. sav.",
-            "latitude": 55.9357609,
-            "longitude": 23.0777888,
+            "latitude": 55.88186336,
+            "longitude": 23.20532631,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9149,14 +9149,14 @@
             }
         },
         {
-            "id": "60a978c9ef83a4b5",
+            "id": "1b65d25f44c4f396",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Aukštųjų Semeniukų k., Logistikos g. 9, 21401",
             "city": "Aukštųjų Semeniukų k.",
             "municipality": "Trakų r. sav.",
-            "latitude": 54.70177276,
-            "longitude": 25.00985073,
+            "latitude": 54.70160335,
+            "longitude": 25.00966088,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9164,14 +9164,14 @@
             }
         },
         {
-            "id": "05373d593848a952",
+            "id": "30cd61072918abd4",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Avižienių k., Ožiarūčių g. 1A, 14185",
             "city": "Avižienių k.",
             "municipality": "Vilniaus r. sav.",
-            "latitude": 54.76410875,
-            "longitude": 25.19664267,
+            "latitude": 54.764005,
+            "longitude": 25.19639378,
             "prices": {
                 "pb95": 1.809,
                 "diesel": 2.019,
@@ -9179,14 +9179,14 @@
             }
         },
         {
-            "id": "6b151009708fe457",
+            "id": "907e6e759de700e4",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Biržai, Parodos g. 2, 41136",
             "city": "Biržai",
             "municipality": "Biržų r. sav.",
-            "latitude": 56.2013087,
-            "longitude": 24.7490206,
+            "latitude": 56.20128359,
+            "longitude": 24.74879753,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.039,
@@ -9194,14 +9194,14 @@
             }
         },
         {
-            "id": "4c26e605e2f2dafb",
+            "id": "0b4b01e64588ca3c",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Biržai, Pasvalio g. 1B, 41132",
             "city": "Biržai",
             "municipality": "Biržų r. sav.",
-            "latitude": 56.2019312,
-            "longitude": 24.7377964,
+            "latitude": 56.20202722,
+            "longitude": 24.73770358,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.039,
@@ -9209,14 +9209,14 @@
             }
         },
         {
-            "id": "bf5abab3e1f2ce2e",
+            "id": "fd27d2f1d788b447",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Brazdigalos k. 1, 39198",
             "city": "Brazdigalos k. 1",
             "municipality": "Pasvalio r. sav.",
-            "latitude": 56.04222887,
-            "longitude": 24.37818501,
+            "latitude": 56.04215704,
+            "longitude": 24.37831384,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.099,
@@ -9224,14 +9224,14 @@
             }
         },
         {
-            "id": "14d767149e1ca33f",
+            "id": "1d22b9a279ee9800",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Daugų k., Neveiglo g. 25, 64144",
             "city": "Daugų k.",
             "municipality": "Alytaus r. sav.",
-            "latitude": 54.0450971,
-            "longitude": 23.526838,
+            "latitude": 54.36678813,
+            "longitude": 24.33760801,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.079,
@@ -9239,14 +9239,14 @@
             }
         },
         {
-            "id": "3e4460cfdebe3f82",
+            "id": "19fd3e18cd3be479",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Dotnuva, Tilto g. 2A, 58352",
             "city": "Dotnuva",
             "municipality": "Kėdainių r. sav.",
-            "latitude": 55.374726,
-            "longitude": 23.8807876,
+            "latitude": 55.37474903,
+            "longitude": 23.88082341,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9254,14 +9254,14 @@
             }
         },
         {
-            "id": "daa242b6a377316d",
+            "id": "6a40b064d8fc007d",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Dukstynos k., Vytauto g. 131, 20186",
             "city": "Dukstynos k.",
             "municipality": "Ukmergės r. sav.",
-            "latitude": 55.27101815,
-            "longitude": 24.80958415,
+            "latitude": 55.26921777,
+            "longitude": 24.81044038,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9269,14 +9269,14 @@
             }
         },
         {
-            "id": "2845482fb2c6008a",
+            "id": "9dddd334510e38ce",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Elektrėnai, Elektrinės g. 6, 26109",
             "city": "Elektrėnai",
             "municipality": "Elektrėnų sav.",
-            "latitude": 54.7845187,
-            "longitude": 24.6542452,
+            "latitude": 54.78456679,
+            "longitude": 24.65429765,
             "prices": {
                 "pb95": 1.929,
                 "diesel": 2.099,
@@ -9299,14 +9299,14 @@
             }
         },
         {
-            "id": "d2a5fa30bb1494b7",
+            "id": "347486b3bf3678b8",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Gediminas, Vyturio g. 2, 28126",
             "city": "Gediminas",
             "municipality": "Utenos r. sav.",
-            "latitude": 55.4778151,
-            "longitude": 25.5815649,
+            "latitude": 55.47781665,
+            "longitude": 25.58151852,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.099,
@@ -9314,14 +9314,14 @@
             }
         },
         {
-            "id": "791aaeedb25badae",
+            "id": "7369b1b0364be697",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Giraitės k., Automagistralės g. 4, 54310",
             "city": "Giraitės k.",
             "municipality": "Kauno r. sav.",
-            "latitude": 54.95927243,
-            "longitude": 23.8643188,
+            "latitude": 54.9591869,
+            "longitude": 23.86431975,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9329,14 +9329,14 @@
             }
         },
         {
-            "id": "575c898261efe1cc",
+            "id": "9130253b965c6bf3",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Gojaus k., Utenos g. 16, 33165",
             "city": "Gojaus k.",
             "municipality": "Molėtų r. sav.",
-            "latitude": 55.21477511,
-            "longitude": 25.43786563,
+            "latitude": 55.21469191,
+            "longitude": 25.43772491,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.089,
@@ -9344,14 +9344,14 @@
             }
         },
         {
-            "id": "5812c960ecaae295",
+            "id": "c019faa7c8e5534f",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Grigaliūnų k. 11, 59281",
             "city": "Grigaliūnų k. 11",
             "municipality": "Prienų r. sav.",
-            "latitude": 55.151831,
-            "longitude": 26.1310055,
+            "latitude": 54.71394907,
+            "longitude": 23.64977437,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9359,14 +9359,14 @@
             }
         },
         {
-            "id": "fdfcdbc920a29571",
+            "id": "6711a1441b345d33",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Gudžiūnų k., Baisogalos g. 5, 58267",
             "city": "Gudžiūnų k.",
             "municipality": "Kėdainių r. sav.",
-            "latitude": 55.51865898,
-            "longitude": 23.7736221,
+            "latitude": 55.51867815,
+            "longitude": 23.77364883,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9374,14 +9374,14 @@
             }
         },
         {
-            "id": "cc7abe713d9f3307",
+            "id": "f1ad4aad810b9531",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Ignalina, Turistų g. 28A, 30138",
             "city": "Ignalina",
             "municipality": "Ignalinos r. sav.",
-            "latitude": 55.3389521,
-            "longitude": 26.1455754,
+            "latitude": 55.33898149,
+            "longitude": 26.14560793,
             "prices": {
                 "pb95": 1.929,
                 "diesel": 2.119,
@@ -9389,14 +9389,14 @@
             }
         },
         {
-            "id": "cff410e1f221d67c",
+            "id": "a4d754d9c78e80c1",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Ilgakiemio k., Prienų g. 22,",
             "city": "Ilgakiemio k.",
             "municipality": "Kauno r. sav.",
-            "latitude": 54.77388973,
-            "longitude": 23.88938919,
+            "latitude": 54.77409737,
+            "longitude": 23.88975019,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.099,
@@ -9404,14 +9404,14 @@
             }
         },
         {
-            "id": "94c5a6d6dea7168f",
+            "id": "c231c1c86d4121a8",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Jašiūnai, Lydos g. 13, 17247",
             "city": "Jašiūnai",
             "municipality": "Šalčininkų r. sav.",
-            "latitude": 54.4395641,
-            "longitude": 25.3273302,
+            "latitude": 54.43976872,
+            "longitude": 25.32731524,
             "prices": {
                 "pb95": 1.919,
                 "diesel": 2.139,
@@ -9419,14 +9419,14 @@
             }
         },
         {
-            "id": "235c4427cd2a4c9d",
+            "id": "a572d9a42f5d8c40",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Jonava, Darbininkų g. 4D, 55101",
             "city": "Jonava",
             "municipality": "Jonavos r. sav.",
-            "latitude": 55.0937258,
-            "longitude": 24.282767,
+            "latitude": 55.09375262,
+            "longitude": 24.28261211,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.079,
@@ -9434,14 +9434,14 @@
             }
         },
         {
-            "id": "77d64099e2c890fd",
+            "id": "db758d9e9fcdb159",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Joniškis, Vilniaus g. 51, 84166",
             "city": "Joniškis",
             "municipality": "Joniškio r. sav.",
-            "latitude": 56.2246151,
-            "longitude": 23.6011237,
+            "latitude": 56.22465151,
+            "longitude": 23.60098823,
             "prices": {
                 "pb95": 1.889,
                 "diesel": 2.099,
@@ -9449,14 +9449,14 @@
             }
         },
         {
-            "id": "49de82f5adc828a8",
+            "id": "05b6163926acc9b7",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Juodalaukių k. 2, 32104",
             "city": "Juodalaukių k. 2",
             "municipality": "Zarasų r. sav.",
-            "latitude": 55.71788524,
-            "longitude": 26.21384197,
+            "latitude": 55.71771767,
+            "longitude": 26.21382465,
             "prices": {
                 "pb95": 1.919,
                 "diesel": 2.139,
@@ -9493,14 +9493,14 @@
             }
         },
         {
-            "id": "9a3d6f8bf32a9dc3",
+            "id": "e0ba1a342c2b5783",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kalvarija, Dariaus ir Girėno g. 81, 69206",
             "city": "Kalvarija",
             "municipality": "Kalvarijos sav.",
-            "latitude": 54.424472,
-            "longitude": 23.2319222,
+            "latitude": 54.4244166,
+            "longitude": 23.23203331,
             "prices": {
                 "pb95": 1.929,
                 "diesel": 2.149,
@@ -9508,14 +9508,14 @@
             }
         },
         {
-            "id": "c20e826d40b1db24",
+            "id": "c22d1a5f3603ffc4",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kampiškių k., Baltijos g. 41, 09300",
             "city": "Kampiškių k.",
             "municipality": "Kauno r. sav.",
-            "latitude": 54.8427321,
-            "longitude": 23.84944081,
+            "latitude": 54.84248502,
+            "longitude": 23.84942127,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9523,14 +9523,14 @@
             }
         },
         {
-            "id": "506598c725da0149",
+            "id": "1c232bfb625bb998",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, A. Juozapavičiaus pr. 90, 45267",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8778473,
-            "longitude": 23.9345597,
+            "latitude": 54.87854855,
+            "longitude": 23.93433785,
             "prices": {
                 "pb95": 1.879,
                 "diesel": 2.079,
@@ -9538,14 +9538,14 @@
             }
         },
         {
-            "id": "8e938e3a68c73be8",
+            "id": "5d91a3544b0dfb5b",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Ateities pl. 105, 52119",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9271996,
-            "longitude": 24.0430425,
+            "latitude": 54.92736828,
+            "longitude": 24.04304214,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9553,14 +9553,14 @@
             }
         },
         {
-            "id": "5dba941c11d2ddd8",
+            "id": "409f3c3d6064cca6",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Ateities pl. 37A, 52119",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9182066,
-            "longitude": 24.0396673,
+            "latitude": 54.91818977,
+            "longitude": 24.04000039,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -9568,14 +9568,14 @@
             }
         },
         {
-            "id": "cd6bfaa8a5e398cc",
+            "id": "8eb1f9888163315c",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Baltijos g. 90B, 47130",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9180088,
-            "longitude": 23.8736664,
+            "latitude": 54.917916,
+            "longitude": 23.8737463,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -9583,28 +9583,28 @@
             }
         },
         {
-            "id": "03b2d889886b0d94",
+            "id": "eb12e6914b22273f",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Biruliškių g. 18A, 51205",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9105791,
-            "longitude": 24.0232261,
+            "latitude": 54.91139079,
+            "longitude": 24.02089433,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059
             }
         },
         {
-            "id": "1afa3c184b185606",
+            "id": "aec4e005334f2236",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Didžioji g. 84, 45462",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8551079,
-            "longitude": 24.0131202,
+            "latitude": 54.85517369,
+            "longitude": 24.01325891,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -9612,14 +9612,14 @@
             }
         },
         {
-            "id": "4aba14b50658a7d1",
+            "id": "e60ad0926c34e96d",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Islandijos pl. 61A, 49117",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9335293,
-            "longitude": 23.9684792,
+            "latitude": 54.93354237,
+            "longitude": 23.96850604,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9627,14 +9627,14 @@
             }
         },
         {
-            "id": "a3d24f417368234f",
+            "id": "0e0d3ba46f2edab3",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, K. Baršausko g. 64, 44405",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8975719,
-            "longitude": 23.9583731,
+            "latitude": 54.89766099,
+            "longitude": 23.95810171,
             "prices": {
                 "pb95": 1.879,
                 "diesel": 2.079,
@@ -9642,14 +9642,14 @@
             }
         },
         {
-            "id": "612e7c0f364f8fdf",
+            "id": "55dde7eb7d026a71",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Karaliaus Mindaugo pr. 54, 44351",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8875335,
-            "longitude": 23.9211444,
+            "latitude": 54.88738104,
+            "longitude": 23.92132782,
             "prices": {
                 "pb95": 1.879,
                 "diesel": 2.079,
@@ -9657,14 +9657,14 @@
             }
         },
         {
-            "id": "81613764ef8b62e8",
+            "id": "78e3f5d13163a5ce",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Marijampolės pl. 29, 45438",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8495447,
-            "longitude": 23.967082,
+            "latitude": 54.84942013,
+            "longitude": 23.96691132,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -9672,14 +9672,14 @@
             }
         },
         {
-            "id": "e7be702bf40adcfd",
+            "id": "74dce60c8bdc3ee1",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Miežėnų g. 18, 47115",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9176824,
-            "longitude": 23.8630548,
+            "latitude": 54.91762212,
+            "longitude": 23.86321562,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -9687,14 +9687,14 @@
             }
         },
         {
-            "id": "06c3ef8e9f0b8a68",
+            "id": "0676c5ab2e9a1818",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, P. Lukšio g. 66A, 49404",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9249064,
-            "longitude": 23.9423227,
+            "latitude": 54.92493135,
+            "longitude": 23.94262165,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -9702,14 +9702,14 @@
             }
         },
         {
-            "id": "0a0aa4cfe13ca362",
+            "id": "51a15aeef494377d",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Pramonės pr. 44, 50302",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.927221,
-            "longitude": 23.9747862,
+            "latitude": 54.92714317,
+            "longitude": 23.97463204,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.039,
@@ -9717,14 +9717,14 @@
             }
         },
         {
-            "id": "5fcb983654686240",
+            "id": "a4f1923dae97d78e",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Raudondvario pl. 288, 47164",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9213913,
-            "longitude": 23.8105362,
+            "latitude": 54.92128056,
+            "longitude": 23.81050537,
             "prices": {
                 "pb95": 1.879,
                 "diesel": 2.079,
@@ -9732,14 +9732,14 @@
             }
         },
         {
-            "id": "e7c7fb89dddb4d5b",
+            "id": "aa2da7f213848f62",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Statybininkų g. 3A, 50124",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9201003,
-            "longitude": 23.9487458,
+            "latitude": 54.92015901,
+            "longitude": 23.94881165,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.059,
@@ -9747,14 +9747,14 @@
             }
         },
         {
-            "id": "b18faa228c899881",
+            "id": "dd732001c0d59309",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, T. Masiulio g. 22B, 52447",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8809124,
-            "longitude": 24.0097867,
+            "latitude": 54.88094413,
+            "longitude": 24.00986864,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.059,
@@ -9762,14 +9762,14 @@
             }
         },
         {
-            "id": "d8bed9e4bdecdb81",
+            "id": "6548a2e4d8e754b4",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Veiverių g. 117, 46354",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8664488,
-            "longitude": 23.8894647,
+            "latitude": 54.86650016,
+            "longitude": 23.88923669,
             "prices": {
                 "pb95": 1.879,
                 "diesel": 2.079,
@@ -9777,14 +9777,14 @@
             }
         },
         {
-            "id": "9df19a7d1e034b4f",
+            "id": "b1c2fb73ad49f5ab",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kaunas, Veiverių g. 124B, 46282",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.8833359,
-            "longitude": 23.893637,
+            "latitude": 54.88323777,
+            "longitude": 23.89383662,
             "prices": {
                 "pb95": 1.879,
                 "diesel": 2.079,
@@ -9792,14 +9792,14 @@
             }
         },
         {
-            "id": "4d7c4531aeb17a6c",
+            "id": "2c5fe1258f50a629",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kerelių k. 1A, 40473",
             "city": "Kerelių k. 1A",
             "municipality": "Kupiškio r. sav.",
-            "latitude": 55.85924205,
-            "longitude": 25.17261232,
+            "latitude": 55.85646985,
+            "longitude": 25.17345447,
             "prices": {
                 "pb95": 1.899,
                 "diesel": 2.059,
@@ -9807,14 +9807,14 @@
             }
         },
         {
-            "id": "e768ab93b4cf39b0",
+            "id": "80234e946f6714a2",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Klaipėda, Liepojos g. 242, 92330",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.7538813,
-            "longitude": 21.1313388,
+            "latitude": 55.75379958,
+            "longitude": 21.13137128,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.079,
@@ -9822,14 +9822,14 @@
             }
         },
         {
-            "id": "16e85faef7b182d2",
+            "id": "45cd757c47f1fa68",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Klaipėda, Nemuno g. 139, 93185",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.6741413,
-            "longitude": 21.1489147,
+            "latitude": 55.67522902,
+            "longitude": 21.15300867,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.059,
@@ -9837,14 +9837,14 @@
             }
         },
         {
-            "id": "81c3c542a7579962",
+            "id": "816a03838fac0d19",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Klaipėda, Priestočio g. 28, 92191",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.7192745,
-            "longitude": 21.1411712,
+            "latitude": 55.71926789,
+            "longitude": 21.14116101,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.059,
@@ -9852,14 +9852,14 @@
             }
         },
         {
-            "id": "eb634613a241fdde",
+            "id": "275f4753a40dbac9",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Klaipėda, Taikos pr. 70A-1, 93202",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.662325,
-            "longitude": 21.1763049,
+            "latitude": 55.68328895,
+            "longitude": 21.16064018,
             "prices": {
                 "pb95": 1.839,
                 "diesel": 2.059,
@@ -9867,14 +9867,14 @@
             }
         },
         {
-            "id": "1a6226f2782c9c2a",
+            "id": "d2e1195a6929f6f1",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Klaipėda, Šilutės pl. 52, 94181",
             "city": "Klaipėda",
             "municipality": "Klaipėdos m. sav.",
-            "latitude": 55.6817397,
-            "longitude": 21.1851383,
+            "latitude": 55.6817225,
+            "longitude": 21.18517084,
             "prices": {
                 "pb95": 1.859,
                 "diesel": 2.079,
@@ -9882,14 +9882,14 @@
             }
         },
         {
-            "id": "924937a7458030a3",
+            "id": "5b78fc9232bc6dbc",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Krekenava, Tilto g. 35, 38305",
             "city": "Krekenava",
             "municipality": "Panevėžio r. sav.",
-            "latitude": 55.5420616,
-            "longitude": 24.098564,
+            "latitude": 55.54155278,
+            "longitude": 24.10785329,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9897,14 +9897,14 @@
             }
         },
         {
-            "id": "2eee6c61bb4a9740",
+            "id": "5df1de90e3d9dbf2",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kretinga, Vytauto g. 163, 97133",
             "city": "Kretinga",
             "municipality": "Kretingos r. sav.",
-            "latitude": 55.890563,
-            "longitude": 21.2782725,
+            "latitude": 55.89058152,
+            "longitude": 21.27847374,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -9912,14 +9912,14 @@
             }
         },
         {
-            "id": "c3d78626fa517c8d",
+            "id": "f7f98d60c4405b63",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Kretingalė, Klaipėdos g. 1A, 96332",
             "city": "Kretingalė",
             "municipality": "Klaipėdos r. sav.",
-            "latitude": 55.8275144,
-            "longitude": 21.1849852,
+            "latitude": 55.82750436,
+            "longitude": 21.18507776,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -10883,14 +10883,14 @@
             }
         },
         {
-            "id": "1639310a72fec100",
+            "id": "b3663baf262346be",
             "name": "VIADA LT",
             "brand": "VIADA LT",
             "address": "Ąžuolų Būdos k.",
             "city": "Ąžuolų Būdos k.",
             "municipality": "Kazlų Rūdos sav.",
-            "latitude": 54.69866967,
-            "longitude": 23.517622,
+            "latitude": 54.69817654,
+            "longitude": 23.51761317,
             "prices": {
                 "pb95": 1.949,
                 "diesel": 2.169,
@@ -11077,14 +11077,14 @@
             }
         },
         {
-            "id": "44db120d50b34f0b",
+            "id": "2fe385711b4aef28",
             "name": "Valdegra",
             "brand": "Valdegra",
             "address": "Igliauka, Prienų g. 7, 69117",
             "city": "Igliauka",
             "municipality": "Marijampolės sav.",
-            "latitude": 54.5578185,
-            "longitude": 23.6563063,
+            "latitude": 54.55813612,
+            "longitude": 23.65639337,
             "prices": {
                 "pb95": 1.789,
                 "diesel": 2.049,
@@ -11107,14 +11107,14 @@
             }
         },
         {
-            "id": "6e19fbdb5db72455",
+            "id": "14f8690613b2b334",
             "name": "Vildega",
             "brand": "Vildega",
             "address": "Vilkaviškis, Vytauto g. 2D, 70137",
             "city": "Vilkaviškis",
             "municipality": "Vilkaviškio r. sav.",
-            "latitude": 54.6433403,
-            "longitude": 23.0530856,
+            "latitude": 54.64346113,
+            "longitude": 23.05291997,
             "prices": {
                 "pb95": 1.759,
                 "diesel": 1.959,
@@ -11122,14 +11122,14 @@
             }
         },
         {
-            "id": "6727e6ac50e8f8c5",
+            "id": "8fb1f0dd45ea5f95",
             "name": "Vimijula",
             "brand": "Vimijula",
             "address": "Ručiūnų k., Kauno g. 2A, 55355",
             "city": "Ručiūnų k.",
             "municipality": "Jonavos r. sav.",
-            "latitude": 55.13002048,
-            "longitude": 24.18939578,
+            "latitude": 55.13794926,
+            "longitude": 24.1932708,
             "prices": {
                 "pb95": 1.87,
                 "diesel": 2.02,
@@ -11137,14 +11137,14 @@
             }
         },
         {
-            "id": "e8033d077c727d95",
+            "id": "5b36372b4a0b43fd",
             "name": "Visvilas",
             "brand": "Visvilas",
             "address": "Tirkšlių k., Laukų g. 2C, 89330",
             "city": "Tirkšlių k.",
             "municipality": "Mažeikių r. sav.",
-            "latitude": 56.258374,
-            "longitude": 22.309437,
+            "latitude": 56.25843863,
+            "longitude": 22.30945015,
             "prices": {
                 "pb95": 1.78,
                 "diesel": 1.99,
@@ -11152,14 +11152,14 @@
             }
         },
         {
-            "id": "a406492a53737870",
+            "id": "46184804e26a0df2",
             "name": "Vlantana",
             "brand": "Vlantana",
             "address": "Gobergiškės k., Dvaro g. 1, 92498",
             "city": "Gobergiškės k.",
             "municipality": "Klaipėdos r. sav.",
-            "latitude": 55.72033562,
-            "longitude": 21.30094337,
+            "latitude": 55.71917037,
+            "longitude": 21.29335463,
             "prices": {
                 "pb95": 1.81,
                 "diesel": 2.03
@@ -11181,14 +11181,14 @@
             }
         },
         {
-            "id": "e1df074fb90977ad",
+            "id": "7ee81d780347f0b3",
             "name": "Žibalas",
             "brand": "Žibalas",
             "address": "Jonava, Taurostos g. 16A, 55195",
             "city": "Jonava",
             "municipality": "Jonavos r. sav.",
-            "latitude": 55.0843369,
-            "longitude": 24.3168713,
+            "latitude": 55.07211501,
+            "longitude": 24.29494647,
             "prices": {
                 "pb95": 1.86,
                 "diesel": 2.06,
