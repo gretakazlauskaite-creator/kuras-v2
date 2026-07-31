@@ -5,14 +5,14 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-07-31",
-        "generated_at": "2026-07-31T08:09:50+00:00",
-        "checksum_sha256": "c13f7e72b700c95dc8e6d92adeca5ae3239df8eefd4e2aee99c9eb312a4a6a01",
+        "generated_at": "2026-07-31T10:50:36+00:00",
+        "checksum_sha256": "2f5d46583b8c7772a21e45ea62aca307b03e4c6ce49bf15098862918fd8883fc",
         "parser_version": "lea-live-api-v1",
-        "source_updated_at": "2026-07-31T10:30:03+03:00"
+        "source_updated_at": "2026-07-31T12:02:21+03:00"
     },
     "summary": {
         "station_count": 756,
-        "coordinate_count": 754,
+        "coordinate_count": 755,
         "price_count": 2068,
         "fuels": [
             "pb95",
@@ -3697,27 +3697,27 @@
             }
         },
         {
-            "id": "53ef0f6744da8613",
+            "id": "7e8199f044aa0edb",
             "name": "Deguva",
             "brand": "Deguva",
             "address": "Kaunas, Raudondvario pl. 234, 47158",
             "city": "Kaunas",
             "municipality": "Kauno m. sav.",
-            "latitude": 54.9209907,
-            "longitude": 23.8246861,
+            "latitude": 54.92113248,
+            "longitude": 23.82592563,
             "prices": {
                 "lpg": 0.75
             }
         },
         {
-            "id": "11f19cafe6dbf249",
+            "id": "9b7f1878b8dc412a",
             "name": "Deliuvis",
             "brand": "Deliuvis",
             "address": "Panevėžys, G. Petkevičaitės-Bitės g. 35C, 37138",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7224376,
-            "longitude": 24.3421829,
+            "latitude": 55.72246287,
+            "longitude": 24.34226901,
             "prices": {
                 "pb95": 1.739,
                 "diesel": 1.999,
@@ -3725,14 +3725,14 @@
             }
         },
         {
-            "id": "b1707d8553650dd5",
+            "id": "c5a531e941970951",
             "name": "Deliuvis",
             "brand": "Deliuvis",
             "address": "Panevėžys, Pušaloto g. 140, 35100",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7465858,
-            "longitude": 24.3291567,
+            "latitude": 55.74649742,
+            "longitude": 24.32992906,
             "prices": {
                 "pb95": 1.739,
                 "diesel": 1.999,
@@ -3740,14 +3740,14 @@
             }
         },
         {
-            "id": "fa995de2cc6b5b1f",
+            "id": "1cda2f7cea0a677e",
             "name": "Deliuvis",
             "brand": "Deliuvis",
             "address": "Panevėžys, S. Kerbedžio g. 2, 35135",
             "city": "Panevėžys",
             "municipality": "Panevėžio m. sav.",
-            "latitude": 55.7431736,
-            "longitude": 24.3424941,
+            "latitude": 55.7432389,
+            "longitude": 24.34220048,
             "prices": {
                 "pb95": 1.739,
                 "diesel": 1.999,
@@ -3781,14 +3781,14 @@
             }
         },
         {
-            "id": "1b7a08e05e1e57b6",
+            "id": "dd2a9d9ba6cff665",
             "name": "Dujovita",
             "brand": "Dujovita",
             "address": "Kėdainiai, Basanavičiaus g. 91E, 57356",
             "city": "Kėdainiai",
             "municipality": "Kėdainių r. sav.",
-            "latitude": 55.2781085,
-            "longitude": 23.959972,
+            "latitude": 55.27806842,
+            "longitude": 23.96011207,
             "prices": {
                 "lpg": 0.77
             }
@@ -5350,14 +5350,14 @@
             }
         },
         {
-            "id": "42368d2791fb3303",
+            "id": "a3a3511132490c5a",
             "name": "Kvistija",
             "brand": "Kvistija",
             "address": "Bačkonių k., Pastrėvio g. 1A, 56240",
             "city": "Bačkonių k.",
             "municipality": "Kaišiadorių r. sav.",
-            "latitude": null,
-            "longitude": null,
+            "latitude": 54.80250729,
+            "longitude": 24.50215726,
             "prices": {
                 "pb95": 1.799,
                 "diesel": 1.959,
@@ -5508,8 +5508,8 @@
             "latitude": 55.90135275,
             "longitude": 22.50630756,
             "prices": {
-                "pb95": 1.92,
-                "diesel": 2.1,
+                "pb95": 1.79,
+                "diesel": 2.05,
                 "lpg": 0.8
             }
         },
@@ -5778,7 +5778,7 @@
             "longitude": 22.19940808,
             "prices": {
                 "pb95": 1.77,
-                "diesel": 1.99,
+                "diesel": 1.97,
                 "lpg": 0.71
             }
         },
