@@ -5,10 +5,10 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-07-31",
-        "generated_at": "2026-07-31T10:50:36+00:00",
-        "checksum_sha256": "2f5d46583b8c7772a21e45ea62aca307b03e4c6ce49bf15098862918fd8883fc",
+        "generated_at": "2026-07-31T13:05:51+00:00",
+        "checksum_sha256": "9bb5175d935a2feb06704d1ff2b0b8b00325c340dba870f595a14606eb183b04",
         "parser_version": "lea-live-api-v1",
-        "source_updated_at": "2026-07-31T12:02:21+03:00"
+        "source_updated_at": "2026-07-31T15:43:10+03:00"
     },
     "summary": {
         "station_count": 756,
@@ -8842,8 +8842,8 @@
             "latitude": 55.58208249,
             "longitude": 21.28526307,
             "prices": {
-                "pb95": 1.84,
-                "diesel": 2.06,
+                "pb95": 1.78,
+                "diesel": 2.02,
                 "lpg": 0.73
             }
         },
@@ -8857,8 +8857,8 @@
             "latitude": 55.7122819,
             "longitude": 21.3816268,
             "prices": {
-                "pb95": 1.86,
-                "diesel": 2.06,
+                "pb95": 1.74,
+                "diesel": 1.97,
                 "lpg": 0.71
             }
         },
@@ -8872,8 +8872,8 @@
             "latitude": 55.71383582,
             "longitude": 21.38662566,
             "prices": {
-                "pb95": 1.89,
-                "diesel": 2.1,
+                "pb95": 1.78,
+                "diesel": 2.02,
                 "lpg": 0.74
             }
         },
@@ -8887,8 +8887,8 @@
             "latitude": 55.7283977,
             "longitude": 21.1325842,
             "prices": {
-                "pb95": 1.84,
-                "diesel": 2.06,
+                "pb95": 1.78,
+                "diesel": 2.02,
                 "lpg": 0.73
             }
         },
@@ -8902,8 +8902,8 @@
             "latitude": 55.6696562,
             "longitude": 21.1586131,
             "prices": {
-                "pb95": 1.84,
-                "diesel": 2.06,
+                "pb95": 1.78,
+                "diesel": 2.02,
                 "lpg": 0.72
             }
         },
@@ -8932,8 +8932,8 @@
             "latitude": 55.68724108,
             "longitude": 21.69352503,
             "prices": {
-                "pb95": 1.84,
-                "diesel": 2.03,
+                "pb95": 1.78,
+                "diesel": 2.02,
                 "lpg": 0.74
             }
         },
@@ -8947,8 +8947,8 @@
             "latitude": 55.6269372,
             "longitude": 21.97178201,
             "prices": {
-                "pb95": 1.84,
-                "diesel": 2.06,
+                "pb95": 1.78,
+                "diesel": 2.02,
                 "lpg": 0.74
             }
         },
@@ -8962,8 +8962,8 @@
             "latitude": 55.46435252,
             "longitude": 21.4702782,
             "prices": {
-                "pb95": 1.84,
-                "diesel": 2.03,
+                "pb95": 1.78,
+                "diesel": 2.02,
                 "lpg": 0.72
             }
         },
@@ -8977,8 +8977,8 @@
             "latitude": 55.71844617,
             "longitude": 21.93221161,
             "prices": {
-                "pb95": 1.84,
-                "diesel": 2.06,
+                "pb95": 1.78,
+                "diesel": 2.02,
                 "lpg": 0.74
             }
         },
@@ -8992,8 +8992,8 @@
             "latitude": 55.22753566,
             "longitude": 21.70188358,
             "prices": {
-                "pb95": 1.84,
-                "diesel": 2.03,
+                "pb95": 1.78,
+                "diesel": 2.02,
                 "lpg": 0.72
             }
         },
