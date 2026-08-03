@@ -70,7 +70,7 @@ jobs:
           grep -q 'data-station-id' static/assets/app.js
           grep -q 'mapsSearchUrl' static/assets/app.js
           grep -q 'data/status.json' static/assets/app.js
-          grep -q 'oficialiame LEA kainų portale' dist/index.html
+          grep -q 'oficialų LEA kainų portalą' dist/index.html
           grep -q 'lea-live-api-v1' dist-api/data/current.json
           grep -q '2026-07-30T10:30:03+03:00' dist-api/data/current.json
           if grep -R -q 'GitHub' dist; then
