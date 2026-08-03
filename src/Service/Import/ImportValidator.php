@@ -22,6 +22,7 @@ final class ImportValidator
         string $sourceDate,
         ?string $latestPublishedDate = null,
         ?int $previousPriceCount = null,
+        ?int $previousStationCount = null,
         bool $allowBackfill = false,
         ?\DateTimeImmutable $now = null,
     ): ValidationResult {
@@ -110,9 +111,26 @@ final class ImportValidator
             }
         }
 
+        if ($previousStationCount !== null && $previousStationCount > 0) {
+            $stationRatio = count($parsed->stations) / $previousStationCount;
+            if ($stationRatio < 0.60 || $stationRatio > 1.60) {
+                $errors[] = sprintf(
+                    'Degalinių skaičius įtartinai pasikeitė: dabar %d, ankstesniame importe %d.',
+                    count($parsed->stations),
+                    $previousStationCount,
+                );
+            } elseif ($stationRatio < 0.80 || $stationRatio > 1.20) {
+                $warnings[] = sprintf('Degalinių skaičius pasikeitė %.1f%%.', abs(1 - $stationRatio) * 100);
+            }
+        }
+
         if ($previousPriceCount !== null && $previousPriceCount > 0) {
             $ratio = $parsed->priceCount() / $previousPriceCount;
-            if ($ratio < 0.60 || $ratio > 1.60) {
+            // The live LEA portal keeps all stations in the response but uses a
+            // null price when a station has not submitted a current value. In
+            // that format station coverage is the integrity guard; a large
+            // numeric-price drop is real source information, not parser loss.
+            if ($previousStationCount === null && ($ratio < 0.60 || $ratio > 1.60)) {
                 $errors[] = sprintf(
                     'Kainų skaičius įtartinai pasikeitė: dabar %d, ankstesniame importe %d.',
                     $parsed->priceCount(),

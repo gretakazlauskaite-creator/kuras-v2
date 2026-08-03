@@ -102,6 +102,7 @@ $checksum = hash('sha256', $sourceBody);
         sourceDate: $source->sourceDate,
         latestPublishedDate: $fixtureMode ? null : ($previous['source']['source_date'] ?? null),
         previousPriceCount: $fixtureMode ? null : ($previous['summary']['price_count'] ?? null),
+        previousStationCount: $fixtureMode ? null : ($previous['summary']['station_count'] ?? null),
         allowBackfill: $fixtureMode,
     );
 
