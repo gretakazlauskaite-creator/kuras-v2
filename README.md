@@ -6,11 +6,11 @@ Fuel price comparison platform for Lithuania. Aggregates daily data from the [Li
 
 - **Static HTML/CSS/JavaScript** — filters, rankings, table and Leaflet map
 - **Generated JSON** — the browser needs no PHP, MySQL or WordPress plugin
-- **GitHub Actions** — downloads, validates and publishes LEA data on working days
+- **GitHub Actions** — checks, validates and publishes LEA data every hour, every day
 - **GitHub Pages** — temporary review hosting before the production static host is selected
 
 The source application is in `static/`. `bin/build-static.php` discovers the
-official LEA workbook, reuses the tested parser, blocks suspicious batches and
+official LEA live API, reuses the tested parser, blocks suspicious batches and
 produces `dist/`. A failed job does not replace the last successful deployment.
 
 ## Static preview
@@ -96,8 +96,9 @@ migrations/     SQL schema
 ## Data Source
 
 Prices come from the [official LEA page](https://www.ena.lt/degalu-kainos-degalinese/).
-LEA collects and publishes the 10:00 prices on working days; this source is
-daily official data, not real-time data.
+The importer checks LEA's public live portal every hour. Individual stations
+can still omit a price or leave an older submission; those cases are preserved
+and explicitly labelled instead of being silently removed.
 
 ## Legacy API v1 and review screen
 

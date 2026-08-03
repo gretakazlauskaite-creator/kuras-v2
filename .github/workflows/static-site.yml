@@ -18,8 +18,9 @@ on:
       - 'src/Service/Import/**'
       - '.github/workflows/static-site.yml'
   schedule:
-    # GitHub cron uses UTC: 08:15, 11:15, 14:15 and 17:15 in Lithuania during summer.
-    - cron: '15 5,8,11,14 * * 1-5'
+    # Check every hour, including weekends. An off-peak minute reduces GitHub
+    # Actions scheduling delays around the top of the hour.
+    - cron: '23 * * * *'
   push:
     branches: [main]
     paths:

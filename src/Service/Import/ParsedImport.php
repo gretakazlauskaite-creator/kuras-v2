@@ -15,7 +15,9 @@ final readonly class ParsedImport
      *   municipality:?string,
      *   latitude?:?float,
      *   longitude?:?float,
-     *   prices:array<string,float>
+     *   prices:array<string,float>,
+     *   price_updated_at?:array<string,string>,
+     *   unavailable_fuels?:list<string>
      * }> $stations
      * @param list<string> $detectedFuelSlugs
      * @param list<string> $issues

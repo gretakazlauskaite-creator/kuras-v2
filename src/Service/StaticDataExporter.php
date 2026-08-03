@@ -44,6 +44,8 @@ final class StaticDataExporter
                 'latitude' => $coordinate['latitude'] ?? null,
                 'longitude' => $coordinate['longitude'] ?? null,
                 'prices' => $station['prices'],
+                'price_updated_at' => $station['price_updated_at'] ?? [],
+                'unavailable_fuels' => $station['unavailable_fuels'] ?? [],
             ];
         }, $parsed->stations);
 

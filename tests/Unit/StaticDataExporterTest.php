@@ -76,6 +76,8 @@ final class StaticDataExporterTest extends TestCase
             'latitude' => 54.40333915,
             'longitude' => 24.03722399,
             'prices' => ['pb95' => 1.699],
+            'price_updated_at' => ['pb95' => '2026-07-30T09:30:31+03:00'],
+            'unavailable_fuels' => ['diesel'],
         ]], ['pb95'], 1);
 
         $payload = (new StaticDataExporter())->export(
@@ -93,5 +95,7 @@ final class StaticDataExporterTest extends TestCase
         self::assertSame(24.03722399, $payload['stations'][0]['longitude']);
         self::assertSame('lea-live-api-v1', $payload['source']['parser_version']);
         self::assertSame('2026-07-30T10:30:03+03:00', $payload['source']['source_updated_at']);
+        self::assertSame('2026-07-30T09:30:31+03:00', $payload['stations'][0]['price_updated_at']['pb95']);
+        self::assertSame(['diesel'], $payload['stations'][0]['unavailable_fuels']);
     }
 }

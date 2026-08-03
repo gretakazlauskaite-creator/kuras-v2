@@ -73,13 +73,6 @@ final class LeaLiveApiParser
                 $issues[] = "API įrašas {$rowNumber}: neatpažintas degalų tipas „{$fuelType}“.";
                 continue;
             }
-            if ($price === null) {
-                // LEA includes declared fuel types whose price has not been
-                // submitted yet. An unavailable price must not reject the
-                // otherwise valid daily snapshot.
-                continue;
-            }
-
             // LEA's `uuid` identifies the individual price submission, not the
             // physical station. Build a stable station identity from the public
             // station fields so all fuel types end up under one map marker.
@@ -102,6 +95,8 @@ final class LeaLiveApiParser
                     'latitude' => $latitude,
                     'longitude' => $longitude,
                     'prices' => [],
+                    'price_updated_at' => [],
+                    'unavailable_fuels' => [],
                     '_submitted' => [],
                 ];
             }
@@ -109,19 +104,36 @@ final class LeaLiveApiParser
             $submittedAt = trim((string) ($record['submitted_at'] ?? ''));
             $previousSubmittedAt = $stations[$stationKey]['_submitted'][$fuelSlug] ?? null;
             if (
-                isset($stations[$stationKey]['prices'][$fuelSlug])
+                array_key_exists($fuelSlug, $stations[$stationKey]['_submitted'])
                 && is_string($previousSubmittedAt)
                 && $submittedAt <= $previousSubmittedAt
             ) {
                 continue;
             }
 
-            $stations[$stationKey]['prices'][$fuelSlug] = $price;
             $stations[$stationKey]['_submitted'][$fuelSlug] = $submittedAt;
+            if ($price === null) {
+                // The new LEA portal deliberately includes stations which sell
+                // this fuel but have not submitted its current price.
+                unset(
+                    $stations[$stationKey]['prices'][$fuelSlug],
+                    $stations[$stationKey]['price_updated_at'][$fuelSlug]
+                );
+                $stations[$stationKey]['unavailable_fuels'][$fuelSlug] = true;
+                continue;
+            }
+
+            $stations[$stationKey]['prices'][$fuelSlug] = $price;
+            $normalizedSubmittedAt = $this->submittedAt($submittedAt);
+            if ($normalizedSubmittedAt !== null) {
+                $stations[$stationKey]['price_updated_at'][$fuelSlug] = $normalizedSubmittedAt;
+            }
+            unset($stations[$stationKey]['unavailable_fuels'][$fuelSlug]);
         }
 
         foreach ($stations as &$station) {
             unset($station['_submitted']);
+            $station['unavailable_fuels'] = array_keys($station['unavailable_fuels']);
         }
         unset($station);
 
@@ -157,6 +169,21 @@ final class LeaLiveApiParser
     private function coordinate(mixed $value): ?float
     {
         return is_numeric($value) ? (float) $value : null;
+    }
+
+    private function submittedAt(string $value): ?string
+    {
+        if ($value === '') {
+            return null;
+        }
+
+        $date = \DateTimeImmutable::createFromFormat(
+            '!Y-m-d H:i:s',
+            $value,
+            new \DateTimeZone('Europe/Vilnius'),
+        );
+
+        return $date === false ? null : $date->format(\DateTimeInterface::ATOM);
     }
 
     private function stationKey(
