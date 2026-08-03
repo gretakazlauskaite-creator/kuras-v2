@@ -69,6 +69,34 @@ final class ImportValidatorTest extends TestCase
         self::assertStringContainsString('įtartinai pasikeitė', implode(' ', $result->errors));
     }
 
+    public function testItAcceptsMissingLivePricesWhenStationCoverageIsStable(): void
+    {
+        $result = $this->validator()->validate(
+            parsed: $this->validImport(),
+            sourceDate: '2026-07-17',
+            previousPriceCount: 100,
+            previousStationCount: 1,
+            now: new \DateTimeImmutable('2026-07-17', new \DateTimeZone('Europe/Vilnius')),
+        );
+
+        self::assertTrue($result->isValid());
+        self::assertStringContainsString('Kainų skaičius pasikeitė', implode(' ', $result->warnings));
+    }
+
+    public function testItRejectsASevereStationCoverageDrop(): void
+    {
+        $result = $this->validator()->validate(
+            parsed: $this->validImport(),
+            sourceDate: '2026-07-17',
+            previousPriceCount: 100,
+            previousStationCount: 100,
+            now: new \DateTimeImmutable('2026-07-17', new \DateTimeZone('Europe/Vilnius')),
+        );
+
+        self::assertFalse($result->isValid());
+        self::assertStringContainsString('Degalinių skaičius įtartinai pasikeitė', implode(' ', $result->errors));
+    }
+
     public function testItRejectsAWorkbookDateThatDisagreesWithTheLeaPage(): void
     {
         $result = $this->validator()->validate(
