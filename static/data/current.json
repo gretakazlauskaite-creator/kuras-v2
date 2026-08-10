@@ -5,14 +5,14 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-09",
-        "generated_at": "2026-08-09T09:05:24+00:00",
-        "checksum_sha256": "acae96e8983c61eba478f5fc2fe6d69bfe671c0fdd40338418d8df57f6a16aa8",
+        "generated_at": "2026-08-10T06:44:53+00:00",
+        "checksum_sha256": "83d6a36672fabe434925b84c354429888919e9df60f49bd93af190f67532c6aa",
         "parser_version": "lea-live-api-v1",
         "source_updated_at": "2026-08-09T10:30:11+03:00"
     },
     "summary": {
-        "station_count": 767,
-        "coordinate_count": 766,
+        "station_count": 763,
+        "coordinate_count": 763,
         "price_count": 187,
         "fuels": [
             "pb95",
@@ -9030,51 +9030,6 @@
             ]
         },
         {
-            "id": "21fcf23a123ac03f",
-            "name": "RV",
-            "brand": "RV",
-            "address": "Mažeikiai, Algirdo g. 42, 89101",
-            "city": "Mažeikiai",
-            "municipality": "Mažeikių r. sav.",
-            "latitude": 56.31857887,
-            "longitude": 22.31892788,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "lpg"
-            ]
-        },
-        {
-            "id": "716559b5f0ab8433",
-            "name": "RV",
-            "brand": "RV",
-            "address": "Mažeikiai, Daukšos g. 29 / Žemaitijos g. 69, 89132",
-            "city": "Mažeikiai",
-            "municipality": "Mažeikių r. sav.",
-            "latitude": 56.31888105,
-            "longitude": 22.31891853,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "lpg"
-            ]
-        },
-        {
-            "id": "f57860048e48a374",
-            "name": "RV",
-            "brand": "RV",
-            "address": "Švenčionys, Mokyklos g. 23, 18111",
-            "city": "Švenčionys",
-            "municipality": "Švenčionių r. sav.",
-            "latitude": 55.13841406,
-            "longitude": 26.1565448,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "lpg"
-            ]
-        },
-        {
             "id": "c1163c7c849dab08",
             "name": "RV Transport",
             "brand": "RV Transport",
@@ -10326,22 +10281,6 @@
                 "lpg": "2026-08-09T10:30:09+03:00"
             },
             "unavailable_fuels": []
-        },
-        {
-            "id": "41ea0febc220ff56",
-            "name": "Tormenta",
-            "brand": "Tormenta",
-            "address": "Kaunas, Linkuvos g. 77, 48314",
-            "city": "Kaunas",
-            "municipality": "Kauno m. sav.",
-            "latitude": null,
-            "longitude": null,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel"
-            ]
         },
         {
             "id": "91d885a12b28824d",
