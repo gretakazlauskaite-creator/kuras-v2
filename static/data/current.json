@@ -5,8 +5,8 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-13",
-        "generated_at": "2026-08-13T08:46:00+00:00",
-        "checksum_sha256": "3236ae5137c81f374387dc26f529da17244f180aaa288056582008f8b708522b",
+        "generated_at": "2026-08-13T13:51:52+00:00",
+        "checksum_sha256": "de1894c0c5147e30d9ecb8423bc363811a4945ae9faf37581ecd57ff569e0966",
         "parser_version": "lea-live-api-v1",
         "source_updated_at": "2026-08-13T11:10:10+03:00"
     },
@@ -4238,6 +4238,27 @@
             "unavailable_fuels": []
         },
         {
+            "id": "5b5e173a45cc2d92",
+            "name": "Circle K",
+            "brand": "Circle K",
+            "address": "Pumpučiai, Pumpučių g. 25, 29253",
+            "city": "Pumpučiai",
+            "municipality": "Anykščių r. sav.",
+            "latitude": 55.67584312,
+            "longitude": 25.35867408,
+            "prices": {
+                "pb95": 1.829,
+                "diesel": 2.029,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-08-13T09:53:40+03:00",
+                "diesel": "2026-08-13T09:53:40+03:00",
+                "lpg": "2026-08-13T09:53:40+03:00"
+            },
+            "unavailable_fuels": []
+        },
+        {
             "id": "ff9a618c33e7b1f8",
             "name": "Circle K",
             "brand": "Circle K",
@@ -8325,27 +8346,6 @@
                 "pb95": 1.769,
                 "diesel": 2.079,
                 "lpg": 0.719
-            },
-            "price_updated_at": {
-                "pb95": "2026-08-13T09:53:40+03:00",
-                "diesel": "2026-08-13T09:53:40+03:00",
-                "lpg": "2026-08-13T09:53:40+03:00"
-            },
-            "unavailable_fuels": []
-        },
-        {
-            "id": "cc95a989227c09aa",
-            "name": "Narjanta",
-            "brand": "Narjanta",
-            "address": "Pumpučiai, Pumpučių g. 25, 29253",
-            "city": "Pumpučiai",
-            "municipality": "Anykščių r. sav.",
-            "latitude": 55.67584312,
-            "longitude": 25.35867408,
-            "prices": {
-                "pb95": 1.829,
-                "diesel": 2.029,
-                "lpg": 0.789
             },
             "price_updated_at": {
                 "pb95": "2026-08-13T09:53:40+03:00",
