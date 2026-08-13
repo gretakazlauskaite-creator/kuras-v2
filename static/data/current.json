@@ -5,8 +5,8 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-13",
-        "generated_at": "2026-08-13T13:51:52+00:00",
-        "checksum_sha256": "de1894c0c5147e30d9ecb8423bc363811a4945ae9faf37581ecd57ff569e0966",
+        "generated_at": "2026-08-13T15:18:34+00:00",
+        "checksum_sha256": "7962849bc7d10b3b817eea164efbe1c57269870bcb882a35d401710ccf93ed89",
         "parser_version": "lea-live-api-v1",
         "source_updated_at": "2026-08-13T11:10:10+03:00"
     },
@@ -3100,6 +3100,27 @@
             "unavailable_fuels": []
         },
         {
+            "id": "0b4fd5c872f511b3",
+            "name": "Circle K",
+            "brand": "Circle K",
+            "address": "Aleksandrijos k., Kikonių g. 10, 40335",
+            "city": "Aleksandrijos k.",
+            "municipality": "Kupiškio r. sav.",
+            "latitude": 55.83425341,
+            "longitude": 25.00932459,
+            "prices": {
+                "pb95": 1.829,
+                "diesel": 2.079,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-08-13T09:53:40+03:00",
+                "diesel": "2026-08-13T09:53:40+03:00",
+                "lpg": "2026-08-13T09:53:40+03:00"
+            },
+            "unavailable_fuels": []
+        },
+        {
             "id": "0598a80f6f229c5e",
             "name": "Circle K",
             "brand": "Circle K",
@@ -4238,14 +4259,14 @@
             "unavailable_fuels": []
         },
         {
-            "id": "5b5e173a45cc2d92",
+            "id": "2f134384e517132e",
             "name": "Circle K",
             "brand": "Circle K",
             "address": "Pumpučiai, Pumpučių g. 25, 29253",
             "city": "Pumpučiai",
             "municipality": "Anykščių r. sav.",
-            "latitude": 55.67584312,
-            "longitude": 25.35867408,
+            "latitude": 55.42441012,
+            "longitude": 24.92009398,
             "prices": {
                 "pb95": 1.829,
                 "diesel": 2.029,
@@ -8309,27 +8330,6 @@
                 "pb95": "2026-08-13T10:03:20+03:00",
                 "diesel": "2026-08-13T10:03:20+03:00",
                 "lpg": "2026-08-13T10:03:20+03:00"
-            },
-            "unavailable_fuels": []
-        },
-        {
-            "id": "3811dd82b9df151d",
-            "name": "Narjanta",
-            "brand": "Narjanta",
-            "address": "Aleksandrijos k., Kikonių g. 10, 40335",
-            "city": "Aleksandrijos k.",
-            "municipality": "Kupiškio r. sav.",
-            "latitude": 55.83425341,
-            "longitude": 25.00932459,
-            "prices": {
-                "pb95": 1.829,
-                "diesel": 2.079,
-                "lpg": 0.799
-            },
-            "price_updated_at": {
-                "pb95": "2026-08-13T09:53:40+03:00",
-                "diesel": "2026-08-13T09:53:40+03:00",
-                "lpg": "2026-08-13T09:53:40+03:00"
             },
             "unavailable_fuels": []
         },
