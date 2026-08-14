@@ -5,15 +5,15 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-14",
-        "generated_at": "2026-08-14T08:39:45+00:00",
-        "checksum_sha256": "38bd4a273f1b0be6ebac6ec3b9735d617ea444e6eb2b045dac60b3c008ac5102",
+        "generated_at": "2026-08-14T11:59:50+00:00",
+        "checksum_sha256": "0ab069993aa172f0b0e18ba87aeabaed5f58b259446587dd2b639cf66b8b8f2e",
         "parser_version": "lea-live-api-v1",
-        "source_updated_at": "2026-08-14T11:11:20+03:00"
+        "source_updated_at": "2026-08-14T13:36:42+03:00"
     },
     "summary": {
         "station_count": 767,
         "coordinate_count": 766,
-        "price_count": 2026,
+        "price_count": 2027,
         "fuels": [
             "pb95",
             "diesel",
@@ -5106,11 +5106,13 @@
             "municipality": "Rokiškio r. sav.",
             "latitude": 55.94317643,
             "longitude": 25.58559008,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "lpg"
-            ]
+            "prices": {
+                "lpg": 0.899
+            },
+            "price_updated_at": {
+                "lpg": "2026-08-14T13:36:42+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "80e2f7e3ba10c9c5",
