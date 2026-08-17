@@ -5,13 +5,13 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-16",
-        "generated_at": "2026-08-16T07:48:15+00:00",
-        "checksum_sha256": "536bfd1e7598b894ef6a0cd0251c7c648394f7f37a88aec9a61b29cc62c768e6",
+        "generated_at": "2026-08-17T07:19:26+00:00",
+        "checksum_sha256": "340778b125632a8ef0801e8f7ded79b67b50067ce52476542c57bba1f6d1a48a",
         "parser_version": "lea-live-api-v1",
         "source_updated_at": "2026-08-16T10:30:11+03:00"
     },
     "summary": {
-        "station_count": 767,
+        "station_count": 766,
         "coordinate_count": 766,
         "price_count": 148,
         "fuels": [
@@ -10324,22 +10324,6 @@
                 "lpg": "2026-08-16T10:30:09+03:00"
             },
             "unavailable_fuels": []
-        },
-        {
-            "id": "41ea0febc220ff56",
-            "name": "Tormenta",
-            "brand": "Tormenta",
-            "address": "Kaunas, Linkuvos g. 77, 48314",
-            "city": "Kaunas",
-            "municipality": "Kauno m. sav.",
-            "latitude": null,
-            "longitude": null,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel"
-            ]
         },
         {
             "id": "91d885a12b28824d",
