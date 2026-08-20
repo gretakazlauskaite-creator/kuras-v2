@@ -5,15 +5,15 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-20",
-        "generated_at": "2026-08-20T07:59:26+00:00",
-        "checksum_sha256": "49dddc3e4a8b6f6bc331cf7f0f07f622d62862c8d15375c9cf822fd2c8b9781a",
+        "generated_at": "2026-08-20T08:58:22+00:00",
+        "checksum_sha256": "3b1876c5ab08762bbb48b26e2d8885cfe22c6573b9ff877812358a138ac27302",
         "parser_version": "lea-live-api-v1",
-        "source_updated_at": "2026-08-20T10:30:04+03:00"
+        "source_updated_at": "2026-08-20T11:02:10+03:00"
     },
     "summary": {
         "station_count": 767,
         "coordinate_count": 766,
-        "price_count": 2060,
+        "price_count": 2072,
         "fuels": [
             "pb95",
             "diesel",
@@ -7410,13 +7410,17 @@
             "municipality": "Šiaulių r. sav.",
             "latitude": 56.09973108,
             "longitude": 23.26565865,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.729,
+                "diesel": 1.999,
+                "lpg": 0.69
+            },
+            "price_updated_at": {
+                "pb95": "2026-08-20T11:00:32+03:00",
+                "diesel": "2026-08-20T11:00:32+03:00",
+                "lpg": "2026-08-20T11:00:32+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "d12ffa1907bb0960",
@@ -7427,13 +7431,17 @@
             "municipality": "Šiaulių m. sav.",
             "latitude": 55.89789464,
             "longitude": 23.35174183,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.729,
+                "diesel": 1.999,
+                "lpg": 0.69
+            },
+            "price_updated_at": {
+                "pb95": "2026-08-20T11:00:32+03:00",
+                "diesel": "2026-08-20T11:00:32+03:00",
+                "lpg": "2026-08-20T11:00:32+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "9ca23d2552a2ef7d",
@@ -7444,13 +7452,17 @@
             "municipality": "Šiaulių m. sav.",
             "latitude": 55.94801517,
             "longitude": 23.32052749,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.729,
+                "diesel": 1.999,
+                "lpg": 0.69
+            },
+            "price_updated_at": {
+                "pb95": "2026-08-20T11:00:32+03:00",
+                "diesel": "2026-08-20T11:00:33+03:00",
+                "lpg": "2026-08-20T11:00:33+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "1fb53248893f1a08",
@@ -15569,13 +15581,17 @@
             "municipality": "Jonavos r. sav.",
             "latitude": 55.13794926,
             "longitude": 24.1932708,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.82,
+                "diesel": 2.09,
+                "lpg": 0.83
+            },
+            "price_updated_at": {
+                "pb95": "2026-08-20T11:02:10+03:00",
+                "diesel": "2026-08-20T11:02:10+03:00",
+                "lpg": "2026-08-20T11:02:10+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "5b36372b4a0b43fd",
