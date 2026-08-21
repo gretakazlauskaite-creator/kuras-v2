@@ -5,15 +5,15 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-21",
-        "generated_at": "2026-08-21T10:50:48+00:00",
-        "checksum_sha256": "a31d9caad5c0c525d6888f2a442e578fb1dc8dc44a88be1eec4a30496863adb9",
+        "generated_at": "2026-08-21T11:45:18+00:00",
+        "checksum_sha256": "56be93a69a91e10704ff7d33c2bb831680fb6df5008d0273c8b8cb534ec379e2",
         "parser_version": "lea-live-api-v1",
-        "source_updated_at": "2026-08-21T13:06:10+03:00"
+        "source_updated_at": "2026-08-21T14:15:33+03:00"
     },
     "summary": {
         "station_count": 767,
         "coordinate_count": 766,
-        "price_count": 2067,
+        "price_count": 2068,
         "fuels": [
             "pb95",
             "diesel",
@@ -10738,11 +10738,13 @@
             "municipality": "Šiaulių m. sav.",
             "latitude": 55.90621528,
             "longitude": 23.25912984,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "lpg"
-            ]
+            "prices": {
+                "lpg": 0.729
+            },
+            "price_updated_at": {
+                "lpg": "2026-08-21T14:15:33+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "9f590f9549695fe6",
