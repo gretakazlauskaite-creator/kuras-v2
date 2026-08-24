@@ -5,15 +5,15 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-24",
-        "generated_at": "2026-08-24T11:46:32+00:00",
-        "checksum_sha256": "536d4de693ac21eab80770a0e178430a5d86a262a479415475502fb7177337d2",
+        "generated_at": "2026-08-24T13:17:12+00:00",
+        "checksum_sha256": "4132a7826dc469d9983f397e67f79ca4a207f9ffe6ca57dc024a922ad3463d20",
         "parser_version": "lea-live-api-v1",
-        "source_updated_at": "2026-08-24T14:26:41+03:00"
+        "source_updated_at": "2026-08-24T15:55:03+03:00"
     },
     "summary": {
         "station_count": 767,
         "coordinate_count": 766,
-        "price_count": 2047,
+        "price_count": 2053,
         "fuels": [
             "pb95",
             "diesel",
@@ -10677,13 +10677,17 @@
             "municipality": "Pasvalio r. sav.",
             "latitude": 56.26753355,
             "longitude": 24.37097378,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.81,
+                "diesel": 2.05,
+                "lpg": 0.85
+            },
+            "price_updated_at": {
+                "pb95": "2026-08-24T15:55:03+03:00",
+                "diesel": "2026-08-24T15:55:03+03:00",
+                "lpg": "2026-08-24T15:55:03+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "95292c93ce56dda5",
@@ -10694,13 +10698,17 @@
             "municipality": "Pasvalio r. sav.",
             "latitude": 56.27250031,
             "longitude": 24.36796682,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.81,
+                "diesel": 2.05,
+                "lpg": 0.85
+            },
+            "price_updated_at": {
+                "pb95": "2026-08-24T15:55:03+03:00",
+                "diesel": "2026-08-24T15:55:03+03:00",
+                "lpg": "2026-08-24T15:55:03+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "6ac51e8b5fdf340d",
