@@ -5,15 +5,15 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-25",
-        "generated_at": "2026-08-25T08:01:47+00:00",
-        "checksum_sha256": "2feffe5c962194341924153c73bce2ed991b00a861b3bccba69680178bd6c9e6",
+        "generated_at": "2026-08-25T09:54:12+00:00",
+        "checksum_sha256": "7e7b5b8fc44e865bbd63ee894e3d505bc761cb8786f5746dffd098eae56629d3",
         "parser_version": "lea-live-api-v1",
-        "source_updated_at": "2026-08-25T10:30:04+03:00"
+        "source_updated_at": "2026-08-25T12:29:35+03:00"
     },
     "summary": {
         "station_count": 767,
         "coordinate_count": 766,
-        "price_count": 2052,
+        "price_count": 2054,
         "fuels": [
             "pb95",
             "diesel",
@@ -12348,12 +12348,15 @@
             "municipality": "Kauno m. sav.",
             "latitude": null,
             "longitude": null,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel"
-            ]
+            "prices": {
+                "pb95": 1.77,
+                "diesel": 2.04
+            },
+            "price_updated_at": {
+                "pb95": "2026-08-25T12:24:18+03:00",
+                "diesel": "2026-08-25T12:29:35+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "91d885a12b28824d",
