@@ -5,14 +5,14 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-08-25",
-        "generated_at": "2026-08-25T13:15:00+00:00",
-        "checksum_sha256": "6f18209755f88369d4f9ad282f412a381973818092de497b7470f139b9d38091",
+        "generated_at": "2026-08-26T05:52:46+00:00",
+        "checksum_sha256": "ee182c6436c51e5a389a03290bf7c26114c26d0f9a08b43ab9c33bfe4917468d",
         "parser_version": "lea-live-api-v1",
         "source_updated_at": "2026-08-25T14:53:11+03:00"
     },
     "summary": {
-        "station_count": 767,
-        "coordinate_count": 766,
+        "station_count": 766,
+        "coordinate_count": 765,
         "price_count": 2060,
         "fuels": [
             "pb95",
@@ -5089,21 +5089,6 @@
                 "lpg": "2026-08-25T09:53:28+03:00"
             },
             "unavailable_fuels": []
-        },
-        {
-            "id": "e07e7105af6a9622",
-            "name": "DVS Topolis",
-            "brand": "DVS Topolis",
-            "address": "Rokiškis, Panevėžio g. 7C, 42163",
-            "city": "Rokiškis",
-            "municipality": "Rokiškio r. sav.",
-            "latitude": 55.94317643,
-            "longitude": 25.58559008,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "lpg"
-            ]
         },
         {
             "id": "80e2f7e3ba10c9c5",
