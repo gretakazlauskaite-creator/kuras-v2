@@ -57,14 +57,9 @@
   function syncMapFilters(){$('[data-map-city]').value=value('[data-city]');$('[data-map-brand]').value=value('[data-brand]');}
   function renderSource(){
     const s=state.data.source,node=$('[data-source]'),timestamp=state.checkedAt||s.generated_at,sourceTimestamp=s.source_updated_at||s.source_date;
-    const checkedDate=new Date(timestamp),sourceDate=new Date(sourceTimestamp),now=Date.now();
-    const checkedLate=Number.isNaN(checkedDate.getTime())||now-checkedDate.getTime()>3.5*60*60*1000;
-    const sourceLate=Number.isNaN(sourceDate.getTime())||now-sourceDate.getTime()>36*60*60*1000;
     node.classList.remove('demo','warning','stale');
     if(state.data.demo){node.classList.add('demo');node.lastChild.textContent=' Demonstraciniai duomenys';showNotice('Rodoma demonstracinė duomenų kopija.','info');return;}
-    if(checkedLate){node.classList.add('stale');node.lastChild.textContent=` Automatinis duomenų patikrinimas vėluoja. Rodoma ${localTime(sourceTimestamp)} kopija · paskutinį kartą patikrinta ${localTime(timestamp)}`;showNotice('Duomenų tikrinimas vėluoja. Rodoma paskutinė sėkmingai patikrinta kopija, todėl dalis kainų gali būti pasenusios.');return;}
-    if(sourceLate){node.classList.add('warning');node.lastChild.textContent=` Naujesnių duomenų dar nepateikta. Rodoma ${localTime(sourceTimestamp)} kopija · patikrinta ${localTime(timestamp)}`;showNotice('Automatinis tikrinimas veikia, tačiau naujesnių kainų dar nepateikta.','info');return;}
-    node.lastChild.textContent=` Kainos atnaujintos: ${localTime(sourceTimestamp)} · patikrinta ${localTime(timestamp)}`;
+    node.lastChild.textContent=` Kainų duomenys: ${localTime(sourceTimestamp)} · patikrinta ${localTime(timestamp)}`;
   }
   function renderTabs(){const fuels=state.data.summary.fuels.filter(f=>fuelLabels[f]);if(!fuels.includes(state.fuel))state.fuel=fuels[0];const buttons=fuels.map(f=>`<button type="button" class="${f===state.fuel?'active':''}" data-fuel="${f}"><span>${fuelLabels[f]}</span><small>${integer(state.data.stations.filter(s=>s.prices?.[f]!=null).length)} su kaina</small></button>`).join('');$('[data-fuels]').innerHTML=buttons;$('[data-map-fuels]').innerHTML=buttons;$('[data-summary-fuel]').textContent=fuelLabels[state.fuel];document.querySelectorAll('[data-fuel]').forEach(b=>b.onclick=()=>{state.fuel=b.dataset.fuel;state.page=1;renderAll();});}
   function renderSummary(rows){const prices=rows.map(s=>priceValue(s)).filter(price=>price!=null);$('[data-average]').textContent=euro(prices.length?prices.reduce((a,b)=>a+b,0)/prices.length:null);$('[data-minimum]').textContent=euro(prices.length?Math.min(...prices):null);$('[data-count]').textContent=integer(rows.length);}
