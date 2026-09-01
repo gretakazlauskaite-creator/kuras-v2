@@ -47,7 +47,7 @@
             "fuels": {
                 "pb95": {
                     "minimum": 1.09,
-                    "average": 1.8380889192886385,
+                    "average": 1.8390875512995826,
                     "station_count": 731,
                     "winner": {
                         "id": "401761ea7e144ea9",
