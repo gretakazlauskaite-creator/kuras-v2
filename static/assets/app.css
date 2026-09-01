@@ -52,3 +52,28 @@
 .view-tabs{display:flex;margin:0 0 14px}.view-tabs button{min-width:150px}.results:not(.show-map) .map-panel{display:none}.results.show-map .list-panel{display:none}.results{grid-template-columns:1fr}.map{height:620px;min-height:620px}
 @media(max-width:1100px){.city-grid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:760px){.fuel-dock{top:6px;width:100%;overflow-x:auto;border-radius:14px}.fuel-dock>span{display:none}.fuel-dock .fuel-tabs{width:max-content}.city-grid{grid-template-columns:repeat(2,1fr)}.period-grid{grid-template-columns:1fr}.trend-card{grid-template-columns:1fr}.alert-card{grid-template-columns:1fr}.alert-card form{grid-template-columns:1fr}.view-tabs{position:sticky;z-index:1090;top:72px;padding:7px;border-radius:12px;background:#fffffff2;box-shadow:0 8px 24px #263c4a1f;backdrop-filter:blur(10px)}.view-tabs button{min-width:0;flex:1}.map{height:460px;min-height:460px}}
+
+/* Unified fuel overview and functional map workspace. */
+.hero-grid{grid-template-columns:minmax(0,1fr) minmax(560px,640px);align-items:center;gap:52px}
+.price-overview{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 22px 55px #2b46521c}
+.price-overview>header{display:grid;gap:16px;padding:20px 22px;border-bottom:1px solid var(--line);background:#f7fafb}
+.price-overview>header>div:first-child{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.price-overview>header>div:first-child>span{color:var(--muted);font-size:11px;font-weight:850;text-transform:uppercase}
+.price-overview>header strong{font-size:16px}.price-overview>header strong b{color:var(--blue)}
+.price-overview .fuel-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.price-overview .fuel-tabs button,.map-fuel-tabs button{display:flex;min-width:0;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:51px;padding:8px 12px;border:1px solid #cbd6dd;border-radius:11px;background:#fff;color:#51616c;font:inherit;font-weight:850;cursor:pointer}
+.price-overview .fuel-tabs button.active,.map-fuel-tabs button.active{border-color:var(--blue);background:var(--blue);color:#fff;box-shadow:0 7px 18px #326f9429}
+.price-overview .fuel-tabs small,.map-fuel-tabs small{margin:0;font-size:9px;font-weight:750;opacity:.75}
+.price-overview .summary{border:0;border-radius:0;box-shadow:none}.price-overview .summary div{padding:22px}.price-overview .summary dt{min-height:30px}.price-overview .summary dd{margin-top:8px}
+.content>.filters{margin-top:0}
+.map-workspace{display:grid;grid-template-columns:280px minmax(0,1fr);min-height:650px}
+.map-filters{display:flex;min-width:0;padding:21px;flex-direction:column;gap:18px;border-right:1px solid var(--line);background:#f8fafb}
+.map-filter-label,.map-filters label>span{display:block;margin-bottom:7px;color:#687682;font-size:11px;font-weight:850}
+.map-fuel-tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.map-fuel-tabs button{min-height:45px;padding:6px}
+.map-filters select{width:100%;height:44px;padding:0 11px;border:1px solid #cbd6dd;border-radius:8px;background:#fff;color:var(--navy);font:inherit}
+.map-filters .map-legend{display:grid;gap:9px;padding:15px 0;border-top:1px solid var(--line);border-right:0;border-bottom:1px solid var(--line);color:#596975}
+.map-filters .map-legend span{font-size:11px}.legend-price.cheap{background:#20ad58}.legend-price.average{background:#e6ad00}.legend-price.expensive{background:#df4848}.legend-price.unavailable{background:#8b969e}
+.map-top>strong{display:block;margin-bottom:9px;font-size:13px}.map-top ol{display:grid;gap:5px;margin:0;padding:0;list-style:none}.map-top button{display:grid;width:100%;grid-template-columns:1fr auto;gap:2px 8px;padding:9px;border:0;border-radius:8px;background:transparent;color:var(--navy);font:inherit;text-align:left;cursor:pointer}.map-top button:hover{background:#eaf2f6}.map-top button span{overflow:hidden;font-size:11px;font-weight:800;text-overflow:ellipsis;white-space:nowrap}.map-top button b{color:var(--green);font-size:11px}.map-top button small{grid-column:1/-1;color:var(--muted);font-size:9px}.map-top .empty{padding:12px 0;text-align:left}
+.map-canvas{display:flex;min-width:0;flex-direction:column}.map-canvas .consent{border-bottom:1px solid var(--line)}.map-canvas .map{height:610px;min-height:610px}.marker.average{background:#e6ad00}.marker.expensive{background:#df4848}.marker.unavailable{background:#7b8790}
+@media(max-width:1080px){.hero-grid{grid-template-columns:1fr}.map-workspace{grid-template-columns:240px minmax(0,1fr)}}
+@media(max-width:760px){.price-overview>header{padding:16px}.price-overview>header>div:first-child{align-items:flex-start;flex-direction:column;gap:4px}.price-overview .fuel-tabs{grid-template-columns:1fr}.price-overview .fuel-tabs button{min-height:48px;flex-direction:row;gap:7px}.price-overview .summary{grid-template-columns:1fr}.price-overview .summary div{padding:14px 16px}.map-workspace{display:block}.map-filters{padding:16px;border-right:0;border-bottom:1px solid var(--line)}.map-fuel-tabs{grid-template-columns:repeat(3,1fr)}.map-fuel-tabs button{min-height:48px}.map-filters .map-legend{grid-template-columns:repeat(2,1fr)}.map-top ol{display:flex;overflow-x:auto}.map-top li{min-width:165px}.map-canvas .map{height:500px;min-height:500px}}
