@@ -61,6 +61,7 @@ jobs:
           test -s dist/index.html
           test -s dist/data/current.json
           test -s dist/data/current.js
+          test -s dist/data/history.json
           test -s dist/data/status.json
           test -s dist/data/import-report.json
           test -s var/import-artifact/import-report.json
