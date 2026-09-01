@@ -1,4 +1,46 @@
 {
-  "schema_version": 1,
-  "days": []
+    "schema_version": 1,
+    "days": [
+        {
+            "date": "2026-08-31",
+            "fuels": {
+                "pb95": {
+                    "minimum": 1.659,
+                    "average": 1.7882578444747452,
+                    "station_count": 733,
+                    "winner": {
+                        "id": "7a26ac48b6290710",
+                        "brand": "Alauša",
+                        "address": "Vilnius, Šv. Stepono g. 44, 01312",
+                        "city": "Vilnius",
+                        "price": 1.659
+                    }
+                },
+                "diesel": {
+                    "minimum": 1.899,
+                    "average": 2.040995918367341,
+                    "station_count": 735,
+                    "winner": {
+                        "id": "0d47d180e8fdf145",
+                        "brand": "Neste Tauragės",
+                        "address": "Tauragė, Dariaus ir Girėno g. 130A, 72194",
+                        "city": "Tauragė",
+                        "price": 1.899
+                    }
+                },
+                "lpg": {
+                    "minimum": 0.67,
+                    "average": 0.7661485809682778,
+                    "station_count": 599,
+                    "winner": {
+                        "id": "6db7d5a872538056",
+                        "brand": "Madalva",
+                        "address": "Plungė, Lentpjūvės g. 10A, 90118",
+                        "city": "Plungė",
+                        "price": 0.67
+                    }
+                }
+            }
+        }
+    ]
 }
