@@ -41,6 +41,47 @@
                     }
                 }
             }
+        },
+        {
+            "date": "2026-09-01",
+            "fuels": {
+                "pb95": {
+                    "minimum": 1.09,
+                    "average": 1.8380889192886385,
+                    "station_count": 731,
+                    "winner": {
+                        "id": "401761ea7e144ea9",
+                        "brand": "Apsaga",
+                        "address": "Šiauliai, Pramonės g. 28, 77116",
+                        "city": "Šiauliai",
+                        "price": 1.09
+                    }
+                },
+                "diesel": {
+                    "minimum": 1.95,
+                    "average": 2.0880927694406655,
+                    "station_count": 733,
+                    "winner": {
+                        "id": "76d74cd8c86aa604",
+                        "brand": "Tripletas",
+                        "address": "Mažeikiai, Sedos g. 16, 89233",
+                        "city": "Mažeikiai",
+                        "price": 1.95
+                    }
+                },
+                "lpg": {
+                    "minimum": 0.67,
+                    "average": 0.7778003327787008,
+                    "station_count": 601,
+                    "winner": {
+                        "id": "6db7d5a872538056",
+                        "brand": "Madalva",
+                        "address": "Plungė, Lentpjūvės g. 10A, 90118",
+                        "city": "Plungė",
+                        "price": 0.67
+                    }
+                }
+            }
         }
     ]
 }
