@@ -12,10 +12,11 @@ use App\Service\Import\LeaPortalConfigLocator;
 use App\Service\Import\LeaWorkbookParser;
 use App\Service\Import\XlsxFileValidator;
 use App\Service\StaticDataExporter;
+use App\Service\StaticHistoryBuilder;
 
-$options = getopt('', ['file:', 'source-date:', 'output:', 'previous-data:', 'archive-output:', 'coordinates:', 'fixture', 'help']);
+$options = getopt('', ['file:', 'source-date:', 'output:', 'previous-data:', 'previous-history:', 'archive-output:', 'coordinates:', 'fixture', 'help']);
 if (isset($options['help'])) {
-    echo "Usage: php bin/build-static.php [--file=prices.xlsx --source-date=YYYY-MM-DD --fixture] [--output=dist] [--previous-data=file.json] [--archive-output=path] [--coordinates=file.json]\n";
+    echo "Usage: php bin/build-static.php [--file=prices.xlsx --source-date=YYYY-MM-DD --fixture] [--output=dist] [--previous-data=file.json] [--previous-history=history.json] [--archive-output=path] [--coordinates=file.json]\n";
     exit(0);
 }
 
@@ -24,6 +25,9 @@ $output = isset($options['output']) ? (string) $options['output'] : $root . '/di
 $previousDataPath = isset($options['previous-data'])
     ? (string) $options['previous-data']
     : $output . '/data/current.json';
+$previousHistoryPath = isset($options['previous-history'])
+    ? (string) $options['previous-history']
+    : dirname($previousDataPath) . '/history.json';
 $archiveOutput = isset($options['archive-output']) ? (string) $options['archive-output'] : null;
 $coordinatesPath = isset($options['coordinates'])
     ? (string) $options['coordinates']
@@ -141,6 +145,8 @@ $checksum = hash('sha256', $sourceBody);
     );
     write_json($output . '/data/current.json', $payload);
     write_javascript_data($output . '/data/current.js', $payload);
+    $history = (new StaticHistoryBuilder())->update(read_previous_data($previousHistoryPath), $payload);
+    write_json($output . '/data/history.json', $history);
     write_json($output . '/data/import-report.json', [
         'status' => 'published',
         'source_date' => $source->sourceDate,

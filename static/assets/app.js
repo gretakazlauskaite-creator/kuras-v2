@@ -4,7 +4,7 @@
   if (embedded) document.documentElement.classList.add('embedded');
   const fuelLabels = {pb95:'Pb 95',pb98:'Pb 98',diesel:'Dyzelinas',lpg:'Dujos'};
   const lithuaniaBounds = [[53.85,20.90],[56.45,26.85]];
-  const state = {data:null,checkedAt:null,fuel:'pb95',page:1,perPage:15,lat:null,lng:null,accuracy:null,map:null,tileLayer:null,tileFailures:0,usingFallbackTiles:false,markers:null,userLayers:null,markerByStationId:new Map(),mapResizeObserver:null,mapResizeFrame:null,focusLocation:false,focusStationId:null,selectedStationId:null,fitResults:false};
+  const state = {data:null,history:{days:[]},checkedAt:null,fuel:'pb95',page:1,perPage:15,lat:null,lng:null,accuracy:null,map:null,tileLayer:null,tileFailures:0,usingFallbackTiles:false,markers:null,userLayers:null,markerByStationId:new Map(),mapResizeObserver:null,mapResizeFrame:null,focusLocation:false,focusStationId:null,selectedStationId:null,fitResults:false};
   const $ = selector => document.querySelector(selector);
   const $$ = selector => [...document.querySelectorAll(selector)];
   const euro = value => value == null ? '—' : Number(value).toFixed(3).replace('.',',')+' €';
@@ -27,7 +27,7 @@
   };
   function priceStatus(station){
     const price=priceValue(station);
-    if(price==null)return {kind:'missing',label:'LEA kainos nepateikė'};
+    if(price==null)return {kind:'missing',label:'Nauja kaina nepateikta'};
     const timestamp=station?.price_updated_at?.[state.fuel];
     if(!timestamp)return {kind:'current',label:''};
     const date=new Date(timestamp);
@@ -47,7 +47,7 @@
     if(!state.data)return [];
     const query=value('[data-search]').toLocaleLowerCase('lt');
     return state.data.stations.filter(s => declaresFuel(s))
-      .filter(s => !value('[data-city]') || s.city===value('[data-city]'))
+      .filter(s => !value('[data-city]') || cityKey(s.city)===cityKey(value('[data-city]')))
       .filter(s => !value('[data-brand]') || s.brand===value('[data-brand]'))
       .filter(s => !query || [s.name,s.brand,s.address,s.city,s.municipality].join(' ').toLocaleLowerCase('lt').includes(query))
       .map(s => ({...s,distance_km:state.lat!=null&&hasCoordinates(s)?distance(state.lat,state.lng,Number(s.latitude),Number(s.longitude)):null}))
@@ -61,13 +61,54 @@
     const sourceLate=Number.isNaN(sourceDate.getTime())||now-sourceDate.getTime()>36*60*60*1000;
     node.classList.remove('demo','warning','stale');
     if(state.data.demo){node.classList.add('demo');node.lastChild.textContent=' Demonstraciniai duomenys';showNotice('Rodoma demonstracinė duomenų kopija.','info');return;}
-    if(checkedLate){node.classList.add('stale');node.lastChild.textContent=` Automatinis LEA patikrinimas vėluoja. Rodoma ${localTime(sourceTimestamp)} kopija · paskutinį kartą patikrinta ${localTime(timestamp)}`;showNotice('Duomenų tikrinimas vėluoja. Rodoma paskutinė sėkmingai patikrinta LEA kopija, todėl dalis kainų gali būti pasenusios.');return;}
-    if(sourceLate){node.classList.add('warning');node.lastChild.textContent=` LEA naujesnių duomenų dar nepateikė. Rodoma ${localTime(sourceTimestamp)} kopija · patikrinta ${localTime(timestamp)}`;showNotice('Automatinis tikrinimas veikia, tačiau LEA naujesnių kainų dar nepateikė.','info');return;}
-    node.lastChild.textContent=` LEA duomenys atnaujinti: ${localTime(sourceTimestamp)} · patikrinta ${localTime(timestamp)}`;
+    if(checkedLate){node.classList.add('stale');node.lastChild.textContent=` Automatinis duomenų patikrinimas vėluoja. Rodoma ${localTime(sourceTimestamp)} kopija · paskutinį kartą patikrinta ${localTime(timestamp)}`;showNotice('Duomenų tikrinimas vėluoja. Rodoma paskutinė sėkmingai patikrinta kopija, todėl dalis kainų gali būti pasenusios.');return;}
+    if(sourceLate){node.classList.add('warning');node.lastChild.textContent=` Naujesnių duomenų dar nepateikta. Rodoma ${localTime(sourceTimestamp)} kopija · patikrinta ${localTime(timestamp)}`;showNotice('Automatinis tikrinimas veikia, tačiau naujesnių kainų dar nepateikta.','info');return;}
+    node.lastChild.textContent=` Kainos atnaujintos: ${localTime(sourceTimestamp)} · patikrinta ${localTime(timestamp)}`;
   }
   function renderTabs(){const fuels=state.data.summary.fuels.filter(f=>fuelLabels[f]);if(!fuels.includes(state.fuel))state.fuel=fuels[0];$('[data-fuels]').innerHTML=fuels.map(f=>`<button type="button" class="${f===state.fuel?'active':''}" data-fuel="${f}">${fuelLabels[f]} <small>${integer(state.data.stations.filter(s=>s.prices?.[f]!=null).length)}</small></button>`).join('');document.querySelectorAll('[data-fuel]').forEach(b=>b.onclick=()=>{state.fuel=b.dataset.fuel;state.page=1;renderAll();});}
-  function renderSummary(rows){const prices=rows.map(s=>priceValue(s)).filter(price=>price!=null);$('[data-average]').textContent=euro(prices.length?prices.reduce((a,b)=>a+b,0)/prices.length:null);$('[data-minimum]').textContent=euro(prices.length?Math.min(...prices):null);$('[data-count]').textContent=integer(prices.length);}
+  function renderSummary(rows){const prices=rows.map(s=>priceValue(s)).filter(price=>price!=null);$('[data-average]').textContent=euro(prices.length?prices.reduce((a,b)=>a+b,0)/prices.length:null);$('[data-minimum]').textContent=euro(prices.length?Math.min(...prices):null);$('[data-count]').textContent=integer(rows.length);}
   function renderTop(rows){const nearby=value('[data-sort]')==='distance'&&state.lat!=null,priced=rows.filter(s=>priceValue(s)!=null);$('[data-top-kicker]').textContent=nearby?'Iš degalinių su patikrinta vieta':'Pigiausi pagal pasirinktus filtrus';$('[data-top-title]').textContent=nearby?'Artimiausios degalinės':'Degalinių TOP 3';$('[data-top-fuel]').textContent=fuelLabels[state.fuel];$('[data-top]').innerHTML=priced.slice(0,3).map((s,i)=>`<article class="top-card"><span class="rank">${i+1}</span><div class="station-copy"><strong>${escapeHtml(s.brand)}</strong><small>${escapeHtml(s.address)}${s.city?', '+escapeHtml(s.city):''}${s.distance_km!=null?' · '+s.distance_km.toFixed(1)+' km':''}</small></div><span class="price">${euro(priceValue(s))}</span></article>`).join('')||'<p class="empty">Pagal pasirinktus filtrus pateiktų kainų nerasta.</p>';}
+  const cityKey = city => String(city||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('lt').replace(/[^a-z0-9]/g,'');
+  const lithuanianLetterCount = city => (String(city||'').match(/[ąčęėįšųūž]/gi)||[]).length;
+  function canonicalCities(stations){
+    const cities=new Map();
+    stations.map(station=>station.city).filter(Boolean).forEach(city=>{
+      const key=cityKey(city),current=cities.get(key);
+      if(!current||lithuanianLetterCount(city)>lithuanianLetterCount(current))cities.set(key,city);
+    });
+    return new Set(cities.values());
+  }
+  function renderCityRanking(){
+    const cities=['Vilnius','Kaunas','Klaipėda','Šiauliai','Panevėžys','Alytus','Marijampolė'];
+    const cards=cities.map(city=>{
+      const candidates=state.data.stations.filter(s=>cityKey(s.city)===cityKey(city)&&priceValue(s)!=null).sort(comparePrices);
+      const station=candidates[0];
+      return station?`<button class="city-card" type="button" data-ranking-city="${escapeHtml(city)}"><span>${escapeHtml(city)}</span><strong>${euro(priceValue(station))}<small>/l</small></strong><b>${escapeHtml(station.brand)}</b><small>${escapeHtml(station.address)}</small><i>Visos degalinės →</i></button>`:`<article class="city-card is-empty"><span>${escapeHtml(city)}</span><strong>—</strong><small>Kaina nepateikta</small></article>`;
+    });
+    $('[data-city-ranking]').innerHTML=cards.join('');
+    $$('[data-ranking-city]').forEach(button=>button.onclick=()=>{const city=button.dataset.rankingCity;$('[data-city]').value=city;state.page=1;renderAll();document.querySelector('.filters').scrollIntoView({behavior:'smooth',block:'center'});});
+  }
+  function renderHistory(){
+    let availableDays=state.history?.days||[];
+    if(!availableDays.length){const fuels={};state.data.summary.fuels.forEach(fuel=>{const priced=state.data.stations.filter(s=>priceValue(s,fuel)!=null).sort((a,b)=>priceValue(a,fuel)-priceValue(b,fuel));if(priced.length){const prices=priced.map(s=>priceValue(s,fuel));fuels[fuel]={minimum:prices[0],average:prices.reduce((a,b)=>a+b,0)/prices.length,station_count:prices.length,winner:{id:priced[0].id,brand:priced[0].brand,address:priced[0].address,city:priced[0].city,price:prices[0]}};}});availableDays=[{date:state.data.source.source_date,fuels}];}
+    const days=availableDays.filter(day=>day?.fuels?.[state.fuel]);
+    $('[data-history-fuel]').textContent=fuelLabels[state.fuel];
+    const periods=[['Naujausia diena',1],['7 dienos',7],['30 dienų',30]];
+    $('[data-period-ranking]').innerHTML=periods.map(([label,count])=>{
+      const slice=days.slice(-count);let best=null;
+      slice.forEach(day=>{const entry=day.fuels[state.fuel];if(entry?.winner&&(!best||entry.minimum<best.minimum))best={...entry,date:day.date};});
+      if(!best)return `<article class="period-card"><span>${label}</span><strong>Istorija kaupiama</strong><small>Duomenys atsiras po sėkmingų kasdienių importų.</small></article>`;
+      return `<article class="period-card"><span>${label}</span><strong>${escapeHtml(best.winner.brand)}</strong><small>${escapeHtml(best.winner.city||best.winner.address)}</small><b>${euro(best.minimum)}<i>/l</i></b><em>${slice.length} d. istorijos</em></article>`;
+    }).join('');
+    const points=days.slice(-30).map(day=>({date:day.date,value:Number(day.fuels[state.fuel].minimum)})).filter(p=>Number.isFinite(p.value));
+    if(points.length<2){$('[data-trend-chart]').innerHTML='<span class="trend-empty">Tendencijai reikia bent dviejų dienų duomenų.</span>';$('[data-trend-summary]').textContent=`Sukaupta ${points.length} d. istorija`;return;}
+    const min=Math.min(...points.map(p=>p.value)),max=Math.max(...points.map(p=>p.value)),range=max-min||0.01;
+    const coords=points.map((p,i)=>`${(i/(points.length-1))*100},${92-((p.value-min)/range)*72}`).join(' ');
+    $('[data-trend-chart]').innerHTML=`<svg viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Mažiausios kainos tendencija"><polyline points="${coords}" vector-effect="non-scaling-stroke"/></svg><span>${euro(points[0].value)}</span><span>${euro(points[points.length-1].value)}</span>`;
+    const change=points[points.length-1].value-points[0].value;$('[data-trend-summary]').textContent=`Per laikotarpį ${change===0?'nepasikeitė':`${change>0?'pakilo':'nukrito'} ${Math.abs(change).toFixed(3).replace('.',',')} €`}`;
+  }
+  function storedAlert(){try{return JSON.parse(localStorage.getItem('kuras-price-alert')||'null');}catch(_){return null;}}
+  function renderAlert(rows){const alert=storedAlert(),status=$('[data-alert-status]');if(!alert){status.hidden=true;return;}const prices=rows.filter(s=>alert.fuel===state.fuel).map(s=>priceValue(s)).filter(v=>v!=null);const minimum=prices.length?Math.min(...prices):null;status.hidden=false;status.className=`alert-status${minimum!=null&&minimum<=alert.price?' reached':''}`;status.textContent=minimum!=null&&minimum<=alert.price?`Tikslas pasiektas: ${fuelLabels[alert.fuel]} mažiausia kaina dabar ${euro(minimum)}.`:`Perspėjimas aktyvus: ${fuelLabels[alert.fuel]} iki ${euro(alert.price)}.`;}
   function renderTable(rows){
     const pages=Math.max(1,Math.ceil(rows.length/state.perPage));
     state.page=Math.min(state.page,pages);
@@ -153,7 +194,7 @@
     if(!station)return;
     if(!hasCoordinates(station)){
       window.open(mapsSearchUrl(station),'_blank','noopener,noreferrer');
-      showNotice('Tiksli šios degalinės vieta dar tikslinama. Atidarėme žemėlapio paiešką pagal oficialų LEA adresą.','info');
+      showNotice('Tiksli šios degalinės vieta dar tikslinama. Atidarėme žemėlapio paiešką pagal pateiktą adresą.','info');
       return;
     }
     state.selectedStationId=String(id);
@@ -163,13 +204,13 @@
     renderTable(rows);
     requestAnimationFrame(()=>renderMap(rows));
   }
-  function renderAll(){renderTabs();const rows=fuelStations();if(state.selectedStationId&&!rows.some(s=>String(s.id)===state.selectedStationId)){state.selectedStationId=null;state.focusStationId=null;}renderSummary(rows);renderTop(rows);renderTable(rows);renderMap(rows);}
+  function renderAll(){renderTabs();const rows=fuelStations();if(state.selectedStationId&&!rows.some(s=>String(s.id)===state.selectedStationId)){state.selectedStationId=null;state.focusStationId=null;}renderSummary(rows);renderTop(rows);renderCityRanking();renderHistory();renderAlert(rows);renderTable(rows);renderMap(rows);}
   function setLocationButtons({disabled=false,text='Naudoti mano vietą',ready=false,title=''}){$$('[data-locate]').forEach(button=>{button.disabled=disabled;button.textContent=text;button.title=title;button.classList.toggle('is-ready',ready);});}
   function showNotice(message,type='error'){const notice=$('[data-notice]');notice.hidden=false;notice.className=`notice${type==='info'?' info':''}`;notice.textContent=message;}
   function geolocationMessage(error){if(error?.code===1)return 'Vietos leidimas nesuteiktas. Telefono arba naršyklės nustatymuose leiskite šiam puslapiui naudoti vietą.';if(error?.code===2)return 'Įrenginiui nepavyko nustatyti vietos. Patikrinkite, ar telefone įjungta vietos nustatymo funkcija.';if(error?.code===3)return 'Vietos nustatymas užtruko per ilgai. Pabandykite dar kartą vietoje, kur geresnis GPS signalas.';return 'Vietos nustatyti nepavyko. Pabandykite dar kartą.';}
-  function locate(){const coordinateCount=state.data?.stations.filter(hasCoordinates).length||0;if(!coordinateCount){showNotice('Artimiausių degalinių skaičiavimas bus įjungtas, kai prie LEA adresų bus prijungtos patikrintos koordinatės.','info');return;}if(!navigator.geolocation){showNotice('Ši naršyklė nepalaiko vietos nustatymo. Galite toliau ieškoti pagal miestą ar adresą.');return;}setLocationButtons({disabled:true,text:'Nustatoma vieta…'});navigator.geolocation.getCurrentPosition(p=>{state.lat=p.coords.latitude;state.lng=p.coords.longitude;state.accuracy=p.coords.accuracy;state.focusLocation=true;$('[data-sort] option[value="distance"]').disabled=false;$('[data-sort]').value='distance';state.page=1;$('[data-notice]').hidden=true;renderAll();setLocationButtons({text:'Vieta nustatyta · atnaujinti',ready:true,title:'Paspauskite dar kartą vietai atnaujinti'});},error=>{setLocationButtons({text:'Bandykite dar kartą'});showNotice(geolocationMessage(error));},{enableHighAccuracy:true,timeout:12000,maximumAge:300000});}
-  async function start(){try{const statusPromise=fetch(`data/status.json?t=${Date.now()}`,{cache:'no-store'}).then(response=>response.ok?response.json():null).catch(()=>null);if(window.__KURAS_DATA){state.data=window.__KURAS_DATA;}else{const response=await fetch('data/current.json',{cache:'no-store'});if(!response.ok)throw new Error();state.data=await response.json();}const status=await statusPromise;state.checkedAt=status?.checked_at||null;options('[data-city]',new Set(state.data.stations.map(s=>s.city).filter(Boolean)),'Visa Lietuva');options('[data-brand]',new Set(state.data.stations.map(s=>s.brand).filter(Boolean)),'Visi tinklai');const coordinateCount=state.data.stations.filter(hasCoordinates).length;$('[data-coordinate-coverage]').textContent=coordinateCount?`${integer(coordinateCount)} iš ${integer(state.data.stations.length)} degalinių turi patikrintą vietą žemėlapyje.`:'Patikrintų degalinių koordinačių dar nėra.';renderSource();renderAll();if(!coordinateCount)setLocationButtons({disabled:true,text:'Artimiausios – ruošiama',title:'Laukiama patikrintų degalinių koordinačių'});}catch(_){showNotice('Kainų failo gauti nepavyko. Automatinis atnaujinimas išsaugojo paskutinę gerą versiją.');}}
+  function locate(){const coordinateCount=state.data?.stations.filter(hasCoordinates).length||0;if(!coordinateCount){showNotice('Artimiausių degalinių skaičiavimas bus įjungtas, kai prie adresų bus prijungtos patikrintos koordinatės.','info');return;}if(!navigator.geolocation){showNotice('Ši naršyklė nepalaiko vietos nustatymo. Galite toliau ieškoti pagal miestą ar adresą.');return;}setLocationButtons({disabled:true,text:'Nustatoma vieta…'});navigator.geolocation.getCurrentPosition(p=>{state.lat=p.coords.latitude;state.lng=p.coords.longitude;state.accuracy=p.coords.accuracy;state.focusLocation=true;$('[data-sort] option[value="distance"]').disabled=false;$('[data-sort]').value='distance';state.page=1;$('[data-notice]').hidden=true;renderAll();setLocationButtons({text:'Vieta nustatyta · atnaujinti',ready:true,title:'Paspauskite dar kartą vietai atnaujinti'});},error=>{setLocationButtons({text:'Bandykite dar kartą'});showNotice(geolocationMessage(error));},{enableHighAccuracy:true,timeout:12000,maximumAge:300000});}
+  async function start(){try{const statusPromise=fetch(`data/status.json?t=${Date.now()}`,{cache:'no-store'}).then(response=>response.ok?response.json():null).catch(()=>null);const historyPromise=fetch(`data/history.json?t=${Date.now()}`,{cache:'no-store'}).then(response=>response.ok?response.json():{days:[]}).catch(()=>({days:[]}));if(window.__KURAS_DATA){state.data=window.__KURAS_DATA;}else{const response=await fetch('data/current.json',{cache:'no-store'});if(!response.ok)throw new Error();state.data=await response.json();}const [status,history]=await Promise.all([statusPromise,historyPromise]);state.checkedAt=status?.checked_at||null;state.history=history||{days:[]};options('[data-city]',canonicalCities(state.data.stations),'Visa Lietuva');options('[data-brand]',new Set(state.data.stations.map(s=>s.brand).filter(Boolean)),'Visi tinklai');$('[data-alert-fuel]').innerHTML=state.data.summary.fuels.filter(f=>fuelLabels[f]).map(f=>`<option value="${f}">${fuelLabels[f]}</option>`).join('');const existingAlert=storedAlert();if(existingAlert){$('[data-alert-fuel]').value=existingAlert.fuel;$('[data-alert-price]').value=Number(existingAlert.price).toFixed(3);}const coordinateCount=state.data.stations.filter(hasCoordinates).length;$('[data-coordinate-coverage]').textContent=coordinateCount?`${integer(coordinateCount)} iš ${integer(state.data.stations.length)} degalinių turi patikrintą vietą žemėlapyje.`:'Patikrintų degalinių koordinačių dar nėra.';renderSource();renderAll();if(!coordinateCount)setLocationButtons({disabled:true,text:'Artimiausios – ruošiama',title:'Laukiama patikrintų degalinių koordinačių'});}catch(_){showNotice('Kainų failo gauti nepavyko. Automatinis atnaujinimas išsaugojo paskutinę gerą versiją.');}}
   function publishHeight(){if(!embedded||window.parent===window)return;window.parent.postMessage({type:'kuras-pricer:height',height:Math.ceil(document.documentElement.scrollHeight)},'*');}
   if(embedded){if('ResizeObserver' in window)new ResizeObserver(publishHeight).observe(document.body);window.addEventListener('load',publishHeight);}
-  $('[data-filters]').onsubmit=e=>{e.preventDefault();state.page=1;state.fitResults=state.lat==null;renderAll();};$('[data-prev]').onclick=()=>{state.page--;renderTable(fuelStations());};$('[data-next]').onclick=()=>{state.page++;renderTable(fuelStations());};$$('[data-locate]').forEach(button=>button.onclick=locate);document.querySelectorAll('[data-view-button]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-view-button]').forEach(x=>x.classList.toggle('active',x===b));const showMap=b.dataset.viewButton==='map';$('.results').classList.toggle('show-map',showMap);if(showMap)requestAnimationFrame(()=>renderMap(fuelStations()));else syncMap(false);});start();
+  $('[data-filters]').onsubmit=e=>{e.preventDefault();state.page=1;state.fitResults=state.lat==null;renderAll();};$('[data-alert-form]').onsubmit=e=>{e.preventDefault();const fuel=$('[data-alert-fuel]').value,price=Number(String($('[data-alert-price]').value).replace(',','.'));if(!fuel||!Number.isFinite(price)||price<.5||price>4){showNotice('Įveskite tikslinę kainą nuo 0,500 iki 4,000 €/l.');return;}localStorage.setItem('kuras-price-alert',JSON.stringify({fuel,price}));state.fuel=fuel;state.page=1;renderAll();};$('[data-prev]').onclick=()=>{state.page--;renderTable(fuelStations());};$('[data-next]').onclick=()=>{state.page++;renderTable(fuelStations());};$$('[data-locate]').forEach(button=>button.onclick=locate);document.querySelectorAll('[data-view-button]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-view-button]').forEach(x=>x.classList.toggle('active',x===b));const showMap=b.dataset.viewButton==='map';$('.results').classList.toggle('show-map',showMap);if(showMap)requestAnimationFrame(()=>renderMap(fuelStations()));else syncMap(false);});start();
 })();
