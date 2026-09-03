@@ -123,6 +123,47 @@
                     }
                 }
             }
+        },
+        {
+            "date": "2026-09-03",
+            "fuels": {
+                "pb95": {
+                    "minimum": 1.699,
+                    "average": 1.8425326086956542,
+                    "station_count": 736,
+                    "winner": {
+                        "id": "2b65097a3af65905",
+                        "brand": "Kvistija",
+                        "address": "Kalnuotės 1 k. 15130",
+                        "city": "Kalnuotės 1 k. 15130",
+                        "price": 1.699
+                    }
+                },
+                "diesel": {
+                    "minimum": 1.989,
+                    "average": 2.0930596205962146,
+                    "station_count": 738,
+                    "winner": {
+                        "id": "3e723e82cf06695e",
+                        "brand": "Baltic Petroleum",
+                        "address": "Lazdijai, Turistų g. 88, 67102",
+                        "city": "Lazdijai",
+                        "price": 1.989
+                    }
+                },
+                "lpg": {
+                    "minimum": 0.67,
+                    "average": 0.7812683333333318,
+                    "station_count": 600,
+                    "winner": {
+                        "id": "6db7d5a872538056",
+                        "brand": "Madalva",
+                        "address": "Plungė, Lentpjūvės g. 10A, 90118",
+                        "city": "Plungė",
+                        "price": 0.67
+                    }
+                }
+            }
         }
     ]
 }
