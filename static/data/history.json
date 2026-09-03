@@ -129,7 +129,7 @@
             "fuels": {
                 "pb95": {
                     "minimum": 1.699,
-                    "average": 1.8428586956521762,
+                    "average": 1.842913043478263,
                     "station_count": 736,
                     "winner": {
                         "id": "2b65097a3af65905",
@@ -141,7 +141,7 @@
                 },
                 "diesel": {
                     "minimum": 1.989,
-                    "average": 2.0933170731707404,
+                    "average": 2.0933848238482478,
                     "station_count": 738,
                     "winner": {
                         "id": "3e723e82cf06695e",
