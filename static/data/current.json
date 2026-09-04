@@ -5,15 +5,15 @@
         "name": "Lietuvos energetikos agentūra (LEA)",
         "page_url": "https://degalukainos.ena.lt/",
         "source_date": "2026-09-04",
-        "generated_at": "2026-09-04T09:38:17+00:00",
-        "checksum_sha256": "793d73051ad036834e7e5ca7a187b3bd30700a51dc6ce4f837cc3c7feb1c8ef3",
+        "generated_at": "2026-09-04T13:47:14+00:00",
+        "checksum_sha256": "f1b55f39c0b9a18e803dca8140553f13b648578523aaea67f6e14896852beae9",
         "parser_version": "lea-live-api-v1",
-        "source_updated_at": "2026-09-04T11:32:15+03:00"
+        "source_updated_at": "2026-09-04T16:43:42+03:00"
     },
     "summary": {
         "station_count": 767,
         "coordinate_count": 766,
-        "price_count": 1799,
+        "price_count": 2072,
         "fuels": [
             "pb95",
             "diesel",
@@ -1017,13 +1017,17 @@
             "municipality": "Alytaus m. sav.",
             "latitude": 54.38674968,
             "longitude": 24.03291319,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.819,
+                "diesel": 2.079,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "8a5df3d14e756eb3",
@@ -1034,13 +1038,17 @@
             "municipality": "Anykščių r. sav.",
             "latitude": 55.50854285,
             "longitude": 25.09624695,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.169,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "70974f84b4f64181",
@@ -1051,13 +1059,17 @@
             "municipality": "Šilalės r. sav.",
             "latitude": 55.57018285,
             "longitude": 22.17665794,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.179,
+                "lpg": 0.79
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "f1b8ded448d32057",
@@ -1068,13 +1080,17 @@
             "municipality": "Druskininkų sav.",
             "latitude": 53.99978044,
             "longitude": 23.98786677,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.969,
+                "diesel": 2.199,
+                "lpg": 0.819
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "3bc8dd65b2c2e93d",
@@ -1085,13 +1101,17 @@
             "municipality": "Druskininkų sav.",
             "latitude": 54.0302633,
             "longitude": 23.98351194,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.969,
+                "diesel": 2.199,
+                "lpg": 0.819
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "74d221bafd120779",
@@ -1102,13 +1122,17 @@
             "municipality": "Klaipėdos r. sav.",
             "latitude": 55.70747618,
             "longitude": 21.38030291,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.199,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "7f753e46b7f04477",
@@ -1119,13 +1143,17 @@
             "municipality": "Raseinių r. sav.",
             "latitude": 55.31823249,
             "longitude": 23.21079649,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.879,
+                "diesel": 2.179,
+                "lpg": 0.77
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "d8fec7cb32ac054f",
@@ -1136,13 +1164,17 @@
             "municipality": "Vilniaus r. sav.",
             "latitude": 54.68113798,
             "longitude": 25.41214971,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.179,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "97608ba742b5b74e",
@@ -1153,12 +1185,15 @@
             "municipality": "Šakių r. sav.",
             "latitude": 54.85233402,
             "longitude": 23.17687677,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.209
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "e3f1fcfd8b26375e",
@@ -1169,13 +1204,17 @@
             "municipality": "Jonavos r. sav.",
             "latitude": 55.09903665,
             "longitude": 24.31591229,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.849,
+                "diesel": 2.129,
+                "lpg": 0.829
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:47+03:00",
+                "diesel": "2026-09-04T14:42:47+03:00",
+                "lpg": "2026-09-04T14:42:47+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "1b8f6d20d18f3da2",
@@ -1186,13 +1225,17 @@
             "municipality": "Kauno r. sav.",
             "latitude": 55.0384555,
             "longitude": 23.60782038,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.869,
+                "diesel": 2.179,
+                "lpg": 0.759
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "876cad03224a8200",
@@ -1203,13 +1246,17 @@
             "municipality": "Jonavos r. sav.",
             "latitude": 55.08237996,
             "longitude": 24.27093489,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.129,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "3d8ce1c5895159e4",
@@ -1220,13 +1267,17 @@
             "municipality": "Joniškio r. sav.",
             "latitude": 56.22341207,
             "longitude": 23.59765138,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.179,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "3de8a3ed255eece5",
@@ -1237,13 +1288,17 @@
             "municipality": "Jurbarko r. sav.",
             "latitude": 55.07822253,
             "longitude": 22.74491424,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.209,
+                "lpg": 0.79
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "27a9f7dcda929dac",
@@ -1254,13 +1309,17 @@
             "municipality": "Raseinių r. sav.",
             "latitude": 55.33559872,
             "longitude": 23.1020618,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.189,
+                "lpg": 0.819
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "cd6011aeab63e2dc",
@@ -1271,13 +1330,17 @@
             "municipality": "Kauno m. sav.",
             "latitude": 54.91742079,
             "longitude": 24.03510568,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.879,
+                "diesel": 2.169,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "40e2e1164092913c",
@@ -1288,13 +1351,17 @@
             "municipality": "Kauno m. sav.",
             "latitude": 54.90316716,
             "longitude": 23.98274502,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.869,
+                "diesel": 2.139,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "01a530362a378a02",
@@ -1305,13 +1372,17 @@
             "municipality": "Kauno m. sav.",
             "latitude": 54.90505612,
             "longitude": 23.8995314,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.849,
+                "diesel": 2.089,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "a98b0e76682b621e",
@@ -1322,13 +1393,17 @@
             "municipality": "Kauno m. sav.",
             "latitude": 54.90762462,
             "longitude": 23.87405934,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.849,
+                "diesel": 2.089,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:47+03:00",
+                "diesel": "2026-09-04T14:42:47+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "fa23b7d8d15cc948",
@@ -1339,13 +1414,17 @@
             "municipality": "Kauno m. sav.",
             "latitude": 54.8613118,
             "longitude": 23.95855979,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.899,
+                "diesel": 2.169,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "294f9e8adba15a6b",
@@ -1377,13 +1456,17 @@
             "municipality": "Klaipėdos m. sav.",
             "latitude": 55.70069671,
             "longitude": 21.19891436,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.129,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "3ad4281da360b6d2",
@@ -1394,13 +1477,17 @@
             "municipality": "Klaipėdos m. sav.",
             "latitude": 55.72092335,
             "longitude": 21.15287961,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.839,
+                "diesel": 2.089,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "a0b1572feb109e35",
@@ -1411,13 +1498,17 @@
             "municipality": "Klaipėdos m. sav.",
             "latitude": 55.70493952,
             "longitude": 21.16332052,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.839,
+                "diesel": 2.109,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "725b3edb991319a0",
@@ -1428,13 +1519,17 @@
             "municipality": "Jurbarko r. sav.",
             "latitude": 55.09944466,
             "longitude": 22.77334068,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.209,
+                "lpg": 0.79
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "8331bbd2784e4855",
@@ -1445,13 +1540,17 @@
             "municipality": "Kėdainių r. sav.",
             "latitude": 55.27702438,
             "longitude": 23.95582653,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.839,
+                "diesel": 2.069,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "3e723e82cf06695e",
@@ -1462,13 +1561,17 @@
             "municipality": "Lazdijų r. sav.",
             "latitude": 54.22065604,
             "longitude": 23.5089976,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.179,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "199ea8f2ece7846d",
@@ -1479,13 +1582,17 @@
             "municipality": "Druskininkų sav.",
             "latitude": 54.0946203,
             "longitude": 23.8714383,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.959,
+                "diesel": 2.189,
+                "lpg": 0.819
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "f9e9690d5d08f633",
@@ -1496,13 +1603,17 @@
             "municipality": "Alytaus r. sav.",
             "latitude": 54.38778364,
             "longitude": 23.99615494,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.149,
+                "lpg": 0.769
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "3861919b098f6f9a",
@@ -1513,13 +1624,17 @@
             "municipality": "Marijampolės sav.",
             "latitude": 54.53386654,
             "longitude": 23.35330631,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.129,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "ca9038593cc666bd",
@@ -1530,13 +1645,17 @@
             "municipality": "Marijampolės sav.",
             "latitude": 54.55574872,
             "longitude": 23.37530293,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.839,
+                "diesel": 2.089,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "31cbf4b33ceb9211",
@@ -1547,13 +1666,17 @@
             "municipality": "Mažeikių r. sav.",
             "latitude": 56.30505361,
             "longitude": 22.35098426,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.109,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "5de127c80fcee131",
@@ -1564,13 +1687,17 @@
             "municipality": "Varėnos r. sav.",
             "latitude": 54.16910964,
             "longitude": 24.20781256,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.959,
+                "diesel": 2.189,
+                "lpg": 0.819
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "d7a2ee4c34b75076",
@@ -1581,13 +1708,17 @@
             "municipality": "Molėtų r. sav.",
             "latitude": 55.21741912,
             "longitude": 25.40343537,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.839,
+                "diesel": 2.099,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "e9f76c4b6d40ebd3",
@@ -1598,13 +1729,17 @@
             "municipality": "Akmenės r. sav.",
             "latitude": 56.31847208,
             "longitude": 22.88559738,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.879,
+                "diesel": 2.169,
+                "lpg": 0.77
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "c5ad48b1e34bb061",
@@ -1615,12 +1750,15 @@
             "municipality": "Neringos sav.",
             "latitude": 55.30072267,
             "longitude": 20.98002534,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.179
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "7cb12a1f6b507141",
@@ -1631,13 +1769,17 @@
             "municipality": "Kupiškio r. sav.",
             "latitude": 55.79647651,
             "longitude": 24.88883792,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.839,
+                "diesel": 2.129,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "eab691d0327715e9",
@@ -1648,13 +1790,17 @@
             "municipality": "Telšių r. sav.",
             "latitude": 55.73052761,
             "longitude": 22.37689064,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.869,
+                "diesel": 2.169,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "1ea711e3f53859a0",
@@ -1665,12 +1811,15 @@
             "municipality": "Zarasų r. sav.",
             "latitude": 55.73945142,
             "longitude": 25.85242031,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.189
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "d7b38af6fc5ad95d",
@@ -1681,13 +1830,17 @@
             "municipality": "Kauno r. sav.",
             "latitude": 54.81474778,
             "longitude": 23.87240005,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.169,
+                "lpg": 0.759
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "0032145f44694bd0",
@@ -1698,13 +1851,17 @@
             "municipality": "Pakruojo r. sav.",
             "latitude": 55.97443806,
             "longitude": 23.86903974,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.139,
+                "lpg": 0.77
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "45fca380a90a9af6",
@@ -1715,13 +1872,17 @@
             "municipality": "Palangos m. sav.",
             "latitude": 55.92349224,
             "longitude": 21.07464189,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.159,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "6430515a9118e430",
@@ -1732,13 +1893,17 @@
             "municipality": "Palangos m. sav.",
             "latitude": 55.9154883,
             "longitude": 21.07814978,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.929,
+                "diesel": 2.209,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "6b61fd38e65ff1c7",
@@ -1749,13 +1914,17 @@
             "municipality": "Rokiškio r. sav.",
             "latitude": 56.01918459,
             "longitude": 25.22214427,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.169,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "bcfcb06d7dff754b",
@@ -1766,13 +1935,17 @@
             "municipality": "Panevėžio m. sav.",
             "latitude": 55.75770557,
             "longitude": 24.36792164,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.159,
+                "lpg": 0.769
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "bba1b11676c8d922",
@@ -1783,13 +1956,17 @@
             "municipality": "Panevėžio m. sav.",
             "latitude": 55.72192931,
             "longitude": 24.39146228,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.169,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "bf8c43f7c00166f3",
@@ -1800,13 +1977,17 @@
             "municipality": "Kalvarijos sav.",
             "latitude": 54.32239096,
             "longitude": 23.14519109,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.219,
+                "lpg": 0.889
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "ab56fe997abbb9de",
@@ -1817,12 +1998,15 @@
             "municipality": "Pasvalio r. sav.",
             "latitude": 56.07093117,
             "longitude": 24.41123079,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.169
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "41ebdd1fbe4540c7",
@@ -1833,13 +2017,17 @@
             "municipality": "Marijampolės sav.",
             "latitude": 54.58697587,
             "longitude": 23.38447536,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.129,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "ae8614db3440c9d3",
@@ -1850,13 +2038,17 @@
             "municipality": "Plungės r. sav.",
             "latitude": 56.04407982,
             "longitude": 21.81567675,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.189,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "792dcfc49f8ada36",
@@ -1867,13 +2059,17 @@
             "municipality": "Klaipėdos r. sav.",
             "latitude": 55.5620308,
             "longitude": 21.3088866,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.149,
+                "lpg": 0.75
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "b0aac91a1c738395",
@@ -1884,13 +2080,17 @@
             "municipality": "Prienų r. sav.",
             "latitude": 54.62860959,
             "longitude": 23.95850085,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.929,
+                "diesel": 2.209,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "1ca977194602317b",
@@ -1901,13 +2101,17 @@
             "municipality": "Radviliškio r. sav.",
             "latitude": 55.8007344,
             "longitude": 23.56542278,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.879,
+                "diesel": 2.179,
+                "lpg": 0.77
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "69b4fb9dec8e6d55",
@@ -1918,13 +2122,17 @@
             "municipality": "Radviliškio r. sav.",
             "latitude": 55.8255192,
             "longitude": 23.5233024,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.879,
+                "diesel": 2.179,
+                "lpg": 0.77
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "3bce2106df9793a4",
@@ -1935,13 +2143,17 @@
             "municipality": "Raseinių r. sav.",
             "latitude": 55.3708352,
             "longitude": 23.13329253,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.179,
+                "lpg": 0.77
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "c7fa4d899e367564",
@@ -1952,13 +2164,17 @@
             "municipality": "Rietavo sav.",
             "latitude": 55.719486,
             "longitude": 21.92852019,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.879,
+                "diesel": 2.169,
+                "lpg": 0.78
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "2a2e8197bb1c8d79",
@@ -1969,13 +2185,17 @@
             "municipality": "Kauno r. sav.",
             "latitude": 54.88949505,
             "longitude": 23.80472397,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.179,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "c7c6fff8e2033b1b",
@@ -1986,13 +2206,17 @@
             "municipality": "Kalvarijos sav.",
             "latitude": 54.32426372,
             "longitude": 23.14466022,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.189,
+                "lpg": 0.859
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "e37faf9ec8388398",
@@ -2003,13 +2227,17 @@
             "municipality": "Zarasų r. sav.",
             "latitude": 55.73731746,
             "longitude": 26.27264138,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.189,
+                "lpg": 0.809
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "ca881a0982550f46",
@@ -2020,13 +2248,17 @@
             "municipality": "Varėnos r. sav.",
             "latitude": 54.2565096,
             "longitude": 24.54704418,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.109,
+                "lpg": 0.759
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "a2617837f2d83bf8",
@@ -2037,13 +2269,17 @@
             "municipality": "Skuodo r. sav.",
             "latitude": 56.25942364,
             "longitude": 21.53042207,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.079,
+                "lpg": 0.769
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "ac77e5d608e080e1",
@@ -2054,13 +2290,17 @@
             "municipality": "Jonavos r. sav.",
             "latitude": 55.05810663,
             "longitude": 24.26351919,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.129,
+                "lpg": 0.77
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "5bd8b586aa92b56e",
@@ -2071,13 +2311,17 @@
             "municipality": "Tauragės r. sav.",
             "latitude": 55.24330849,
             "longitude": 22.25303084,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.849,
+                "diesel": 2.129,
+                "lpg": 0.75
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "ece3ec12cb357ccc",
@@ -2088,13 +2332,17 @@
             "municipality": "Telšių r. sav.",
             "latitude": 56.00404657,
             "longitude": 22.24472049,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.839,
+                "diesel": 2.109,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "836673c124ed4724",
@@ -2105,12 +2353,15 @@
             "municipality": "Mažeikių r. sav.",
             "latitude": 56.26244684,
             "longitude": 22.31040817,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.189
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "c0f7a2559b9366e6",
@@ -2121,13 +2372,17 @@
             "municipality": "Trakų r. sav.",
             "latitude": 54.62734448,
             "longitude": 24.94864735,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.169,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "38af1056ab09b2e6",
@@ -2138,13 +2393,17 @@
             "municipality": "Kaišiadorių r. sav.",
             "latitude": 54.81686838,
             "longitude": 24.43656186,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.179,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "549b76ddc34d05c8",
@@ -2155,13 +2414,17 @@
             "municipality": "Ukmergės r. sav.",
             "latitude": 55.24093222,
             "longitude": 24.7397265,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.119,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "42cc54e46af67de9",
@@ -2172,13 +2435,17 @@
             "municipality": "Utenos r. sav.",
             "latitude": 55.49540378,
             "longitude": 25.5748768,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.849,
+                "diesel": 2.089,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "d88a55279f1f9d3b",
@@ -2189,13 +2456,17 @@
             "municipality": "Mažeikių r. sav.",
             "latitude": 56.16391283,
             "longitude": 22.10157612,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.179,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "206d412fd6686535",
@@ -2206,13 +2477,17 @@
             "municipality": "Vilniaus r. sav.",
             "latitude": 54.76853735,
             "longitude": 25.1959108,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.169,
+                "lpg": 0.759
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "7f218e45714613e1",
@@ -2223,13 +2498,17 @@
             "municipality": "Radviliškio r. sav.",
             "latitude": 55.76333015,
             "longitude": 23.74294809,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.899,
+                "diesel": 2.179,
+                "lpg": 0.77
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "0c69c2fd9e4516dd",
@@ -2240,13 +2519,17 @@
             "municipality": "Biržų r. sav.",
             "latitude": 56.19739426,
             "longitude": 24.70957386,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.179,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "7be503e88766d183",
@@ -2257,13 +2540,17 @@
             "municipality": "Varėnos r. sav.",
             "latitude": 54.21831148,
             "longitude": 24.56589846,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.109,
+                "lpg": 0.759
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "03ce5edb96c7d1f0",
@@ -2274,13 +2561,17 @@
             "municipality": "Prienų r. sav.",
             "latitude": 54.76102906,
             "longitude": 23.7132276,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.189,
+                "lpg": 0.8
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "ca430af370295877",
@@ -2291,13 +2582,17 @@
             "municipality": "Vilniaus r. sav.",
             "latitude": 54.86329651,
             "longitude": 25.49097875,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.169,
+                "lpg": 0.769
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "84102efb01597aa4",
@@ -2308,13 +2603,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.66080422,
             "longitude": 25.23356177,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.849,
+                "diesel": 2.089,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:47+03:00",
+                "diesel": "2026-09-04T14:42:47+03:00",
+                "lpg": "2026-09-04T14:42:47+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "c912f20fa52975da",
@@ -2325,13 +2624,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.77924539,
             "longitude": 25.34234801,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.179,
+                "lpg": 0.759
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "b5a5220d3fc9bdf9",
@@ -2342,13 +2645,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.72402245,
             "longitude": 25.28225813,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.899,
+                "diesel": 2.169,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "2fd220cb366dea06",
@@ -2359,13 +2666,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.72228126,
             "longitude": 25.31733675,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.879,
+                "diesel": 2.149,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:47+03:00",
+                "diesel": "2026-09-04T14:42:47+03:00",
+                "lpg": "2026-09-04T14:42:47+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "6b26e81e1ec6e3a4",
@@ -2376,12 +2687,15 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.6139816,
             "longitude": 25.30897645,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel"
-            ]
+            "prices": {
+                "pb95": 1.959,
+                "diesel": 2.119
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "a25d9668fc253536",
@@ -2392,13 +2706,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.66681545,
             "longitude": 25.25087372,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.879,
+                "diesel": 2.149,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:47+03:00",
+                "diesel": "2026-09-04T14:42:47+03:00",
+                "lpg": "2026-09-04T14:42:47+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "6529b22e74a9b3de",
@@ -2409,13 +2727,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.64049978,
             "longitude": 25.2674053,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.179,
+                "lpg": 0.819
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "13f860a526091797",
@@ -2426,13 +2748,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.76769921,
             "longitude": 25.27233948,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.839,
+                "diesel": 2.089,
+                "lpg": 0.769
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "7398f05b12d2c080",
@@ -2443,13 +2769,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.70286414,
             "longitude": 25.2881622,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.839,
+                "diesel": 2.089,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "492ca9aa5810003a",
@@ -2460,13 +2790,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.69230173,
             "longitude": 25.34643156,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.869,
+                "diesel": 2.139,
+                "lpg": 0.799
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "9f3eb3e994688ae3",
@@ -2477,13 +2811,17 @@
             "municipality": "Vilniaus m. sav.",
             "latitude": 54.7109034,
             "longitude": 25.16166454,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.169,
+                "lpg": 0.75
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:51+03:00",
+                "diesel": "2026-09-04T14:42:51+03:00",
+                "lpg": "2026-09-04T14:42:51+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "037de1a527239d6c",
@@ -2494,13 +2832,17 @@
             "municipality": "Šakių r. sav.",
             "latitude": 54.9455784,
             "longitude": 23.0458561,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.209,
+                "lpg": 0.79
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "1a0ddd6fa1187d2e",
@@ -2511,13 +2853,17 @@
             "municipality": "Šalčininkų r. sav.",
             "latitude": 54.31795465,
             "longitude": 25.38159677,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.169,
+                "lpg": 0.789
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "c1c50b62e723d822",
@@ -2528,13 +2874,17 @@
             "municipality": "Šiaulių m. sav.",
             "latitude": 55.95757509,
             "longitude": 23.31605137,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.889,
+                "diesel": 2.169,
+                "lpg": 0.77
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:50+03:00",
+                "diesel": "2026-09-04T14:42:50+03:00",
+                "lpg": "2026-09-04T14:42:50+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "3493af14ba89b082",
@@ -2545,13 +2895,17 @@
             "municipality": "Šilalės r. sav.",
             "latitude": 55.49009238,
             "longitude": 22.20001532,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.879,
+                "diesel": 2.169,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "179f2d847e84ad2c",
@@ -2562,13 +2916,17 @@
             "municipality": "Šilutės r. sav.",
             "latitude": 55.35291592,
             "longitude": 21.46311915,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.909,
+                "diesel": 2.169,
+                "lpg": 0.749
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:48+03:00",
+                "diesel": "2026-09-04T14:42:48+03:00",
+                "lpg": "2026-09-04T14:42:48+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "9cbfbc593ae41ca4",
@@ -2579,13 +2937,17 @@
             "municipality": "Širvintų r. sav.",
             "latitude": 55.03227678,
             "longitude": 24.96719053,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.859,
+                "diesel": 2.139,
+                "lpg": 0.779
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T14:42:49+03:00",
+                "diesel": "2026-09-04T14:42:49+03:00",
+                "lpg": "2026-09-04T14:42:49+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "5f8c958084445998",
@@ -10491,13 +10853,17 @@
             "municipality": "Šilalės r. sav.",
             "latitude": 55.56638461,
             "longitude": 21.99570763,
-            "prices": [],
-            "price_updated_at": [],
-            "unavailable_fuels": [
-                "pb95",
-                "diesel",
-                "lpg"
-            ]
+            "prices": {
+                "pb95": 1.82,
+                "diesel": 2.07,
+                "lpg": 0.8
+            },
+            "price_updated_at": {
+                "pb95": "2026-09-04T16:43:42+03:00",
+                "diesel": "2026-09-04T16:43:42+03:00",
+                "lpg": "2026-09-04T16:43:42+03:00"
+            },
+            "unavailable_fuels": []
         },
         {
             "id": "21fcf23a123ac03f",
