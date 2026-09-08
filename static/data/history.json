@@ -334,7 +334,7 @@
             "fuels": {
                 "pb95": {
                     "minimum": 1.769,
-                    "average": 1.9518451086956627,
+                    "average": 1.9519538043478364,
                     "station_count": 736,
                     "winner": {
                         "id": "2b65097a3af65905",
@@ -346,7 +346,7 @@
                 },
                 "diesel": {
                     "minimum": 1.999,
-                    "average": 2.199976964769648,
+                    "average": 2.200126016260163,
                     "station_count": 738,
                     "winner": {
                         "id": "150be363452aac87",
@@ -358,8 +358,8 @@
                 },
                 "lpg": {
                     "minimum": 0.67,
-                    "average": 0.7987608695652157,
-                    "station_count": 598,
+                    "average": 0.7988113522537547,
+                    "station_count": 599,
                     "winner": {
                         "id": "6db7d5a872538056",
                         "brand": "Madalva",
