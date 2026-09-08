@@ -328,6 +328,47 @@
                     }
                 }
             }
+        },
+        {
+            "date": "2026-09-08",
+            "fuels": {
+                "pb95": {
+                    "minimum": 1.769,
+                    "average": 1.9518451086956627,
+                    "station_count": 736,
+                    "winner": {
+                        "id": "2b65097a3af65905",
+                        "brand": "Kvistija",
+                        "address": "Kalnuotės 1 k. 15130",
+                        "city": "Kalnuotės 1 k. 15130",
+                        "price": 1.769
+                    }
+                },
+                "diesel": {
+                    "minimum": 1.999,
+                    "average": 2.199976964769648,
+                    "station_count": 738,
+                    "winner": {
+                        "id": "150be363452aac87",
+                        "brand": "Alauša",
+                        "address": "Kaunas, Palemono g. 171, 52107",
+                        "city": "Kaunas",
+                        "price": 1.999
+                    }
+                },
+                "lpg": {
+                    "minimum": 0.67,
+                    "average": 0.7987608695652157,
+                    "station_count": 598,
+                    "winner": {
+                        "id": "6db7d5a872538056",
+                        "brand": "Madalva",
+                        "address": "Plungė, Lentpjūvės g. 10A, 90118",
+                        "city": "Plungė",
+                        "price": 0.67
+                    }
+                }
+            }
         }
     ]
 }
