@@ -369,6 +369,47 @@
                     }
                 }
             }
+        },
+        {
+            "date": "2026-09-09",
+            "fuels": {
+                "pb95": {
+                    "minimum": 1.799,
+                    "average": 1.933568990042675,
+                    "station_count": 703,
+                    "winner": {
+                        "id": "9bc658ab2f74ac12",
+                        "brand": "Alauša",
+                        "address": "Anykščiai, A. Vienuolio g. 32A, 29149",
+                        "city": "Anykščiai",
+                        "price": 1.799
+                    }
+                },
+                "diesel": {
+                    "minimum": 1.999,
+                    "average": 2.177697872340424,
+                    "station_count": 705,
+                    "winner": {
+                        "id": "9bc658ab2f74ac12",
+                        "brand": "Alauša",
+                        "address": "Anykščiai, A. Vienuolio g. 32A, 29149",
+                        "city": "Anykščiai",
+                        "price": 1.999
+                    }
+                },
+                "lpg": {
+                    "minimum": 0.67,
+                    "average": 0.7989412811387898,
+                    "station_count": 562,
+                    "winner": {
+                        "id": "6db7d5a872538056",
+                        "brand": "Madalva",
+                        "address": "Plungė, Lentpjūvės g. 10A, 90118",
+                        "city": "Plungė",
+                        "price": 0.67
+                    }
+                }
+            }
         }
     ]
 }
