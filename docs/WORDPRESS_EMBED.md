@@ -29,7 +29,7 @@ body:has(#kuras-pricer-embed) .wp-block-post-content {
 <div id="kuras-pricer-embed" style="position:relative;isolation:isolate;z-index:1;width:100vw;max-width:none;margin-left:calc(50% - 50vw);pointer-events:auto!important">
   <iframe
     id="kuras-pricer-frame"
-    src="https://gretakazlauskaite-creator.github.io/kuras-v2/?embed=1"
+    src="https://setupadlt.github.io/kuras-v2/?embed=1"
     title="Degalų kainos Lietuvoje"
     loading="eager"
     scrolling="no"
@@ -40,7 +40,7 @@ body:has(#kuras-pricer-embed) .wp-block-post-content {
 <script>
 (function () {
   var frame = document.getElementById('kuras-pricer-frame');
-  var allowedOrigin = 'https://gretakazlauskaite-creator.github.io';
+  var allowedOrigin = 'https://setupadlt.github.io';
   frame.style.setProperty('pointer-events', 'auto', 'important');
   frame.style.touchAction = 'auto';
   frame.style.minHeight = '0';
