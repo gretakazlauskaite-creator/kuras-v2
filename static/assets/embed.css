@@ -1,6 +1,7 @@
 .embedded body{background:transparent}
 .embedded footer{display:none}
 .embedded .site-header{display:block}
-.embedded .hero{padding-top:48px}
-.embedded .content{padding-bottom:30px}
+.embedded .content{padding-bottom:0}
+.embedded .app-section{min-height:0}
+.embedded .data-note{margin-bottom:0}
 .embedded .app{position:relative;z-index:0;pointer-events:auto}
