@@ -13,7 +13,20 @@ no importer.
    other than the GitHub Pages review address.
 
 ```html
-<div id="kuras-pricer-embed" style="position:relative;isolation:isolate;z-index:1;width:100%;max-width:none;pointer-events:auto!important">
+<style>
+body:has(#kuras-pricer-embed) .wp-block-post-title,
+body:has(#kuras-pricer-embed) .wp-site-blocks > header,
+body:has(#kuras-pricer-embed) header.wp-block-template-part {
+  display:none!important;
+}
+body:has(#kuras-pricer-embed) main,
+body:has(#kuras-pricer-embed) .wp-block-post-content {
+  margin:0!important;
+  padding:0!important;
+  max-width:none!important;
+}
+</style>
+<div id="kuras-pricer-embed" style="position:relative;isolation:isolate;z-index:1;width:100vw;max-width:none;margin-left:calc(50% - 50vw);pointer-events:auto!important">
   <iframe
     id="kuras-pricer-frame"
     src="https://gretakazlauskaite-creator.github.io/kuras-v2/?embed=1"
@@ -21,7 +34,7 @@ no importer.
     loading="eager"
     scrolling="no"
     allow="geolocation"
-    style="position:relative;z-index:1;display:block;width:100%;min-height:1600px;border:0;pointer-events:auto!important;touch-action:auto"
+    style="position:relative;z-index:1;display:block;width:100%;height:900px;min-height:0;border:0;pointer-events:auto!important;touch-action:auto"
   ></iframe>
 </div>
 <script>
@@ -30,10 +43,11 @@ no importer.
   var allowedOrigin = 'https://gretakazlauskaite-creator.github.io';
   frame.style.setProperty('pointer-events', 'auto', 'important');
   frame.style.touchAction = 'auto';
+  frame.style.minHeight = '0';
   window.addEventListener('message', function (event) {
     if (event.origin !== allowedOrigin || event.source !== frame.contentWindow) return;
     if (!event.data || event.data.type !== 'kuras-pricer:height') return;
-    var height = Math.max(800, Math.min(12000, Number(event.data.height) || 0));
+    var height = Math.max(520, Math.min(12000, Number(event.data.height) || 0));
     frame.style.height = height + 'px';
   });
 }());
