@@ -410,6 +410,47 @@
                     }
                 }
             }
+        },
+        {
+            "date": "2026-09-10",
+            "fuels": {
+                "pb95": {
+                    "minimum": 1.82,
+                    "average": 1.9295696721311486,
+                    "station_count": 732,
+                    "winner": {
+                        "id": "c0f87b9c4b54b592",
+                        "brand": "Alauša",
+                        "address": "Puskelnių k., Plytinės g. 2, 68103",
+                        "city": "Puskelnių k.",
+                        "price": 1.82
+                    }
+                },
+                "diesel": {
+                    "minimum": 1.999,
+                    "average": 2.169262942779302,
+                    "station_count": 734,
+                    "winner": {
+                        "id": "4e85eff11823b4ae",
+                        "brand": "Neste Kalvarijos 1",
+                        "address": "Salaperaugio k., Europos g. 1, 69286",
+                        "city": "Salaperaugio k.",
+                        "price": 1.999
+                    }
+                },
+                "lpg": {
+                    "minimum": 0.67,
+                    "average": 0.801405084745763,
+                    "station_count": 590,
+                    "winner": {
+                        "id": "6db7d5a872538056",
+                        "brand": "Madalva",
+                        "address": "Plungė, Lentpjūvės g. 10A, 90118",
+                        "city": "Plungė",
+                        "price": 0.67
+                    }
+                }
+            }
         }
     ]
 }
