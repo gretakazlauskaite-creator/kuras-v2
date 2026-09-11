@@ -451,6 +451,47 @@
                     }
                 }
             }
+        },
+        {
+            "date": "2026-09-11",
+            "fuels": {
+                "pb95": {
+                    "minimum": 1.77,
+                    "average": 1.9169755102040855,
+                    "station_count": 735,
+                    "winner": {
+                        "id": "82c20a43023faf6e",
+                        "brand": "Jozita",
+                        "address": "Gargždai, Gamyklos g. 1, 96155",
+                        "city": "Gargždai",
+                        "price": 1.77
+                    }
+                },
+                "diesel": {
+                    "minimum": 1.99,
+                    "average": 2.168036635006794,
+                    "station_count": 737,
+                    "winner": {
+                        "id": "82c20a43023faf6e",
+                        "brand": "Jozita",
+                        "address": "Gargždai, Gamyklos g. 1, 96155",
+                        "city": "Gargždai",
+                        "price": 1.99
+                    }
+                },
+                "lpg": {
+                    "minimum": 0.67,
+                    "average": 0.8011127946127948,
+                    "station_count": 594,
+                    "winner": {
+                        "id": "6db7d5a872538056",
+                        "brand": "Madalva",
+                        "address": "Plungė, Lentpjūvės g. 10A, 90118",
+                        "city": "Plungė",
+                        "price": 0.67
+                    }
+                }
+            }
         }
     ]
 }
