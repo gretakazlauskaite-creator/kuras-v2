@@ -492,6 +492,47 @@
                     }
                 }
             }
+        },
+        {
+            "date": "2026-09-12",
+            "fuels": {
+                "pb95": {
+                    "minimum": 1.797,
+                    "average": 1.9004226804123718,
+                    "station_count": 97,
+                    "winner": {
+                        "id": "f8358f2ae19aa7c3",
+                        "brand": "Stateta",
+                        "address": "Alytaus k., 64464",
+                        "city": "Alytaus k.",
+                        "price": 1.797
+                    }
+                },
+                "diesel": {
+                    "minimum": 2.097,
+                    "average": 2.1560206185567017,
+                    "station_count": 97,
+                    "winner": {
+                        "id": "f8358f2ae19aa7c3",
+                        "brand": "Stateta",
+                        "address": "Alytaus k., 64464",
+                        "city": "Alytaus k.",
+                        "price": 2.097
+                    }
+                },
+                "lpg": {
+                    "minimum": 0.68,
+                    "average": 0.7757812500000004,
+                    "station_count": 96,
+                    "winner": {
+                        "id": "d876b18296771d18",
+                        "brand": "Bonsa",
+                        "address": "Taurai, Tilžės pl. 46, 72142",
+                        "city": "Taurai",
+                        "price": 0.68
+                    }
+                }
+            }
         }
     ]
 }
